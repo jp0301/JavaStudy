@@ -89,7 +89,6 @@ public class Test006
 			System.out.println("gÀÇ °á°ú : " + g);
 
 
-
 	}
 }
 
