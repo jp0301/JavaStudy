@@ -27,12 +27,11 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
 
-
-
 public class Test028
 {
 	public static void main(String[] args) throws IOException
 	{
+		/*
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		System.out.print("임의의 정수 입력 : ");
@@ -41,9 +40,33 @@ public class Test028
 		String strResult;
 
 		//strResult = (n > 0) ? ( (n == 0) ? "영" : "양수" ) : ( (n == 0) ? "영" : "음수" );
-		strResult = (n != 0) ? ( n > 0 ? "양수" : "음수" ) : "영";
+		strResult = (n != 0) ? ( (n > 0) ? "양수" : "음수" ) : "영";
 
 		System.out.printf("%d → %s\n", n, strResult);
+
+		*/
+
+
+		//-- 함께한 풀이
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+		int n;
+		String strResult;
+
+
+		System.out.print("임의의 정수 입력 : ");
+		n = Integer.parseInt(br.readLine());
+
+		/*
+		n이 0보다 크다 → true  → n은 양수
+		               → false → n이 0보다 작다 → true  → n은 음수
+					   							  → false → n은 양수
+		*/
+
+		strResult = (n > 0) ? "양수" : ( (n < 0) ? "음수" : "영" );
+
+		System.out.println(n + " → " + strResult);
+
 	}
 }
 
