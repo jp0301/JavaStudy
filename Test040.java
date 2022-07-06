@@ -29,23 +29,26 @@ public class Test040
 {
 	public static void main(String[] args) throws IOException
 	{
+
 		char ch1, ch2;
 		System.out.print("한 문자 입력 : ");
 		ch1 = (char) System.in.read();
 
-		if(ch1 >= 'A' && ch1 <= 'Z')
+
+		
+		if(ch1 >= 'A' && ch1 <= 'Z')						// 대문자 A(65)보다 크면서 Z(90)보다 작을 때
 		{
-			ch2 = (char)(ch1 + 32);
-			System.out.printf(">> %c → %c\n", ch1, ch2);
+			ch2 = (char)(ch1 + 32);							// 소문자로 변환하기 위해 만약 A라면 (65 → 97) +32를 해줌
+			System.out.printf(">> %c → %c\n", ch1, ch2);	// 결과 출력
 		}
-		else if(ch1 >= 'a' && ch1 <= 'z')
+		else if(ch1 >= 'a' && ch1 <= 'z')					// 소문자 a(97)보다 크면서 z(122)보다 작을 때
 		{
-			ch2 = (char)(ch1 - 32);
-			System.out.printf(">> %c → %c\n", ch1, ch2);
+			ch2 = (char)(ch1 - 32);							// 대문자로 변환하기 위해 만약 a라면 (97 → 65) -32를 해줌
+			System.out.printf(">> %c → %c\n", ch1, ch2);	// 결과 출력
 		}
 		else
 		{
-			System.out.println(">> 입력 오류~!!!");
+			System.out.println(">> 입력 오류~!!!");			// 그 외 출력
 		}
 		
 	}

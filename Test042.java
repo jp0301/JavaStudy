@@ -43,7 +43,7 @@ public class Test042
 			case 1 :
 				System.out.println("★"); break;
 			default : 
-				System.out.println();
+				System.out.println("입력오류~!!!");
 		}
 		*/
 

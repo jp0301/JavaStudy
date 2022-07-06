@@ -27,8 +27,6 @@
 // >> 입력 오류~!!!
 // 계속하려면 아무 키나 누르세요...
 
-// 모음 a e i o u
-
 
 import java.io.IOException;
 
@@ -41,22 +39,26 @@ public class Test039
 		char ch;
 
 		ch = (char) System.in.read();
-		
 
-		// 대문자인지 먼저 판별
+		
+		// 알파벳 모음 a e i o u
+
+
+		// 대문자일 경우 모음(A, E, I, O, U)일 때
 		if (ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U')
 		{	
 			System.out.println(">> 모음~!!!");
 		}
-		else if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u')
+		else if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') // 소문자 모음일 때
 		{
 			System.out.println(">> 모음~!!!");
-		}
+		} 
+		//대문자 모음이 아니면서 AND 대문자 아스키코드 A(65)~Z(90)을 벗어나지 않을 때 = 결국 대문자 자음
 		else if ((ch != 'A' || ch != 'B' || ch != 'C' || ch != 'D' || ch != 'E') && (ch >= 'A' && ch <= 'Z'))
 		{
 			System.out.println();
 		}
-		else if ((ch != 'a' || ch != 'e' || ch != 'i' || ch != 'o' || ch != 'u') && (ch >= 'a' && ch <= 'z'))
+		else if ((ch != 'a' || ch != 'e' || ch != 'i' || ch != 'o' || ch != 'u') && (ch >= 'a' && ch <= 'z')) // 소문자 자음일 때
 		{
 			System.out.println("");
 		}
