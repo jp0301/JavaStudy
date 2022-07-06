@@ -41,32 +41,54 @@ public class Test035
 {
 	public static void main(String[] args) throws IOException
 	{
+		// 주요 변수 선언
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int year;
 
 
-		System.out.print("임의의 정수 입력 : ");
+		// 연산 및 처리
+		System.out.print("임의의 연도 입력 : ");
 		year = Integer.parseInt(br.readLine());
 
-	
-		String result = "?년";
 
-		if (year % 4 == 0 && year % 100 != 0)
+		String result;
+		if (year % 4 == 0 && year % 100 != 0) // 4의 배수이고 100의 배수가 아니면 윤년
 		{
 			result = "윤년";
 		}
-		else if (year % 400 == 0)
+		else if (year % 400 == 0)			  // 400의 배수이면 윤년
 		{
 			result = "윤년";
 		}
-		else
+		else								  // 그 외에는 평년
 		{
 			result = "평년";
 		}
 
+
+		// 결과 출력
 		System.out.printf("%d년 → %s\n", year, result);
 		
 
 	}
-
 }
+
+// 실행 결과
+
+/*
+임의의 연도 입력 : 2022
+2022년 → 평년
+계속하려면 아무 키나 누르십시오 . . .
+*/
+
+/*
+임의의 연도 입력 : 1900
+1900년 → 평년
+계속하려면 아무 키나 누르십시오 . . .
+*/
+
+/*
+임의의 연도 입력 : 1998
+1998년 → 평년
+계속하려면 아무 키나 누르십시오 . . .
+*/
