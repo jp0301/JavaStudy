@@ -47,17 +47,13 @@ public class Test042
 		}
 		*/
 
-
-
 		// ② switch 기본 모델 - break 딱 한 번만 구현
 		switch(num)
 		{
 			case 3 : System.out.printf("★"); 
 			case 2 : System.out.printf("★");
-			case 1 : System.out.printf("★\n"); //break;
-			default : break; 
+			case 1 : System.out.printf("★\n"); break;
+			default : System.out.println("입력오류~!!!"); 
 		}
-
-
 	}
 }

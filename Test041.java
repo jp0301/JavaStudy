@@ -18,6 +18,8 @@
 
 	 switch문의 『수식』과 case의 『상수』는
 	 byte, short, int, long 형이어야 한다.
+	 + 문자 타입(char)
+	 + 문자열(String)
 
 	 case 문 뒤에 『break;』 가 없는 형태인 경우
 	 다음 case 문의 문장을 계속해서(이어서) 수행하게 된다. (→ 기본 모델)
