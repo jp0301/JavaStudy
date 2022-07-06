@@ -27,7 +27,11 @@
 // >> 입력 오류~!!!
 // 계속하려면 아무 키나 누르세요...
 
+// 모음 a e i o u
+
+
 import java.io.IOException;
+
 
 public class Test039
 {
@@ -40,10 +44,52 @@ public class Test039
 		
 
 		// 대문자인지 먼저 판별
-		if (ch >= 'A' && ch <= 'Z')
+		if (ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U')
+		{	
+			System.out.println(">> 모음~!!!");
+		}
+		else if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u')
 		{
 			System.out.println(">> 모음~!!!");
 		}
+		else if ((ch != 'A' || ch != 'B' || ch != 'C' || ch != 'D' || ch != 'E') && (ch >= 'A' && ch <= 'Z'))
+		{
+			System.out.println();
+		}
+		else if ((ch != 'a' || ch != 'e' || ch != 'i' || ch != 'o' || ch != 'u') && (ch >= 'a' && ch <= 'z'))
+		{
+			System.out.println("");
+		}
 
+		else
+		{
+			System.out.println(">> 입력 오류~!!!");
+		}
 	}
 }
+
+// 실행 결과
+
+/*
+임의의 알파벳 한 문자 입력 : i
+>> 모음~!!!
+계속하려면 아무 키나 누르십시오 . . .
+*/
+
+/*
+임의의 알파벳 한 문자 입력 : u
+>> 모음~!!!
+계속하려면 아무 키나 누르십시오 . . .
+*/
+
+/*
+임의의 알파벳 한 문자 입력 : b
+
+계속하려면 아무 키나 누르십시오 . . .
+*/
+
+/*
+임의의 알파벳 한 문자 입력 : 6
+>> 입력 오류~!!!
+계속하려면 아무 키나 누르십시오 . . .
+*/

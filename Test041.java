@@ -26,16 +26,54 @@
 	 해당 지점에서수행을 멈춘 후 switch 문을 빠져나간다. (→ 일반 모델)
 */
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+
 public class Test041
 {
-	public static void main(String[] args)
+	public static void main(String[] args) throws IOException
 	{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
+		String name;				//-- 이름
+		int kor, eng, mat, tot;		//-- 국어, 영어, 수학, 총점
+		double avg;					//-- 평균
+		char grade;					//-- 등급
 
+		System.out.print("이름 입력 : ");
+		name = br.readLine();
 
+		System.out.print("국어점수 입력 : ");
+		kor = Integer.parseInt(br.readLine());
+	
+		System.out.print("영어점수 입력 : ");
+		eng = Integer.parseInt(br.readLine());
+	
+		System.out.print("수학점수 입력 : ");
+		mat = Integer.parseInt(br.readLine());
+	
+		tot = kor + eng + mat;
+		avg = tot / 3.0;
+
+		if(avg >= 90)
+			grade = 'A';
+		else if(avg >= 80)
+			grade = 'B';
+		else if(avg >= 70)
+			grade = 'C';
+		else if(avg >= 60)
+			grade = 'D';
+		else
+			grade='F';
+
+		//결과 출력
+		System.out.println();
+		System.out.printf(">> 당신의 이름은 %s 입니다.\n", name);
+		System.out.printf(">> 총점은 %d, 평균은 %.2f 입니다.\n", tot, avg);
+		System.out.printf(">> 등급은 %c 입니다.\n", grade);
 
 	}
-
 }
 
 

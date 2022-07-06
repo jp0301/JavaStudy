@@ -23,11 +23,50 @@
 // 계속하려면 아무 키나 누르세요...
 
 
+import java.io.IOException;
 
 public class Test040
 {
-	public static void main(String[] args)
+	public static void main(String[] args) throws IOException
 	{
+		char ch1, ch2;
+		System.out.print("한 문자 입력 : ");
+		ch1 = (char) System.in.read();
+
+		if(ch1 >= 'A' && ch1 <= 'Z')
+		{
+			ch2 = (char)(ch1 + 32);
+			System.out.printf(">> %c → %c\n", ch1, ch2);
+		}
+		else if(ch1 >= 'a' && ch1 <= 'z')
+		{
+			ch2 = (char)(ch1 - 32);
+			System.out.printf(">> %c → %c\n", ch1, ch2);
+		}
+		else
+		{
+			System.out.println(">> 입력 오류~!!!");
+		}
 		
 	}
 }
+
+// 실행 결과
+
+/*
+한 문자 입력 : C
+>> C → c
+계속하려면 아무 키나 누르십시오 . . .
+*/
+
+/*
+한 문자 입력 : t
+>> t → T
+계속하려면 아무 키나 누르십시오 . . .
+*/
+
+/*
+한 문자 입력 : 5
+>> 입력 오류~!!!
+계속하려면 아무 키나 누르십시오 . . .
+*/
