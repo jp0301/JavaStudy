@@ -38,7 +38,8 @@ public class Test041
 		
 		String name;				//-- 이름
 		int kor, eng, mat, tot;		//-- 국어, 영어, 수학, 총점
-		double avg;					//-- 평균
+		//double avg;				
+		int avg;						//-- 평균
 		char grade;					//-- 등급
 
 		System.out.print("이름 입력 : ");
@@ -54,8 +55,12 @@ public class Test041
 		mat = Integer.parseInt(br.readLine());
 	
 		tot = kor + eng + mat;
-		avg = tot / 3.0;
+		//avg = tot / 3.0;
+		avg = tot / 3;
 
+
+
+		/*
 		if(avg >= 90)
 			grade = 'A';
 		else if(avg >= 80)
@@ -66,11 +71,70 @@ public class Test041
 			grade = 'D';
 		else
 			grade='F';
+		*/
+
+		/*
+		switch(avg)
+		{
+			case 100: grade = 'A'; break;
+			case 99 : grade = 'A'; break;
+			case 98 : grade = 'A'; break;
+						:
+			case 70 : grade = 'C'; break;
+						:
+			case 60 : grade = 'D'; break;
+						:
+			case 0 : grade = 'F'; break;
+		}
+		*/
+
+		/*
+		switch(avg/10)
+		{
+			case 10: grade = 'A'; break;
+			case 9 : grade = 'A'; break;
+			case 8 : grade = 'B'; break;
+			case 7 : grade = 'C'; break;
+			case 6 : grade = 'D'; break;
+			case 5 : grade = 'F'; break;
+			case 4 : grade = 'F'; break;
+			case 3 : grade = 'F'; break;
+			case 2 : grade = 'F'; break;
+			case 1 : grade = 'F'; break;
+			case 0 : grade = 'F'; break;
+		}
+		*/
+
+		/*
+		switch(avg/10)
+		{
+			case 10: grade = 'A'; break;
+			case 9 : grade = 'A'; break;
+			case 8 : grade = 'B'; break;
+			case 7 : grade = 'C'; break;
+			case 6 : grade = 'D'; break;
+			default : grade = 'F'; // default를 안쓰면 위에서 변수 선언과 동시에 초기화시켜놔야함
+		}
+		*/
+
+
+		switch(avg/10)
+		{
+			case 10: case 9 : grade = 'A'; break;
+			case 8 : grade = 'B'; break;
+			case 7 : grade = 'C'; break;
+			case 6 : grade = 'D'; break;
+			default : grade = 'F'; // default를 안쓰면 위에서 변수 선언과 동시에 초기화시켜놔야함
+		}
+
+
+
 
 		//결과 출력
 		System.out.println();
 		System.out.printf(">> 당신의 이름은 %s 입니다.\n", name);
-		System.out.printf(">> 총점은 %d, 평균은 %.2f 입니다.\n", tot, avg);
+		//System.out.printf(">> 총점은 %d, 평균은 %.2f 입니다.\n", tot, avg);
+		System.out.printf(">> 총점은 %d, 평균은 %d 입니다.\n", tot, avg);
 		System.out.printf(">> 등급은 %c 입니다.\n", grade);
 
 	}
@@ -80,5 +144,13 @@ public class Test041
 // 실행 결과
 
 /*
+이름 입력 : 박원석
+국어점수 입력 : 90
+영어점수 입력 : 80
+수학점수 입력 : 70
 
+>> 당신의 이름은 박원석 입니다.
+>> 총점은 240, 평균은 80 입니다.
+>> 등급은 B 입니다.
+계속하려면 아무 키나 누르십시오 . . .
 */
