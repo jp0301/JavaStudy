@@ -19,7 +19,7 @@ public class Test058
 {
 	public static void main(String[] args)
 	{
-		
+		/*
 		for(int n = 1; n <= 100; n++)
 		{
 			if(n % 4 == 0)
@@ -30,8 +30,26 @@ public class Test058
 					System.out.println();
 			}
 		}
-	
-
+		*/
+		for(int n=4; n<=100; n+=4)
+		{
+			System.out.printf("%4d", n);
+			
+			if(n % (4*5) == 0)		  //-- 출력 구문이 4*5의 배수가 될 때 마다
+				System.out.println(); //-- 개행
+		}
 
 	}
 }
+
+
+// 실행 결과
+
+/*
+   4   8  12  16  20
+  24  28  32  36  40
+  44  48  52  56  60
+  64  68  72  76  80
+  84  88  92  96 100
+계속하려면 아무 키나 누르십시오 . . .
+*/
