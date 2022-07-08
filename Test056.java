@@ -60,29 +60,26 @@ public class Test056
 		// 주요 변수 선언
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-		int num;			//-- 사용자의 입력값을 담아낼 변수
-		int sum=0;			//-- 누적합을 담아낼 변수
-		int n=1;			//-- 루프 변수로 활용하며 몇 번째 입력값인지를 담아낼 변수
-
+		int num;				//-- 사용자의 입력값을 담아낼 변수
+		int sum=0;				//-- 누적합을 담아낼 변수
+		int n=1;				//-- 루프 변수로 활용하며 몇 번째 입력값인지를 담아낼 변수
 
 
 		// 연산 및 처리
 
+		do
+		{
+			System.out.printf(" %d번째 정수 입력(-1 종료) : ", n);
+			num = Integer.parseInt(br.readLine());
+			
+			sum += num;			//-- sum을 num만큼 증가시켜라~!!!
 
+			n++;
+		}
+		while (num != -1);		//-- num이 -1이 아닐 경우 (계속해서 반복)
 
 		// 결과 출력
-
-
-
-
-
-
-
-
-
-
-
-
+		System.out.println("\n>> 현재까지 입력된 정수의 합 : " + (sum+1));
 
 	}
 }
