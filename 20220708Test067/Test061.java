@@ -11,13 +11,11 @@
 
 // 실행 예)
 /*
-
     *
    **
   ***
  ****
 *****
-
 */
 
 
@@ -25,7 +23,7 @@ public class Test061
 {
 	public static void main(String[] args)
 	{
-		for(int i=0; i<=5; i++)			// 6 행 만들기
+		for(int i=1; i<=5; i++)			// 행 5개
 		{
 			for(int j=5; j>=i; j--)     // j=5 부터 i보다 크거나 같아질 때까지 1씩 감소
 			{
@@ -38,9 +36,16 @@ public class Test061
 			}
 			System.out.println(); // 개행
 		}
-
-
-
-		
 	}
 }
+
+// 실행 결과
+
+/*
+     *
+    **
+   ***
+  ****
+ *****
+계속하려면 아무 키나 누르십시오 . . .
+*/
