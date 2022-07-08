@@ -25,6 +25,21 @@ public class Test061
 {
 	public static void main(String[] args)
 	{
+		for(int i=0; i<=5; i++)			// 6 행 만들기
+		{
+			for(int j=5; j>=i; j--)     // j=5 부터 i보다 크거나 같아질 때까지 1씩 감소
+			{
+				System.out.print(" ");	// 하면서 " " 공백 한 칸 출력
+			}							
+
+			for(int k=1; k<=i; k++)     // k=1부터 i보다 작거나 같아질 때까지 1씩 증가
+			{
+				System.out.print("*");  // 하면서 "*" 출력
+			}
+			System.out.println(); // 개행
+		}
+
+
 
 		
 	}
