@@ -32,7 +32,7 @@ public class CircleTest
 	
 	void input() throws IOException
 	{
-		// 여기다 작성하는 이유는
+		// 여기다 버퍼리더를 작성하는 이유는
 		// 그냥 class에다 작성해버리면
 		// Test071에서 인스턴스를 생성했을 때 사용하지도 않는데 메모리를 사용하게된다.
 		// 따라서 input() 안에서 작성하여 입력받을 때만.
@@ -47,15 +47,20 @@ public class CircleTest
 		// 클래스에서 작성하는 것은 가급적이면 하지 말자!
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	
 		System.out.print("반지름 입력 : ");
 		r = Integer.parseInt(br.readLine());
+
+		//BufferedReader 클래스 내의 readLine 메소드 리턴 자료형은 String, 문자열
+		// String readLine() throws IOException { ... }; 추측 가능
 	}
 
+	// 넓이 계산
 	double calArea()
 	{
 		return r * r * PI;
 	}
-
+	// 둘레 계산
 	double calLength()
 	{
 		return r * 2 * PI;
@@ -68,6 +73,4 @@ public class CircleTest
 		System.out.printf(">> 둘레 : %.2f\n", l);
 	}
 	
-
-
 }
