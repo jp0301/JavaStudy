@@ -3,10 +3,6 @@
 	- »ı¼ºÀÚ(Constructor)
   ====================================*/
 
-
-
-
-
 class NumberTest2
 {
 	int num;
