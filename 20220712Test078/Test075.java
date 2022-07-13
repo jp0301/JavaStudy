@@ -26,7 +26,6 @@ class NumberTest2
 		System.out.println("생성자 호출 시 매개변수 전달 : " + n);
 	}
 
-
 	int getNum()
 	{
 		return num;
