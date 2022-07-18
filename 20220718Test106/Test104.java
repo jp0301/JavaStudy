@@ -23,8 +23,8 @@ public class Test104
     public static void print(char c) {};					//-- 가능하지만 되게 조심해야함, 가급적 이런식의 메소드 오버로딩은 회피, 자동형변환규칙 check~!!!
 	public static void print(int i, int j) {};		
 	public static void print(double d) {};					//-- 되지만 조심, 형변환규칙 check~!!!
-	//public static void print(double e) { return 10.0; };
-    public static double print(double e) { return 10.0; };  //--(X) check~!!!
+	//public static void print(double e) { return 10.0; };     //-- 정의 불가
+    // public static double print(double e) { return 10.0; };  //--(X) check~!!!
 	
 	
 }
