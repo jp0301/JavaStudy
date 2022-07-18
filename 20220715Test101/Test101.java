@@ -53,9 +53,11 @@
 
 import java.util.Scanner;
 
+
+
 class Sungjuk
 {
-
+	
 	int su;
 	Record[] recArr;
 
@@ -136,6 +138,7 @@ class Sungjuk
 		}
 	}
 
+
 	// rank() 메소드 테스트
 	/*
 		예제 데이터 입력해서 현재 평균은 순서대로
@@ -197,7 +200,12 @@ class Sungjuk
 		}
 	}
 
+
+
+
 }
+
+
 
 public class Test101
 {
@@ -208,7 +216,6 @@ public class Test101
 		sj.score();
 		sj.rank();
 		sj.print();
-
 	}
 }
 // 실행 결과
@@ -239,6 +246,6 @@ public class Test101
   김철수  80  68  86  234   78.00    2
   이훈이  35  66  89  190   63.33    5
   한유리  55  72  94  221   73.67    3
-   맹구  77  88  99  264   88.00    1
+    맹구  77  88  99  264   88.00    1
 계속하려면 아무 키나 누르십시오 . . .
 */
