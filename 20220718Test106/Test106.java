@@ -129,8 +129,17 @@ public class Test106
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
+		// 입력받는 주민번호(문자열 형태)를 담아둘 변수 선언
 		String str;
+		// 공식에 따라 주민번호의 각 자릿수에 곱하게 될 수 → 배열 형태
+		//          7 5 0 6 1 5 - 1 8 6 2 1 3 3
 		int[] ch = {2,3,4,5,6,7,0,8,9,2,3,4,5};
+		//                     ---
+		//                     check~!!!
+		
+		// 곱셈 연산 후 누적합 → (각 곱셈의 결과를 더해나가라...)
+		//              ------
+		//              0으로 초기화
 		int tot = 0;
 
 
@@ -139,37 +148,78 @@ public class Test106
 		
 		if(str.length() > 14 || str.length() < 14)
 		{
-			System.out.println("입력 오류~!!!");
-			return;
+			System.out.println(">> 입력 오류~!!!");
+			return; 
 		}
+
+		// 테스트
+		//System.out.println(">> 자릿수 적합~!!!");
 		
 
 		for(int i=0; i < 13; i++) // 13번 제외하고 12번까지만 돌게 하기
 		{
+
+			// 테스트
+			//System.out.print(i + " ");
+			//--==>> 0 1 2 3 4 5 6 7 8 9 10 11 12
+
+			// i가 6일 때에는 뒷부분 무시하고 계속해라~!!!
 			if(i==6)
 				continue;
 
 			tot += ch[i] * Integer.parseInt(str.substring(i, (i+1)));
 		}
 
+		//테스트
+		//System.out.println("tot : " + tot);
+		//--==>> 217, 누적합 정상 출력됨
+
+		//--------------------------------- 여기까지 수행하면 ①과 ②를 모두 끝낸 상황이며
+		//                                  규칙에 맞게 곱셈 연산을 수행한 결과를 모두 더한 값은
+		//					                변수 tot에 담겨있는 상태가 된다.
+
 
 		int result = 11 - (tot % 11);
-		result %= 10;
 
-		
+		//--------------------------------- 여기까지 수행하면 ③과 ④를 모두 끝낸 상황이며
+		//								    su에 대한 연산 결과 두 자리로 나올 경우
+		//									주민번호 마지막 자리의 숫자와 비교를 수행할 수 없는 상황
+
+		result %= 10;						// result = result % 10;
+
+		// 확인 테스트
 		//System.out.println("- 나머지 : " + result);
 		//System.out.println("- 주민번호 13번째 숫자 : " + str.substring(13));
 
 
 		if(result == Integer.parseInt(str.substring(13)))
-			System.out.println("정확한 주민번호~!!!");
+			System.out.println(">> 정확한 주민번호~!!!");
 		else
-			System.out.println("잘못된 주민번호~!!!");
+			System.out.println(">> 잘못된 주민번호~!!!");
 		
 		
 	}
 }
 
+// 실행 결과
+
+/*
+주민번호입력(xxxxxx-xxxxxxx) : 750615-1862133
+>> 정확한 주민번호~!!!
+계속하려면 아무 키나 누르십시오 . . .
+*/
+
+/*
+주민번호입력(xxxxxx-xxxxxxx) : 750615-18621334
+>> 입력 오류~!!!
+계속하려면 아무 키나 누르십시오 . . .
+*/
+
+/*
+주민번호입력(xxxxxx-xxxxxxx) : 980301-1113335
+>> 잘못된 주민번호~!!!
+계속하려면 아무 키나 누르십시오 . . .
+*/
 
 
 
