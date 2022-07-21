@@ -60,11 +60,11 @@ public class Test110
 		do
 		{
 			flag = false;
+			pass++;
 
-
-			for(int i = 1; i < n; i++)
-			{
-				for(int j = 0; j < n-i; j++)
+		//	for(int i = 1; i < n; i++)
+			//{
+				for(int j = 0; j < n-pass; j++)
 				{
 					if(score[j] < score[j+1])
 					{
@@ -80,11 +80,11 @@ public class Test110
 						flag = true;
 					}
 				}
-			}
+			//}
 
 
 		}
-		while (flag == false);
+		while (flag);
 
 
 		// 등수
@@ -103,7 +103,7 @@ public class Test110
 		System.out.println("--------------");
 		for(int i=0; i < n; i++)
 		{
-			System.out.printf("%d등 %s %3d\n", rank[i], name[i], score[i]);
+			System.out.printf("%d등 %s %3d\n", i+1, name[i], score[i]);
 		}
 		System.out.println("--------------");
 
