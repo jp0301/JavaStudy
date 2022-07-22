@@ -1,6 +1,6 @@
 # 🏫 Study File list
 
-- `2022.06.27 ~ present` : 쌍용강북교육센터 실무기반 데이터 솔루션 ~~~ 
+- `2022.06.27 ~ present` : 실무 프로젝트 기반 빅데이터 서비스 솔루션 개발자 양성과정 / 쌍용강북교육센터
  
  ## 🌎 Link
  - [JAVA API docs](https://docs.oracle.com/javase/8/docs/api/)
