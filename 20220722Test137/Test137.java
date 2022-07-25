@@ -135,7 +135,53 @@ public class Test137
 		//--==>> |사          랑|
 		//-- 양쪽 가장자리 공백 제거
 
+		System.out.println("|" + s.replaceAll(" ", "") + "|");
+		//--==>> |사랑|
+		//-- 대상 문자열의 모든 공백을 지우겠다. 
 
+
+		// "50"
+		int temp = Integer.parseInt("50");
+		//System.out.println(temp);
+		System.out.printf("%d\n", temp);
+		//--==>> 50
+
+		s = Integer.toString(30); // object의 toString의 메소드 오버로딩, integer. 클래스 메소드
+		//System.out.println(s);
+		System.out.printf("%s\n", s);
+		//--==>> 30
+		
+
+		int n = 2345678;
+		System.out.printf("%d", n);
+		System.out.format("%d", n);
+		//--==>> 23456782345678
+		System.out.println();
+
+
+		// 문자열 형태를 반환하는 것
+		s = String.format("%d", n);
+		System.out.println(s);
+		//--==>> 2345678
+
+
+		s = String.format("%,d", n); // 3자리 마다 구둣점을 찍어주는 역할 (,)
+		System.out.println(s);
+		//--==>> 2,345,678
+
+		
+		//String str = "기본,열정,배려";
+		//String[] strArr = str.split(",");
+		
+		// line 173 ~174 와 동일한 구문
+		String[] strArr = "기본,열정,배려".split(",");
+
+		for (String str : strArr)
+			System.out.print(str + " ");
+		System.out.println();
+		//--==>> 기본 열정 배려
+
+		
 
 	}
 }	
