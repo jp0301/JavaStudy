@@ -19,7 +19,7 @@ public class Test152
 		catch (Exception e)		// ⑨ 예외 잡아내기
 		{
 			// ⑩ 잡아낸 예외에 대한 처리
-			System.out.println("printStackTrace....................);
+			System.out.println("printStackTrace....................");
 			e.printStackTrace();
 		}
 	}
@@ -53,7 +53,7 @@ public class Test152
 		{
 			// ⑤ 잡아낸 예외에 대한 처리
 			System.out.println("printStackTrace.........");\
-			e.printStackPrve;
+			e.printStackTrace;
 
 			// check~!!!
 			// ⑥ 잡아서 처리한 예외를 다시 던지기

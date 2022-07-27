@@ -135,7 +135,7 @@ public class Test138
 		//    → 한국seoulkorea우리나라대한민국
 		sb3.insert(0, "한국");
 		System.out.println("seoul 앞에 『한국』 추가 : " + sb3.toString());
-		//--==>> seoul 앞에 『한국』 추가 : 한국seoulkorea우리나라대한민국
+		//--==>> seoul 앞에   추가 : 한국seoulkorea우리나라대한민국
 
 
 		// ○ 대상 문자열(sb3) 중 korea 문자열 뒤에
