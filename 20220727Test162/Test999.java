@@ -196,11 +196,6 @@ public class Test999
 	}
 
 
-
-
-
-
-
 	public static void main(String[] args) throws IOException
 	{
 		do

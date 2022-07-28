@@ -105,33 +105,48 @@ public class Test162
 		v.add(new MyData("정영준", 13));
 		v.add(new MyData("정미경", 7));
 		v.add(new MyData("한은영", 3));
+		
+		// 벡터 자료구조 v 에 담긴 내용(요소) 전체 출력하기
+		// 실행 예)
+		// 이름:정영준, 나이:13세
+		// 이름:정미경, 나이:7세
+		// 이름:한은영, 나이:3세
 
+		System.out.println("[전체 요소 출력]");
 
-		System.out.println("벡터 요소 갯수 : " + v.size());
-
-
-		/*
-		System.out.print("전체 요소 출력 : ");
+		// ①
 		for(MyData str : v)
-			System.out.print(str + " ");
+			System.out.printf("이름:%s, 나이:%d세\n", str.getName(), str.getAge());
 		System.out.println();
+		//--==>>
+		/*
+		이름:정영준, 나이:13세
+		이름:정미경, 나이:7세
+		이름:한은영, 나이:3세
 		*/
 
-		System.out.println("전체 요소 출력 : ");
-		for(MyData str : v)
-			System.out.printf("이름 : %s  나이 : %d\n", str.getName(), str.getAge());
-		System.out.println();
+		// ②
+		for(int i=0; i < v.size(); i++)
+		{
+			System.out.printf("이름:%s, 나이:%d세\n", v.elementAt(i).getName(), v.elementAt(i).getAge());
+		}
+
+		// ③	
+		for(int i=0; i < v.size(); i++)
+		{
+			System.out.printf("이름:%s, 나이:%d세\n", v.get(i).getName(), v.get(i).getAge());
+		}
+
+		// ④
+		for(Object temp : v)
+		{
+			System.out.printf("이름:%s, 나이:%d세\n", ((MyData)temp).getName(), ((MyData)temp).getAge() );
+			//                                         -------------
+			//                                         위의 str 과 같아짐
+		}
+
 
         
-
-
-
-
-
-
-
-      
-
 	}
 }
 

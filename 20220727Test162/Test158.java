@@ -27,6 +27,10 @@
    List 인터페이스를 통해 제공받고 있기 때문에
    List 인터페이스의 모든 메소드를 사용할 수 있다.
 
+
+
+
+
    - void add(int index, E element)
    - void insertElementAt(E obj, int index)
      주어진 위치에 객체를 저장한다.
@@ -62,7 +66,7 @@
      주어진 위치에 저장된 객체를 반환한다.
 
    - Enumeration<E> elements()
-     벡터의 모든 요소를 반홚한다.
+     벡터의 모든 요소를 반환한다.
 
    - int indexOf(Object o)
      주어진 객체가 저장된 위치를 반환한다.
