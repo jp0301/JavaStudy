@@ -31,6 +31,7 @@
 import java.util.ArrayList;
 import java.util.Vector;
 import java.util.List;
+import java.util.ListIterator;
 
 public class Test165
 {
@@ -59,10 +60,16 @@ public class Test165
 
 		// "탑건2" 앞에 "레미제라블" 추가
 		//  → [범죄도시2, 레미제라블, 탑건2, 마녀2, 인셉션]
-
+		// ① "탑건2" 찾기 →  indexOf() → 위치 인덱스 반환
 		//list3.add(1,"레미제라블");
-		int i = list3.indexOf("탑건2");
-		list3.add(i, "레미제라블");
+		int n = list3.indexOf("탑건2");
+
+		//테스트
+		System.out.println("n : " + n);
+		//--==>> n : 1
+
+		// ② "탑건2" 찾은 인덱스 위치 "레미제라블" 삽입 → add()
+		list3.add(n, "레미제라블");
 
 		// 출력 → 더미데이터 확인
 		System.out.println("==============================================================");
@@ -70,13 +77,29 @@ public class Test165
 		System.out.println(list2); //--==>> [범죄도시2, 탑건2, 마녀2, 인셉션]
 		System.out.println(list3); //--==>> []
 								   //--==>> [범죄도시2, 탑건2, 마녀2, 인셉션]
+								   // 레미제라블 삽입 후~!!!
 								   //--==>> [범죄도시2, 레미제라블, 탑건2, 마녀2, 인셉션]
 		System.out.println("==============================================================");
+		System.out.println();
 
 
+		// 출력 → listIterator() 메소드를 활용하여 출력
+		ListIterator<String> li = list3.listIterator();
 
+		while (li.hasNext())
+		{
+			System.out.print(li.next() + " ");
+		}
+		System.out.println();
+		//--==>> 범죄도시2 레미제라블 탑건2 마녀2 인셉션
 
-
+		// 출력 → 역순으로 접근
+		while (li.hasPrevious())
+		{
+			System.out.print(li.previous() + " ");
+		}
+		System.out.println();
+		//--==>> 인셉션 마녀2 탑건2 레미제라블 범죄도시2
 
 	}
 }
