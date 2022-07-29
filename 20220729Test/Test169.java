@@ -117,13 +117,36 @@ class MyComparator<T> implements Comparator<T>
 		 GradeVO s1 = (GradeVO)o1;
 		 GradeVO s2 = (GradeVO)o2;
 
-		 // 학번 기준 (오름차순)
-		 return Integer.parseInt(s1.getHak()) - Integer.parseInt(s2.getHak());
-		 // return Integer.parseInt("2206113") - Integer.parseInt("2206115");
-		 // return 2206113 - 2206115;
-		 // return -2; 이렇게 되면 뒤의 것이 더 크기 때문에 오름차순 된 것.
+		// 학번 기준 (오름차순)
+		//return Integer.parseInt(s1.getHak()) - Integer.parseInt(s2.getHak());
+		// return Integer.parseInt("2206113") - Integer.parseInt("2206115");
+		// return 2206113 - 2206115;
+		// return -2; 이렇게 되면 뒤의 것이 더 크기 때문에 오름차순 된 것.
+		
+		// 학번 기준 (내림차순)
+		//return Integer.parseInt(s2.getHak()) - Integer.parseInt(s1.getHak());
 
-		 //return s2.getName().toCompare(s1.getName());
+		// 총점 기준(오름차순)
+		//return s1.getTot() - s2.getTot();
+
+		// 총점 기준(내림차순)
+		//return s2.getTot() - s1.getTot();
+
+
+		//------------------------------------------------------------
+		// Test137.java 에서 compareTo() 두 문자열 비교
+		// seoul korea
+		//System.out.println(s.compareTo("seoul korea"));
+		//--==>> 0 → 두 문자열이 같다. (s 와 "seoul korea" 가 ...)
+		//------------------------------------------------------------
+		
+		// 이름 기준(오름차순)
+		return s1.getName().compareTo(s2.getName());
+
+		// 이름 기준(내림차순)
+		//return s2.getName().compareTo(s1.getName());
+				
+
 	}
 }
 // E obj - 『Element』
@@ -163,7 +186,7 @@ public class Test169
 		//   가나다순 → 오름차순 정렬 확인, 넣기 전에 있던 것들과 비교해서 어디다 넣어야 할지 확인하고 추가한다.
 		//                                    따라서 비교작업이 계속 이루어지기 때문에 리소스 소모가 심하다.
 
-		System.out.println("------------------------------------------------------");
+		System.out.println("\n------------------------------------------------------\n");
 
 		// TreeSet 자료구조 인스턴스 생성
 		//TreeSet<GradeVO> set2 = new TreeSet<GradeVO>();
@@ -215,13 +238,68 @@ public class Test169
 
 		// 객체 자체를 직접 출력하는 것이 아니라
 		// 객체가 갖고있는 속성에 접근하여 출력할 수 있도록 처리
-		Iterator<GradeVO> it3 = set2.iterator();
-		while(it3.hasNext())
+
+		Iterator<GradeVO> it2 = set2.iterator();
+		while(it2.hasNext())
 		{
-			GradeVO vo = it3.next();
-			System.out.printf("%7s %7s %4d %4d %4d\n", vo.getHak(), vo.getName(), vo.getKor(), vo.getEng(), vo.getMat());
+			GradeVO vo = it2.next();
+			System.out.printf("%7s %7s %4d %4d %4d %4d\n", vo.getHak(), vo.getName(), vo.getKor(), vo.getEng(), vo.getMat(), vo.getTot());
 		}
 		System.out.println();
+		//--==>>
+		/* 
+		// 학번 기준 오름차순 정렬
+		2206113     박효신   90   80   70
+		2206115     신용재   91   81   71
+		2206128     김범수   88   78   68
+		2206139     조재현   70   60   50
+		2206150     임재범   99   82   72
+		*/
 
+		/*
+		// 학번 기준 내림차순 정렬
+		2206150     임재범   99   82   72
+		2206139     조재현   70   60   50
+		2206128     김범수   88   78   68
+		2206115     신용재   91   81   71
+		2206113     박효신   90   80   70
+		*/
+
+		// 총점 기준(오름차순)
+		/*
+		2206139     조재현   70   60   50  180
+		2206128     김범수   88   78   68  234
+		2206113     박효신   90   80   70  240
+		2206115     신용재   91   81   71  243
+		2206150     임재범   99   82   72  253
+		*/
+
+		// 총점 기준(내림차순)
+		/*
+		2206150     임재범   99   82   72  253
+		2206115     신용재   91   81   71  243
+		2206113     박효신   90   80   70  240
+		2206128     김범수   88   78   68  234
+		2206139     조재현   70   60   50  180
+		*/
+		
+		// 이름 기준(오름차순)
+		/*
+		2206128     김범수   88   78   68  234
+		2206113     박효신   90   80   70  240
+		2206115     신용재   91   81   71  243
+		2206150     임재범   99   82   72  253
+		2206139     조재현   70   60   50  180
+		*/
+
+		// 이름 기준(내림차순)
+		/*
+		2206139     조재현   70   60   50  180
+		2206150     임재범   99   82   72  253
+		2206115     신용재   91   81   71  243
+		2206113     박효신   90   80   70  240
+		2206128     김범수   88   78   68  234
+		*/
+		
 	}
-} 
+}
