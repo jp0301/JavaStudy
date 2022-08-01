@@ -1,13 +1,14 @@
 
 
-
-
+import java.io.File;
+import java.io.FileReader;
+import java.io.BufferedReader;
 import java.util.Scanner;
 
 // 메인 클래스
 public class Main
 {
-	public static void main(String[] args)
+	public static void main(String[] args)  throws Exception
 	{
 		// 초기화면(메인 화면) 출력
 		Output op = new Output();
@@ -18,6 +19,19 @@ public class Main
 		{
 			op.mainLogo();
 			op.startMenu();
+
+			String path = System.getProperty("user.dir");
+			File file = new File(path + "\\Storelist.csv");
+			
+			BufferedReader br = new BufferedReader(new BufferedReader(new FileReader(file)));
+
+			String line = "";
+
+			while((line = br.readLine()) != null)
+			{
+				System.out.println(line);
+			}
+
 
 			Scanner sc = new Scanner(System.in);
 
