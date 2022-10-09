@@ -1,38 +1,38 @@
 /*==================================
-  ¡á¡á¡á ÄÃ·º¼Ç(Collection) ¡á¡á¡á
+  â– â– â–  ì»¬ë ‰ì…˜(Collection) â– â– â– 
 ====================================*/
 
 /*
-¡Û Å¥(Queue)
+â—‹ í(Queue)
 
-   Å¥(Queue)´Â ¼±ÀÔ¼±ÃâÀÇ FIFO(First Input, First Output) ±¸Á¶·Î
-   ¸ÕÀú ÀÔ·ÂµÈ ÀÚ·á¸¦ ¸ÕÀú Ãâ·ÂÇÏ¸ç
-   Queue ÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇÑ Å¬·¡½º´Â Å¥¿Í °ü·ÃÇÑ ´Ù¾çÇÑ ±â´ÉÀ» Á¦°øÇÑ´Ù.
+   í(Queue)ëŠ” ì„ ìž…ì„ ì¶œì˜ FIFO(First Input, First Output) êµ¬ì¡°ë¡œ
+   ë¨¼ì € ìž…ë ¥ëœ ìžë£Œë¥¼ ë¨¼ì € ì¶œë ¥í•˜ë©°
+   Queue ì¸í„°íŽ˜ì´ìŠ¤ë¥¼ êµ¬í˜„í•œ í´ëž˜ìŠ¤ëŠ” íì™€ ê´€ë ¨í•œ ë‹¤ì–‘í•œ ê¸°ëŠ¥ì„ ì œê³µí•œë‹¤.
 
-¡Ø Queue ÀÎÅÍÆäÀÌ½º ÀÎ½ºÅÏ½º¸¦ »ý¼ºÇÏ±â À§ÇØ¼­´Â
-   new ¿¬»êÀÚ¸¦ ÀÌ¿ëÇÏ¿© Queue ÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇÑ(implements)
-   Å¬·¡½ºÀÇ »ý¼ºÀÚ¸¦ È£ÃâÇÑ´Ù.
+â€» Queue ì¸í„°íŽ˜ì´ìŠ¤ ì¸ìŠ¤í„´ìŠ¤ë¥¼ ìƒì„±í•˜ê¸° ìœ„í•´ì„œëŠ”
+   new ì—°ì‚°ìžë¥¼ ì´ìš©í•˜ì—¬ Queue ì¸í„°íŽ˜ì´ìŠ¤ë¥¼ êµ¬í˜„í•œ(implements)
+   í´ëž˜ìŠ¤ì˜ ìƒì„±ìžë¥¼ í˜¸ì¶œí•œë‹¤.
 
    ex) Queue ob = new LinkedList();
 
-¡Û ÁÖ¿ä ¸Þ¼Òµå
+â—‹ ì£¼ìš” ë©”ì†Œë“œ
 
    - E element()
-     Å¥ÀÇ head ¿ä¼Ò¸¦ ¹ÝÈ¯ÇÏ¸ç »èÁ¦ÇÏÁö ¾Ê´Â´Ù.
+     íì˜ head ìš”ì†Œë¥¼ ë°˜í™˜í•˜ë©° ì‚­ì œí•˜ì§€ ì•ŠëŠ”ë‹¤.
 
    - boolean  offer(E o)
-     ÁöÁ¤µÈ ¿ä¼Ò¸¦ Å¥¿¡ »ðÀÔÇÑ´Ù.
+     ì§€ì •ëœ ìš”ì†Œë¥¼ íì— ì‚½ìž…í•œë‹¤.
 
    - E peek()
-     Å¥ÀÇ head ¿ä¼Ò¸¦ ¹ÝÈ¯ÇÏ°í »èÁ¦ÇÏÁö ¾ÊÀ¸¸ç
-	 Å¥ ÀÚ·á±¸Á¶°¡ empty ÀÎ °æ¿ì nullÀ» ¹ÝÈ¯ÇÑ´Ù.
+     íì˜ head ìš”ì†Œë¥¼ ë°˜í™˜í•˜ê³  ì‚­ì œí•˜ì§€ ì•Šìœ¼ë©°
+	 í ìžë£Œêµ¬ì¡°ê°€ empty ì¸ ê²½ìš° nullì„ ë°˜í™˜í•œë‹¤.
 
    - E poll()
-     Å¥ÀÇ head ¿ä¼Ò¸¦ ¹ÝÈ¯ÇÏ°í »èÁ¦ÇÏ¸ç
-	 Å¥ ÀÚ·á±¸Á¶°¡ empty ÀÎ °æ¿ì nullÀ» ¹ÝÈ¯ÇÑ´Ù.
+     íì˜ head ìš”ì†Œë¥¼ ë°˜í™˜í•˜ê³  ì‚­ì œí•˜ë©°
+	 í ìžë£Œêµ¬ì¡°ê°€ empty ì¸ ê²½ìš° nullì„ ë°˜í™˜í•œë‹¤.
 
    - E remove()
-     Å¥ÀÇ head ¿ä¼Ò¸¦ ¹ÝÈ¯ÇÏ°í »èÁ¦ÇÑ´Ù.
+     íì˜ head ìš”ì†Œë¥¼ ë°˜í™˜í•˜ê³  ì‚­ì œí•œë‹¤.
 */
 
 import java.util.Queue;
@@ -42,17 +42,17 @@ public class Test156
 {
 	public static void main(String[] args)
 	{
-		// Queue ÀÚ·á±¸Á¶ »ý¼º
+		// Queue ìžë£Œêµ¬ì¡° ìƒì„±
 		//Queue myQue = new Queue();		//--(X)
 		Queue<Object> myQue = new LinkedList<Object>();
 
-		// µ¥ÀÌÅÍ ÁØºñ
-		String str1 = "ÃÖ¸ð¾¾";
-		String str2 = "Á¤¸ð¾¾";
-		String str3 = "±è¸ð¾¾";
-		String str4 = "Á¶¸ð¾¾";
+		// ë°ì´í„° ì¤€ë¹„
+		String str1 = "ìµœëª¨ì”¨";
+		String str2 = "ì •ëª¨ì”¨";
+		String str3 = "ê¹€ëª¨ì”¨";
+		String str4 = "ì¡°ëª¨ì”¨";
 
-		// myQue ¶ó´Â Queue ÀÚ·á±¸Á¶¿¡ µ¥ÀÌÅÍ Ãß°¡
+		// myQue ë¼ëŠ” Queue ìžë£Œêµ¬ì¡°ì— ë°ì´í„° ì¶”ê°€
 		myQue.offer(str1);
 		myQue.offer(str2);
 		myQue.offer(str3);
@@ -63,56 +63,56 @@ public class Test156
 		//--==>> test : true
 
 		
-		//Å×½ºÆ®(È®ÀÎ)
+		//í…ŒìŠ¤íŠ¸(í™•ì¸)
 		System.out.println(myQue);
-		//--==>> [ÃÖ¸ð¾¾, Á¤¸ð¾¾, ±è¸ð¾¾, Á¶¸ð¾¾]		//-- ´õ¹Ì
+		//--==>> [ìµœëª¨ì”¨, ì •ëª¨ì”¨, ê¹€ëª¨ì”¨, ì¡°ëª¨ì”¨]		//-- ë”ë¯¸
 		
-		// Queue ÀÚ·á±¸Á¶ myQue ¿¡¼­
-		// ¿ä¼Ò¸¦ Á¦°ÅÇÏÁö ¾Ê°í head ¿ä¼Ò ¹ÝÈ¯
-		System.out.println("°ª1 : " + (String)myQue.element());
-		System.out.println("°ª2 : " + (String)myQue.element());
-		System.out.println("°ª3 : " + (String)myQue.element());
-		//--==>> °ª1 : ÃÖ¸ð¾¾
-		//		 °ª2 : ÃÖ¸ð¾¾
-		//		 °ª3 : ÃÖ¸ð¾¾
+		// Queue ìžë£Œêµ¬ì¡° myQue ì—ì„œ
+		// ìš”ì†Œë¥¼ ì œê±°í•˜ì§€ ì•Šê³  head ìš”ì†Œ ë°˜í™˜
+		System.out.println("ê°’1 : " + (String)myQue.element());
+		System.out.println("ê°’2 : " + (String)myQue.element());
+		System.out.println("ê°’3 : " + (String)myQue.element());
+		//--==>> ê°’1 : ìµœëª¨ì”¨
+		//		 ê°’2 : ìµœëª¨ì”¨
+		//		 ê°’3 : ìµœëª¨ì”¨
 
 		System.out.println();
 
 		String val;
 
-		// ¨ç 
+		// â‘  
 		// peek()
-		//-- Å¥ÀÇ head ¿ä¼Ò ¹ÝÈ¯, Á¦°Å ¾ÈÇÔ.
-		//   Å¥°¡ empty ÀÏ °æ¿ì null À» ¹ÝÈ¯
+		//-- íì˜ head ìš”ì†Œ ë°˜í™˜, ì œê±° ì•ˆí•¨.
+		//   íê°€ empty ì¼ ê²½ìš° null ì„ ë°˜í™˜
 		/*
 		while(myQue.peek() != null)
 		{
 			//poll()
-			//-- Å¥ÀÇ head ¿ä¼Ò ¹ÝÈ¯. Á¦°ÅÇÔ.
-			//   Å¥°¡ empty ÀÏ °æ¿ì null À» ¹ÝÈ¯
+			//-- íì˜ head ìš”ì†Œ ë°˜í™˜. ì œê±°í•¨.
+			//   íê°€ empty ì¼ ê²½ìš° null ì„ ë°˜í™˜
 			val = (String)myQue.poll();
-			System.out.println("¿ä¼Ò : " + val);
+			System.out.println("ìš”ì†Œ : " + val);
 		}
 		System.out.println();
-		//--==>> ¿ä¼Ò : ÃÖ¸ð¾¾
-		//		 ¿ä¼Ò : Á¤¸ð¾¾
-		//       ¿ä¼Ò : ±è¸ð¾¾
-		//       ¿ä¼Ò : Á¶¸ð¾¾
+		//--==>> ìš”ì†Œ : ìµœëª¨ì”¨
+		//		 ìš”ì†Œ : ì •ëª¨ì”¨
+		//       ìš”ì†Œ : ê¹€ëª¨ì”¨
+		//       ìš”ì†Œ : ì¡°ëª¨ì”¨
 		*/
 
 		/*
 		while(myQue.poll() != null)
 		{
 			val = (String)myQue.poll();
-			System.out.println("¿ä¼Ò : " + val);
+			System.out.println("ìš”ì†Œ : " + val);
 		}
 		System.out.println();
-		//--==>> ¿ä¼Ò : Á¤¸ð¾¾
-		//		 ¿ä¼Ò : Á¶¸ð¾¾
+		//--==>> ìš”ì†Œ : ì •ëª¨ì”¨
+		//		 ìš”ì†Œ : ì¡°ëª¨ì”¨
 		*/
 
 		
-        // ¨è
+        // â‘¡
 		/*
 		while(true)
 		{
@@ -120,32 +120,32 @@ public class Test156
 			if(val==null)
 				break;
 			else
-				System.out.println("¿ä¼Ò : " + val);
+				System.out.println("ìš”ì†Œ : " + val);
 		}
 		System.out.println();
 		*/
 		/*
-		//--==>> ¿ä¼Ò : ÃÖ¸ð¾¾
-		//		 ¿ä¼Ò : Á¤¸ð¾¾
-		//       ¿ä¼Ò : ±è¸ð¾¾
-		//       ¿ä¼Ò : Á¶¸ð¾¾
+		//--==>> ìš”ì†Œ : ìµœëª¨ì”¨
+		//		 ìš”ì†Œ : ì •ëª¨ì”¨
+		//       ìš”ì†Œ : ê¹€ëª¨ì”¨
+		//       ìš”ì†Œ : ì¡°ëª¨ì”¨
 		*/
 
 		
-		// ¨é
+		// â‘¢
 		/*
 		while(!myQue.isEmpty())
 		{
 			val = (String)myQue.poll();
-			System.out.println("¿ä¼Ò : " + val);
+			System.out.println("ìš”ì†Œ : " + val);
 		}
 		System.out.println();
 		*/
 		/*
-		//--==>> ¿ä¼Ò : ÃÖ¸ð¾¾
-		//		 ¿ä¼Ò : Á¤¸ð¾¾
-		//       ¿ä¼Ò : ±è¸ð¾¾
-		//       ¿ä¼Ò : Á¶¸ð¾¾
+		//--==>> ìš”ì†Œ : ìµœëª¨ì”¨
+		//		 ìš”ì†Œ : ì •ëª¨ì”¨
+		//       ìš”ì†Œ : ê¹€ëª¨ì”¨
+		//       ìš”ì†Œ : ì¡°ëª¨ì”¨
 		*/
 
 		

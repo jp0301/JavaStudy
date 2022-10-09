@@ -1,23 +1,23 @@
 /*=====================================
-    ¡á¡á¡á Å¬·¡½º¿Í ÀÎ½ºÅÏ½º ¡á¡á¡á
+    â– â– â–  í´ëž˜ìŠ¤ì™€ ì¸ìŠ¤í„´ìŠ¤ â– â– â– 
   =====================================*/
 
-// ¡Ø CircleTest.java ÆÄÀÏ°ú ¼¼Æ®~!!!
+// â€» CircleTest.java íŒŒì¼ê³¼ ì„¸íŠ¸~!!!
 
 import java.io.IOException;
 
 public class Test071
 {
-	// input() ¸Þ¼Òµå¿¡¼­ throws IOException ¿¹¿ÜÃ³¸®¸¦ ÇÏ¸é
-	// input ¸Þ¼Òµå ¹ÛÀ¸·Î ´øÁö¸é¼­
-	// main() ¸Þ¼Òµå·Î ´øÁ®¹ö¸° °ÍÀÌ±â ¶§¹®¿¡ ´Ù½Ã ÇÑ¹ø ´øÁ®Áà¾ßÇÏ±â ¶§¹®¿¡
-	// ÇÑ¹ø ´õ ¿¹¿ÜÃ³¸®¸¦ ÇØÁØ´Ù.
+	// input() ë©”ì†Œë“œì—ì„œ throws IOException ì˜ˆì™¸ì²˜ë¦¬ë¥¼ í•˜ë©´
+	// input ë©”ì†Œë“œ ë°–ìœ¼ë¡œ ë˜ì§€ë©´ì„œ
+	// main() ë©”ì†Œë“œë¡œ ë˜ì ¸ë²„ë¦° ê²ƒì´ê¸° ë•Œë¬¸ì— ë‹¤ì‹œ í•œë²ˆ ë˜ì ¸ì¤˜ì•¼í•˜ê¸° ë•Œë¬¸ì—
+	// í•œë²ˆ ë” ì˜ˆì™¸ì²˜ë¦¬ë¥¼ í•´ì¤€ë‹¤.
 
 	public static void main(String[] args) throws IOException
 	{
-		// CircleTest Å¬·¡½º ±â¹Ý ÀÎ½ºÅÏ½º »ý¼º
-		// CircleTest ÀÎ½ºÅÏ½º »ý¼º
-		// CircleTest °´Ã¼ »ý¼º
+		// CircleTest í´ëž˜ìŠ¤ ê¸°ë°˜ ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
+		// CircleTest ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
+		// CircleTest ê°ì²´ ìƒì„±
 		CircleTest ob = new CircleTest();
 		
 
@@ -30,12 +30,12 @@ public class Test071
 	}
 }
 
-// ½ÇÇà °á°ú
+// ì‹¤í–‰ ê²°ê³¼
 
 /*
-¹ÝÁö¸§ ÀÔ·Â : 25
->> ¹ÝÁö¸§ÀÌ 25 ÀÎ ¿øÀÇ
->> ³ÐÀÌ : 1963.50
->> µÑ·¹ : 157.08
-°è¼ÓÇÏ·Á¸é ¾Æ¹« Å°³ª ´©¸£½Ê½Ã¿À . . .
+ë°˜ì§€ë¦„ ìž…ë ¥ : 25
+>> ë°˜ì§€ë¦„ì´ 25 ì¸ ì›ì˜
+>> ë„“ì´ : 1963.50
+>> ë‘˜ë ˆ : 157.08
+ê³„ì†í•˜ë ¤ë©´ ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ì‹­ì‹œì˜¤ . . .
 */

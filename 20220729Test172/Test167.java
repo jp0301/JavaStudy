@@ -1,10 +1,10 @@
 /*==================================
-  ¡á¡á¡á ÄÃ·º¼Ç(Collection) ¡á¡á¡á
+  â– â– â–  ì»¬ë ‰ì…˜(Collection) â– â– â– 
 ====================================*/
 
-// List ¡æ String[] : List.toArray();
+// List â†’ String[] : List.toArray();
 
-// String[] ¡æ List : Arrays.asList();
+// String[] â†’ List : Arrays.asList();
 
 import java.util.List;
 import java.util.ArrayList;
@@ -21,7 +21,7 @@ public class Test167
 		mList.add("3");
 
 		// check~!!!
-		// List ¡æ String[]
+		// List â†’ String[]
 		//mList.toArray(new String[100]);
 		String[] sArrays = mList.toArray(new String[mList.size()]);
 
@@ -33,9 +33,9 @@ public class Test167
 		//--==>> 1 2 3
 
 		// check~!!!
-		// String[] ¡æ List
+		// String[] â†’ List
 		List<String> mNewList = Arrays.asList(sArrays);
-		// ¡Ø ¡ºArrays.asList()¡» ÀÇ ¹İÈ¯ ÀÚ·áÇüÀº ¡ºList¡»
+		// â€» ã€Arrays.asList()ã€ ì˜ ë°˜í™˜ ìë£Œí˜•ì€ ã€Listã€
 
 		for(String s : mNewList)
 		{

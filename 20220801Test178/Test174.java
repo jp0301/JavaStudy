@@ -1,9 +1,9 @@
 /*=======================================
-  ¡á¡á¡á ÀÚ¹ÙÀÇ ±âº» ÀÔÃâ·Â(I/O) ¡á¡á¡á
-  - Reader ½Ç½À
+  â– â– â–  ìžë°”ì˜ ê¸°ë³¸ ìž…ì¶œë ¥(I/O) â– â– â– 
+  - Reader ì‹¤ìŠµ
 =========================================*/
 
-// Test172.java ÆÄÀÏ°ú ºñ±³~!!!
+// Test172.java íŒŒì¼ê³¼ ë¹„êµ~!!!
 
 import java.io.Reader;
 import java.io.InputStreamReader;
@@ -16,13 +16,13 @@ public class Test174
 		int data;
 		char ch;
 		
-		// System.in         : ÀÚ¹Ù Ç¥ÁØ ÀÔ·Â ½ºÆ®¸² ¡æ ¹ÙÀÌÆ® ±â¹Ý
-		// InputStreamReader : ¹ÙÀÌÆ® ±â¹Ý ½ºÆ®¸²À» ¡æ ¹®ÀÚ ±â¹Ý ½ºÆ®¸²À¸·Î
-		//                     º¯È¯ÇØ ÁÖ´Â ¿ªÇÒ ¼öÇà
-		// Reader            : ¹®ÀÚ ±â¹Ý ½ºÆ®¸² °´Ã¼
+		// System.in         : ìžë°” í‘œì¤€ ìž…ë ¥ ìŠ¤íŠ¸ë¦¼ â†’ ë°”ì´íŠ¸ ê¸°ë°˜
+		// InputStreamReader : ë°”ì´íŠ¸ ê¸°ë°˜ ìŠ¤íŠ¸ë¦¼ì„ â†’ ë¬¸ìž ê¸°ë°˜ ìŠ¤íŠ¸ë¦¼ìœ¼ë¡œ
+		//                     ë³€í™˜í•´ ì£¼ëŠ” ì—­í•  ìˆ˜í–‰
+		// Reader            : ë¬¸ìž ê¸°ë°˜ ìŠ¤íŠ¸ë¦¼ ê°ì²´
 		Reader rd = new InputStreamReader(System.in);
 
-		System.out.println("¹®ÀÚ¿­ ÀÔ·Â(Á¾·á:Ctrl+z)");
+		System.out.println("ë¬¸ìžì—´ ìž…ë ¥(ì¢…ë£Œ:Ctrl+z)");
 		
 		while( (data = rd.read()) != -1 )
 		{
@@ -31,29 +31,29 @@ public class Test174
 			//System.out.print(ch);
 			//--==>>
 			/*
-			¹®ÀÚ¿­ ÀÔ·Â(Á¾·á:Ctrl+z)
+			ë¬¸ìžì—´ ìž…ë ¥(ì¢…ë£Œ:Ctrl+z)
 			1234
 			1234
 			abcd
 			abcd
-			°¡³ª´Ù¶ó
-			°¡³ª´Ù¶ó
+			ê°€ë‚˜ë‹¤ë¼
+			ê°€ë‚˜ë‹¤ë¼
 			^Z
-			°è¼ÓÇÏ·Á¸é ¾Æ¹« Å°³ª ´©¸£½Ê½Ã¿À . . .
+			ê³„ì†í•˜ë ¤ë©´ ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ì‹­ì‹œì˜¤ . . .
 			*/
 
 			System.out.write(ch);
 			//--==>>
 			/*
-			¹®ÀÚ¿­ ÀÔ·Â(Á¾·á:Ctrl+z)
+			ë¬¸ìžì—´ ìž…ë ¥(ì¢…ë£Œ:Ctrl+z)
 			1234
 			1234
 			abcd
 			abcd
-			°¡³ª´Ù¶ó
-			 ˜ä|
+			ê°€ë‚˜ë‹¤ë¼
+			 ì„†|
 			^Z
-			°è¼ÓÇÏ·Á¸é ¾Æ¹« Å°³ª ´©¸£½Ê½Ã¿À . . .
+			ê³„ì†í•˜ë ¤ë©´ ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ì‹­ì‹œì˜¤ . . .
 			*/
 			
 			

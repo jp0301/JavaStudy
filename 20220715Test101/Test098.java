@@ -1,25 +1,25 @@
 /*========================================================================================
-      ¡á¡á¡á Å¬·¡½º¿Í ÀÎ½ºÅÏ½º ¡á¡á¡á
-    - Á¤º¸ Àº´Ð°ú Á¢±Ù Á¦¾î Áö½ÃÀÚ(Á¢±Ù Áö½ÃÀÚ, Á¢±Ù Á¦¾îÀÚ, Á¢±Ù ÁöÁ¤ÀÚ, Á¢±Ù Á¦ÇÑÀÚ)
+      â– â– â–  í´ëž˜ìŠ¤ì™€ ì¸ìŠ¤í„´ìŠ¤ â– â– â– 
+    - ì •ë³´ ì€ë‹‰ê³¼ ì ‘ê·¼ ì œì–´ ì§€ì‹œìž(ì ‘ê·¼ ì§€ì‹œìž, ì ‘ê·¼ ì œì–´ìž, ì ‘ê·¼ ì§€ì •ìž, ì ‘ê·¼ ì œí•œìž)
   =======================================================================================*/
 
  import java.util.Scanner;
 
  class CircleTest2
  {
-	// ¸â¹ö º¯¼ö, ÀÎ½ºÅÏ½º º¯¼ö, Àü¿ª º¯¼ö
+	// ë©¤ë²„ ë³€ìˆ˜, ì¸ìŠ¤í„´ìŠ¤ ë³€ìˆ˜, ì „ì—­ ë³€ìˆ˜
 	//int num;
 
 
-	// ¡é
+	// â†“
 
-	// Á¤º¸ Àº´Ð(Information Hiding)
-	// ¡ºprivate¡» ÀÌ¶ó´Â Á¢±ÙÁ¦¾îÁö½ÃÀÚÀÇ ¼±¾ðÀº
-	// Å¬·¡½º ³»ºÎ¿¡¼­¸¸ Á¢±Ù ¹× ÂüÁ¶°¡ °¡´ÉÇÏ°Ô ÇÏ°Ú´Ù´Â ÀÇ¹Ì
-	// int Çü Àü¿ª º¯¼ö ¡æ ÀÚµ¿ 0À¸·Î ÃÊ±âÈ­ Áö¿ø
+	// ì •ë³´ ì€ë‹‰(Information Hiding)
+	// ã€Žprivateã€ ì´ë¼ëŠ” ì ‘ê·¼ì œì–´ì§€ì‹œìžì˜ ì„ ì–¸ì€
+	// í´ëž˜ìŠ¤ ë‚´ë¶€ì—ì„œë§Œ ì ‘ê·¼ ë° ì°¸ì¡°ê°€ ê°€ëŠ¥í•˜ê²Œ í•˜ê² ë‹¤ëŠ” ì˜ë¯¸
+	// int í˜• ì „ì—­ ë³€ìˆ˜ â†’ ìžë™ 0ìœ¼ë¡œ ì´ˆê¸°í™” ì§€ì›
 	private int num;
 
-	// getter / setter ±¸¼º
+	// getter / setter êµ¬ì„±
 	/*
 	int getNum()
 	{
@@ -38,7 +38,7 @@
 	{
 		Scanner sc = new Scanner(System.in);
 
-		System.out.print("¹ÝÁö¸§ ÀÔ·Â : ");
+		System.out.print("ë°˜ì§€ë¦„ ìž…ë ¥ : ");
 		num = sc.nextInt();
 
 	}
@@ -50,8 +50,8 @@
 
 	void write(double area)
 	{
-		System.out.println("¹ÝÁö¸§ : " + num);
-		System.out.println("³ÐÀÌ : " + area);
+		System.out.println("ë°˜ì§€ë¦„ : " + num);
+		System.out.println("ë„“ì´ : " + area);
 	}
  } 
 
@@ -60,22 +60,22 @@ public class Test098
 {
 	public static void main(String[] args)
 	{
-		// CircleTest2 ÀÎ½ºÅÏ½º »ý¼º
+		// CircleTest2 ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
 		CircleTest2 ob1 = new CircleTest2();
 		
 		//ob1.num = 10;
 		//
 		//ob1.setNum(10);
 		
-		//System.out.println("¿øÀÇ ¹ÝÁö¸§ : " + ob1.num);
-		//              ¡é
-		//System.out.println("¿øÀÇ ¹ÝÁö¸§ : " + ob1.getNum());
+		//System.out.println("ì›ì˜ ë°˜ì§€ë¦„ : " + ob1.num);
+		//              â†“
+		//System.out.println("ì›ì˜ ë°˜ì§€ë¦„ : " + ob1.getNum());
 
-		// ¡Ø ÇöÀç·Î½á´Â À¯ÀÏÇÏ°Ô 
-		// CircleTest2 ÀÇ num¿¡ µ¥ÀÌÅÍ¸¦ Àü´ÞÇÒ ¼ö ÀÖ´Â ¹æ¹ý
+		// â€» í˜„ìž¬ë¡œì¨ëŠ” ìœ ì¼í•˜ê²Œ 
+		// CircleTest2 ì˜ numì— ë°ì´í„°ë¥¼ ì „ë‹¬í•  ìˆ˜ ìžˆëŠ” ë°©ë²•
 		ob1.input();
-		//--==>> ¹ÝÁö¸§ ÀÔ·Â : 500
-		//		 ¡æ ¡ºob1.num = 500;¡»
+		//--==>> ë°˜ì§€ë¦„ ìž…ë ¥ : 500
+		//		 â†’ ã€Žob1.num = 500;ã€
 
 		double result = ob1.calArea();
 
@@ -85,11 +85,11 @@ public class Test098
 	}
 }
 
-// ½ÇÇà °á°ú
+// ì‹¤í–‰ ê²°ê³¼
 
 /*
-¹ÝÁö¸§ ÀÔ·Â : 500
-¹ÝÁö¸§ : 500
-³ÐÀÌ : 785398.0
-°è¼ÓÇÏ·Á¸é ¾Æ¹« Å°³ª ´©¸£½Ê½Ã¿À . . .
+ë°˜ì§€ë¦„ ìž…ë ¥ : 500
+ë°˜ì§€ë¦„ : 500
+ë„“ì´ : 785398.0
+ê³„ì†í•˜ë ¤ë©´ ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ì‹­ì‹œì˜¤ . . .
 */

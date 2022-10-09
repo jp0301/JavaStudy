@@ -1,20 +1,20 @@
  /*=============================================
-      ¡á¡á¡á ½ÇÇà Èå¸§ÀÇ ÄÁÆ®·Ñ(Á¦¾î¹®) ¡á¡á¡á
-      - if¹®
-	  - if ~ else ¹® ½Ç½À
+      â– â– â–  ì‹¤í–‰ íë¦„ì˜ ì»¨íŠ¸ë¡¤(ì œì–´ë¬¸) â– â– â– 
+      - ifë¬¸
+	  - if ~ else ë¬¸ ì‹¤ìŠµ
    ============================================*/
 
-// 1. ÇÁ·Î±×·¥À» ÀÛ¼ºÇÒ ¶§ ÁÖ¾îÁø Á¶°Ç¿¡ µû¶ó
-//	  ºĞ±â ¹æÇâÀ» Á¤ÇÏ±â À§ÇØ »ç¿ëÇÏ´Â Á¦¾î¹®¿¡´Â
-//    if ¹®, if ~ else ¹®, Á¶°Ç ¿¬»êÀÚ, º¹ÇÕ if¹®(if¹® ÁßÃ¸)
-//    , switch ¹®ÀÌ ÀÖ´Ù.
+// 1. í”„ë¡œê·¸ë¨ì„ ì‘ì„±í•  ë•Œ ì£¼ì–´ì§„ ì¡°ê±´ì— ë”°ë¼
+//	  ë¶„ê¸° ë°©í–¥ì„ ì •í•˜ê¸° ìœ„í•´ ì‚¬ìš©í•˜ëŠ” ì œì–´ë¬¸ì—ëŠ”
+//    if ë¬¸, if ~ else ë¬¸, ì¡°ê±´ ì—°ì‚°ì, ë³µí•© ifë¬¸(ifë¬¸ ì¤‘ì²©)
+//    , switch ë¬¸ì´ ìˆë‹¤.
 
-// 2. if¹®Àº if ´ÙÀ½ÀÇ Á¶°ÇÀÌ ÂüÀÏ °æ¿ì
-//    Æ¯Á¤ ¹®ÀåÀ» ¼öÇàÇÏ°íÀÚ ÇÒ ¶§ »ç¿ëµÇ´Â ±¸¹®ÀÌ´Ù.
+// 2. ifë¬¸ì€ if ë‹¤ìŒì˜ ì¡°ê±´ì´ ì°¸ì¼ ê²½ìš°
+//    íŠ¹ì • ë¬¸ì¥ì„ ìˆ˜í–‰í•˜ê³ ì í•  ë•Œ ì‚¬ìš©ë˜ëŠ” êµ¬ë¬¸ì´ë‹¤.
 
-// È¦¼ö, Â¦¼ö ¡æ ´ÜÀÏ if ±¸¹®
+// í™€ìˆ˜, ì§ìˆ˜ â†’ ë‹¨ì¼ if êµ¬ë¬¸
 
-// È¦¼ö, Â¦¼ö, ¿µ ¡æ if ¹® ÁßÃ¸
+// í™€ìˆ˜, ì§ìˆ˜, ì˜ â†’ if ë¬¸ ì¤‘ì²©
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -27,7 +27,7 @@ public class Test033
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int n;
 
-		System.out.print("ÀÓÀÇÀÇ Á¤¼ö ÀÔ·Â : ");
+		System.out.print("ì„ì˜ì˜ ì •ìˆ˜ ì…ë ¥ : ");
 		n = Integer.parseInt(br.readLine());
 		
 		/*
@@ -35,73 +35,73 @@ public class Test033
 		{
 			if(n % 2 == 0)
 			{
-				System.out.printf(">> %dÀº(´Â) Â¦¼öÀÔ´Ï´Ù.\n", n);
+				System.out.printf(">> %dì€(ëŠ”) ì§ìˆ˜ì…ë‹ˆë‹¤.\n", n);
 			}
 
 			if (n % 2 == 1)
 			{
-				System.out.printf(">> %dÀº(´Â) È¦¼öÀÔ´Ï´Ù.\n", n);
+				System.out.printf(">> %dì€(ëŠ”) í™€ìˆ˜ì…ë‹ˆë‹¤.\n", n);
 			}
 		
 		}
 		else 
 		{
-			System.out.printf(">> %dÀº(´Â) ¿µÀÔ´Ï´Ù.\n", n);
+			System.out.printf(">> %dì€(ëŠ”) ì˜ì…ë‹ˆë‹¤.\n", n);
 		}
 		*/
 
 		/*
 		if(n == 0)
 		{
-			System.out.printf(">> %dÀº(´Â) ¿µÀÔ´Ï´Ù.\n", n);
+			System.out.printf(">> %dì€(ëŠ”) ì˜ì…ë‹ˆë‹¤.\n", n);
 		}
 		else if(n%2 == 0)
 		{
-			System.out.printf(">> %dÀº(´Â) Â¦¼öÀÔ´Ï´Ù.\n", n);
+			System.out.printf(">> %dì€(ëŠ”) ì§ìˆ˜ì…ë‹ˆë‹¤.\n", n);
 
 		}
 		else
 		{
-			System.out.printf(">> %dÀº(´Â) È¦¼öÀÔ´Ï´Ù.\n", n);
+			System.out.printf(">> %dì€(ëŠ”) í™€ìˆ˜ì…ë‹ˆë‹¤.\n", n);
 		}
 		*/
 
 		/*
 		if(n % 2 != 0)
 		{
-			System.out.printf(">> %dÀº(´Â) È¦¼öÀÔ´Ï´Ù.\n", n);
+			System.out.printf(">> %dì€(ëŠ”) í™€ìˆ˜ì…ë‹ˆë‹¤.\n", n);
 		}
 		else if(n == 0)
 		{
-			System.out.printf(">> %dÀº(´Â) ¿µÀÔ´Ï´Ù.\n", n);
+			System.out.printf(">> %dì€(ëŠ”) ì˜ì…ë‹ˆë‹¤.\n", n);
 
 		}
 		else if(n % 2 == 0)
 		{
-			System.out.printf(">> %dÀº(´Â) Â¦¼öÀÔ´Ï´Ù.\n", n);
+			System.out.printf(">> %dì€(ëŠ”) ì§ìˆ˜ì…ë‹ˆë‹¤.\n", n);
 		}
 		*/
 
-		String result = "ÆÇÁ¤ ºÒ°¡";
+		String result = "íŒì • ë¶ˆê°€";
 		
 		if(n==0)
 		{
-			result = "¿µ";
+			result = "ì˜";
 		}
 		else if (n %2 ==0)
 		{	
-			result = "Â¦¼ö";
+			result = "ì§ìˆ˜";
 		}
 		else if (n%2!=0)
 		{
-			result = "È¦¼ö";
+			result = "í™€ìˆ˜";
 		}
 		//else
 		//{
-		//	result = "ÆÇÁ¤ ºÒ°¡";
+		//	result = "íŒì • ë¶ˆê°€";
 		//}
 
-		System.out.println( n + " ¡æ " + result);
+		System.out.println( n + " â†’ " + result);
 
 
 	}

@@ -1,6 +1,6 @@
 /*==============================
-  ¡á¡á¡á Å¬·¡½º °í±Þ ¡á¡á¡á
-   - ÁßÃ¸ Å¬·¡½º
+  â– â– â–  í´ëž˜ìŠ¤ ê³ ê¸‰ â– â– â– 
+   - ì¤‘ì²© í´ëž˜ìŠ¤
 ===============================*/
 
 
@@ -10,44 +10,44 @@ class Test2
 	static int a = 10;
 	int b = 20;
 
-	void write()		 // ¢º¢º¢º Ã¹ ¹øÂ° write() ¸Þ¼Òµå
+	void write()		 // â–¶â–¶â–¶ ì²« ë²ˆì§¸ write() ë©”ì†Œë“œ
 	{
-		System.out.println("write()...¨ç");
+		System.out.println("write()...â‘ ");
 		final int c = 20;
 		int d = 40;
 
 		// inner
-		// ¸Þ¼Òµå ¾È¿¡ Á¸ÀçÇÏ´Â ¶Ç ´Ù¸¥ Å¬·¡½º(·ÎÄÃ Å¬·¡½º, local class, Áö¿ª Å¬·¡½º)
+		// ë©”ì†Œë“œ ì•ˆì— ì¡´ìž¬í•˜ëŠ” ë˜ ë‹¤ë¥¸ í´ëž˜ìŠ¤(ë¡œì»¬ í´ëž˜ìŠ¤, local class, ì§€ì—­ í´ëž˜ìŠ¤)
 		class LocalTest 
 		{
-			void write()	   // ¢º¢º¢º µÎ ¹øÂ° write() ¸Þ¼Òµå
+			void write()	   // â–¶â–¶â–¶ ë‘ ë²ˆì§¸ write() ë©”ì†Œë“œ
 			{
-				System.out.println("write()...¨è");
+				System.out.println("write()...â‘¡");
 				System.out.println("a : " + a);
 				System.out.println("b : " + b);
 				System.out.println("c : " + c);
-				//System.out.println("d : " + d);		//-- ¿¡·¯ ¹ß»ý(ÄÄÆÄÀÏ ¿¡·¯)
+				//System.out.println("d : " + d);		//-- ì—ëŸ¬ ë°œìƒ(ì»´íŒŒì¼ ì—ëŸ¬)
 			}
 		}
 		
 
-		// ¡Ø º¯¼ö c¿Í º¯¼ö d ´Â µÑ ´Ù Áö¿ªº¯¼öÀÌÁö¸¸...
-		//    (Ã¹ ¹øÂ° write() ¸Þ¼Òµå ¾È¿¡¼­ ¼±¾ðµÈ º¯¼öÀÌ¹Ç·Î...)
-		//    c ´Â final º¯¼öÀÌ±â ¶§¹®¿¡ 
-		//    µÎ ¹øÂ° write() ¸Þ¼Òµå¿¡¼­ ¾ðÁ¦ Á¢±ÙÇÏ´õ¶óµµ 
-		//    °íÁ¤µÈ °ª 20ÀÓÀ» º¸Àå¹ÞÀ» ¼ö ÀÖ´Ù.
-		//    ¹Ý¸é¿¡ d´Â ±× °ªÀÌ ¼ö½Ã·Î º¯ÇÒ ¼ö ÀÖ´Â »óÈ²ÀÌ¹Ç·Î
-		//    LocalTest Å¬·¡½ºÀÇ ÀÎ½ºÅÏ½º »ý¼º ½ÃÁ¡À» 
-		//    ¾ðÁ¦°¡ µÉÁö ¾Ë ¼ö ¾ø±â ¶§¹®¿¡
-		//    ÀÌ·ÎÀÎÇØ ÀÎ½ºÅÏ½º »ý¼º ½ÃÁ¡¿¡ d ¿¡ ¾î¶² °ªÀÌ ´ã°ÜÀÖ´ÂÁö
-		//    º¸Àå¹ÞÀ» ¼ö ¾ø±â ¶§¹®¿¡
-		//    º¯¼ö d ¿¡ Á¢±ÙÇÏ´Â °ÍÀ» ÇÇÇÒ ¼ö ÀÖµµ·Ï ¹®¹ýÀûÀ¸·Î Ã³¸®.
+		// â€» ë³€ìˆ˜ cì™€ ë³€ìˆ˜ d ëŠ” ë‘˜ ë‹¤ ì§€ì—­ë³€ìˆ˜ì´ì§€ë§Œ...
+		//    (ì²« ë²ˆì§¸ write() ë©”ì†Œë“œ ì•ˆì—ì„œ ì„ ì–¸ëœ ë³€ìˆ˜ì´ë¯€ë¡œ...)
+		//    c ëŠ” final ë³€ìˆ˜ì´ê¸° ë•Œë¬¸ì— 
+		//    ë‘ ë²ˆì§¸ write() ë©”ì†Œë“œì—ì„œ ì–¸ì œ ì ‘ê·¼í•˜ë”ë¼ë„ 
+		//    ê³ ì •ëœ ê°’ 20ìž„ì„ ë³´ìž¥ë°›ì„ ìˆ˜ ìžˆë‹¤.
+		//    ë°˜ë©´ì— dëŠ” ê·¸ ê°’ì´ ìˆ˜ì‹œë¡œ ë³€í•  ìˆ˜ ìžˆëŠ” ìƒí™©ì´ë¯€ë¡œ
+		//    LocalTest í´ëž˜ìŠ¤ì˜ ì¸ìŠ¤í„´ìŠ¤ ìƒì„± ì‹œì ì„ 
+		//    ì–¸ì œê°€ ë ì§€ ì•Œ ìˆ˜ ì—†ê¸° ë•Œë¬¸ì—
+		//    ì´ë¡œì¸í•´ ì¸ìŠ¤í„´ìŠ¤ ìƒì„± ì‹œì ì— d ì— ì–´ë–¤ ê°’ì´ ë‹´ê²¨ìžˆëŠ”ì§€
+		//    ë³´ìž¥ë°›ì„ ìˆ˜ ì—†ê¸° ë•Œë¬¸ì—
+		//    ë³€ìˆ˜ d ì— ì ‘ê·¼í•˜ëŠ” ê²ƒì„ í”¼í•  ìˆ˜ ìžˆë„ë¡ ë¬¸ë²•ì ìœ¼ë¡œ ì²˜ë¦¬.
 		d += 10;
 
 		d += 20;
 
 		LocalTest lt = new LocalTest();
-		lt.write();							//-- µÎ ¹øÂ° write() ¸Þ¼Òµå È£Ãâ
+		lt.write();							//-- ë‘ ë²ˆì§¸ write() ë©”ì†Œë“œ í˜¸ì¶œ
 
 		d += 30;
 
@@ -57,26 +57,26 @@ class Test2
 	}
 }
 
-// main() ¸Þ¼Òµå¸¦ Æ÷ÇÔÇÏ°í ÀÖ´Â ¿ÜºÎÀÇ ´Ù¸¥ Å¬·¡½º
+// main() ë©”ì†Œë“œë¥¼ í¬í•¨í•˜ê³  ìžˆëŠ” ì™¸ë¶€ì˜ ë‹¤ë¥¸ í´ëž˜ìŠ¤
 public class Test123
 {
 	public static void main(String[] args)
 	{
-		//Test2(outer) Å¬·¡½º ±â¹Ý ÀÎ½ºÅÏ½º »ý¼º
+		//Test2(outer) í´ëž˜ìŠ¤ ê¸°ë°˜ ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
 		Test2 ob = new Test2();
-		ob.write();				//-- Ã¹ ¹øÂ° write() ¸Þ¼Òµå È£Ãâ
+		ob.write();				//-- ì²« ë²ˆì§¸ write() ë©”ì†Œë“œ í˜¸ì¶œ
 		
 		
 	}
 }
 
-// ½ÇÇà °á°ú
+// ì‹¤í–‰ ê²°ê³¼
 
 /*
-write()...¨ç
-write()...¨è
+write()...â‘ 
+write()...â‘¡
 a : 10
 b : 20
 c : 20
-°è¼ÓÇÏ·Á¸é ¾Æ¹« Å°³ª ´©¸£½Ê½Ã¿À . . .
+ê³„ì†í•˜ë ¤ë©´ ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ì‹­ì‹œì˜¤ . . .
 */

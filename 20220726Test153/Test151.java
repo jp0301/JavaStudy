@@ -1,10 +1,10 @@
 /*==============================================
-  ¡á¡á¡á ¿¹¿Ü Ã³¸®(Exception Handling) ¡á¡á¡á
+  â– â– â–  ì˜ˆì™¸ ì²˜ë¦¬(Exception Handling) â– â– â– 
 ===============================================*/
 
-// Test150.java ÆÄÀÏ°ú ºñ±³~!!!
+// Test150.java íŒŒì¼ê³¼ ë¹„êµ~!!!
 
-// ¡Ø throw          cf) throws
+// â€» throw          cf) throws
 
 class Demo
 {
@@ -15,8 +15,8 @@ class Demo
 		if(value <= 0)
 		{
 			//return;
-			throw new Exception("value ´Â 0º¸´Ù ÀÛ°Å³ª °°À» ¼ö ¾ø½À´Ï´Ù."); //¿¹¿Ü°¡ ÅÍÁ®³ª¿À´Â ±Ù¿ø
-			// ¸Ş¼ÒµåÈ£Ãâ(); // throws Exception
+			throw new Exception("value ëŠ” 0ë³´ë‹¤ ì‘ê±°ë‚˜ ê°™ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤."); //ì˜ˆì™¸ê°€ í„°ì ¸ë‚˜ì˜¤ëŠ” ê·¼ì›
+			// ë©”ì†Œë“œí˜¸ì¶œ(); // throws Exception
 		}
 		this.value = value;
 	}

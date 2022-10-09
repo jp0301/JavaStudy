@@ -1,9 +1,9 @@
 /* ===================================
-    ¡á¡á¡á ¸Ş¼ÒµåÀÇ Àç±ÍÈ£Ãâ ¡á¡á¡á
+    â– â– â–  ë©”ì†Œë“œì˜ ì¬ê·€í˜¸ì¶œ â– â– â– 
 ======================================*/
 
 
-/*  ¿©±â¼­ ÄÚµå ³»¿¡¼­ 2±ºµ¥ À§Ä¡ ¹Ù²Ù±â
+/*  ì—¬ê¸°ì„œ ì½”ë“œ ë‚´ì—ì„œ 2êµ°ë° ìœ„ì¹˜ ë°”ê¾¸ê¸°
 	public static void showHi(int cnt)
 	{
 		System.out.println("Hi~");
@@ -12,11 +12,11 @@
 			return;
 	}
 
-	¡Ø ¹®Á¦Á¡
-	1. showHi(cnt--)°¡ Á¶°Ç¹®º¸´Ù À§¿¡ ÀÖÀ¸´Ï ¸ØÃßÁö ¾Ê´Â´Ù.
-	   ¡æ Á¶°Ç¹®À» À§·Î ¿Ã¸°´Ù.
-	2. showHi(cnt--)ÀÌ±â¿¡ cnt°ªÀÌ µé¾î°¡°í ³­ µÚ¿¡ 1¾¿ °¨¼ÒµÈ´Ù.
-	   ¡æ showHi(--cnt);
+	â€» ë¬¸ì œì 
+	1. showHi(cnt--)ê°€ ì¡°ê±´ë¬¸ë³´ë‹¤ ìœ„ì— ìˆìœ¼ë‹ˆ ë©ˆì¶”ì§€ ì•ŠëŠ”ë‹¤.
+	   â†’ ì¡°ê±´ë¬¸ì„ ìœ„ë¡œ ì˜¬ë¦°ë‹¤.
+	2. showHi(cnt--)ì´ê¸°ì— cntê°’ì´ ë“¤ì–´ê°€ê³  ë‚œ ë’¤ì— 1ì”© ê°ì†Œëœë‹¤.
+	   â†’ showHi(--cnt);
 */
 
 
@@ -27,7 +27,7 @@ public class InfRecul
 		showHi(3);
 	}
 
-	// ÄÚµå ³»¿¡¼­ 2±ºµ¥ À§Ä¡ ¹Ù²Ù±â
+	// ì½”ë“œ ë‚´ì—ì„œ 2êµ°ë° ìœ„ì¹˜ ë°”ê¾¸ê¸°
 
 	public static void showHi(int cnt)
 	{
@@ -41,11 +41,11 @@ public class InfRecul
 }
 
 
-// Àç±Í ¹İº¹
+// ì¬ê·€ ë°˜ë³µ
 /*
 	public static void showHi(3)
 	{
-		System.out.println("Hi~");  // Ãâ·Â
+		System.out.println("Hi~");  // ì¶œë ¥
 
 		if(3==1)
 			return;					// (x)
@@ -57,7 +57,7 @@ public class InfRecul
 /*
 	public static void showHi(2)
 	{
-		System.out.println("Hi~");  // Ãâ·Â
+		System.out.println("Hi~");  // ì¶œë ¥
 
 		if(2==1)
 			return;					// (x)
@@ -69,7 +69,7 @@ public class InfRecul
 /*
 	public static void showHi(1)
 	{
-		System.out.println("Hi~");  // Ãâ·Â
+		System.out.println("Hi~");  // ì¶œë ¥
 
 		if(1==1)
 			return;					// (o)
@@ -78,10 +78,10 @@ public class InfRecul
 	}
 */
 
-// ½ÇÇà °á°ú
+// ì‹¤í–‰ ê²°ê³¼
 /*
 Hi~
 Hi~
 Hi~
-°è¼ÓÇÏ·Á¸é ¾Æ¹« Å°³ª ´©¸£½Ê½Ã¿À . . .
+ê³„ì†í•˜ë ¤ë©´ ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ì‹­ì‹œì˜¤ . . .
 */

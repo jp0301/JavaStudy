@@ -1,41 +1,41 @@
 /*====================================
-    ¡á¡á¡á Å¬·¡½º¿Í ÀÎ½ºÅÏ½º ¡á¡á¡á
+    â– â– â–  í´ëž˜ìŠ¤ì™€ ì¸ìŠ¤í„´ìŠ¤ â– â– â– 
   ====================================*/
 
-// »ç¿ëÀÚ·ÎºÎÅÍ ÀÓÀÇÀÇ µÎ Á¤¼ö¿Í ¿¬»êÀÚ¸¦ ÀÔ·Â¹Þ¾Æ
-// ÇØ´ç ¿¬»êÀ» ¼öÇàÇÏ´Â ÇÁ·Î±×·¥À» ±¸ÇöÇÑ´Ù.
-// ´Ü, Å¬·¡½º¿Í ÀÎ½ºÅÏ½ºÀÇ °³³äÀ» È°¿ëÇÏ¿© ÀÛ¼ºÇÒ ¼ö ÀÖµµ·Ï ÇÑ´Ù.
-// (Calculate Å¬·¡½º ¼³°è)
+// ì‚¬ìš©ìžë¡œë¶€í„° ìž„ì˜ì˜ ë‘ ì •ìˆ˜ì™€ ì—°ì‚°ìžë¥¼ ìž…ë ¥ë°›ì•„
+// í•´ë‹¹ ì—°ì‚°ì„ ìˆ˜í–‰í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ êµ¬í˜„í•œë‹¤.
+// ë‹¨, í´ëž˜ìŠ¤ì™€ ì¸ìŠ¤í„´ìŠ¤ì˜ ê°œë…ì„ í™œìš©í•˜ì—¬ ìž‘ì„±í•  ìˆ˜ ìžˆë„ë¡ í•œë‹¤.
+// (Calculate í´ëž˜ìŠ¤ ì„¤ê³„)
 
-// ½ÇÇà ¿¹)
-// ÀÓÀÇÀÇ µÎ Á¤¼ö ÀÔ·Â(°ø¹é ±¸ºÐ) : 10 5
-// ÀÓÀÇÀÇ ¿¬»êÀÚ(+ - * /)         : +
+// ì‹¤í–‰ ì˜ˆ)
+// ìž„ì˜ì˜ ë‘ ì •ìˆ˜ ìž…ë ¥(ê³µë°± êµ¬ë¶„) : 10 5
+// ìž„ì˜ì˜ ì—°ì‚°ìž(+ - * /)         : +
 // >> 10 + 5 = 15
-// °è¼ÓÇÏ·Á¸é ¾Æ¹« Å°³ª ´©¸£¼¼¿ä...
+// ê³„ì†í•˜ë ¤ë©´ ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ì„¸ìš”...
 
 import java.util.Scanner;
 import java.io.IOException;
 
 class Calculate
 {
-	int num1, num2;		//-- µÎ Á¤¼ö ´ã¾Æ³¾ º¯¼ö
-	char op;			//-- ¿¬»êÀÚ ´ã¾Æ³¾ º¯¼ö
+	int num1, num2;		//-- ë‘ ì •ìˆ˜ ë‹´ì•„ë‚¼ ë³€ìˆ˜
+	char op;			//-- ì—°ì‚°ìž ë‹´ì•„ë‚¼ ë³€ìˆ˜
 
 
-	// ¸Þ¼Òµå Á¤ÀÇ(±â´É : ÀÔ·Â)
+	// ë©”ì†Œë“œ ì •ì˜(ê¸°ëŠ¥ : ìž…ë ¥)
 	void input() throws IOException
 	{
-		// Scanner ÀÎ½ºÅÏ½º »ý¼º
+		// Scanner ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
 		Scanner sc = new Scanner(System.in);
-		System.out.print("ÀÓÀÇÀÇ µÎ Á¤¼ö ÀÔ·Â(°ø¹é ±¸ºÐ) : ");
+		System.out.print("ìž„ì˜ì˜ ë‘ ì •ìˆ˜ ìž…ë ¥(ê³µë°± êµ¬ë¶„) : ");
 		num1 = sc.nextInt();
 		num2 = sc.nextInt();
 
-		System.out.print("ÀÓÀÇÀÇ ¿¬»êÀÚ(+ - * /) : ");
+		System.out.print("ìž„ì˜ì˜ ì—°ì‚°ìž(+ - * /) : ");
 		op = (char)System.in.read();
 	}
 
-	// ¸Þ¼Òµå Á¤ÀÇ(±â´É : ¿¬»ê) ³ª´°¼À ¿¬»êµµ Á¤¼ö ±â¹ÝÀ¸·Î Ã³¸®ÇÏÀÚ
+	// ë©”ì†Œë“œ ì •ì˜(ê¸°ëŠ¥ : ì—°ì‚°) ë‚˜ëˆ—ì…ˆ ì—°ì‚°ë„ ì •ìˆ˜ ê¸°ë°˜ìœ¼ë¡œ ì²˜ë¦¬í•˜ìž
 	int calculate()
 	{
 		//int cal = 0;
@@ -50,7 +50,7 @@ class Calculate
 		else if(op == '/')
 			cal = num1 / num2;
 		else
-			System.out.println("¿¬»êÀÚ ¿À·ù");
+			System.out.println("ì—°ì‚°ìž ì˜¤ë¥˜");
 		*/
 
 		switch(op)
@@ -65,7 +65,7 @@ class Calculate
 		return result;
 	}
 
-	// ¸Þ¼Òµå Á¤ÀÇ(±â´É : Ãâ·Â)
+	// ë©”ì†Œë“œ ì •ì˜(ê¸°ëŠ¥ : ì¶œë ¥)
 	void print(int result)
 	{
 		System.out.printf(">> %d %c %d = %d\n", num1, op, num2, result);
@@ -78,27 +78,27 @@ public class Test073
 {
 	public static void main(String[] args) throws IOException
 	{
-		// Calculate ÀÎ½ºÅÏ½º »ý¼º
+		// Calculate ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
 		Calculate ob = new Calculate();
 
-		ob.input(); // »ý¼ºÇÑ ÀÎ½ºÅÏ½º¸¦ ÅëÇÑ ÀÔ·Â ¸Þ¼Òµå È£Ãâ
+		ob.input(); // ìƒì„±í•œ ì¸ìŠ¤í„´ìŠ¤ë¥¼ í†µí•œ ìž…ë ¥ ë©”ì†Œë“œ í˜¸ì¶œ
 		//ob.print(ob.calculate()); 
-		int r = ob.calculate(); // »ý¼ºÇÑ ÀÎ½ºÅÏ½º¸¦ ÅëÇÑ ¿¬»ê ¸Þ¼­µåÈ£Ãâ
+		int r = ob.calculate(); // ìƒì„±í•œ ì¸ìŠ¤í„´ìŠ¤ë¥¼ í†µí•œ ì—°ì‚° ë©”ì„œë“œí˜¸ì¶œ
 		ob.print(r);
 	}
 }
 
-// ½ÇÇà °á°ú
+// ì‹¤í–‰ ê²°ê³¼
 /*
-ÀÓÀÇÀÇ µÎ Á¤¼ö ÀÔ·Â(°ø¹é ±¸ºÐ) : 10 5
-ÀÓÀÇÀÇ ¿¬»êÀÚ(+ - * /) : -
+ìž„ì˜ì˜ ë‘ ì •ìˆ˜ ìž…ë ¥(ê³µë°± êµ¬ë¶„) : 10 5
+ìž„ì˜ì˜ ì—°ì‚°ìž(+ - * /) : -
 >> 10 - 5 = 5
-°è¼ÓÇÏ·Á¸é ¾Æ¹« Å°³ª ´©¸£½Ê½Ã¿À . . .
+ê³„ì†í•˜ë ¤ë©´ ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ì‹­ì‹œì˜¤ . . .
 */
 
 /*
-ÀÓÀÇÀÇ µÎ Á¤¼ö ÀÔ·Â(°ø¹é ±¸ºÐ) : 20 5
-ÀÓÀÇÀÇ ¿¬»êÀÚ(+ - * /) : *
+ìž„ì˜ì˜ ë‘ ì •ìˆ˜ ìž…ë ¥(ê³µë°± êµ¬ë¶„) : 20 5
+ìž„ì˜ì˜ ì—°ì‚°ìž(+ - * /) : *
 >> 20 * 5 = 100
-°è¼ÓÇÏ·Á¸é ¾Æ¹« Å°³ª ´©¸£½Ê½Ã¿À . . .
+ê³„ì†í•˜ë ¤ë©´ ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ì‹­ì‹œì˜¤ . . .
 */

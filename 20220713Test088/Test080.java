@@ -1,22 +1,22 @@
 /*============================
-      ¡á¡á¡á ¹è¿­ ¡á¡á¡á
-    - ¹è¿­ÀÇ ±âº»Àû È°¿ë
+      â– â– â–  ë°°ì—´ â– â– â– 
+    - ë°°ì—´ì˜ ê¸°ë³¸ì  í™œìš©
   ============================*/
 
-// ÀÓÀÇÀÇ Á¤¼öµéÀÌ µé¾îÀÖ´Â ¹è¿­ÀÇ ¼ýÀÚ µ¥ÀÌÅÍµé Áß
-// Â¦¼öÀÎ ¿ä¼Ò¸¸ °ñ¶ó¼­ Ãâ·ÂÇÏ°í, 3ÀÇ ¹è¼öÀÎ ¿ä¼Ò¸¸ °ñ¶ó¼­ Ãâ·ÂÇÏ´Â
-// ÇÁ·Î±×·¥À» ±¸ÇöÇÑ´Ù.
+// ìž„ì˜ì˜ ì •ìˆ˜ë“¤ì´ ë“¤ì–´ìžˆëŠ” ë°°ì—´ì˜ ìˆ«ìž ë°ì´í„°ë“¤ ì¤‘
+// ì§ìˆ˜ì¸ ìš”ì†Œë§Œ ê³¨ë¼ì„œ ì¶œë ¥í•˜ê³ , 3ì˜ ë°°ìˆ˜ì¸ ìš”ì†Œë§Œ ê³¨ë¼ì„œ ì¶œë ¥í•˜ëŠ”
+// í”„ë¡œê·¸ëž¨ì„ êµ¬í˜„í•œë‹¤.
 
-// ¹è¿­À» ±¸¼ºÇÏ´Â ÀÓÀÇÀÇ Á¤¼ö = 4 7 9 1 3 2 5 6 8
+// ë°°ì—´ì„ êµ¬ì„±í•˜ëŠ” ìž„ì˜ì˜ ì •ìˆ˜ = 4 7 9 1 3 2 5 6 8
 
-// ½ÇÇà ¿¹)
-// ¹è¿­ ¿ä¼Ò ÀüÃ¼ Ãâ·Â
+// ì‹¤í–‰ ì˜ˆ)
+// ë°°ì—´ ìš”ì†Œ ì „ì²´ ì¶œë ¥
 // 4 7 9 1 3 2 5 6 8
-// Â¦¼ö ¼±ÅÃÀû Ãâ·Â
+// ì§ìˆ˜ ì„ íƒì  ì¶œë ¥
 // 4 2 6 8
-// 3ÀÇ ¹è¼ö ¼±ÅÃÀû Ãâ·Â
+// 3ì˜ ë°°ìˆ˜ ì„ íƒì  ì¶œë ¥
 // 9 3 6
-// °è¼ÓÇÏ·Á¸é ¾Æ¹« Å°³ª ´©¸£¼¼¿ä...
+// ê³„ì†í•˜ë ¤ë©´ ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ì„¸ìš”...
 
 public class Test080
 {
@@ -25,14 +25,14 @@ public class Test080
 		/*
 		int[] arr = {4, 7, 9, 1, 3, 2, 5, 6, 8};
 
-		System.out.println("¹è¿­ ¿ä¼Ò ÀüÃ¼ Ãâ·Â");
+		System.out.println("ë°°ì—´ ìš”ì†Œ ì „ì²´ ì¶œë ¥");
 		for(int i = 0; i<9; i++)
 		{
 			System.out.printf("%d ", arr[i]);
 		}
 		System.out.println();
 
-		System.out.println("Â¦¼ö ¼±ÅÃÀû Ãâ·Â");
+		System.out.println("ì§ìˆ˜ ì„ íƒì  ì¶œë ¥");
 		for(int i = 0; i<9; i++)
 		{
 			if(arr[i] % 2 == 0)
@@ -40,7 +40,7 @@ public class Test080
 		}
 		System.out.println();
 
-		System.out.println("3ÀÇ ¹è¼ö ¼±ÅÃÀû Ãâ·Â");
+		System.out.println("3ì˜ ë°°ìˆ˜ ì„ íƒì  ì¶œë ¥");
 		for(int i = 0; i<9; i++)
 		{
 			if(arr[i] % 3 == 0)
@@ -51,8 +51,8 @@ public class Test080
 
 
 
-		// ¹è¿­ ¼±¾ð ¹× ÃÊ±âÈ­
-		// ¹æ¹ý ¨ç
+		// ë°°ì—´ ì„ ì–¸ ë° ì´ˆê¸°í™”
+		// ë°©ë²• â‘ 
 		/*
 		int[] arr = new int[9];
 		arr[0] = 4; 
@@ -66,17 +66,17 @@ public class Test080
 		arr[8] = 8;
 		*/
 
-		// ¹æ¹ý ¨è
+		// ë°©ë²• â‘¡
 		int[] arr = {4, 7, 9, 1, 3, 2, 5, 6, 8};
 
 		//System.out.println(arr);
 		//--==>> [I@15db9742
 
-		// ¡Ø ÀÏ¹ÝÀûÀÎ º¯¼ö¿¡ ´ã±ä ³»¿ëÀ» Ãâ·ÂÇÏ´Â Çü½Ä(¹æ¹ý)À¸·Î´Â
-		//    ¹è¿­¿¡ ´ã±ä µ¥ÀÌÅÍµéÀ» Ãâ·ÂÇÒ ¼ö ¾ø´Ù.
+		// â€» ì¼ë°˜ì ì¸ ë³€ìˆ˜ì— ë‹´ê¸´ ë‚´ìš©ì„ ì¶œë ¥í•˜ëŠ” í˜•ì‹(ë°©ë²•)ìœ¼ë¡œëŠ”
+		//    ë°°ì—´ì— ë‹´ê¸´ ë°ì´í„°ë“¤ì„ ì¶œë ¥í•  ìˆ˜ ì—†ë‹¤.
 
 		/*
-		System.out.println("¹è¿­ ¿ä¼Ò ÀüÃ¼ Ãâ·Â");
+		System.out.println("ë°°ì—´ ìš”ì†Œ ì „ì²´ ì¶œë ¥");
 		for (int i=0; i<9; i++)
 		{
 			System.out.print(arr[i] + " ");
@@ -86,19 +86,19 @@ public class Test080
 
 		//--==>>
 		/*
-		¹è¿­ ¿ä¼Ò ÀüÃ¼ Ãâ·Â
+		ë°°ì—´ ìš”ì†Œ ì „ì²´ ì¶œë ¥
 		4 7 9 1 3 2 5 6 8
 		*/
 
 		//System.out.println(arr.length);
 		//--==>> 9
 
-		// ¡Ø ¹è¿­ arrÀÇ ±æÀÌ(¹æÀÇ °¹¼ö) È®ÀÎ
+		// â€» ë°°ì—´ arrì˜ ê¸¸ì´(ë°©ì˜ ê°¯ìˆ˜) í™•ì¸
 		//    : arr.length
 
 
 
-		System.out.println("¹è¿­ ¿ä¼Ò ÀüÃ¼ Ãâ·Â");
+		System.out.println("ë°°ì—´ ìš”ì†Œ ì „ì²´ ì¶œë ¥");
 		for (int i=0; i<arr.length; i++)
 		{
 			System.out.print(arr[i] + " ");
@@ -106,23 +106,23 @@ public class Test080
 		System.out.println();
 		//--==>>
 		/*
-		¹è¿­ ¿ä¼Ò ÀüÃ¼ Ãâ·Â
+		ë°°ì—´ ìš”ì†Œ ì „ì²´ ì¶œë ¥
 		4 7 9 1 3 2 5 6 8
 		*/
 
 
-		System.out.println("Â¦¼ö ¼±ÅÃÀû Ãâ·Â");
+		System.out.println("ì§ìˆ˜ ì„ íƒì  ì¶œë ¥");
 		for(int i=0; i<arr.length; i++)
 		{
 			/*
-			if(i%2 == 0)	// Â¦¼ö¶ó¸é...
+			if(i%2 == 0)	// ì§ìˆ˜ë¼ë©´...
 			{
-				// Ãâ·ÂÇØ~!!! ¡æ ÇØ´ç ÀÎµ¦½º¸¦...
+				// ì¶œë ¥í•´~!!! â†’ í•´ë‹¹ ì¸ë±ìŠ¤ë¥¼...
 				System.out.print(i + " ");
 			}
 			*/
 
-			// i¹øÂ° ¿ä¼ÒÀÇ °ªÀÌ Â¦¼ö¶ó¸é...
+			// ië²ˆì§¸ ìš”ì†Œì˜ ê°’ì´ ì§ìˆ˜ë¼ë©´...
 			if(arr[i]%2 == 0)
 			{
 				System.out.print(arr[i] + " ");
@@ -132,17 +132,17 @@ public class Test080
 		System.out.println();
 		//--==>>
 		/*
-		Â¦¼ö ¼±ÅÃÀû Ãâ·Â
+		ì§ìˆ˜ ì„ íƒì  ì¶œë ¥
 		4 2 6 8
 		*/
 
 		
-		System.out.println("3ÀÇ ¹è¼ö ¼±ÅÃÀû Ãâ·Â");
+		System.out.println("3ì˜ ë°°ìˆ˜ ì„ íƒì  ì¶œë ¥");
 		for(int i=0; i<arr.length; i++)
 		{
-			if(arr[i]%3 == 0)		//-- i¹øÂ° ¿ä¼ÒÀÇ °ªÀÌ 3ÀÇ ¹è¼ö¶ó¸é...
+			if(arr[i]%3 == 0)		//-- ië²ˆì§¸ ìš”ì†Œì˜ ê°’ì´ 3ì˜ ë°°ìˆ˜ë¼ë©´...
 			{
-				// Ãâ·ÂÇØ~!!!
+				// ì¶œë ¥í•´~!!!
 				System.out.print(arr[i] + " ");
 			}
 
@@ -151,13 +151,13 @@ public class Test080
 	}
 }
 
-// ½ÇÇà °á°ú
+// ì‹¤í–‰ ê²°ê³¼
 
 /*
-¹è¿­ ¿ä¼Ò ÀüÃ¼ Ãâ·Â
+ë°°ì—´ ìš”ì†Œ ì „ì²´ ì¶œë ¥
 4 7 9 1 3 2 5 6 8
-Â¦¼ö ¼±ÅÃÀû Ãâ·Â
+ì§ìˆ˜ ì„ íƒì  ì¶œë ¥
 4 2 6 8
-3ÀÇ ¹è¼ö ¼±ÅÃÀû Ãâ·Â
+3ì˜ ë°°ìˆ˜ ì„ íƒì  ì¶œë ¥
 9 3 6
 */

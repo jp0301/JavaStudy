@@ -1,7 +1,7 @@
 /*==============================================
-  ¡á¡á¡á ÀÚ¹ÙÀÇ ÁÖ¿ä(Áß¿ä) Å¬·¡½º ¡á¡á¡á
-  - ÀÚ¹Ù¿¡¼­ ±âº»ÀûÀ¸·Î Á¦°øÇÏ´Â ÁÖ¿ä Å¬·¡½ºµé
-  - Wrapper Å¬·¡½º
+  â– â– â–  ìžë°”ì˜ ì£¼ìš”(ì¤‘ìš”) í´ëž˜ìŠ¤ â– â– â– 
+  - ìžë°”ì—ì„œ ê¸°ë³¸ì ìœ¼ë¡œ ì œê³µí•˜ëŠ” ì£¼ìš” í´ëž˜ìŠ¤ë“¤
+  - Wrapper í´ëž˜ìŠ¤
 ===============================================*/
 
 import java.math.BigInteger;
@@ -10,19 +10,19 @@ public class Test132
 {
 	public static void main(String[] args)
 	{
-		// ºÒ°¡´É
+		// ë¶ˆê°€ëŠ¥
 		//int a1 = 123456789123456789;
 		//System.out.println(a1);
 		
-		// ºÒ°¡´É
+		// ë¶ˆê°€ëŠ¥
 		//long b1 = 123456789123456789;
 		//System.out.println(b1);
 		
-		// °¡´É
+		// ê°€ëŠ¥
 		//long c1 = 123456789123456789L;
 		//System.out.println(c1);
 
-		// ºÒ°¡´É
+		// ë¶ˆê°€ëŠ¥
 		//long d1 = 123456789123456789123456789L;
 		//System.out.println(d1);
 
@@ -33,42 +33,42 @@ public class Test132
 		//System.out.println(c);
 		
 
-		// ´õÇÏ±â
+		// ë”í•˜ê¸°
 		BigInteger c = a.add(b);
-		System.out.println("µ¡¼À °á°ú : " + c);
-		//--==>> µ¡¼À °á°ú : 24691578247093578
+		System.out.println("ë§ì…ˆ ê²°ê³¼ : " + c);
+		//--==>> ë§ì…ˆ ê²°ê³¼ : 24691578247093578
 
-		// »©±â
+		// ë¹¼ê¸°
 		BigInteger d = a.subtract(b);
-		System.out.println("»¬¼À °á°ú : " + d);
-		//--==>> »¬¼À °á°ú : 0
+		System.out.println("ëº„ì…ˆ ê²°ê³¼ : " + d);
+		//--==>> ëº„ì…ˆ ê²°ê³¼ : 0
 
-		// °öÇÏ±â
+		// ê³±í•˜ê¸°
 		BigInteger e = a.multiply(b);
-		System.out.println("°ö¼À °á°ú : " + e);
-		//--==>> °ö¼À °á°ú : 152418509083086192506851072210521
+		System.out.println("ê³±ì…ˆ ê²°ê³¼ : " + e);
+		//--==>> ê³±ì…ˆ ê²°ê³¼ : 152418509083086192506851072210521
 
-		// ³ª´°¼À
+		// ë‚˜ëˆ—ì…ˆ
 		BigInteger f = a.divide(b);
-		System.out.println("³ª´°¼À °á°ú : " + f);
-		//--==>> »¬¼À °á°ú : 1
+		System.out.println("ë‚˜ëˆ—ì…ˆ ê²°ê³¼ : " + f);
+		//--==>> ëº„ì…ˆ ê²°ê³¼ : 1
 
 
-		// Áö¼ö½Â
+		// ì§€ìˆ˜ìŠ¹
 		BigInteger g = new BigInteger("2");
-		System.out.println("2ÀÇ 3½Â : " + g.pow(3));
-		//--==>> 2ÀÇ 3½Â : 8
+		System.out.println("2ì˜ 3ìŠ¹ : " + g.pow(3));
+		//--==>> 2ì˜ 3ìŠ¹ : 8
 
 
 	}
 }
 
-// ½ÇÇà °á°ú
+// ì‹¤í–‰ ê²°ê³¼
 /*
-µ¡¼À °á°ú : 24691578247093578
-»¬¼À °á°ú : 0
-°ö¼À °á°ú : 152418509083086192506851072210521
-³ª´°¼À °á°ú : 1
-2ÀÇ 3½Â : 8
-°è¼ÓÇÏ·Á¸é ¾Æ¹« Å°³ª ´©¸£½Ê½Ã¿À . . .
+ë§ì…ˆ ê²°ê³¼ : 24691578247093578
+ëº„ì…ˆ ê²°ê³¼ : 0
+ê³±ì…ˆ ê²°ê³¼ : 152418509083086192506851072210521
+ë‚˜ëˆ—ì…ˆ ê²°ê³¼ : 1
+2ì˜ 3ìŠ¹ : 8
+ê³„ì†í•˜ë ¤ë©´ ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ì‹­ì‹œì˜¤ . . .
 */

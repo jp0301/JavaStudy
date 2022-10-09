@@ -1,22 +1,22 @@
 /*==================================
-  ¡á¡á¡á ÄÃ·º¼Ç(Collection) ¡á¡á¡á
+  â– â– â–  ì»¬ë ‰ì…˜(Collection) â– â– â– 
 ====================================*/
 
-// Set ¡æ HashSet, TreeSet
-// - ¼ø¼­°¡ ¾ø´Ù.
-// - Áßº¹À» Çã¿ëÇÏÁö ¾Ê´Â ±¸Á¶(±âº»)
+// Set â†’ HashSet, TreeSet
+// - ìˆœì„œê°€ ì—†ë‹¤.
+// - ì¤‘ë³µì„ í—ˆìš©í•˜ì§€ ì•ŠëŠ” êµ¬ì¡°(ê¸°ë³¸)
 
 /*
-¡Û TreeSet<E> Å¬·¡½º
+â—‹ TreeSet<E> í´ëž˜ìŠ¤
 
-   java.util.TreeSet<E> Å¬·¡½º´Â
-   Set ÀÎÅÍÆäÀÌ½º¸¦ »ó¼ÓÇÑ SortedSet ÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇÑ Å¬·¡½º·Î
-   µ¥ÀÌÅÍ¸¦ Ãß°¡ÇÏ¸é µ¥ÀÌÅÍµéÀÌ ÀÚµ¿À¸·Î ¿À¸§Â÷¼ø Á¤·ÄÀÌ µÈ´Ù.
+   java.util.TreeSet<E> í´ëž˜ìŠ¤ëŠ”
+   Set ì¸í„°íŽ˜ì´ìŠ¤ë¥¼ ìƒì†í•œ SortedSet ì¸í„°íŽ˜ì´ìŠ¤ë¥¼ êµ¬í˜„í•œ í´ëž˜ìŠ¤ë¡œ
+   ë°ì´í„°ë¥¼ ì¶”ê°€í•˜ë©´ ë°ì´í„°ë“¤ì´ ìžë™ìœ¼ë¡œ ì˜¤ë¦„ì°¨ìˆœ ì •ë ¬ì´ ëœë‹¤.
 */
 
-// VO  - Value Object, ºñÁî´Ï½º ·ÎÁ÷À» Æ÷ÇÔÇÏ°í ÀÖÀ» ¶§, Æ÷ÇÔµÇ°í ÀÖ´Â DTO, ½Ç¹«¿¡¼­´Â ±¸ºÐÇØ¼­ Àß¾È¾´´Ù.(º¸ÅëÀº ÅëÄªÇÔ)
-// DTO - Data Transfer Object, µ¥ÀÌÅÍ¸¦ ´ã¾Æ¼­ ÀÌÂÊ °èÃþ¿¡¼­ ÀúÂÊ °èÃþÀ¸·Î Àü¼Û, ¼ö½ÅÇØ¼­ º¸°ü Ã³¸®, µ¥ÀÌÅÍ Àü¼Û °´Ã¼
-// DAO - Data Access Object, ÇÁ·Î±×·¥ ´Ü¿¡¼­ DTO±×¸©¿¡ ´ã¾Æ¼­ µ¥ÀÌÅÍº£ÀÌ½º¿¡ Àü´ÞÇÏ¸é¼­ Áö½ÃÇÏ´Â ¸í·ÉÇÏ´Â ´À³¦, ¾î¶»°Ô ¾÷¹« Ã³¸®ÇØ¶ó. µ¥ÀÌÅÍ Á¢±Ù °´Ã¼
+// VO  - Value Object, ë¹„ì¦ˆë‹ˆìŠ¤ ë¡œì§ì„ í¬í•¨í•˜ê³  ìžˆì„ ë•Œ, í¬í•¨ë˜ê³  ìžˆëŠ” DTO, ì‹¤ë¬´ì—ì„œëŠ” êµ¬ë¶„í•´ì„œ ìž˜ì•ˆì“´ë‹¤.(ë³´í†µì€ í†µì¹­í•¨)
+// DTO - Data Transfer Object, ë°ì´í„°ë¥¼ ë‹´ì•„ì„œ ì´ìª½ ê³„ì¸µì—ì„œ ì €ìª½ ê³„ì¸µìœ¼ë¡œ ì „ì†¡, ìˆ˜ì‹ í•´ì„œ ë³´ê´€ ì²˜ë¦¬, ë°ì´í„° ì „ì†¡ ê°ì²´
+// DAO - Data Access Object, í”„ë¡œê·¸ëž¨ ë‹¨ì—ì„œ DTOê·¸ë¦‡ì— ë‹´ì•„ì„œ ë°ì´í„°ë² ì´ìŠ¤ì— ì „ë‹¬í•˜ë©´ì„œ ì§€ì‹œí•˜ëŠ” ëª…ë ¹í•˜ëŠ” ëŠë‚Œ, ì–´ë–»ê²Œ ì—…ë¬´ ì²˜ë¦¬í•´ë¼. ë°ì´í„° ì ‘ê·¼ ê°ì²´
 
 
 import java.util.Iterator;
@@ -25,12 +25,12 @@ import java.util.Comparator;
 
 class GradeVO
 {
-	// ÁÖ¿ä ¼Ó¼º ±¸¼º
-	private String hak;				//-- ÇÐ¹ø
-	private String name;			//-- ÀÌ¸§
-	private int kor, eng, mat;		//-- ±¹¾î, ¿µ¾î, ¼öÇÐ Á¡¼ö
+	// ì£¼ìš” ì†ì„± êµ¬ì„±
+	private String hak;				//-- í•™ë²ˆ
+	private String name;			//-- ì´ë¦„
+	private int kor, eng, mat;		//-- êµ­ì–´, ì˜ì–´, ìˆ˜í•™ ì ìˆ˜
 
-	// »ý¼ºÀÚ(»ç¿ëÀÚ Á¤ÀÇ »ý¼ºÀÚ) ¡æ 5°³ÀÇ ¸Å°³º¯¼ö¸¦ °¡Áø »ý¼ºÀÚ
+	// ìƒì„±ìž(ì‚¬ìš©ìž ì •ì˜ ìƒì„±ìž) â†’ 5ê°œì˜ ë§¤ê°œë³€ìˆ˜ë¥¼ ê°€ì§„ ìƒì„±ìž
 	GradeVO(String hak, String name, int kor, int eng, int mat)
 	{
 		this.hak = hak;
@@ -40,18 +40,18 @@ class GradeVO
 		this.mat = mat;
 	}
 
-	// default »ý¼ºÀÚ ÀÚµ¿ »ðÀÔµÇÁö ¾ÊÀ½~!!!
+	// default ìƒì„±ìž ìžë™ ì‚½ìž…ë˜ì§€ ì•ŠìŒ~!!!
 
-	// »ý¼ºÀÚ(»ç¿ëÀÚ Á¤ÀÇ »ý¼ºÀÚ) ¡æ ¸Å°³º¯¼ö ¾ø´Â »ý¼ºÀÚ
-	//-- ¸Å°³º¯¼ö°¡ Á¸ÀçÇÏ´Â »ý¼ºÀÚ¸¦ »ç¿ëÀÚ Á¤ÀÇ »ý¼ºÀÚ·Î ±¸¼ºÇÏ¿´±â ¶§¹®¿¡
-	//   default »ý¼ºÀÚ°¡ ÀÚµ¿À¸·Î »ðÀÔµÇÁö ¾ÊÀ» °ÍÀ» ¿ì·ÁÇÏ¿©
-	//   Ãß°¡·Î Á¤ÀÇÇÑ »ý¼ºÀÚ
+	// ìƒì„±ìž(ì‚¬ìš©ìž ì •ì˜ ìƒì„±ìž) â†’ ë§¤ê°œë³€ìˆ˜ ì—†ëŠ” ìƒì„±ìž
+	//-- ë§¤ê°œë³€ìˆ˜ê°€ ì¡´ìž¬í•˜ëŠ” ìƒì„±ìžë¥¼ ì‚¬ìš©ìž ì •ì˜ ìƒì„±ìžë¡œ êµ¬ì„±í•˜ì˜€ê¸° ë•Œë¬¸ì—
+	//   default ìƒì„±ìžê°€ ìžë™ìœ¼ë¡œ ì‚½ìž…ë˜ì§€ ì•Šì„ ê²ƒì„ ìš°ë ¤í•˜ì—¬
+	//   ì¶”ê°€ë¡œ ì •ì˜í•œ ìƒì„±ìž
 	GradeVO()
 	{
 		this("", "", 0, 0, 0);
 	}
 
-	// getter / setter ±¸¼º
+	// getter / setter êµ¬ì„±
 	public String getHak()
 	{
 		return hak;
@@ -100,7 +100,7 @@ class GradeVO
 		this.mat = mat;
 	}
 	
-	// Ãß°¡ ¸Þ¼Òµå Á¤ÀÇ(ÃÑÁ¡ »êÃâ)
+	// ì¶”ê°€ ë©”ì†Œë“œ ì •ì˜(ì´ì  ì‚°ì¶œ)
 	public int getTot()
 	{
 		return this.kor + this.eng + this.mat;
@@ -110,101 +110,101 @@ class GradeVO
 
 class MyComparator<T> implements Comparator<T>
 {
-	// ºñ±³ ¸Þ¼Òµå ÀçÁ¤ÀÇ
+	// ë¹„êµ ë©”ì†Œë“œ ìž¬ì •ì˜
 	@Override
 	public int compare(T o1, T o2)
 	{
 		 GradeVO s1 = (GradeVO)o1;
 		 GradeVO s2 = (GradeVO)o2;
 
-		// ÇÐ¹ø ±âÁØ (¿À¸§Â÷¼ø)
+		// í•™ë²ˆ ê¸°ì¤€ (ì˜¤ë¦„ì°¨ìˆœ)
 		//return Integer.parseInt(s1.getHak()) - Integer.parseInt(s2.getHak());
 		// return Integer.parseInt("2206113") - Integer.parseInt("2206115");
 		// return 2206113 - 2206115;
-		// return -2; ÀÌ·¸°Ô µÇ¸é µÚÀÇ °ÍÀÌ ´õ Å©±â ¶§¹®¿¡ ¿À¸§Â÷¼ø µÈ °Í.
+		// return -2; ì´ë ‡ê²Œ ë˜ë©´ ë’¤ì˜ ê²ƒì´ ë” í¬ê¸° ë•Œë¬¸ì— ì˜¤ë¦„ì°¨ìˆœ ëœ ê²ƒ.
 		
-		// ÇÐ¹ø ±âÁØ (³»¸²Â÷¼ø)
+		// í•™ë²ˆ ê¸°ì¤€ (ë‚´ë¦¼ì°¨ìˆœ)
 		//return Integer.parseInt(s2.getHak()) - Integer.parseInt(s1.getHak());
 
-		// ÃÑÁ¡ ±âÁØ(¿À¸§Â÷¼ø)
+		// ì´ì  ê¸°ì¤€(ì˜¤ë¦„ì°¨ìˆœ)
 		//return s1.getTot() - s2.getTot();
 
-		// ÃÑÁ¡ ±âÁØ(³»¸²Â÷¼ø)
+		// ì´ì  ê¸°ì¤€(ë‚´ë¦¼ì°¨ìˆœ)
 		//return s2.getTot() - s1.getTot();
 
 
 		//------------------------------------------------------------
-		// Test137.java ¿¡¼­ compareTo() µÎ ¹®ÀÚ¿­ ºñ±³
+		// Test137.java ì—ì„œ compareTo() ë‘ ë¬¸ìžì—´ ë¹„êµ
 		// seoul korea
 		//System.out.println(s.compareTo("seoul korea"));
-		//--==>> 0 ¡æ µÎ ¹®ÀÚ¿­ÀÌ °°´Ù. (s ¿Í "seoul korea" °¡ ...)
+		//--==>> 0 â†’ ë‘ ë¬¸ìžì—´ì´ ê°™ë‹¤. (s ì™€ "seoul korea" ê°€ ...)
 		//------------------------------------------------------------
 		
-		// ÀÌ¸§ ±âÁØ(¿À¸§Â÷¼ø)
+		// ì´ë¦„ ê¸°ì¤€(ì˜¤ë¦„ì°¨ìˆœ)
 		return s1.getName().compareTo(s2.getName());
 
-		// ÀÌ¸§ ±âÁØ(³»¸²Â÷¼ø)
+		// ì´ë¦„ ê¸°ì¤€(ë‚´ë¦¼ì°¨ìˆœ)
 		//return s2.getName().compareTo(s1.getName());
 				
 
 	}
 }
-// E obj - ¡ºElement¡»
+// E obj - ã€ŽElementã€
 // T - Type
 
 public class Test169
 {
 	public static void main(String[] args)
 	{
-		// TreeSet ÀÚ·á±¸Á¶ ÀÎ½ºÅÏ½º »ý¼º
+		// TreeSet ìžë£Œêµ¬ì¡° ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
 		TreeSet<String> set = new TreeSet<String>();
 
-		// TreeSet ÀÚ·á±¸Á¶ set¿¡ ¿ä¼Ò Ãß°¡ ¡æ add();
-		set.add("±Í¸êÀÇÄ®³¯");
-		set.add("¸íÅ½Á¤ÄÚ³­");
-		set.add("ÇÏÀÌÅ¥");
-		set.add("³ÊÀÇÀÌ¸§Àº");
-		set.add("Æ÷ÄÏ¸ó");
-		set.add("¼¾°úÄ¡È÷·ÎÀÇÇà¹æºÒ¸í");
-		set.add("µðÁö¸ó¾îµåº¥Ã³");
-		set.add("ÀÌ¿ôÁýÅäÅä·Î");
-		set.add("Â¯±¸´Â¸ø¸»·Á");
-		set.add("¾Æ±â°ø·æµÑ¸®¾óÀ½º°´ë¸ðÇè");
-		set.add("·¯ºê¶óÀÌºê");
+		// TreeSet ìžë£Œêµ¬ì¡° setì— ìš”ì†Œ ì¶”ê°€ â†’ add();
+		set.add("ê·€ë©¸ì˜ì¹¼ë‚ ");
+		set.add("ëª…íƒì •ì½”ë‚œ");
+		set.add("í•˜ì´í");
+		set.add("ë„ˆì˜ì´ë¦„ì€");
+		set.add("í¬ì¼“ëª¬");
+		set.add("ì„¼ê³¼ì¹˜ížˆë¡œì˜í–‰ë°©ë¶ˆëª…");
+		set.add("ë””ì§€ëª¬ì–´ë“œë²¤ì²˜");
+		set.add("ì´ì›ƒì§‘í† í† ë¡œ");
+		set.add("ì§±êµ¬ëŠ”ëª»ë§ë ¤");
+		set.add("ì•„ê¸°ê³µë£¡ë‘˜ë¦¬ì–¼ìŒë³„ëŒ€ëª¨í—˜");
+		set.add("ëŸ¬ë¸Œë¼ì´ë¸Œ");
 		
-		// Iterator ¸¦ È°¿ëÇÑ set ¿ä¼Ò ÀüÃ¼ Ãâ·Â
+		// Iterator ë¥¼ í™œìš©í•œ set ìš”ì†Œ ì „ì²´ ì¶œë ¥
 		Iterator<String> it = set.iterator();
 		while(it.hasNext())
 		{
 			System.out.print(it.next() + " ");
 		}
 		System.out.println();
-		//--==>> ±Í¸êÀÇÄ®³¯ ³ÊÀÇÀÌ¸§Àº µðÁö¸ó¾îµåº¥Ã³ ·¯ºê¶óÀÌºê
-		//		 ¸íÅ½Á¤ÄÚ³­ ¼¾°úÄ¡È÷·ÎÀÇÇà¹æºÒ¸í ¾Æ±â°ø·æµÑ¸®¾óÀ½º°´ë¸ðÇè
-		//		 ÀÌ¿ôÁýÅäÅä·Î Â¯±¸´Â¸ø¸»·Á Æ÷ÄÏ¸ó ÇÏÀÌÅ¥
-		//-- ¿ä¼Ò¸¦ ¹®ÀÚ¿­·Î ±¸¼ºÇÒ °æ¿ì
-		//   °¡³ª´Ù¼ø ¡æ ¿À¸§Â÷¼ø Á¤·Ä È®ÀÎ, ³Ö±â Àü¿¡ ÀÖ´ø °Íµé°ú ºñ±³ÇØ¼­ ¾îµð´Ù ³Ö¾î¾ß ÇÒÁö È®ÀÎÇÏ°í Ãß°¡ÇÑ´Ù.
-		//                                    µû¶ó¼­ ºñ±³ÀÛ¾÷ÀÌ °è¼Ó ÀÌ·ç¾îÁö±â ¶§¹®¿¡ ¸®¼Ò½º ¼Ò¸ð°¡ ½ÉÇÏ´Ù.
+		//--==>> ê·€ë©¸ì˜ì¹¼ë‚  ë„ˆì˜ì´ë¦„ì€ ë””ì§€ëª¬ì–´ë“œë²¤ì²˜ ëŸ¬ë¸Œë¼ì´ë¸Œ
+		//		 ëª…íƒì •ì½”ë‚œ ì„¼ê³¼ì¹˜ížˆë¡œì˜í–‰ë°©ë¶ˆëª… ì•„ê¸°ê³µë£¡ë‘˜ë¦¬ì–¼ìŒë³„ëŒ€ëª¨í—˜
+		//		 ì´ì›ƒì§‘í† í† ë¡œ ì§±êµ¬ëŠ”ëª»ë§ë ¤ í¬ì¼“ëª¬ í•˜ì´í
+		//-- ìš”ì†Œë¥¼ ë¬¸ìžì—´ë¡œ êµ¬ì„±í•  ê²½ìš°
+		//   ê°€ë‚˜ë‹¤ìˆœ â†’ ì˜¤ë¦„ì°¨ìˆœ ì •ë ¬ í™•ì¸, ë„£ê¸° ì „ì— ìžˆë˜ ê²ƒë“¤ê³¼ ë¹„êµí•´ì„œ ì–´ë””ë‹¤ ë„£ì–´ì•¼ í• ì§€ í™•ì¸í•˜ê³  ì¶”ê°€í•œë‹¤.
+		//                                    ë”°ë¼ì„œ ë¹„êµìž‘ì—…ì´ ê³„ì† ì´ë£¨ì–´ì§€ê¸° ë•Œë¬¸ì— ë¦¬ì†ŒìŠ¤ ì†Œëª¨ê°€ ì‹¬í•˜ë‹¤.
 
 		System.out.println("\n------------------------------------------------------\n");
 
-		// TreeSet ÀÚ·á±¸Á¶ ÀÎ½ºÅÏ½º »ý¼º
+		// TreeSet ìžë£Œêµ¬ì¡° ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
 		//TreeSet<GradeVO> set2 = new TreeSet<GradeVO>();
 		//
-		//                 ¡é
+		//                 â†“
 		//
-		// MyCompartor Å¬·¡½º¸¦ »ý¼ºÇÏ¿©
-		// compare() ¸Þ¼Òµå¸¦ ÀçÁ¤ÀÇÇÑ ÈÄ ´Ù½Ã »ý¼º
+		// MyCompartor í´ëž˜ìŠ¤ë¥¼ ìƒì„±í•˜ì—¬
+		// compare() ë©”ì†Œë“œë¥¼ ìž¬ì •ì˜í•œ í›„ ë‹¤ì‹œ ìƒì„±
 		TreeSet<GradeVO> set2 = new TreeSet<GradeVO>(new MyComparator<GradeVO>());
 
-		// TreeSet ÀÚ·á±¸Á¶ set2 ¿¡ ¿ä¼Ò Ãß°¡
-		set2.add(new GradeVO("2206113", "¹ÚÈ¿½Å", 90, 80, 70));
-		set2.add(new GradeVO("2206115", "½Å¿ëÀç", 91, 81, 71));
-		set2.add(new GradeVO("2206128", "±è¹ü¼ö", 88, 78, 68));
-        set2.add(new GradeVO("2206139", "Á¶ÀçÇö", 70, 60, 50));
-        set2.add(new GradeVO("2206150", "ÀÓÀç¹ü", 99, 82, 72));
+		// TreeSet ìžë£Œêµ¬ì¡° set2 ì— ìš”ì†Œ ì¶”ê°€
+		set2.add(new GradeVO("2206113", "ë°•íš¨ì‹ ", 90, 80, 70));
+		set2.add(new GradeVO("2206115", "ì‹ ìš©ìž¬", 91, 81, 71));
+		set2.add(new GradeVO("2206128", "ê¹€ë²”ìˆ˜", 88, 78, 68));
+        set2.add(new GradeVO("2206139", "ì¡°ìž¬í˜„", 70, 60, 50));
+        set2.add(new GradeVO("2206150", "ìž„ìž¬ë²”", 99, 82, 72));
 
-		// Iterator ¸¦ È°¿ëÇÑ set2 ¿ä¼Ò ÀüÃ¼ Ãâ·Â
+		// Iterator ë¥¼ í™œìš©í•œ set2 ìš”ì†Œ ì „ì²´ ì¶œë ¥
 		/*
 		Iterator<GradeVO> it2 = set2.iterator();
 
@@ -213,16 +213,16 @@ public class Test169
 			System.out.print(it2.next() + " ");
 		}
 		System.out.println();
-		//--==>> ¿¡·¯ ¹ß»ý(·±Å¸ÀÓ ¿¡·¯)
+		//--==>> ì—ëŸ¬ ë°œìƒ(ëŸ°íƒ€ìž„ ì—ëŸ¬)
 		//       Exception in thread "main" java.lang.ClassCastException: 
 		//       GradeVO cannot be cast to java.lang.Comparable
 		*/
 
 		//
-		//                 ¡é
+		//                 â†“
 		//
-		// MyCompartor Å¬·¡½º¸¦ »ý¼ºÇÏ¿©
-		// compare() ¸Þ¼Òµå¸¦ ÀçÁ¤ÀÇÇÑ ÈÄ ´Ù½Ã ±¸¼º
+		// MyCompartor í´ëž˜ìŠ¤ë¥¼ ìƒì„±í•˜ì—¬
+		// compare() ë©”ì†Œë“œë¥¼ ìž¬ì •ì˜í•œ í›„ ë‹¤ì‹œ êµ¬ì„±
 		/*
 		Iterator<GradeVO> it2 = set2.iterator();
 		while(it2.hasNext())
@@ -232,12 +232,12 @@ public class Test169
 		System.out.println();
 		*/
 		//--==>> GradeVO@15db9742 GradeVO@6d06d69c GradeVO@7852e922 GradeVO@4e25154f GradeVO@70dea4e
-		//       °´Ã¼¸¦ Ãâ·ÂÇÑ °ÍÀÌ±â ¶§¹®¿¡ ¼³°èµµÀÇ Å¬·¡½º¸í@ÇØ½ÃÄÚµå
+		//       ê°ì²´ë¥¼ ì¶œë ¥í•œ ê²ƒì´ê¸° ë•Œë¬¸ì— ì„¤ê³„ë„ì˜ í´ëž˜ìŠ¤ëª…@í•´ì‹œì½”ë“œ
 
-		//                 ¡é
+		//                 â†“
 
-		// °´Ã¼ ÀÚÃ¼¸¦ Á÷Á¢ Ãâ·ÂÇÏ´Â °ÍÀÌ ¾Æ´Ï¶ó
-		// °´Ã¼°¡ °®°íÀÖ´Â ¼Ó¼º¿¡ Á¢±ÙÇÏ¿© Ãâ·ÂÇÒ ¼ö ÀÖµµ·Ï Ã³¸®
+		// ê°ì²´ ìžì²´ë¥¼ ì§ì ‘ ì¶œë ¥í•˜ëŠ” ê²ƒì´ ì•„ë‹ˆë¼
+		// ê°ì²´ê°€ ê°–ê³ ìžˆëŠ” ì†ì„±ì— ì ‘ê·¼í•˜ì—¬ ì¶œë ¥í•  ìˆ˜ ìžˆë„ë¡ ì²˜ë¦¬
 
 		Iterator<GradeVO> it2 = set2.iterator();
 		while(it2.hasNext())
@@ -248,57 +248,57 @@ public class Test169
 		System.out.println();
 		//--==>>
 		/* 
-		// ÇÐ¹ø ±âÁØ ¿À¸§Â÷¼ø Á¤·Ä
-		2206113     ¹ÚÈ¿½Å   90   80   70
-		2206115     ½Å¿ëÀç   91   81   71
-		2206128     ±è¹ü¼ö   88   78   68
-		2206139     Á¶ÀçÇö   70   60   50
-		2206150     ÀÓÀç¹ü   99   82   72
+		// í•™ë²ˆ ê¸°ì¤€ ì˜¤ë¦„ì°¨ìˆœ ì •ë ¬
+		2206113     ë°•íš¨ì‹    90   80   70
+		2206115     ì‹ ìš©ìž¬   91   81   71
+		2206128     ê¹€ë²”ìˆ˜   88   78   68
+		2206139     ì¡°ìž¬í˜„   70   60   50
+		2206150     ìž„ìž¬ë²”   99   82   72
 		*/
 
 		/*
-		// ÇÐ¹ø ±âÁØ ³»¸²Â÷¼ø Á¤·Ä
-		2206150     ÀÓÀç¹ü   99   82   72
-		2206139     Á¶ÀçÇö   70   60   50
-		2206128     ±è¹ü¼ö   88   78   68
-		2206115     ½Å¿ëÀç   91   81   71
-		2206113     ¹ÚÈ¿½Å   90   80   70
+		// í•™ë²ˆ ê¸°ì¤€ ë‚´ë¦¼ì°¨ìˆœ ì •ë ¬
+		2206150     ìž„ìž¬ë²”   99   82   72
+		2206139     ì¡°ìž¬í˜„   70   60   50
+		2206128     ê¹€ë²”ìˆ˜   88   78   68
+		2206115     ì‹ ìš©ìž¬   91   81   71
+		2206113     ë°•íš¨ì‹    90   80   70
 		*/
 
-		// ÃÑÁ¡ ±âÁØ(¿À¸§Â÷¼ø)
+		// ì´ì  ê¸°ì¤€(ì˜¤ë¦„ì°¨ìˆœ)
 		/*
-		2206139     Á¶ÀçÇö   70   60   50  180
-		2206128     ±è¹ü¼ö   88   78   68  234
-		2206113     ¹ÚÈ¿½Å   90   80   70  240
-		2206115     ½Å¿ëÀç   91   81   71  243
-		2206150     ÀÓÀç¹ü   99   82   72  253
+		2206139     ì¡°ìž¬í˜„   70   60   50  180
+		2206128     ê¹€ë²”ìˆ˜   88   78   68  234
+		2206113     ë°•íš¨ì‹    90   80   70  240
+		2206115     ì‹ ìš©ìž¬   91   81   71  243
+		2206150     ìž„ìž¬ë²”   99   82   72  253
 		*/
 
-		// ÃÑÁ¡ ±âÁØ(³»¸²Â÷¼ø)
+		// ì´ì  ê¸°ì¤€(ë‚´ë¦¼ì°¨ìˆœ)
 		/*
-		2206150     ÀÓÀç¹ü   99   82   72  253
-		2206115     ½Å¿ëÀç   91   81   71  243
-		2206113     ¹ÚÈ¿½Å   90   80   70  240
-		2206128     ±è¹ü¼ö   88   78   68  234
-		2206139     Á¶ÀçÇö   70   60   50  180
+		2206150     ìž„ìž¬ë²”   99   82   72  253
+		2206115     ì‹ ìš©ìž¬   91   81   71  243
+		2206113     ë°•íš¨ì‹    90   80   70  240
+		2206128     ê¹€ë²”ìˆ˜   88   78   68  234
+		2206139     ì¡°ìž¬í˜„   70   60   50  180
 		*/
 		
-		// ÀÌ¸§ ±âÁØ(¿À¸§Â÷¼ø)
+		// ì´ë¦„ ê¸°ì¤€(ì˜¤ë¦„ì°¨ìˆœ)
 		/*
-		2206128     ±è¹ü¼ö   88   78   68  234
-		2206113     ¹ÚÈ¿½Å   90   80   70  240
-		2206115     ½Å¿ëÀç   91   81   71  243
-		2206150     ÀÓÀç¹ü   99   82   72  253
-		2206139     Á¶ÀçÇö   70   60   50  180
+		2206128     ê¹€ë²”ìˆ˜   88   78   68  234
+		2206113     ë°•íš¨ì‹    90   80   70  240
+		2206115     ì‹ ìš©ìž¬   91   81   71  243
+		2206150     ìž„ìž¬ë²”   99   82   72  253
+		2206139     ì¡°ìž¬í˜„   70   60   50  180
 		*/
 
-		// ÀÌ¸§ ±âÁØ(³»¸²Â÷¼ø)
+		// ì´ë¦„ ê¸°ì¤€(ë‚´ë¦¼ì°¨ìˆœ)
 		/*
-		2206139     Á¶ÀçÇö   70   60   50  180
-		2206150     ÀÓÀç¹ü   99   82   72  253
-		2206115     ½Å¿ëÀç   91   81   71  243
-		2206113     ¹ÚÈ¿½Å   90   80   70  240
-		2206128     ±è¹ü¼ö   88   78   68  234
+		2206139     ì¡°ìž¬í˜„   70   60   50  180
+		2206150     ìž„ìž¬ë²”   99   82   72  253
+		2206115     ì‹ ìš©ìž¬   91   81   71  243
+		2206113     ë°•íš¨ì‹    90   80   70  240
+		2206128     ê¹€ë²”ìˆ˜   88   78   68  234
 		*/
 		
 	}

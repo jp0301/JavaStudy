@@ -1,20 +1,20 @@
 /*=============================================
-      ¡á¡á¡á ½ÇÇà Èå¸§ÀÇ ÄÁÆ®·Ñ(Á¦¾î¹®) ¡á¡á¡á
-	  - switch ¹® ½Ç½À
+      â– â– â–  ì‹¤í–‰ íë¦„ì˜ ì»¨íŠ¸ë¡¤(ì œì–´ë¬¸) â– â– â– 
+	  - switch ë¬¸ ì‹¤ìŠµ
   ============================================*/
 
-// »ç¿ëÀÚ·ÎºÎÅÍ ÀÓÀÇÀÇ µÎ Á¤¼ö¿Í ¿¬»êÀÚ¸¦ ÀÔ·Â¹Þ¾Æ
-// ÇØ´ç ¿¬»êÀÚÀÇ ¿¬»ê Ã³¸® °á°ú¸¦ Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ±¸ÇöÇÑ´Ù
-// ´Ü, switch ¹®À» È°¿ëÇÑ Ã³¸®ÇÒ ¼ö ÀÖµµ·Ï ÇÏ¸ç,
-// ¿¬»ê °á°ú´Â ÆíÀÇ»ó Á¤¼ö ÇüÅÂ·Î Ã³¸®ÇÒ ¼ö ÀÖµµ·Ï ÇÑ´Ù.
+// ì‚¬ìš©ìžë¡œë¶€í„° ìž„ì˜ì˜ ë‘ ì •ìˆ˜ì™€ ì—°ì‚°ìžë¥¼ ìž…ë ¥ë°›ì•„
+// í•´ë‹¹ ì—°ì‚°ìžì˜ ì—°ì‚° ì²˜ë¦¬ ê²°ê³¼ë¥¼ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ êµ¬í˜„í•œë‹¤
+// ë‹¨, switch ë¬¸ì„ í™œìš©í•œ ì²˜ë¦¬í•  ìˆ˜ ìžˆë„ë¡ í•˜ë©°,
+// ì—°ì‚° ê²°ê³¼ëŠ” íŽ¸ì˜ìƒ ì •ìˆ˜ í˜•íƒœë¡œ ì²˜ë¦¬í•  ìˆ˜ ìžˆë„ë¡ í•œë‹¤.
 
-// ½ÇÇà ¿¹)
-// Ã¹ ¹øÂ° Á¤¼ö ÀÔ·Â : 3
-// µÎ ¹øÂ° Á¤¼ö ÀÔ·Â : 17
-// ¿¬»êÀÚ ÀÔ·Â[+ - * /] : -
+// ì‹¤í–‰ ì˜ˆ)
+// ì²« ë²ˆì§¸ ì •ìˆ˜ ìž…ë ¥ : 3
+// ë‘ ë²ˆì§¸ ì •ìˆ˜ ìž…ë ¥ : 17
+// ì—°ì‚°ìž ìž…ë ¥[+ - * /] : -
 
 // 3 - 17 = -14
-// °è¼ÓÇÏ·Á¸é ¾Æ¹« Å°³ª ...
+// ê³„ì†í•˜ë ¤ë©´ ì•„ë¬´ í‚¤ë‚˜ ...
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -27,17 +27,17 @@ public class Test043
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 
-		/* ¨ç ---------------------------------------------------------------
+		/* â‘  ---------------------------------------------------------------
 		int num1, num2, op, result;
 		//char op;
 
-		System.out.print("Ã¹ ¹øÂ° Á¤¼ö ÀÔ·Â : ");
+		System.out.print("ì²« ë²ˆì§¸ ì •ìˆ˜ ìž…ë ¥ : ");
 		num1 = Integer.parseInt(br.readLine());
 
-		System.out.print("µÎ ¹øÂ° Á¤¼ö ÀÔ·Â : ");
+		System.out.print("ë‘ ë²ˆì§¸ ì •ìˆ˜ ìž…ë ¥ : ");
 		num2 = Integer.parseInt(br.readLine());
 
-		System.out.print("¿¬»êÀÚ ÀÔ·Â[+ - * /] : ");
+		System.out.print("ì—°ì‚°ìž ìž…ë ¥[+ - * /] : ");
 		
 		//op = (char)System.in.read();
 		op = System.in.read();
@@ -49,8 +49,8 @@ public class Test043
 			case 45 : result = num1 - num2; break;
 			case 42 : result = num1 * num2; break;
 			case 47 : result = num1 / num2; break;
-			default : return;							// 1. °ªÀÇ ¹ÝÈ¯
-														// 2. ¸Þ¼Òµå¸¦ Á¾·á½ÃÅ²´Ù. ¡æ Á¾·á ´ë»óÀº main() ¸Þ¼Òµå ¡æ ÇÁ·Î±×·¥ Á¾·á
+			default : return;							// 1. ê°’ì˜ ë°˜í™˜
+														// 2. ë©”ì†Œë“œë¥¼ ì¢…ë£Œì‹œí‚¨ë‹¤. â†’ ì¢…ë£Œ ëŒ€ìƒì€ main() ë©”ì†Œë“œ â†’ í”„ë¡œê·¸ëž¨ ì¢…ë£Œ
 		}
 
 		System.out.println();
@@ -61,17 +61,17 @@ public class Test043
 		
 
 
-		// ¨è ---------------------------------------------------------------
+		// â‘¡ ---------------------------------------------------------------
 		int a, b, result;
 		char op;
 
-		System.out.print("Ã¹ ¹øÂ° Á¤¼ö ÀÔ·Â : ");
+		System.out.print("ì²« ë²ˆì§¸ ì •ìˆ˜ ìž…ë ¥ : ");
 		a = Integer.parseInt(br.readLine());
 
-		System.out.print("µÎ ¹øÂ° Á¤¼ö ÀÔ·Â : ");
+		System.out.print("ë‘ ë²ˆì§¸ ì •ìˆ˜ ìž…ë ¥ : ");
 		b = Integer.parseInt(br.readLine());
 
-		System.out.print("¿¬»êÀÚ ÀÔ·Â[+ - * /] : ");
+		System.out.print("ì—°ì‚°ìž ìž…ë ¥[+ - * /] : ");
 		op = (char)System.in.read();
 
 		switch(op)
@@ -88,12 +88,12 @@ public class Test043
 		
 	}
 }
-// ½ÇÇà °á°ú
+// ì‹¤í–‰ ê²°ê³¼
 /*
-Ã¹ ¹øÂ° Á¤¼ö ÀÔ·Â : 14
-µÎ ¹øÂ° Á¤¼ö ÀÔ·Â : 6
-¿¬»êÀÚ ÀÔ·Â[+ - * /] : -
+ì²« ë²ˆì§¸ ì •ìˆ˜ ìž…ë ¥ : 14
+ë‘ ë²ˆì§¸ ì •ìˆ˜ ìž…ë ¥ : 6
+ì—°ì‚°ìž ìž…ë ¥[+ - * /] : -
 
 >> 14 - 6 = 8
-°è¼ÓÇÏ·Á¸é ¾Æ¹« Å°³ª ´©¸£½Ê½Ã¿À . . .
+ê³„ì†í•˜ë ¤ë©´ ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ì‹­ì‹œì˜¤ . . .
 */

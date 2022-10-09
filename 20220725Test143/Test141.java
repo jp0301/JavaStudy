@@ -1,80 +1,80 @@
 /*==============================================
-  ¡á¡á¡á ÀÚ¹ÙÀÇ ÁÖ¿ä(Áß¿ä) Å¬·¡½º ¡á¡á¡á
-  - ÀÚ¹Ù¿¡¼­ ±âº»ÀûÀ¸·Î Á¦°øÇÏ´Â ÁÖ¿ä Å¬·¡½ºµé
-  - ¹®ÀÚ¿­ °ü·Ã Å¬·¡½º
-  - Ä³¸¯ÅÍ ¼Â(CharacterSet)
+  â– â– â–  ìžë°”ì˜ ì£¼ìš”(ì¤‘ìš”) í´ëž˜ìŠ¤ â– â– â– 
+  - ìžë°”ì—ì„œ ê¸°ë³¸ì ìœ¼ë¡œ ì œê³µí•˜ëŠ” ì£¼ìš” í´ëž˜ìŠ¤ë“¤
+  - ë¬¸ìžì—´ ê´€ë ¨ í´ëž˜ìŠ¤
+  - ìºë¦­í„° ì…‹(CharacterSet)
 ===============================================*/
 
 /*
-¡á Ä³¸¯ÅÍ ¼Â(Character Set)
+â–  ìºë¦­í„° ì…‹(Character Set)
 
-   ¡Û À¯´ÏÄÚµå(unicode)
-      ±¹Á¦ Ç¥ÁØÀ¸·Î Á¦Á¤µÈ 2¹ÙÀÌÆ®°èÀÇ ¸¸±¹ °øÅëÀÇ ±¹Á¦ ¹®ÀÚºÎÈ£
-	  Ã¼°è(UCS: Universal Code System)¸¦ ¸»ÇÑ´Ù.
-	  ¾ÖÇÃÄÄÇ»ÅÍ, IBM, ¸¶ÀÌÅ©·Î¼ÒÇÁÆ® µîÀÌ ÄÁ¼Ò½Ã¾öÀ» ¼³¸³ÇÑ
-	  À¯´ÏÄÚµå(Unicode)°¡ 1990³â¿¡ Ã¹ ¹öÀüÀ» ¹ßÇ¥ÇÏ¿´°í
-	  ISO/IEC JTC1 ¿¡¼­ 1995³â 9¿ù ±¹Á¦Ç¥ÁØÀ¸·Î Á¦Á¤ÇÏ¿´´Ù.
-	  °ø½Ä ¸íÄªÀº ISO/IEC 10646-1(Universal Multiple-Octet Coded Character Set)ÀÌ´Ù.
+   â—‹ ìœ ë‹ˆì½”ë“œ(unicode)
+      êµ­ì œ í‘œì¤€ìœ¼ë¡œ ì œì •ëœ 2ë°”ì´íŠ¸ê³„ì˜ ë§Œêµ­ ê³µí†µì˜ êµ­ì œ ë¬¸ìžë¶€í˜¸
+	  ì²´ê³„(UCS: Universal Code System)ë¥¼ ë§í•œë‹¤.
+	  ì• í”Œì»´í“¨í„°, IBM, ë§ˆì´í¬ë¡œì†Œí”„íŠ¸ ë“±ì´ ì»¨ì†Œì‹œì—„ì„ ì„¤ë¦½í•œ
+	  ìœ ë‹ˆì½”ë“œ(Unicode)ê°€ 1990ë…„ì— ì²« ë²„ì „ì„ ë°œí‘œí•˜ì˜€ê³ 
+	  ISO/IEC JTC1 ì—ì„œ 1995ë…„ 9ì›” êµ­ì œí‘œì¤€ìœ¼ë¡œ ì œì •í•˜ì˜€ë‹¤.
+	  ê³µì‹ ëª…ì¹­ì€ ISO/IEC 10646-1(Universal Multiple-Octet Coded Character Set)ì´ë‹¤.
 
-	  µ¥ÀÌÅÍÀÇ ±³È¯À» ¿øÈ°ÇÏ°Ô ÇÏ±â À§ÇÏ¿© ¹®ÀÚ 1°³¿¡ ºÎ¿©µÇ´Â °ªÀ»
-	  16ºñÆ®·Î ÅëÀÏÇÏ¿´´Ù.
-	  ÄÚµåÀÇ 1¹®ÀÚ ´ç ¿µ¾î´Â 7ºñÆ®, ºñ¿µ¾î´Â 8ºñÆ®,
-	  ÇÑ±ÛÀÌ³ª ÀÏº»¾î´Â 16ºñÆ®ÀÇ °ªÀ» °¡Áö°Ô µÇ´Âµ¥
-	  ÀÌµéÀ» ¸ðµÎ 16ºñÆ®·Î ÅëÀÏÇÑ °ÍÀÌ´Ù.
+	  ë°ì´í„°ì˜ êµí™˜ì„ ì›í™œí•˜ê²Œ í•˜ê¸° ìœ„í•˜ì—¬ ë¬¸ìž 1ê°œì— ë¶€ì—¬ë˜ëŠ” ê°’ì„
+	  16ë¹„íŠ¸ë¡œ í†µì¼í•˜ì˜€ë‹¤.
+	  ì½”ë“œì˜ 1ë¬¸ìž ë‹¹ ì˜ì–´ëŠ” 7ë¹„íŠ¸, ë¹„ì˜ì–´ëŠ” 8ë¹„íŠ¸,
+	  í•œê¸€ì´ë‚˜ ì¼ë³¸ì–´ëŠ” 16ë¹„íŠ¸ì˜ ê°’ì„ ê°€ì§€ê²Œ ë˜ëŠ”ë°
+	  ì´ë“¤ì„ ëª¨ë‘ 16ë¹„íŠ¸ë¡œ í†µì¼í•œ ê²ƒì´ë‹¤.
 
-   ¡Û UTF-8 °ú UTF-16
-	  UTF-8 °ú UTF-16 ÀÇ Â÷ÀÌ¸¦ ÇÑ ¸¶µð·Î ¸»ÇÏ¸é
-	  ¹®ÀÚ¸¦ Ç¥ÇöÇÒ ¶§ÀÇ ´ÜÀ§°¡ ´Ù¸£´Ù´Â °ÍÀÌ´Ù.
-	  UTF-8 Àº 8ºñÆ® °¡º¯Àå ¸ÖÆ¼¹ÙÀÌÆ®¿¡¼­ ¹®ÀÚ¸¦ Ç¥ÇöÇÏ°í,
-	  UTF-16 Àº 16ºñÆ® °¡º¯Àå ¸ÖÆ¼¹ÙÀÌÆ®¿¡¼­ ¹®ÀÚ¸¦ Ç¥ÇöÇÑ´Ù.
+   â—‹ UTF-8 ê³¼ UTF-16
+	  UTF-8 ê³¼ UTF-16 ì˜ ì°¨ì´ë¥¼ í•œ ë§ˆë””ë¡œ ë§í•˜ë©´
+	  ë¬¸ìžë¥¼ í‘œí˜„í•  ë•Œì˜ ë‹¨ìœ„ê°€ ë‹¤ë¥´ë‹¤ëŠ” ê²ƒì´ë‹¤.
+	  UTF-8 ì€ 8ë¹„íŠ¸ ê°€ë³€ìž¥ ë©€í‹°ë°”ì´íŠ¸ì—ì„œ ë¬¸ìžë¥¼ í‘œí˜„í•˜ê³ ,
+	  UTF-16 ì€ 16ë¹„íŠ¸ ê°€ë³€ìž¥ ë©€í‹°ë°”ì´íŠ¸ì—ì„œ ë¬¸ìžë¥¼ í‘œí˜„í•œë‹¤.
 
 	  - UTF-8(8bit UCS Transformation Format)
-	    À¥¿¡¼­ ±âº»ÀûÀ¸·Î »ç¿ëÇÏ´Â ÄÚµå.
-		UCS-2·Î Á¤ÀÇµÇ´Â ¹®ÀÚ ÁýÇÕÀ» ÀÌ¿ëÇÏ¿© ±â¼úµÈ ¹®ÀÚ¿­À»
-		¹ÙÀÌÆ® ¿­·Î º¯È¯ÇÏ´Â ¹æ½ÄÀÇ 1°³ 1°³ ¹®ÀÚ¸¦ 1~6¹ÙÀÌÆ® °¡º¯Àå
-		¸ÖÆ¼¹ÙÀÌÆ®·Î º¯È¯ÇÑ´Ù.
+	    ì›¹ì—ì„œ ê¸°ë³¸ì ìœ¼ë¡œ ì‚¬ìš©í•˜ëŠ” ì½”ë“œ.
+		UCS-2ë¡œ ì •ì˜ë˜ëŠ” ë¬¸ìž ì§‘í•©ì„ ì´ìš©í•˜ì—¬ ê¸°ìˆ ëœ ë¬¸ìžì—´ì„
+		ë°”ì´íŠ¸ ì—´ë¡œ ë³€í™˜í•˜ëŠ” ë°©ì‹ì˜ 1ê°œ 1ê°œ ë¬¸ìžë¥¼ 1~6ë°”ì´íŠ¸ ê°€ë³€ìž¥
+		ë©€í‹°ë°”ì´íŠ¸ë¡œ ë³€í™˜í•œë‹¤.
 
 	  - UTF-15(16bit UCS Transformation Format)
-	    ÀÚ¹ÙÀÇ ±âº» ÄÚµå, ÀÚ¹Ù¿¡¼­´Â ¹®ÀÚ ÇÏ³ª¸¦ ÀúÀåÇÏ¸é ¹ÙÀÌÆ® ¼ö´Â
-		¿µ¹®ÀÚÀÎµå, ÇÑ±¼¹®ÀÚÀÌµç 2¹ÙÀÌÆ®¸¦ Â÷ÁöÇÏ°Ô µÈ´Ù.
-		UCS-2 ·Î Á¤ÀÇµÇ´Â ¹®ÀÚ ÁýÇÕÀ» ÀÌ¿ëÇÏ¿© ±â¼úµÈ ¹®ÀÚ¿­¿¡
-		UCS-4 ÀÇ ÀÏºÎÀÇ ¹®ÀÚ¸¦ Ã¤¿ö³Ö±â À§ÇÑ ÀÎÄÚµù ¹æ½Ä,
-		UTF-S °ú º´¿ëÇÒ ¼ö ÀÖ´Ù.
-		UCS-2 ·Î ÀÌ¿ëÇÒ ¼ö ÀÖ´Â ¹®ÀÚ ¼ö¸¦ ´ëÆø ´Ã¸± ¼þ ÀÖ´Ù.
+	    ìžë°”ì˜ ê¸°ë³¸ ì½”ë“œ, ìžë°”ì—ì„œëŠ” ë¬¸ìž í•˜ë‚˜ë¥¼ ì €ìž¥í•˜ë©´ ë°”ì´íŠ¸ ìˆ˜ëŠ”
+		ì˜ë¬¸ìžì¸ë“œ, í•œêµ´ë¬¸ìžì´ë“  2ë°”ì´íŠ¸ë¥¼ ì°¨ì§€í•˜ê²Œ ëœë‹¤.
+		UCS-2 ë¡œ ì •ì˜ë˜ëŠ” ë¬¸ìž ì§‘í•©ì„ ì´ìš©í•˜ì—¬ ê¸°ìˆ ëœ ë¬¸ìžì—´ì—
+		UCS-4 ì˜ ì¼ë¶€ì˜ ë¬¸ìžë¥¼ ì±„ì›Œë„£ê¸° ìœ„í•œ ì¸ì½”ë”© ë°©ì‹,
+		UTF-S ê³¼ ë³‘ìš©í•  ìˆ˜ ìžˆë‹¤.
+		UCS-2 ë¡œ ì´ìš©í•  ìˆ˜ ìžˆëŠ” ë¬¸ìž ìˆ˜ë¥¼ ëŒ€í­ ëŠ˜ë¦´ ìˆ­ ìžˆë‹¤.
 
-	  ¡Ø ÀÚ¹Ù´Ü¿¡¼­´Â UTF-16À» »ç¿ëÇÏ°í À¥¿¡¼­´Â UTF-8À» »ç¿ëÇÏ±â ¶§¹®¿¡
-	     °æ¿ì¿¡ µû¶ó º¯È¯ÇØ¾ß ÇÏ´Â »óÈ²ÀÌ ¹ß»ýÇÒ ¼ö ÀÖ´Ù.
+	  â€» ìžë°”ë‹¨ì—ì„œëŠ” UTF-16ì„ ì‚¬ìš©í•˜ê³  ì›¹ì—ì„œëŠ” UTF-8ì„ ì‚¬ìš©í•˜ê¸° ë•Œë¬¸ì—
+	     ê²½ìš°ì— ë”°ë¼ ë³€í™˜í•´ì•¼ í•˜ëŠ” ìƒí™©ì´ ë°œìƒí•  ìˆ˜ ìžˆë‹¤.
 
-¡á ¹®ÀÚ ÄÚµåÀÇ Á¾·ù
+â–  ë¬¸ìž ì½”ë“œì˜ ì¢…ë¥˜
 
-   ¡Û KSC5601
-      ÇÑ±Û ¿Ï¼ºÇü Ç¥ÁØ(ÇÑ±Û 2, 350ÀÚ Ç¥Çö);
-	  ÇÑ±¹°ø¾÷Ç¥ÁØ Á¤º¸Ã³¸®ºÐ¾ß(C)ÀÇ 5601¹ø Ç¥ÁØ¾È.
+   â—‹ KSC5601
+      í•œê¸€ ì™„ì„±í˜• í‘œì¤€(í•œê¸€ 2, 350ìž í‘œí˜„);
+	  í•œêµ­ê³µì—…í‘œì¤€ ì •ë³´ì²˜ë¦¬ë¶„ì•¼(C)ì˜ 5601ë²ˆ í‘œì¤€ì•ˆ.
 
-   ¡Û KSC5636
-      ¿µ¹®ÀÚ¿¡ ´ëÇÑ Ç¥ÁØ
-	  ÇÑ±¹°ø¾÷Ç¥ÁØ Á¤º¸Ã³¸®ºÐ¾ß(C)ÀÇ 5636¹ø Ç¥ÁØ¾È.
-	  ±âÁ¸ ASCII Code ¿¡¼­ ¿ª½½·¡½Ã(\)¸¦ ¿ø(£Ü) Ç¥½Ã·Î ´ëÃ¼.
+   â—‹ KSC5636
+      ì˜ë¬¸ìžì— ëŒ€í•œ í‘œì¤€
+	  í•œêµ­ê³µì—…í‘œì¤€ ì •ë³´ì²˜ë¦¬ë¶„ì•¼(C)ì˜ 5636ë²ˆ í‘œì¤€ì•ˆ.
+	  ê¸°ì¡´ ASCII Code ì—ì„œ ì—­ìŠ¬ëž˜ì‹œ(\)ë¥¼ ì›(ï¿¦) í‘œì‹œë¡œ ëŒ€ì²´.
 
-   ¡Û EUC-KR(MS949)
-      Bell-Laboratories ¿¡¼­ À¯´Ð½º »ó¿¡¼­ ¿µ¹®ÀÚ ÀÌ¿ÜÀÇ ¹®ÀÚ¸¦
-	  Áö¿øÇÏ±â À§ÇØ Á¦¾ÈÇÑ È®Àå À¯´ÏÄÚµå(Extend UNIX Code) Áß
-	  ÇÑ±Û ÀÎÄÚµù ¹æ½Ä.
-	  ¿µ¹®Àº KSC5636À¸·Î Ã³¸®ÇÏ°í, ÇÑ±ÛÀº KSC5601·Î Ã³¸®.
-	  Áï, EUC-KR(MS949) = KSC5636 + KSC5601
+   â—‹ EUC-KR(MS949)
+      Bell-Laboratories ì—ì„œ ìœ ë‹‰ìŠ¤ ìƒì—ì„œ ì˜ë¬¸ìž ì´ì™¸ì˜ ë¬¸ìžë¥¼
+	  ì§€ì›í•˜ê¸° ìœ„í•´ ì œì•ˆí•œ í™•ìž¥ ìœ ë‹ˆì½”ë“œ(Extend UNIX Code) ì¤‘
+	  í•œê¸€ ì¸ì½”ë”© ë°©ì‹.
+	  ì˜ë¬¸ì€ KSC5636ìœ¼ë¡œ ì²˜ë¦¬í•˜ê³ , í•œê¸€ì€ KSC5601ë¡œ ì²˜ë¦¬.
+	  ì¦‰, EUC-KR(MS949) = KSC5636 + KSC5601
 
-	¡Û UTF-8
-	   ¿µ¹®°ú ¼ýÀÚ´Â 1¹ÙÀÌÆ®, ÇÑ±ÛÀº 3¹ÙÀÌÆ®·Î Ç¥Çö
-	   (À¥¿¡¼­ ¸¹ÀÌ »ç¿ë. UTF-8  Çü½ÄÀ¸·Î JSP¸¦ ÀÛ¼ºÇÒ ¶§¿¡´Â
-	   ÆÄÀÏµµ UTF-8 Çü½ÄÀ¸·Î ÀúÀåÇØ¾ß ÇÑ´Ù.
+	â—‹ UTF-8
+	   ì˜ë¬¸ê³¼ ìˆ«ìžëŠ” 1ë°”ì´íŠ¸, í•œê¸€ì€ 3ë°”ì´íŠ¸ë¡œ í‘œí˜„
+	   (ì›¹ì—ì„œ ë§Žì´ ì‚¬ìš©. UTF-8  í˜•ì‹ìœ¼ë¡œ JSPë¥¼ ìž‘ì„±í•  ë•Œì—ëŠ”
+	   íŒŒì¼ë„ UTF-8 í˜•ì‹ìœ¼ë¡œ ì €ìž¥í•´ì•¼ í•œë‹¤.
 
-	¡Û UTF-16
-	   ÀÚ¹Ù ±âº» ¹®ÀÚ ÄÚµå.
-	   ¿µ¹®°ú ¼ýÀÚ´Â 1¹ÙÀÌÆ®, ÇÑ±ÛÀº 2¹ÙÀÌÆ®·Î Ç¥Çö
+	â—‹ UTF-16
+	   ìžë°” ê¸°ë³¸ ë¬¸ìž ì½”ë“œ.
+	   ì˜ë¬¸ê³¼ ìˆ«ìžëŠ” 1ë°”ì´íŠ¸, í•œê¸€ì€ 2ë°”ì´íŠ¸ë¡œ í‘œí˜„
 
-	¡Û ISO-8859-1
-	   ¼­À¯·´ ¾ð¾î Ç¥±â¿¡ ÇÊ¿äÇÑ US-ASCII ¿¡ ¾ø´Â
-	   94°³ ±ÛÀÚÀÇ ¼øÂ÷Àû ³ª¿­.
+	â—‹ ISO-8859-1
+	   ì„œìœ ëŸ½ ì–¸ì–´ í‘œê¸°ì— í•„ìš”í•œ US-ASCII ì— ì—†ëŠ”
+	   94ê°œ ê¸€ìžì˜ ìˆœì°¨ì  ë‚˜ì—´.
 
 */
 
@@ -85,13 +85,13 @@ public class Test141
 	public static void main(String[] args) throws UnsupportedEncodingException
 	{
 		byte[] buf;
-		String name = new String("¹Ú¿ø¼®");
+		String name = new String("ë°•ì›ì„");
 
-		System.out.println("µðÆúÆ® Ä³¸¯ÅÍ¼Â : " + System.getProperty("file.encoding"));
-		//--==>> µðÆúÆ® Ä³¸¯ÅÍ¼Â : MS949
+		System.out.println("ë””í´íŠ¸ ìºë¦­í„°ì…‹ : " + System.getProperty("file.encoding"));
+		//--==>> ë””í´íŠ¸ ìºë¦­í„°ì…‹ : MS949
 		
-		// ¡ºString.getBytes()¡»
-		//  : µðÆúÆ® Ä³¸¯ÅÍ¼ÂÀ¸·Î ¹ÙÀÌÆ® ¹è¿­À» ¹ÝÈ¯ÇÏ´Â ¸Þ¼Òµå
+		// ã€ŽString.getBytes()ã€
+		//  : ë””í´íŠ¸ ìºë¦­í„°ì…‹ìœ¼ë¡œ ë°”ì´íŠ¸ ë°°ì—´ì„ ë°˜í™˜í•˜ëŠ” ë©”ì†Œë“œ
 		buf = name.getBytes();
 		
 		System.out.println("Length : " + buf.length);
@@ -100,7 +100,7 @@ public class Test141
 		for(byte b : buf)
 			System.out.println("[" + b + "]");
 		System.out.println();
-		//--==>> ÇÑ±ÛÀ» 2¹ÙÀÌÆ®·Î ÂÉ°·
+		//--==>> í•œê¸€ì„ 2ë°”ì´íŠ¸ë¡œ ìª¼ê°¬
 		/*
 		[-71]
 		[-38]
@@ -110,12 +110,12 @@ public class Test141
 		[-82]
 		*/
 		
-		// "UTF-8" Ä³¸¯ÅÍ¼ÂÀ¸·Î ¹ÙÀÌÆ® ¹è¿­À» º¯È¯
+		// "UTF-8" ìºë¦­í„°ì…‹ìœ¼ë¡œ ë°”ì´íŠ¸ ë°°ì—´ì„ ë³€í™˜
 		buf = name.getBytes("utf-8");			
-		//--==>> ¿¡·¯ ¹ß»ý(ÄÄÆÄÀÏ ¿¡·¯)
+		//--==>> ì—ëŸ¬ ë°œìƒ(ì»´íŒŒì¼ ì—ëŸ¬)
 		//       UnsupportedEncodingException
 
-		// ¡æ ¿¹¿Ü Ã³¸® ÈÄ... ´Ù½Ã È®ÀÎ
+		// â†’ ì˜ˆì™¸ ì²˜ë¦¬ í›„... ë‹¤ì‹œ í™•ì¸
 		System.out.println("Length : " + buf.length);
 		//--==>> Length : 9
 
@@ -123,7 +123,7 @@ public class Test141
 		for(byte b : buf)
 			System.out.println("[" + b + "]");
 		System.out.println();
-		//--==>> ÇÑ±ÛÀ» 3¹ÙÀÌÆ®·Î ÂÉ°·
+		//--==>> í•œê¸€ì„ 3ë°”ì´íŠ¸ë¡œ ìª¼ê°¬
 		/*
 		[-21]
 		[-80]
@@ -136,27 +136,27 @@ public class Test141
 		[-99]
 		*/
 
-		// new String("¹Ú¿ø¼®");
-		// new String(¹ÙÀÌÆ®¹è¿­, ÀÎÄÚµù¹æ½Ä);
+		// new String("ë°•ì›ì„");
+		// new String(ë°”ì´íŠ¸ë°°ì—´, ì¸ì½”ë”©ë°©ì‹);
 		// new String(buf, "utf-8");
 
-		// utf-8 ÇüÅÂ·Î ÀúÀåµÈ ¹ÙÀÌÆ® ¹è¿­À»
-		// String °´Ã¼·Î ÆÄ¶ó¹ÌÅÍ °ª ¡ºutf-8¡»À» ºÎ¿©ÇÏ¿© »ý¼º
-		// ¡æ Áï, utf-8 ±â¹ÝÀ¸·Î buf ¹ÙÀÌÆ®¹è¿­À» ÇÕÃÄ
-		//    ¹®ÀÚ¿­ °´Ã¼ »ý¼ºÇÑ ÈÄ ÀÌ¸§ Ãâ·Â
+		// utf-8 í˜•íƒœë¡œ ì €ìž¥ëœ ë°”ì´íŠ¸ ë°°ì—´ì„
+		// String ê°ì²´ë¡œ íŒŒë¼ë¯¸í„° ê°’ ã€Žutf-8ã€ì„ ë¶€ì—¬í•˜ì—¬ ìƒì„±
+		// â†’ ì¦‰, utf-8 ê¸°ë°˜ìœ¼ë¡œ buf ë°”ì´íŠ¸ë°°ì—´ì„ í•©ì³
+		//    ë¬¸ìžì—´ ê°ì²´ ìƒì„±í•œ í›„ ì´ë¦„ ì¶œë ¥
 		System.out.println("Value 1 : " + new String(buf, "utf-8"));
-		//--==>> Value 1 : ¹Ú¿ø¼®
+		//--==>> Value 1 : ë°•ì›ì„
 
 		System.out.println();
 		
-		// UTF-8 ÇüÅÂ·Î ÀúÀåµÈ ¹ÙÀÌÆ® ¹è¿­À»
-		// String °´Ã¼·Î ÆÄ¶ó¹ÌÅÍ °ª ¾øÀÌ
-		// µðÆúÆ® Ä³¸¯ÅÍ¼Â(MS949)À» ºÎ¿©ÇÏ¿© »ý¼º
+		// UTF-8 í˜•íƒœë¡œ ì €ìž¥ëœ ë°”ì´íŠ¸ ë°°ì—´ì„
+		// String ê°ì²´ë¡œ íŒŒë¼ë¯¸í„° ê°’ ì—†ì´
+		// ë””í´íŠ¸ ìºë¦­í„°ì…‹(MS949)ì„ ë¶€ì—¬í•˜ì—¬ ìƒì„±
 		System.out.println("Value 2 : " + new String(buf));
-		//--==>> Value 2 : ë°•ì›?„
+		//--==>> Value 2 : è«›ëº¤ì?ê½
 		
 		
-		System.out.println(); // °³Çà
+		System.out.println(); // ê°œí–‰
 
 		String convert = new String(name.getBytes("euc-kr"), "utf-8");
 
@@ -172,17 +172,17 @@ public class Test141
 		//--==>> Length : 14
 
 		/*
-		¡Ø check~!!!
+		â€» check~!!!
 
-		   euc-kr À» utf-8 ·Î º¯È¯ÇÏ°Ú´Ù´Â ÀÇµµ·Î
-		   À§¿Í °°ÀÌ ÄÚµùÀ» ÇØ¹ö¸®¸é
-		   ÀÌ·¯ÇÑ º¯È¯(Àß¸øµÈ º¯È¯)À¸·Î ÀÎÇØ ¹è¿­ÀÌ ±úÁ®¼­
-		   euc-kr ÀÌµç... utf-8 ÀÌµç...
-		   ¾î¶°ÇÑ ¹ÙÀÌÆ® ¹è¿­·Î ÀÐ¾î¿Àµç
-		   °á°ú¹°ÀÌ ±úÁ®ÀÖ´Â °ÍÀ» È®ÀÎÇÒ ¼ö ÀÖ´Ù.
+		   euc-kr ì„ utf-8 ë¡œ ë³€í™˜í•˜ê² ë‹¤ëŠ” ì˜ë„ë¡œ
+		   ìœ„ì™€ ê°™ì´ ì½”ë”©ì„ í•´ë²„ë¦¬ë©´
+		   ì´ëŸ¬í•œ ë³€í™˜(ìž˜ëª»ëœ ë³€í™˜)ìœ¼ë¡œ ì¸í•´ ë°°ì—´ì´ ê¹¨ì ¸ì„œ
+		   euc-kr ì´ë“ ... utf-8 ì´ë“ ...
+		   ì–´ë– í•œ ë°”ì´íŠ¸ ë°°ì—´ë¡œ ì½ì–´ì˜¤ë“ 
+		   ê²°ê³¼ë¬¼ì´ ê¹¨ì ¸ìžˆëŠ” ê²ƒì„ í™•ì¸í•  ìˆ˜ ìžˆë‹¤.
 
-		   ÀÌ¹Ì ±úÁ®¼­ »ý¼ºµÈ String °´Ã¼ÀÇ ¹ÙÀÌÆ® ¹è¿­Àº
-		   ¾î¶² ¹æ½ÄÀ¸·Îµç º¹±¸°¡ ºÒ°¡´ÉÇÏ´Ù.
+		   ì´ë¯¸ ê¹¨ì ¸ì„œ ìƒì„±ëœ String ê°ì²´ì˜ ë°”ì´íŠ¸ ë°°ì—´ì€
+		   ì–´ë–¤ ë°©ì‹ìœ¼ë¡œë“  ë³µêµ¬ê°€ ë¶ˆê°€ëŠ¥í•˜ë‹¤.
 		*/
 	}
 

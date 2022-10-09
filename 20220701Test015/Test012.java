@@ -1,7 +1,7 @@
 /*============================================
-  ¡á¡á¡á ÀÚ¹Ù ±âº» ÇÁ·Î±×·¡¹Ö ¡á¡á¡á
-  - º¯¼ö¿Í ÀÚ·áÇü
-  - ÀÚ¹Ù ±âº» ÀÔÃâ·Â : BufferedReader Å¬·¡½º
+  â– â– â–  ìžë°” ê¸°ë³¸ í”„ë¡œê·¸ëž˜ë° â– â– â– 
+  - ë³€ìˆ˜ì™€ ìžë£Œí˜•
+  - ìžë°” ê¸°ë³¸ ìž…ì¶œë ¥ : BufferedReader í´ëž˜ìŠ¤
 =============================================*/
 
 import java.io.BufferedReader;
@@ -12,82 +12,82 @@ public class Test012
 {
 	public static void main(String[] args) throws IOException
 	{
-		// Å°º¸µå ÀåÂø(»ý¼º)
-		// ¡æ BufferedReader Å¬·¡½º ±â¹ÝÀÇ ÀÎ½ºÅÏ½º(°´Ã¼) »ý¼º
+		// í‚¤ë³´ë“œ ìž¥ì°©(ìƒì„±)
+		// â†’ BufferedReader í´ëž˜ìŠ¤ ê¸°ë°˜ì˜ ì¸ìŠ¤í„´ìŠ¤(ê°ì²´) ìƒì„±
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		//------------------------------------
-		//    ¹®ÀÚ ÀÔ·ÂÀ» ÀÐ¾îµéÀÌ´Â ÀåÄ¡    
+		//    ë¬¸ìž ìž…ë ¥ì„ ì½ì–´ë“¤ì´ëŠ” ìž¥ì¹˜    
 		//                                     ---------------------
-		//                                     ¹ÙÀÌÆ® ¡æ ¹®ÀÚ ¹ø¿ª±â
+		//                                     ë°”ì´íŠ¸ â†’ ë¬¸ìž ë²ˆì—­ê¸°
         //                                                           ----------
-		//                                                           ¹ÙÀÌÆ® ÀÔ·Â°ª
+		//                                                           ë°”ì´íŠ¸ ìž…ë ¥ê°’
 
-		// ÁÖ¿ä º¯¼ö ¼±¾ð
-		int r;								//-- ¹ÝÁö¸§
-		final double PI = 3.141592;			//-- ¿øÁÖÀ² ¡æ º¯¼öÀÇ »ó¼öÈ­ ¡ºfinal¡»
-		double a, b;						//-- ¿øÀÇ ³ÐÀÌ, µÑ·¹
+		// ì£¼ìš” ë³€ìˆ˜ ì„ ì–¸
+		int r;								//-- ë°˜ì§€ë¦„
+		final double PI = 3.141592;			//-- ì›ì£¼ìœ¨ â†’ ë³€ìˆ˜ì˜ ìƒìˆ˜í™” ã€Žfinalã€
+		double a, b;						//-- ì›ì˜ ë„“ì´, ë‘˜ë ˆ
 
 
 
-		// ¿¬»ê ¹× Ã³¸®
-		// ¨ç »ç¿ëÀÚ¿¡°Ô ¾È³» ¸Þ¼¼Áö Ãâ·Â
-		//System.out.println("¿øÀÇ ¹ÝÁö¸§ ÀÔ·Â : ");
-		System.out.print("¿øÀÇ ¹ÝÁö¸§ ÀÔ·Â : ");
+		// ì—°ì‚° ë° ì²˜ë¦¬
+		// â‘  ì‚¬ìš©ìžì—ê²Œ ì•ˆë‚´ ë©”ì„¸ì§€ ì¶œë ¥
+		//System.out.println("ì›ì˜ ë°˜ì§€ë¦„ ìž…ë ¥ : ");
+		System.out.print("ì›ì˜ ë°˜ì§€ë¦„ ìž…ë ¥ : ");
 
-		// ¨è »ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ °ªÀ» ¹Þ¾Æ¿Í¼­ ¹ÝÁö¸§ º¯¼ö r¿¡ ´ã¾Æ³»±â 
-		// r = br.readLine();		//-- BufferedReader ÀÇ readLine() 
-									//   ¡æ ÀÔ·Â ´ë±â¿­¿¡ ³²¾ÆÀÖ´Â ¹®ÀÚ¿­ ¹ÝÈ¯
+		// â‘¡ ì‚¬ìš©ìžê°€ ìž…ë ¥í•œ ê°’ì„ ë°›ì•„ì™€ì„œ ë°˜ì§€ë¦„ ë³€ìˆ˜ rì— ë‹´ì•„ë‚´ê¸° 
+		// r = br.readLine();		//-- BufferedReader ì˜ readLine() 
+									//   â†’ ìž…ë ¥ ëŒ€ê¸°ì—´ì— ë‚¨ì•„ìžˆëŠ” ë¬¸ìžì—´ ë°˜í™˜
 		// r = "2546";
 
-		// "2546" ¡æ parseInt()		  ¡æ 2546
-		// "80" ¡æ parseInt()		  ¡æ 80
+		// "2546" â†’ parseInt()		  â†’ 2546
+		// "80" â†’ parseInt()		  â†’ 80
 
-		// Integer.parseInt("80")	  ¡æ 80
-		//-- ¸Å°³º¯¼ö·Î ³Ñ°Ü¹ÞÀº ¹®ÀÚ¿­ µ¥ÀÌÅÍ¸¦ Á¤¼öÇüÀ¸·Î º¯È¯
-		//   ´Ü, ÀÌ ¶§ ³Ñ°Ü¹Þ´Â ¹®ÀÚ¿­ µ¥ÀÌÅÍ´Â ¼ýÀÚ ÇüÅÂ¿©¾ß ÇÑ´Ù.
+		// Integer.parseInt("80")	  â†’ 80
+		//-- ë§¤ê°œë³€ìˆ˜ë¡œ ë„˜ê²¨ë°›ì€ ë¬¸ìžì—´ ë°ì´í„°ë¥¼ ì •ìˆ˜í˜•ìœ¼ë¡œ ë³€í™˜
+		//   ë‹¨, ì´ ë•Œ ë„˜ê²¨ë°›ëŠ” ë¬¸ìžì—´ ë°ì´í„°ëŠ” ìˆ«ìž í˜•íƒœì—¬ì•¼ í•œë‹¤.
 		//                                    (NumberFormat)
 
 		r = Integer.parseInt(br.readLine());
 		//r = Integer.parseInt("2546");
 		//r = 2546;
-		//-- »ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ °ªÀ» br Áï BufferedReader ÀÇ ¡ºreadLine()¡»
-		//   ¸Þ¼Òµå¸¦ È°¿ëÇÏ¿© ¹®ÀÚ¿­ ÇüÅÂ·Î ÀÐ¾îµéÀÎ ÈÄ
-		//   ±× °ªÀ» ¡ºInteger.parseInt()¡»¸¦ ÅëÇØ ¼ýÀÚÇü(Á¤¼öÇü)À¸·Î º¯È¯ÇÑ ÈÄ
-		// Á¤¼ö ÇüÅÂÀÇ ¹ÝÁö¸§ º¯¼ö r¿¡ ´ã¾Æ³»±â
+		//-- ì‚¬ìš©ìžê°€ ìž…ë ¥í•œ ê°’ì„ br ì¦‰ BufferedReader ì˜ ã€ŽreadLine()ã€
+		//   ë©”ì†Œë“œë¥¼ í™œìš©í•˜ì—¬ ë¬¸ìžì—´ í˜•íƒœë¡œ ì½ì–´ë“¤ì¸ í›„
+		//   ê·¸ ê°’ì„ ã€ŽInteger.parseInt()ã€ë¥¼ í†µí•´ ìˆ«ìží˜•(ì •ìˆ˜í˜•)ìœ¼ë¡œ ë³€í™˜í•œ í›„
+		// ì •ìˆ˜ í˜•íƒœì˜ ë°˜ì§€ë¦„ ë³€ìˆ˜ rì— ë‹´ì•„ë‚´ê¸°
 
 
-		// ¨é ³ÐÀÌ ¹× µÑ·¹ °Ô»ê(¿¬»ê)
-		//    ¡æ °¢°¢ º¯¼ö a¿Í b¿¡ ´ã¾Æ³»±â
+		// â‘¢ ë„“ì´ ë° ë‘˜ë ˆ ê²Œì‚°(ì—°ì‚°)
+		//    â†’ ê°ê° ë³€ìˆ˜ aì™€ bì— ë‹´ì•„ë‚´ê¸°
 		a = r * r * PI;
 		b = r * 2 * PI;
 		
 		
-		// ÃÖÁ¾ °á°ú Ãâ·Â
-		// ¡æ º¯¼ö a¿Í b¿¡ ´ã°ÜÀÖ´Â °ª Ãâ·Â
-		//System.out.println(">> ³ÐÀÌ : " + a);
-		//System.out.println(">> µÑ·¹ : " + b);
+		// ìµœì¢… ê²°ê³¼ ì¶œë ¥
+		// â†’ ë³€ìˆ˜ aì™€ bì— ë‹´ê²¨ìžˆëŠ” ê°’ ì¶œë ¥
+		//System.out.println(">> ë„“ì´ : " + a);
+		//System.out.println(">> ë‘˜ë ˆ : " + b);
 		//--==>>
 		/*
-		¿øÀÇ ¹ÝÁö¸§ ÀÔ·Â: 45
-		>> ³ÐÀÌ : 6361.723800000001
-		>> µÑ·¹ : 282.74328
+		ì›ì˜ ë°˜ì§€ë¦„ ìž…ë ¥: 45
+		>> ë„“ì´ : 6361.723800000001
+		>> ë‘˜ë ˆ : 282.74328
 		*/
 
-		//¹ÝÁö¸§ÀÌ 45ÀÎ ¿øÀÇ ³ÐÀÌ´Â 6361.72 ÀÌ¸ç,
-		//¹ÝÁö¸§ÀÌ 45ÀÎ ¿øÀÇ µÑ·¹´Â 282.74 ÀÌ´Ù.
-		System.out.printf(">> ¹ÝÁö¸§ÀÌ %dÀÎ ¿øÀÇ ³ÐÀÌ´Â %.2f ÀÌ¸ç,%n", r, a);
-		System.out.printf(">> ¹ÝÁö¸§ÀÌ %dÀÎ ¿øÀÇ µÑ·¹´Â %.2f ÀÌ´Ù.%n", r, b);
+		//ë°˜ì§€ë¦„ì´ 45ì¸ ì›ì˜ ë„“ì´ëŠ” 6361.72 ì´ë©°,
+		//ë°˜ì§€ë¦„ì´ 45ì¸ ì›ì˜ ë‘˜ë ˆëŠ” 282.74 ì´ë‹¤.
+		System.out.printf(">> ë°˜ì§€ë¦„ì´ %dì¸ ì›ì˜ ë„“ì´ëŠ” %.2f ì´ë©°,%n", r, a);
+		System.out.printf(">> ë°˜ì§€ë¦„ì´ %dì¸ ì›ì˜ ë‘˜ë ˆëŠ” %.2f ì´ë‹¤.%n", r, b);
 
 	}
 }
 
 
 
-// ½ÇÇà °á°ú
+// ì‹¤í–‰ ê²°ê³¼
 /*
-¿øÀÇ ¹ÝÁö¸§ ÀÔ·Â : 45
->> ¹ÝÁö¸§ÀÌ 45ÀÎ ¿øÀÇ ³ÐÀÌ´Â 6361.72 ÀÌ¸ç,
->> ¹ÝÁö¸§ÀÌ 45ÀÎ ¿øÀÇ µÑ·¹´Â 282.74 ÀÌ´Ù.
-°è¼ÓÇÏ·Á¸é ¾Æ¹« Å°³ª ´©¸£½Ê½Ã¿À . . .
+ì›ì˜ ë°˜ì§€ë¦„ ìž…ë ¥ : 45
+>> ë°˜ì§€ë¦„ì´ 45ì¸ ì›ì˜ ë„“ì´ëŠ” 6361.72 ì´ë©°,
+>> ë°˜ì§€ë¦„ì´ 45ì¸ ì›ì˜ ë‘˜ë ˆëŠ” 282.74 ì´ë‹¤.
+ê³„ì†í•˜ë ¤ë©´ ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ì‹­ì‹œì˜¤ . . .
 */
 

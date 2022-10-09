@@ -1,8 +1,8 @@
 /*=======================================
-  ¡á¡á¡á ÀÚ¹ÙÀÇ ±âº» ÀÔÃâ·Â(I/O) ¡á¡á¡á
+  â– â– â–  ìžë°”ì˜ ê¸°ë³¸ ìž…ì¶œë ¥(I/O) â– â– â– 
 =========================================*/
 
-// Reader Writer ½Ç½À
+// Reader Writer ì‹¤ìŠµ
 
 import java.io.Reader;
 import java.io.Writer;
@@ -17,32 +17,32 @@ import java.io.IOException;
 public class Test176
 {
 
-	public void process(InputStream is) // System.in Àü´Þ~!!!
+	public void process(InputStream is) // System.in ì „ë‹¬~!!!
 	{
 		int data;
 
-		System.out.println("¹®ÀÚ¿­ ÀÔ·Â(Á¾·á:Ctrl+z)");
+		System.out.println("ë¬¸ìžì—´ ìž…ë ¥(ì¢…ë£Œ:Ctrl+z)");
 
 		try
 		{
-			// ¸Å°³º¯¼ö is ¶ó´Â ¹ÙÀÌÆ® ±â¹Ý °´Ã¼(InputStream)¸¦
-			// ¹®ÀÚ ½ºÆ®¸²À¸·Î º¯È¯ÇÏ¿©
-			// (¡æ InputStreamReader °¡ ¼öÇà)
-			// Reader Å¸ÀÔÀÇ rd¿¡¼­ ÂüÁ¶ÇÒ ¼ö ÀÖµµ·Ï Ã³¸®
+			// ë§¤ê°œë³€ìˆ˜ is ë¼ëŠ” ë°”ì´íŠ¸ ê¸°ë°˜ ê°ì²´(InputStream)ë¥¼
+			// ë¬¸ìž ìŠ¤íŠ¸ë¦¼ìœ¼ë¡œ ë³€í™˜í•˜ì—¬
+			// (â†’ InputStreamReader ê°€ ìˆ˜í–‰)
+			// Reader íƒ€ìž…ì˜ rdì—ì„œ ì°¸ì¡°í•  ìˆ˜ ìžˆë„ë¡ ì²˜ë¦¬
 			Reader rd = new InputStreamReader(is);	// System.in
-			//==> ¹®ÀÚ ±â¹Ý ÀÔ·Â ½ºÆ®¸² rd~!!!
+			//==> ë¬¸ìž ê¸°ë°˜ ìž…ë ¥ ìŠ¤íŠ¸ë¦¼ rd~!!!
 
-			// ¹ÙÀÌÆ® ±â¹Ý ½ºÆ®¸²ÀÎ ÀÚ¹Ù ±âº» Ãâ·Â ½ºÆ®¸²(System.out)À»
-			// ¹®ÀÚ ½ºÆ®¸²À¸·Î º¯È¯ÇÏ¿©
-			// (¡æ OutputStreamWriter °¡ ¼öÇà)
-			// Writer Å¸ÀÔÀÇ wt¿¡¼­ ÂüÁ¶ÇÒ ¼ö ÀÖµµ·Ï Ã³¸®
+			// ë°”ì´íŠ¸ ê¸°ë°˜ ìŠ¤íŠ¸ë¦¼ì¸ ìžë°” ê¸°ë³¸ ì¶œë ¥ ìŠ¤íŠ¸ë¦¼(System.out)ì„
+			// ë¬¸ìž ìŠ¤íŠ¸ë¦¼ìœ¼ë¡œ ë³€í™˜í•˜ì—¬
+			// (â†’ OutputStreamWriter ê°€ ìˆ˜í–‰)
+			// Writer íƒ€ìž…ì˜ wtì—ì„œ ì°¸ì¡°í•  ìˆ˜ ìžˆë„ë¡ ì²˜ë¦¬
 			Writer wt = new OutputStreamWriter(System.out);
-			//==> ¹®ÀÚ ±â¹Ý Ãâ·Â ½ºÆ®¸² wt~!!!
+			//==> ë¬¸ìž ê¸°ë°˜ ì¶œë ¥ ìŠ¤íŠ¸ë¦¼ wt~!!!
 
 			while( (data = rd.read()) != -1 )
 			{
-				wt.write(data);	//-- ³»º¸³»´Â ½ºÆ®¸²(¹°ÁÙ±â)¿¡ data¸¦ ±â·Ï
-				wt.flush();		//-- ±â·ÏÇÑ ½ºÆ®¸²(¹°ÁÙ±â)¸¦ ¹Ð¾î³»¾î ³»º¸³¿
+				wt.write(data);	//-- ë‚´ë³´ë‚´ëŠ” ìŠ¤íŠ¸ë¦¼(ë¬¼ì¤„ê¸°)ì— dataë¥¼ ê¸°ë¡
+				wt.flush();		//-- ê¸°ë¡í•œ ìŠ¤íŠ¸ë¦¼(ë¬¼ì¤„ê¸°)ë¥¼ ë°€ì–´ë‚´ì–´ ë‚´ë³´ëƒ„
 			}
 		}
 		catch (IOException e)
@@ -59,21 +59,21 @@ public class Test176
 	}
 }
 
-// ½ÇÇà °á°ú
+// ì‹¤í–‰ ê²°ê³¼
 
 /*
-¹®ÀÚ¿­ ÀÔ·Â(Á¾·á:Ctrl+z)
+ë¬¸ìžì—´ ìž…ë ¥(ì¢…ë£Œ:Ctrl+z)
 1234
 1234
 abcd
 abcd
 efg
 efg
-°¡³ª´Ù¶ó
-°¡³ª´Ù¶ó
-¹Ú¿ø¼®
-¹Ú¿ø¼®
+ê°€ë‚˜ë‹¤ë¼
+ê°€ë‚˜ë‹¤ë¼
+ë°•ì›ì„
+ë°•ì›ì„
 ^Z
-°è¼ÓÇÏ·Á¸é ¾Æ¹« Å°³ª ´©¸£½Ê½Ã¿À . . .
+ê³„ì†í•˜ë ¤ë©´ ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ì‹­ì‹œì˜¤ . . .
 
 */

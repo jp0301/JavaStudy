@@ -1,48 +1,48 @@
 /*==============================================
-  ¡á¡á¡á ÀÚ¹ÙÀÇ ÁÖ¿ä(Áß¿ä) Å¬·¡½º ¡á¡á¡á
-  - ÀÚ¹Ù¿¡¼­ ±âº»ÀûÀ¸·Î Á¦°øÇÏ´Â ÁÖ¿ä Å¬·¡½ºµé
-  - Calendar Å¬·¡½º
+  â– â– â–  ìžë°”ì˜ ì£¼ìš”(ì¤‘ìš”) í´ëž˜ìŠ¤ â– â– â– 
+  - ìžë°”ì—ì„œ ê¸°ë³¸ì ìœ¼ë¡œ ì œê³µí•˜ëŠ” ì£¼ìš” í´ëž˜ìŠ¤ë“¤
+  - Calendar í´ëž˜ìŠ¤
 ===============================================*/
 
 
 /*
-¡Û java.util.Calendar Å¬·¡½º´Â
-   ³¯Â¥¿Í ½Ã°£À» °´Ã¼ ¸ðµ¨¸µÈ­ ÇÑ Å¬·¡½º·Î
-   ¿¬, ¿ù, ÀÏ, ¿äÀÏ, ½Ã, ºÐ, ÃÊ±îÁöÀÇ
-   ½Ã°£°ú ³¯Â¥¿Í °ü·ÃµÈ Á¤º¸¸¦ Á¦°øÇÑ´Ù.
-   ±×¸®°í, Calendar Å¬·¡½º´Â Ãß»ó Å¬·¡½ºÀÌ¹Ç·Î Á÷Á¢ °´Ã¼¸¦ »ý¼ºÇÒ ¼ö ¾øÀ¸¸ç
-   ½ÇÁ¦ÀûÀÎ ¸Þ¼Òµå ±¸ÇöÀº  Calendar Å¬·¡½ºÀÇ ¼­ºê Å¬·¡½ºÀÎ
-   GregorianCalendar Å¬·¡½º¿¡ Á¤ÀÇµÇ¾î ÀÖ´Ù.
+â—‹ java.util.Calendar í´ëž˜ìŠ¤ëŠ”
+   ë‚ ì§œì™€ ì‹œê°„ì„ ê°ì²´ ëª¨ë¸ë§í™” í•œ í´ëž˜ìŠ¤ë¡œ
+   ì—°, ì›”, ì¼, ìš”ì¼, ì‹œ, ë¶„, ì´ˆê¹Œì§€ì˜
+   ì‹œê°„ê³¼ ë‚ ì§œì™€ ê´€ë ¨ëœ ì •ë³´ë¥¼ ì œê³µí•œë‹¤.
+   ê·¸ë¦¬ê³ , Calendar í´ëž˜ìŠ¤ëŠ” ì¶”ìƒ í´ëž˜ìŠ¤ì´ë¯€ë¡œ ì§ì ‘ ê°ì²´ë¥¼ ìƒì„±í•  ìˆ˜ ì—†ìœ¼ë©°
+   ì‹¤ì œì ì¸ ë©”ì†Œë“œ êµ¬í˜„ì€  Calendar í´ëž˜ìŠ¤ì˜ ì„œë¸Œ í´ëž˜ìŠ¤ì¸
+   GregorianCalendar í´ëž˜ìŠ¤ì— ì •ì˜ë˜ì–´ ìžˆë‹¤.
 
-   ½Ã½ºÅÛÀ¸·ÎºÎÅÍ ÇöÀç ½Ã½ºÅÛ ½Ã°£ Á¤º¸¸¦ ¾ò¾î¿Ã ¶§
-   getInstance() ¶ó´Â Á¤Àû(static) ¸Þ¼Òµå¸¦ ÀÌ¿ëÇÏ¿© °´Ã¼¸¦ »ý¼ºÇÒ ¼ö ÀÖ´Ù.
-   »ý¼ºµÈ Calendar Å¬·¡½º °´Ã¼´Â ½Ã½ºÅÛÀÇ ÇöÀç ³¯Â¥¿Í ½Ã°£ Á¤º¸¸¦ °¡Áö¸ç,
-   ÀÌ °´Ã¼°¡ »ý¼ºµÇ¸é °®°íÀÖ´Â ½Ã°£ Á¤º¸µéÀº
-   get() ¸Þ¼Òµå¸¦ ÀÌ¿ëÇÏ¿© ½±°Ô °¡Á®¿Ã(»ç¿ëÇÒ) ¼ö ÀÖ´Ù.
+   ì‹œìŠ¤í…œìœ¼ë¡œë¶€í„° í˜„ìž¬ ì‹œìŠ¤í…œ ì‹œê°„ ì •ë³´ë¥¼ ì–»ì–´ì˜¬ ë•Œ
+   getInstance() ë¼ëŠ” ì •ì (static) ë©”ì†Œë“œë¥¼ ì´ìš©í•˜ì—¬ ê°ì²´ë¥¼ ìƒì„±í•  ìˆ˜ ìžˆë‹¤.
+   ìƒì„±ëœ Calendar í´ëž˜ìŠ¤ ê°ì²´ëŠ” ì‹œìŠ¤í…œì˜ í˜„ìž¬ ë‚ ì§œì™€ ì‹œê°„ ì •ë³´ë¥¼ ê°€ì§€ë©°,
+   ì´ ê°ì²´ê°€ ìƒì„±ë˜ë©´ ê°–ê³ ìžˆëŠ” ì‹œê°„ ì •ë³´ë“¤ì€
+   get() ë©”ì†Œë“œë¥¼ ì´ìš©í•˜ì—¬ ì‰½ê²Œ ê°€ì ¸ì˜¬(ì‚¬ìš©í• ) ìˆ˜ ìžˆë‹¤.
 
-   getInstance()  ¸Þ¼Òµå´Â ³»ºÎÀûÀ¸·Î GregorianCalendar °´Ã¼¸¦ »ý¼ºÇÏ¿©
-   µ¹·ÁÁÖ±â ¶§¹®¿¡ GregorianCalendar °´Ã¼¸¦ Á÷Á¢ »ý¼ºÇÏ¿© ½Ã°£ Á¤º¸¸¦
-   ±¸ÇÒ ¼öµµ ÀÖ´Ù.
+   getInstance()  ë©”ì†Œë“œëŠ” ë‚´ë¶€ì ìœ¼ë¡œ GregorianCalendar ê°ì²´ë¥¼ ìƒì„±í•˜ì—¬
+   ëŒë ¤ì£¼ê¸° ë•Œë¬¸ì— GregorianCalendar ê°ì²´ë¥¼ ì§ì ‘ ìƒì„±í•˜ì—¬ ì‹œê°„ ì •ë³´ë¥¼
+   êµ¬í•  ìˆ˜ë„ ìžˆë‹¤.
 */
 
 /*
-¡Û ½Ç½À ¹®Á¦
-   »ç¿ëÀÚ·ÎºÎÅÍ ¿¬, ¿ùÀ» ÀÔ·Â¹Þ¾Æ
-   ´Þ·ÂÀ» ±×·ÁÁÖ´Â(Ãâ·ÂÇÏ´Â) ÇÁ·Î±×·¥À» ±¸ÇöÇÑ´Ù.
-   ´Ü, Calendar Å¬·¡½º¸¦ È°¿ëÇÏ¿© ÀÛ¼ºÇÒ ¼ö ÀÖµµ·Ï ÇÑ´Ù.
-   ¡Ø API Document ÂüÁ¶ÇÏ¿© getActualMaximum() ¸Þ¼ÒµåÀÇ È°¿ë ¹æ¹ý °ËÅäÇÒ °Í
+â—‹ ì‹¤ìŠµ ë¬¸ì œ
+   ì‚¬ìš©ìžë¡œë¶€í„° ì—°, ì›”ì„ ìž…ë ¥ë°›ì•„
+   ë‹¬ë ¥ì„ ê·¸ë ¤ì£¼ëŠ”(ì¶œë ¥í•˜ëŠ”) í”„ë¡œê·¸ëž¨ì„ êµ¬í˜„í•œë‹¤.
+   ë‹¨, Calendar í´ëž˜ìŠ¤ë¥¼ í™œìš©í•˜ì—¬ ìž‘ì„±í•  ìˆ˜ ìžˆë„ë¡ í•œë‹¤.
+   â€» API Document ì°¸ì¡°í•˜ì—¬ getActualMaximum() ë©”ì†Œë“œì˜ í™œìš© ë°©ë²• ê²€í† í•  ê²ƒ
 
-½ÇÇà ¿¹)
-¿¬µµ ÀÔ·Â : 0
-¿¬µµ ÀÔ·Â : 2022
-¿ù ÀÔ·Â : -20
-¿ù ÀÔ·Â : 16
-¿ù ÀÔ·Â : 7
+ì‹¤í–‰ ì˜ˆ)
+ì—°ë„ ìž…ë ¥ : 0
+ì—°ë„ ìž…ë ¥ : 2022
+ì›” ìž…ë ¥ : -20
+ì›” ìž…ë ¥ : 16
+ì›” ìž…ë ¥ : 7
 
 
-       [  2022³â 7¿ù  ]
+       [  2022ë…„ 7ì›”  ]
 
-  ÀÏ  ¿ù  È­  ¼ö  ¸ñ  ±Ý  Åä
+  ì¼  ì›”  í™”  ìˆ˜  ëª©  ê¸ˆ  í† 
   ===========================
                        1   2
    3   4   5   6   7   8   9
@@ -51,7 +51,7 @@
   24  25  26  27  28  29  30
   31
   ===========================
-  °è¼ÓÇÏ·Á¸é ¾Æ¹« Å°³ª ´©¸£¼¼¿ä...
+  ê³„ì†í•˜ë ¤ë©´ ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ì„¸ìš”...
 */
 
 import java.io.BufferedReader;
@@ -66,90 +66,90 @@ public class Test143
 {
 	public static void main(String[] args) throws IOException
 	{
-		//BufferedReader Å¬·¡½º ±â¹Ý ÀÎ½ºÅÏ½º »ý¼º
+		//BufferedReader í´ëž˜ìŠ¤ ê¸°ë°˜ ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
-		// Calendar Å¬·¡½º ±â¹Ý ÀÎ½ºÅÏ½º »ý¼º
+		// Calendar í´ëž˜ìŠ¤ ê¸°ë°˜ ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
 		Calendar cl = Calendar.getInstance();
 		
-		int y, m, w; //³â,¿ù,¿äÀÏ
+		int y, m, w; //ë…„,ì›”,ìš”ì¼
 
 		do
 		{
-			System.out.print("¿¬µµ ÀÔ·Â : ");
+			System.out.print("ì—°ë„ ìž…ë ¥ : ");
 			y = Integer.parseInt(br.readLine());
 		}
 		while (y < 1);
 
 		do
 		{
-			System.out.print("¿ù ÀÔ·Â : ");
+			System.out.print("ì›” ìž…ë ¥ : ");
 			m = Integer.parseInt(br.readLine());
 		}
 		while (m < 1 || m > 12);
 
 
-		// »ç¿ëÀÚ·ÎºÎÅÍ ÀÔ·Â¹ÞÀº ¿¬(y), ¿ù(m)À» ÀÌ¿ëÇÏ¿©
-		// ´Þ·Â ³¯Â¥ ¼¼ÆÃ
+		// ì‚¬ìš©ìžë¡œë¶€í„° ìž…ë ¥ë°›ì€ ì—°(y), ì›”(m)ì„ ì´ìš©í•˜ì—¬
+		// ë‹¬ë ¥ ë‚ ì§œ ì„¸íŒ…
 		cl.set(y, m-1, 1);
-		//-- ¿ù ±¸¼º ½Ã ÀÔ·Â°ª(m)À» ±×´ë·Î »ç¿ëÇÏ´Â °ÍÀÌ ¾Æ´Ï¶ó
-		//   ÀÔ·Â°ª¿¡¼­ 1À» »« °ªÀ¸·Î ¿ùÀ» ¼³Á¤ÇØ¾ß ÇÑ´Ù.
-		//-- ÀÏ ±¸¼º ½Ã ÀÔ·Â¹ÞÀº ¿¬, ¿ù¿¡ ÇØ´çÇÏ´Â 1ÀÏ·Î ¼³Á¤ÇØ¾ß ÇÑ´Ù.
-		//   1ÀÏÀÇ ¿äÀÏ È®ÀÎ ÇÊ¿ä~!!!
+		//-- ì›” êµ¬ì„± ì‹œ ìž…ë ¥ê°’(m)ì„ ê·¸ëŒ€ë¡œ ì‚¬ìš©í•˜ëŠ” ê²ƒì´ ì•„ë‹ˆë¼
+		//   ìž…ë ¥ê°’ì—ì„œ 1ì„ ëº€ ê°’ìœ¼ë¡œ ì›”ì„ ì„¤ì •í•´ì•¼ í•œë‹¤.
+		//-- ì¼ êµ¬ì„± ì‹œ ìž…ë ¥ë°›ì€ ì—°, ì›”ì— í•´ë‹¹í•˜ëŠ” 1ì¼ë¡œ ì„¤ì •í•´ì•¼ í•œë‹¤.
+		//   1ì¼ì˜ ìš”ì¼ í™•ì¸ í•„ìš”~!!!
 
 
 		//System.out.println(Calendar.DAY_OF_WEEK); 
 		//--==>> 7
 		
-		// ¼¼ÆÃµÈ ´Þ·ÂÀÇ ³¯Â¥·ÎºÎÅÍ ¿äÀÏ °¡Á®¿À±â
+		// ì„¸íŒ…ëœ ë‹¬ë ¥ì˜ ë‚ ì§œë¡œë¶€í„° ìš”ì¼ ê°€ì ¸ì˜¤ê¸°
 		w = cl.get(Calendar.DAY_OF_WEEK);
 
-		// Å×½ºÆ®(È®ÀÎ)
+		// í…ŒìŠ¤íŠ¸(í™•ì¸)
 		//System.out.println("w : " + w);
 		//--==>> w : 6
 
 		/*
-			¿¬µµ ÀÔ·Â : 2022
-			¿ù ÀÔ·Â   : 7
-			6 ¡æ 2022³â 7¿ù ±âÁØ ¡æ ±Ý¿äÀÏ ¡æ 2022³â 7¿ù 1ÀÏÀº ±Ý¿äÀÏ~!!!
+			ì—°ë„ ìž…ë ¥ : 2022
+			ì›” ìž…ë ¥   : 7
+			6 â†’ 2022ë…„ 7ì›” ê¸°ì¤€ â†’ ê¸ˆìš”ì¼ â†’ 2022ë…„ 7ì›” 1ì¼ì€ ê¸ˆìš”ì¼~!!!
 		*/
 		
 
 
 
 
-		// °á°ú Ãâ·Â ¡æ ´Þ·Â ±×¸®±â
+		// ê²°ê³¼ ì¶œë ¥ â†’ ë‹¬ë ¥ ê·¸ë¦¬ê¸°
 		System.out.println();
-		System.out.println("\t[ " + y + "³â " + m + "¿ù ]\n");
-		System.out.println("  ÀÏ  ¿ù  È­  ¼ö  ¸ñ  ±Ý  Åä");
+		System.out.println("\t[ " + y + "ë…„ " + m + "ì›” ]\n");
+		System.out.println("  ì¼  ì›”  í™”  ìˆ˜  ëª©  ê¸ˆ  í† ");
 		System.out.println(" ============================");
 		
 		//getActualMaximum(int)
-		// ¡Ø getActualMaximumÀº ³¯Â¥°¡ ¼¼ÆÃ µÈ Calendar °¡ °¡Áú ¼ö ÀÖ´Â ÃÖ´ë °ª
+		// â€» getActualMaximumì€ ë‚ ì§œê°€ ì„¸íŒ… ëœ Calendar ê°€ ê°€ì§ˆ ìˆ˜ ìžˆëŠ” ìµœëŒ€ ê°’
 
 		//System.out.println(cl.getActualMinimum(Calendar.DATE)); //--==>> 1
 		//System.out.println(cl.getActualMaximum(Calendar.DATE));
 
 		for(int i = 1; i < w; i++)
 			System.out.print("    ");
-		// Å×½ºÆ®(È®ÀÎ)
+		// í…ŒìŠ¤íŠ¸(í™•ì¸)
 		//System.out.printf("%4d",1);
 
-		// Calendar Å¬·¡½º ¡ºgetActualMaximum()¡» ¸Þ¼Òµå check~!!! 
+		// Calendar í´ëž˜ìŠ¤ ã€ŽgetActualMaximum()ã€ ë©”ì†Œë“œ check~!!! 
 		for(int i = 1; i <= cl.getActualMaximum(Calendar.DATE); i++)
 		{
 			System.out.printf("%4d", i);
 		
 		
-			w++;			//-- ¹Ýº¹¹®À» ¼öÇàÇÏ¸ç ³¯Â¥°¡ Áõ°¡ÇÒ ¶§ ¸¶´Ù
-							//   ¿äÀÏµµ ÇÔ²² Áõ°¡ÇÒ ¼ö ÀÖµµ·Ï Ã³¸®
-							//-- Áõ°¡ÇÑ ¿äÀÏÀÌ ÀÏ¿äÀÏÀÌ µÉ ¶§ ¸¶´Ù
-							//   °³Çà ÈÄ Ãâ·ÂµÉ ¼ö ÀÖµµ·Ï Ã³¸®
+			w++;			//-- ë°˜ë³µë¬¸ì„ ìˆ˜í–‰í•˜ë©° ë‚ ì§œê°€ ì¦ê°€í•  ë•Œ ë§ˆë‹¤
+							//   ìš”ì¼ë„ í•¨ê»˜ ì¦ê°€í•  ìˆ˜ ìžˆë„ë¡ ì²˜ë¦¬
+							//-- ì¦ê°€í•œ ìš”ì¼ì´ ì¼ìš”ì¼ì´ ë  ë•Œ ë§ˆë‹¤
+							//   ê°œí–‰ í›„ ì¶œë ¥ë  ìˆ˜ ìžˆë„ë¡ ì²˜ë¦¬
 			if(w % 7 == 1)
 				System.out.println();
 		}
-		if(w % 7 != 1)				//-- ÀÏ¿äÀÏ °³ÇàÀÌ Àû¿ëµÇÁö ¾Ê¾ÒÀ» ¶§¸¸
-			System.out.println();	//   °³Çà Ã³¸®
+		if(w % 7 != 1)				//-- ì¼ìš”ì¼ ê°œí–‰ì´ ì ìš©ë˜ì§€ ì•Šì•˜ì„ ë•Œë§Œ
+			System.out.println();	//   ê°œí–‰ ì²˜ë¦¬
 
 
 		System.out.println(" ============================");
@@ -157,15 +157,15 @@ public class Test143
 	}
 }
 
-// ½ÇÇà °á°ú
+// ì‹¤í–‰ ê²°ê³¼
 
 /*
-¿¬µµ ÀÔ·Â : 2022
-¿ù ÀÔ·Â : 2
+ì—°ë„ ìž…ë ¥ : 2022
+ì›” ìž…ë ¥ : 2
 
-        [ 2022³â 2¿ù ]
+        [ 2022ë…„ 2ì›” ]
 
-  ÀÏ  ¿ù  È­  ¼ö  ¸ñ  ±Ý  Åä
+  ì¼  ì›”  í™”  ìˆ˜  ëª©  ê¸ˆ  í† 
  ============================
            1   2   3   4   5
    6   7   8   9  10  11  12
@@ -173,17 +173,17 @@ public class Test143
   20  21  22  23  24  25  26
   27  28
  ============================
-°è¼ÓÇÏ·Á¸é ¾Æ¹« Å°³ª ´©¸£½Ê½Ã¿À . . .
+ê³„ì†í•˜ë ¤ë©´ ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ì‹­ì‹œì˜¤ . . .
 */
 
 
 /*
-¿¬µµ ÀÔ·Â : 2022
-¿ù ÀÔ·Â : 7
+ì—°ë„ ìž…ë ¥ : 2022
+ì›” ìž…ë ¥ : 7
 
-        [ 2022³â 7¿ù ]
+        [ 2022ë…„ 7ì›” ]
 
-  ÀÏ  ¿ù  È­  ¼ö  ¸ñ  ±Ý  Åä
+  ì¼  ì›”  í™”  ìˆ˜  ëª©  ê¸ˆ  í† 
  ============================
                        1   2
    3   4   5   6   7   8   9
@@ -192,5 +192,5 @@ public class Test143
   24  25  26  27  28  29  30
   31
  ============================
-°è¼ÓÇÏ·Á¸é ¾Æ¹« Å°³ª ´©¸£½Ê½Ã¿À . . .
+ê³„ì†í•˜ë ¤ë©´ ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ì‹­ì‹œì˜¤ . . .
 */

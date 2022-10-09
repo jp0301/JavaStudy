@@ -1,13 +1,13 @@
 /*=============================================
-      ¡á¡á¡á ÀÚ¹Ù ±âº» ÇÁ·Î±×·¡¹Ö ¡á¡á¡á
-   - ÀÚ¹Ù ±âº» ÀÔÃâ·Â : System.util.Scanner
+      â– â– â–  ìžë°” ê¸°ë³¸ í”„ë¡œê·¸ëž˜ë° â– â– â– 
+   - ìžë°” ê¸°ë³¸ ìž…ì¶œë ¥ : System.util.Scanner
 ==============================================*/
 
-// ¡Ø java.util.Scanner
-//    ´Ü¶ô ¹®ÀÚ ÆÐÅÏÀ» »ç¿ëÇÏ¿© ÀÔ·ÂÀ» ÅäÅ«¿¡ µû¶ó ºÐÇÒÇÏ¸ç
-//    µðÆúÆ®(default)·Î »ç¿ëµÇ´Â ´Ü¶ô¹®ÀÚ´Â °ø¹éÀÌ´Ù.
-//    ÀÛ¼ºµÈ ´ÙÀ½ ÅäÅ«Àº ¡ºnext()¡» ¸Þ¼Òµå¸¦ »ç¿ë
-//    ´Ù¸¥ ÇüÅÂ(ÀÚ·áÇü)ÀÇ °ªÀ¸·Î º¯È¯ÇÒ ¼ö ÀÖ´Ù.
+// â€» java.util.Scanner
+//    ë‹¨ë½ ë¬¸ìž íŒ¨í„´ì„ ì‚¬ìš©í•˜ì—¬ ìž…ë ¥ì„ í† í°ì— ë”°ë¼ ë¶„í• í•˜ë©°
+//    ë””í´íŠ¸(default)ë¡œ ì‚¬ìš©ë˜ëŠ” ë‹¨ë½ë¬¸ìžëŠ” ê³µë°±ì´ë‹¤.
+//    ìž‘ì„±ëœ ë‹¤ìŒ í† í°ì€ ã€Žnext()ã€ ë©”ì†Œë“œë¥¼ ì‚¬ìš©
+//    ë‹¤ë¥¸ í˜•íƒœ(ìžë£Œí˜•)ì˜ ê°’ìœ¼ë¡œ ë³€í™˜í•  ìˆ˜ ìžˆë‹¤.
 
 import java.util.Scanner;
 //import java.io.IOException;
@@ -16,36 +16,36 @@ public class Test017
 {
 	public static void main(String[] args) //throws IOException
 	{
-		// Scanner Å¬·¡½º ±â¹ÝÀÇ ÀÎ½ºÅÏ½º »ý¼º
+		// Scanner í´ëž˜ìŠ¤ ê¸°ë°˜ì˜ ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
 		Scanner sc = new Scanner(System.in); //-- new Scanner + Scanner();
 		
-		//ÁÖ¿ä º¯¼ö ¼±¾ð
-		String name;		//-- ÀÌ¸§
-		int kor, eng, mat;	//-- ±¹¾î, ¿µ¾î, ¼öÇÐ
+		//ì£¼ìš” ë³€ìˆ˜ ì„ ì–¸
+		String name;		//-- ì´ë¦„
+		int kor, eng, mat;	//-- êµ­ì–´, ì˜ì–´, ìˆ˜í•™
 		
-		//¿¬»ê ¹× Ã³¸®
-		System.out.print("ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä : ");
+		//ì—°ì‚° ë° ì²˜ë¦¬
+		System.out.print("ì´ë¦„ì„ ìž…ë ¥í•˜ì„¸ìš” : ");
 		name = sc.next();
 		
-		// Å×½ºÆ®(È®ÀÎ)
-		//System.out.println("ÀÔ·ÂÇÑ ÀÌ¸§ : " + name);
+		// í…ŒìŠ¤íŠ¸(í™•ì¸)
+		//System.out.println("ìž…ë ¥í•œ ì´ë¦„ : " + name);
 		
-		System.out.print("±¹¾î Á¡¼ö ÀÔ·Â : ");
+		System.out.print("êµ­ì–´ ì ìˆ˜ ìž…ë ¥ : ");
 		//kor = Integer.parseInt(br.readLine());
 		kor = sc.nextInt();
 
-		System.out.print("¿µ¾î Á¡¼ö ÀÔ·Â : ");
+		System.out.print("ì˜ì–´ ì ìˆ˜ ìž…ë ¥ : ");
 		eng = sc.nextInt();
 
-		System.out.print("¼öÇÐ Á¡¼ö ÀÔ·Â : ");
+		System.out.print("ìˆ˜í•™ ì ìˆ˜ ìž…ë ¥ : ");
 		mat = sc.nextInt();
 
 
-		//ÃÖÁ¾ °á°ú Ãâ·Â
+		//ìµœì¢… ê²°ê³¼ ì¶œë ¥
 		System.out.println();
-		System.out.println(">> ÀÌ¸§ : " + name);
-		//System.out.println(">> ÃÑÁ¡ : " + kor + eng + mat);
-		System.out.println(">> ÃÑÁ¡ : " + (kor + eng + mat));
+		System.out.println(">> ì´ë¦„ : " + name);
+		//System.out.println(">> ì´ì  : " + kor + eng + mat);
+		System.out.println(">> ì´ì  : " + (kor + eng + mat));
 
 
 
@@ -53,14 +53,14 @@ public class Test017
 }
 
 
-// ½ÇÇà °á°ú
+// ì‹¤í–‰ ê²°ê³¼
 /*
-ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä : ¹Ú¿ø¼®
-±¹¾î Á¡¼ö ÀÔ·Â : 10
-¿µ¾î Á¡¼ö ÀÔ·Â : 20
-¼öÇÐ Á¡¼ö ÀÔ·Â : 30
+ì´ë¦„ì„ ìž…ë ¥í•˜ì„¸ìš” : ë°•ì›ì„
+êµ­ì–´ ì ìˆ˜ ìž…ë ¥ : 10
+ì˜ì–´ ì ìˆ˜ ìž…ë ¥ : 20
+ìˆ˜í•™ ì ìˆ˜ ìž…ë ¥ : 30
 
->> ÀÌ¸§ : ¹Ú¿ø¼®
->> ÃÑÁ¡ : 60
-°è¼ÓÇÏ·Á¸é ¾Æ¹« Å°³ª ´©¸£½Ê½Ã¿À . . .
+>> ì´ë¦„ : ë°•ì›ì„
+>> ì´ì  : 60
+ê³„ì†í•˜ë ¤ë©´ ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ì‹­ì‹œì˜¤ . . .
 */

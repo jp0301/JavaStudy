@@ -1,95 +1,95 @@
 /*================================================
-  ¡á¡á¡á °´Ã¼ Á÷·ÄÈ­(Object Serialization) ¡á¡á¡á
+  â– â– â–  ê°ì²´ ì§ë ¬í™”(Object Serialization) â– â– â– 
 ==================================================*/
 
 /*
-¡Û °´Ã¼ Á÷·ÄÈ­(Object Serialization)´Â
+â—‹ ê°ì²´ ì§ë ¬í™”(Object Serialization)ëŠ”
    
-   ¸Þ¸ð¸®¿¡ »ý¼ºµÈ Å¬·¡½º °´Ã¼ÀÇ ¸â¹ö º¯¼öÀÇ ÇöÀç »óÅÂ¸¦
-   ±×´ë·Î º¸Á¸ÇØ¼­ ÆÄÀÏ¿¡ ÀúÀåÇÏ°Å³ª
-   ³×Æ®¿öÅ©¸¦ ÅëÇØ Àü´ÞÇÒ ¼ö ÀÖ´Â ±â´ÉÀ¸·Î
-   ¸â¹ö º¯¼öÀÇ °ªÀ» º¸Á¸ÇÑ´Ù°Å³ª
-   ´Ù¸¥ ³×Æ®¿öÅ©¿¡ ÀÖ´Â È£½ºÆ®¿¡ °ªÀ» º¸³¾ °æ¿ì »ç¿ëÇÏ°Ô µÈ´Ù.
+   ë©”ëª¨ë¦¬ì— ìƒì„±ëœ í´ëž˜ìŠ¤ ê°ì²´ì˜ ë©¤ë²„ ë³€ìˆ˜ì˜ í˜„ìž¬ ìƒíƒœë¥¼
+   ê·¸ëŒ€ë¡œ ë³´ì¡´í•´ì„œ íŒŒì¼ì— ì €ìž¥í•˜ê±°ë‚˜
+   ë„¤íŠ¸ì›Œí¬ë¥¼ í†µí•´ ì „ë‹¬í•  ìˆ˜ ìžˆëŠ” ê¸°ëŠ¥ìœ¼ë¡œ
+   ë©¤ë²„ ë³€ìˆ˜ì˜ ê°’ì„ ë³´ì¡´í•œë‹¤ê±°ë‚˜
+   ë‹¤ë¥¸ ë„¤íŠ¸ì›Œí¬ì— ìžˆëŠ” í˜¸ìŠ¤íŠ¸ì— ê°’ì„ ë³´ë‚¼ ê²½ìš° ì‚¬ìš©í•˜ê²Œ ëœë‹¤.
 
-   Áï, °´Ã¼ Á÷·ÄÈ­´Â ³»¿ë¹°À» ¹ÙÀÌÆ® ´ÜÀ§·Î º¯È¯ÇÏ¿©
-   ÆÄÀÏ ¶Ç´Â ³×Æ®¿öÅ©¸¦ ÅëÇØ ¼Û¼ö½Å(½ºÆ®¸²)ÀÌ °¡´ÉÇÏ°Ô
-   ¸¸µé¾îÁÖ´Â °ÍÀ¸·Î ÀÌ ¶§, °´Ã¼¶õ ¸â¹ö º¯¼öÀÇ ¸Þ¸ð¸®¸¸À¸·Î ±¸¼ºµÈ °ÍÀ» ¸»ÇÑ´Ù.
+   ì¦‰, ê°ì²´ ì§ë ¬í™”ëŠ” ë‚´ìš©ë¬¼ì„ ë°”ì´íŠ¸ ë‹¨ìœ„ë¡œ ë³€í™˜í•˜ì—¬
+   íŒŒì¼ ë˜ëŠ” ë„¤íŠ¸ì›Œí¬ë¥¼ í†µí•´ ì†¡ìˆ˜ì‹ (ìŠ¤íŠ¸ë¦¼)ì´ ê°€ëŠ¥í•˜ê²Œ
+   ë§Œë“¤ì–´ì£¼ëŠ” ê²ƒìœ¼ë¡œ ì´ ë•Œ, ê°ì²´ëž€ ë©¤ë²„ ë³€ìˆ˜ì˜ ë©”ëª¨ë¦¬ë§Œìœ¼ë¡œ êµ¬ì„±ëœ ê²ƒì„ ë§í•œë‹¤.
 
-   µû¶ó¼­, ¸Þ¼Òµå¿Í »ý¼ºÀÚ´Â °´Ã¼ Á÷·ÄÈ­ÀÇ ´ë»ó¿¡¼­ Á¦¿ÜµÈ´Ù.
-
-
-¡Û °´Ã¼ Á÷·ÄÈ­ÀÇ ÀåÁ¡
-
-   °´Ã¼ ÀÚÃ¼ÀÇ ³»¿ëÀ» ÀÔÃâ·Â Çü½Ä¿¡ ±¸¾Ö¹ÞÁö ¾Ê°í
-   °´Ã¼¸¦ ÆÄÀÏ¿¡ ÀúÀåÇÔÀ¸·Î½á ¿µ¼Ó¼ºÀ» Á¦°øÇÒ ¼ö ÀÖÀ¸¸ç
-   °´Ã¼ ÀÚÃ¼¸¦ ³×Æ®¿öÅ©¸¦ ÅëÇØ ¼Õ½±°Ô ±³È¯ÇÒ ¼ö ÀÖ°Ô µÈ´Ù.
-
-   °´Ã¼ Á÷·ÄÈ­´Â ÀÚ¹Ù 1.1 ÀÌÈÄ¿¡ µµÀÔµÇ¾ú´Âµ¥
-   ±× ÀÌÀ¯´Â RMI ¿Í Bean ¶§¹®ÀÌ¾ú´Ù.
-   RMI ´Â ¿ø·¡ °´Ã¼ Åë½ÅÀ» Áö¿øÇØ¾ß ÇÏ±â ¶§¹®¿¡
-   °´Ã¼°¡ ±×´ë·Î ÀÌµ¿ÇÒ ¼ö ÀÖ¾î¾ß ÇÑ´Ù.
-   µû¶ó¼­ ÀÌ¸¦ Áö¿øÇÏ±â À§ÇØ¼­´Â °´Ã¼ Á÷·ÄÈ­°¡ ÇÊ¼öÀûÀÌ¾ú´Ù.
-
-   ¶ÇÇÑ, Bean Àº ¼³°è ½Ã »óÅÂ¿¡ ´ëÇÑ Á¤º¸¸¦ ÀúÀåÇÒ ¶§
-   ÀÌ °´Ã¼ Á÷·ÄÈ­¸¦ »ç¿ëÇÏ¸é ÆíÇÏ°Ô °´Ã¼ »óÅÂ¸¦ ÀúÀåÇÒ ¼ö ÀÖ´Ù.
+   ë”°ë¼ì„œ, ë©”ì†Œë“œì™€ ìƒì„±ìžëŠ” ê°ì²´ ì§ë ¬í™”ì˜ ëŒ€ìƒì—ì„œ ì œì™¸ëœë‹¤.
 
 
-   ¡Ø RMI(Remote Method Invocation)
-      ¼­·Î ´Ù¸¥ °¡»ó ±â°èÀåÄ¡¿¡ Á¸ÀçÇÏ´Â ÇÔ¼ö¸¦
-	  È£ÃâÇÏ°í ½ÇÇàÇÏ´Â ±â´ÉÀ» ´ã´çÇÑ´Ù.
-	  ¼­·Î ´Ù¸¥ Åë½Å ±¸Á¶¿¡ À§Ä¡ÇÑ °¢°¢ÀÇ ¿ø°Ý °´Ã¼µé °£ÀÇ
-	  Åë½Å ±¸Á¶¸¦ Áö¿øÇÏ´Â °³³äÀ¸·Î ÀÌÇØÇÏ¸é ÁÁ°Ú´Ù.
+â—‹ ê°ì²´ ì§ë ¬í™”ì˜ ìž¥ì 
 
-   ¡Ø Bean(ºó) - ±ÔÄ¢, ±Ô¾à
-      C/S ±¸Á¶Àû ¸ðµ¨¿¡¼­ ¼­¹öÃø ±¸Á¶¿¡ ÇØ´çÇÏ¸ç,
-      Àç»ç¿ë °¡´ÉÇÑ ¼ÒÇÁÆ®¿þ¾î °³Ã¼¸¦ ¸¸µé ¼ö ÀÖ°Ô ÇÏ´Â ÄÄÆ÷³ÍÆ® ±â¼ú.
-	  ÀÛ¼ºµÈ °³Ã¼ÀÇ °øÀ¯°¡ °¡´ÉÇÏ¸ç ÇÁ·ÎÁ§Æ®¿¡ ½±°Ô Æ÷ÇÔ½ÃÅ³ ¼ö ÀÖµµ·Ï ÇÑ´Ù.
-	  Å¬¶óÀÌ¾ðÆ®¿¡°Ô ºóÀÌ¶ó´Â ÇÁ·Î±×·¥ ÄÄÆ÷³ÍÆ®¸¦ ºÐ¹èÇÏ´Â ¹æ½ÄÀ¸·Î Ã³¸®.
+   ê°ì²´ ìžì²´ì˜ ë‚´ìš©ì„ ìž…ì¶œë ¥ í˜•ì‹ì— êµ¬ì• ë°›ì§€ ì•Šê³ 
+   ê°ì²´ë¥¼ íŒŒì¼ì— ì €ìž¥í•¨ìœ¼ë¡œì¨ ì˜ì†ì„±ì„ ì œê³µí•  ìˆ˜ ìžˆìœ¼ë©°
+   ê°ì²´ ìžì²´ë¥¼ ë„¤íŠ¸ì›Œí¬ë¥¼ í†µí•´ ì†ì‰½ê²Œ êµí™˜í•  ìˆ˜ ìžˆê²Œ ëœë‹¤.
+
+   ê°ì²´ ì§ë ¬í™”ëŠ” ìžë°” 1.1 ì´í›„ì— ë„ìž…ë˜ì—ˆëŠ”ë°
+   ê·¸ ì´ìœ ëŠ” RMI ì™€ Bean ë•Œë¬¸ì´ì—ˆë‹¤.
+   RMI ëŠ” ì›ëž˜ ê°ì²´ í†µì‹ ì„ ì§€ì›í•´ì•¼ í•˜ê¸° ë•Œë¬¸ì—
+   ê°ì²´ê°€ ê·¸ëŒ€ë¡œ ì´ë™í•  ìˆ˜ ìžˆì–´ì•¼ í•œë‹¤.
+   ë”°ë¼ì„œ ì´ë¥¼ ì§€ì›í•˜ê¸° ìœ„í•´ì„œëŠ” ê°ì²´ ì§ë ¬í™”ê°€ í•„ìˆ˜ì ì´ì—ˆë‹¤.
+
+   ë˜í•œ, Bean ì€ ì„¤ê³„ ì‹œ ìƒíƒœì— ëŒ€í•œ ì •ë³´ë¥¼ ì €ìž¥í•  ë•Œ
+   ì´ ê°ì²´ ì§ë ¬í™”ë¥¼ ì‚¬ìš©í•˜ë©´ íŽ¸í•˜ê²Œ ê°ì²´ ìƒíƒœë¥¼ ì €ìž¥í•  ìˆ˜ ìžˆë‹¤.
 
 
-¡Û Serializable ÀÎÅÍÆäÀÌ½º
+   â€» RMI(Remote Method Invocation)
+      ì„œë¡œ ë‹¤ë¥¸ ê°€ìƒ ê¸°ê³„ìž¥ì¹˜ì— ì¡´ìž¬í•˜ëŠ” í•¨ìˆ˜ë¥¼
+	  í˜¸ì¶œí•˜ê³  ì‹¤í–‰í•˜ëŠ” ê¸°ëŠ¥ì„ ë‹´ë‹¹í•œë‹¤.
+	  ì„œë¡œ ë‹¤ë¥¸ í†µì‹  êµ¬ì¡°ì— ìœ„ì¹˜í•œ ê°ê°ì˜ ì›ê²© ê°ì²´ë“¤ ê°„ì˜
+	  í†µì‹  êµ¬ì¡°ë¥¼ ì§€ì›í•˜ëŠ” ê°œë…ìœ¼ë¡œ ì´í•´í•˜ë©´ ì¢‹ê² ë‹¤.
+
+   â€» Bean(ë¹ˆ) - ê·œì¹™, ê·œì•½
+      C/S êµ¬ì¡°ì  ëª¨ë¸ì—ì„œ ì„œë²„ì¸¡ êµ¬ì¡°ì— í•´ë‹¹í•˜ë©°,
+      ìž¬ì‚¬ìš© ê°€ëŠ¥í•œ ì†Œí”„íŠ¸ì›¨ì–´ ê°œì²´ë¥¼ ë§Œë“¤ ìˆ˜ ìžˆê²Œ í•˜ëŠ” ì»´í¬ë„ŒíŠ¸ ê¸°ìˆ .
+	  ìž‘ì„±ëœ ê°œì²´ì˜ ê³µìœ ê°€ ê°€ëŠ¥í•˜ë©° í”„ë¡œì íŠ¸ì— ì‰½ê²Œ í¬í•¨ì‹œí‚¬ ìˆ˜ ìžˆë„ë¡ í•œë‹¤.
+	  í´ë¼ì´ì–¸íŠ¸ì—ê²Œ ë¹ˆì´ë¼ëŠ” í”„ë¡œê·¸ëž¨ ì»´í¬ë„ŒíŠ¸ë¥¼ ë¶„ë°°í•˜ëŠ” ë°©ì‹ìœ¼ë¡œ ì²˜ë¦¬.
+
+
+â—‹ Serializable ì¸í„°íŽ˜ì´ìŠ¤
    
-   °´Ã¼ Á÷·ÄÈ­¸¦ ÇÏ±â À§ÇØ ¸ÕÀú °´Ã¼ Á÷·ÄÈ­°¡ °¡´ÉÇÏµµ·Ï
-   java.io.Serializable ÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇØ ÁÖ¾î¾ß ÇÑ´Ù.
-   ÀÌ ÀÎÅÍÆäÀÌ½º´Â °´Ã¼ Á÷·ÄÈ­°¡ Á¦°øµÇ¾î¾ß ÇÑ´Ù´Â »ç½ÇÀ»
-   JVM ¿¡ ¾Ë·ÁÁÖ´Â ¿ªÇÒÀ» ¼öÇàÇÑ´Ù.
-   ¶ÇÇÑ, Serializable ÀÎÅÍÆäÀÌ½º´Â
-   ´Ù¸¥ ÀÎÅÍÆäÀÌ½º¿Í ´Þ¸® ±¸ÇöÇØ¾ß ÇÒ ¸Þ¼Òµå°¡ ¾ø±â ¶§¹®¿¡
-   ´ÜÁö ¼±¾ð¸¸ ÇØÁÖ¸é µÈ´Ù.
+   ê°ì²´ ì§ë ¬í™”ë¥¼ í•˜ê¸° ìœ„í•´ ë¨¼ì € ê°ì²´ ì§ë ¬í™”ê°€ ê°€ëŠ¥í•˜ë„ë¡
+   java.io.Serializable ì¸í„°íŽ˜ì´ìŠ¤ë¥¼ êµ¬í˜„í•´ ì£¼ì–´ì•¼ í•œë‹¤.
+   ì´ ì¸í„°íŽ˜ì´ìŠ¤ëŠ” ê°ì²´ ì§ë ¬í™”ê°€ ì œê³µë˜ì–´ì•¼ í•œë‹¤ëŠ” ì‚¬ì‹¤ì„
+   JVM ì— ì•Œë ¤ì£¼ëŠ” ì—­í• ì„ ìˆ˜í–‰í•œë‹¤.
+   ë˜í•œ, Serializable ì¸í„°íŽ˜ì´ìŠ¤ëŠ”
+   ë‹¤ë¥¸ ì¸í„°íŽ˜ì´ìŠ¤ì™€ ë‹¬ë¦¬ êµ¬í˜„í•´ì•¼ í•  ë©”ì†Œë“œê°€ ì—†ê¸° ë•Œë¬¸ì—
+   ë‹¨ì§€ ì„ ì–¸ë§Œ í•´ì£¼ë©´ ëœë‹¤.
 
-   Çü½Ä)
-   ¨ç
-   public class Å¬·¡½º¸í implements Serializable
+   í˜•ì‹)
+   â‘ 
+   public class í´ëž˜ìŠ¤ëª… implements Serializable
    {
 		// ...
    }
 
-   ¨è
-   Serializable ÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇÑ ÈÄ
-   ObjectInputStream Å¬·¡½º¿Í ObjectOutputStream Å¬·¡½º¸¦ ÀÌ¿ëÇÏ¿©
-   °´Ã¼ ´ÜÀ§·Î ÀÔÃâ·ÂÀ» ¼öÇàÇÏ°Ô µÈ´Ù.
+   â‘¡
+   Serializable ì¸í„°íŽ˜ì´ìŠ¤ë¥¼ êµ¬í˜„í•œ í›„
+   ObjectInputStream í´ëž˜ìŠ¤ì™€ ObjectOutputStream í´ëž˜ìŠ¤ë¥¼ ì´ìš©í•˜ì—¬
+   ê°ì²´ ë‹¨ìœ„ë¡œ ìž…ì¶œë ¥ì„ ìˆ˜í–‰í•˜ê²Œ ëœë‹¤.
 
-   ¡Ø ¸â¹ö º¯¼ö°¡ static À¸·Î ¼±¾ðµÈ °æ¿ì
-      (Áï, Å¬·¡½º º¯¼öÀÏ °æ¿ì)
-	  °´Ã¼ Á÷·ÄÈ­ÀÇ ´ë»ó¿¡¼­ Á¦¿ÜµÈ´Ù.
+   â€» ë©¤ë²„ ë³€ìˆ˜ê°€ static ìœ¼ë¡œ ì„ ì–¸ëœ ê²½ìš°
+      (ì¦‰, í´ëž˜ìŠ¤ ë³€ìˆ˜ì¼ ê²½ìš°)
+	  ê°ì²´ ì§ë ¬í™”ì˜ ëŒ€ìƒì—ì„œ ì œì™¸ëœë‹¤.
 
 
-¡Û Object Stream
+â—‹ Object Stream
 
    java.io.ObjectInputStream
-   ObjectInputStream Å¬·¡½º´Â ObjectOutputStream Å¬·¡½º¿¡ ÀÇÇØ
-   ÆÄÀÏ¿¡ ÀúÀåµÇ¾î ÀÖ´Â °´Ã¼³ª ³×Æ®¿öÅ©¸¦ ÅëÇØ Àü´ÞµÈ °´Ã¼ÀÇ
-   Á÷·ÄÈ­¸¦ ÇØÁ¦ÇÏ´Â ±â´ÉÀ» Á¦°øÇÑ´Ù.
-   ´Ü, java.io.Serializable ÀÎÅÍÆäÀÌ½º¿Í
-   java.io.Externalizable ÀÎÅÍÆäÀÌ½º¸¦ Áö¿øÇØÁÖ´Â °´Ã¼¿¡ ´ëÇØ¼­¸¸
-   »ç¿ëÀÌ °¡´ÉÇÏ´Ù.
-   Áï, Serializable ÀÎÅÍÆäÀÌ½º¿Í Externalizable ÀÎÅÍÆäÀÌ½º¸¦
-   ±¸ÇöÇÑ °´Ã¼¿¡¼­¸¸ »ç¿ëÀÌ °¡´ÉÇÏ´Ù´Â °ÍÀÌ´Ù.
-   ÀÌ ¶§, readObject() ¸Þ¼Òµå¸¦ ÀÌ¿ëÇÏ¿©
-   ½ºÆ®¸²À¸·ÎºÎÅÍ Á÷·ÄÈ­µÈ °´Ã¼¸¦ ÀÐÀ» ¼ö ÀÖÀ¸¸ç
+   ObjectInputStream í´ëž˜ìŠ¤ëŠ” ObjectOutputStream í´ëž˜ìŠ¤ì— ì˜í•´
+   íŒŒì¼ì— ì €ìž¥ë˜ì–´ ìžˆëŠ” ê°ì²´ë‚˜ ë„¤íŠ¸ì›Œí¬ë¥¼ í†µí•´ ì „ë‹¬ëœ ê°ì²´ì˜
+   ì§ë ¬í™”ë¥¼ í•´ì œí•˜ëŠ” ê¸°ëŠ¥ì„ ì œê³µí•œë‹¤.
+   ë‹¨, java.io.Serializable ì¸í„°íŽ˜ì´ìŠ¤ì™€
+   java.io.Externalizable ì¸í„°íŽ˜ì´ìŠ¤ë¥¼ ì§€ì›í•´ì£¼ëŠ” ê°ì²´ì— ëŒ€í•´ì„œë§Œ
+   ì‚¬ìš©ì´ ê°€ëŠ¥í•˜ë‹¤.
+   ì¦‰, Serializable ì¸í„°íŽ˜ì´ìŠ¤ì™€ Externalizable ì¸í„°íŽ˜ì´ìŠ¤ë¥¼
+   êµ¬í˜„í•œ ê°ì²´ì—ì„œë§Œ ì‚¬ìš©ì´ ê°€ëŠ¥í•˜ë‹¤ëŠ” ê²ƒì´ë‹¤.
+   ì´ ë•Œ, readObject() ë©”ì†Œë“œë¥¼ ì´ìš©í•˜ì—¬
+   ìŠ¤íŠ¸ë¦¼ìœ¼ë¡œë¶€í„° ì§ë ¬í™”ëœ ê°ì²´ë¥¼ ì½ì„ ìˆ˜ ìžˆìœ¼ë©°
 
-   ÀÌ·¸°Ô ÀÐÀº °´Ã¼´Â ¹è¿­, ¹®ÀÚ¿­ ¶Ç´Â °¢ °´Ã¼ µî
-   ¿ø·¡ÀÇ Çü(Type)À¸·Î Ä³½ºÆÃ ÇØ ÁÖ¾î¾ß ÇÑ´Ù.
+   ì´ë ‡ê²Œ ì½ì€ ê°ì²´ëŠ” ë°°ì—´, ë¬¸ìžì—´ ë˜ëŠ” ê° ê°ì²´ ë“±
+   ì›ëž˜ì˜ í˜•(Type)ìœ¼ë¡œ ìºìŠ¤íŒ… í•´ ì£¼ì–´ì•¼ í•œë‹¤.
 
 */
 
@@ -108,134 +108,134 @@ public class Test177
 	{
 		String appDir = System.getProperty("user.dir");
 		
-		// Å×½ºÆ®(È®ÀÎ)
+		// í…ŒìŠ¤íŠ¸(í™•ì¸)
 		//System.out.println(appDir);
 		//--==>> C:\JavaStudy
 
-		// ÆÄÀÏ °´Ã¼ »ý¼º
+		// íŒŒì¼ ê°ì²´ ìƒì„±
 		File f0 = new File(appDir, "\\data\\test.ser");
-		//-- appDir ¡æ C:\JavaStudy
-		//-- appDir À§Ä¡¸¦ ±âÁØÀ¸·Î(Áß½ÉÀ¸·Î) "\\data\test.ser"¸¦
-		//   ±¸¼ºÇÏ°Ú´Ù´Â ÀÇ¹Ì.
-		//-- °á°úÀûÀ¸·Î´Â ¡ºC:\JavaStudy\data\test.ser¡» ±¸¼º.
+		//-- appDir â†’ C:\JavaStudy
+		//-- appDir ìœ„ì¹˜ë¥¼ ê¸°ì¤€ìœ¼ë¡œ(ì¤‘ì‹¬ìœ¼ë¡œ) "\\data\test.ser"ë¥¼
+		//   êµ¬ì„±í•˜ê² ë‹¤ëŠ” ì˜ë¯¸.
+		//-- ê²°ê³¼ì ìœ¼ë¡œëŠ” ã€ŽC:\JavaStudy\data\test.serã€ êµ¬ì„±.
 
-		// Å×½ºÆ®(È®ÀÎ)
+		// í…ŒìŠ¤íŠ¸(í™•ì¸)
 		//System.out.println(f0.getParentFile().exists());
 		//--==>> false
-		//-- ¡ºtest.ser¡» ÆÄÀÏÀÌ ¸¸µé¾îÁú µð·ºÅÍ¸® °æ·Î°¡ ±¸¼ºµÇ¾î ÀÖÁö ¾Ê´Ù.
+		//-- ã€Žtest.serã€ íŒŒì¼ì´ ë§Œë“¤ì–´ì§ˆ ë””ë ‰í„°ë¦¬ ê²½ë¡œê°€ êµ¬ì„±ë˜ì–´ ìžˆì§€ ì•Šë‹¤.
 		
-		// ¡ºC:\JavaStudy¡» °æ·Î¿¡ ¡ºdata¡» µð·ºÅÍ¸® »ý¼º ÈÄ ´Ù½Ã È®ÀÎ
+		// ã€ŽC:\JavaStudyã€ ê²½ë¡œì— ã€Ždataã€ ë””ë ‰í„°ë¦¬ ìƒì„± í›„ ë‹¤ì‹œ í™•ì¸
 
-		// Å×½ºÆ®(È®ÀÎ)
+		// í…ŒìŠ¤íŠ¸(í™•ì¸)
 		//System.out.println(f0.getParentFile().exists());
 		//--==>> true
-		//-- ¡ºtest.ser¡» ÆÄÀÏÀÌ ¸¸µé¾îÁú µð·ºÅÍ¸® °æ·Î°¡ ±¸¼ºµÇ¾î ÀÖ´Ù.
+		//-- ã€Žtest.serã€ íŒŒì¼ì´ ë§Œë“¤ì–´ì§ˆ ë””ë ‰í„°ë¦¬ ê²½ë¡œê°€ êµ¬ì„±ë˜ì–´ ìžˆë‹¤.
 
-		// ¡ºtest.ser¡» ÆÄÀÏÀÌ ¸¸µé¾îÁú µð·ºÅä¸® °æ·Î°¡ ±¸¼ºµÇ¾î ÀÖÁö ¾Ê´Ù¸é
+		// ã€Žtest.serã€ íŒŒì¼ì´ ë§Œë“¤ì–´ì§ˆ ë””ë ‰í† ë¦¬ ê²½ë¡œê°€ êµ¬ì„±ë˜ì–´ ìžˆì§€ ì•Šë‹¤ë©´
 		if (!f0.getParentFile().exists())
 		{
-			// µð·ºÅÍ¸®¸¦ ¸¸µé°Ú´Ù.
+			// ë””ë ‰í„°ë¦¬ë¥¼ ë§Œë“¤ê² ë‹¤.
 			f0.getParentFile().mkdirs();
 		}
 		
 
-		// Hashtable ÀÚ·á±¸Á¶ ÀÎ½ºÅÏ½º »ý¼º
+		// Hashtable ìžë£Œêµ¬ì¡° ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
 		Hashtable<String, String> h1 = new Hashtable<String, String>();
 		
-		// »ý¼ºÇÑ h1 ÀÌ¶ó´Â Hashtable ÀÚ·á±¸Á¶¿¡ ¿ä¼Ò Ãß°¡
-		h1.put("2206428","¾ö¼Ò¿¬");
-		h1.put("2206436","À¯µ¿Çö");
-		h1.put("2206512","ÀÓ½Ã¿¬");
-		h1.put("2206524","ÇÑÀº¿µ");
-		h1.put("2206537","Á¶ÇöÇÏ");
+		// ìƒì„±í•œ h1 ì´ë¼ëŠ” Hashtable ìžë£Œêµ¬ì¡°ì— ìš”ì†Œ ì¶”ê°€
+		h1.put("2206428","ì—„ì†Œì—°");
+		h1.put("2206436","ìœ ë™í˜„");
+		h1.put("2206512","ìž„ì‹œì—°");
+		h1.put("2206524","í•œì€ì˜");
+		h1.put("2206537","ì¡°í˜„í•˜");
 
-		// Å×½ºÆ®(È®ÀÎ)
+		// í…ŒìŠ¤íŠ¸(í™•ì¸)
 		//System.out.println(h1.get("2206524"));
-		//--==>> ÇÑÀº¿µ
+		//--==>> í•œì€ì˜
 
-		// ÆÄÀÏ Àü¿ë Ãâ·Â ½ºÆ®¸² »ý¼º(¼öµµ²ÀÁö ¿­±â)
+		// íŒŒì¼ ì „ìš© ì¶œë ¥ ìŠ¤íŠ¸ë¦¼ ìƒì„±(ìˆ˜ë„ê¼­ì§€ ì—´ê¸°)
 		FileOutputStream fos = new FileOutputStream(f0);
-		//-- ÆÄÀÏ Àü¿ë Ãâ·Â ½ºÆ®¸²(¹°ÁÙ±â)¿¡
-		//   f0 ¶ó´Â ÆÄÀÏ °´Ã¼¸¦ ¶ç¿ì°Ú´Ù.
+		//-- íŒŒì¼ ì „ìš© ì¶œë ¥ ìŠ¤íŠ¸ë¦¼(ë¬¼ì¤„ê¸°)ì—
+		//   f0 ë¼ëŠ” íŒŒì¼ ê°ì²´ë¥¼ ë„ìš°ê² ë‹¤.
 		// InputStreamReader isr = new InputStreamReader(System.in);
 		
-		// °´Ã¼ Àü¿ë Ãâ·Â ½ºÆ®¸² »ý¼º
+		// ê°ì²´ ì „ìš© ì¶œë ¥ ìŠ¤íŠ¸ë¦¼ ìƒì„±
 		ObjectOutputStream oos = new ObjectOutputStream(fos);
-		//-- °´Ã¼ Àü¿ë Ãâ·Â ½ºÆ®¸²(¹°ÁÙ±â)À¸·Î
-		//   fos ¶ó´Â ÆÄÀÏ Àü¿ë Ãâ·Â ½ºÆ®¸²À» °¨½Î°Ú´Ù.
+		//-- ê°ì²´ ì „ìš© ì¶œë ¥ ìŠ¤íŠ¸ë¦¼(ë¬¼ì¤„ê¸°)ìœ¼ë¡œ
+		//   fos ë¼ëŠ” íŒŒì¼ ì „ìš© ì¶œë ¥ ìŠ¤íŠ¸ë¦¼ì„ ê°ì‹¸ê² ë‹¤.
 		// BufferedReader br = new BufferedReader(isr);
 
-		// À§ÀÇ line 153 ~ 159 ¿Í µ¿ÀÏÇÑ ±¸¹®
+		// ìœ„ì˜ line 153 ~ 159 ì™€ ë™ì¼í•œ êµ¬ë¬¸
 		// ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(f0));
 
-		// À§ÀÇ line 164 ÀÇ °³³ä°ú ºñ±³ÇÒ ±¸¹®(±¸Á¶ÀûÀ¸·Î µ¿ÀÏÇÑ ±¸¹®)
+		// ìœ„ì˜ line 164 ì˜ ê°œë…ê³¼ ë¹„êµí•  êµ¬ë¬¸(êµ¬ì¡°ì ìœ¼ë¡œ ë™ì¼í•œ êµ¬ë¬¸)
 		// BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-		// ¡Ø ObjectOutputStream Å¬·¡½º´Â
-		//    °´Ã¼µéÀ» Ãâ·ÂÇÏ´Â ±â´ÉÀ» Á¦°øÇÏ´Â Å¬·¡½º·Î
-		//    Ãâ·Â ½ºÆ®¸²¿¡  Ãâ·ÂÇÏ±â Àü¿¡
-		//    ³»ºÎÀûÀ¸·Î °´Ã¼ Á÷·ÄÈ­¸¦ ¼öÇàÇÏ°Ô µÈ´Ù.
-		//    ÀÚ¹Ù ±âº»Çü µ¥ÀÌÅÍ ¶Ç´Â °´Ã¼µéÀ»
-		//    ÆÄÀÏ¿¡ ÀúÀåÇÏ°Å³ª ³×Æ®¿öÅ©¸¦ ÅëÇØ Àü´ÞÇÏ±â À§ÇØ
-		//    Àü´ÞÇÒ °´Ã¼¸¦ Á÷·ÄÈ­ÇÏ´Â ±â´ÉÀ» Á¦°øÇÏ´Â °ÍÀÌ´Ù.
+		// â€» ObjectOutputStream í´ëž˜ìŠ¤ëŠ”
+		//    ê°ì²´ë“¤ì„ ì¶œë ¥í•˜ëŠ” ê¸°ëŠ¥ì„ ì œê³µí•˜ëŠ” í´ëž˜ìŠ¤ë¡œ
+		//    ì¶œë ¥ ìŠ¤íŠ¸ë¦¼ì—  ì¶œë ¥í•˜ê¸° ì „ì—
+		//    ë‚´ë¶€ì ìœ¼ë¡œ ê°ì²´ ì§ë ¬í™”ë¥¼ ìˆ˜í–‰í•˜ê²Œ ëœë‹¤.
+		//    ìžë°” ê¸°ë³¸í˜• ë°ì´í„° ë˜ëŠ” ê°ì²´ë“¤ì„
+		//    íŒŒì¼ì— ì €ìž¥í•˜ê±°ë‚˜ ë„¤íŠ¸ì›Œí¬ë¥¼ í†µí•´ ì „ë‹¬í•˜ê¸° ìœ„í•´
+		//    ì „ë‹¬í•  ê°ì²´ë¥¼ ì§ë ¬í™”í•˜ëŠ” ê¸°ëŠ¥ì„ ì œê³µí•˜ëŠ” ê²ƒì´ë‹¤.
 
 		
-		// »ý¼ºµÈ ½ºÆ®¸²¿¡ ³»º¸³¾ °´Ã¼¸¦ ±â·Ï
+		// ìƒì„±ëœ ìŠ¤íŠ¸ë¦¼ì— ë‚´ë³´ë‚¼ ê°ì²´ë¥¼ ê¸°ë¡
 		oos.writeObject(h1);
-		//-- out.write(ch); ¿Í °°Àº °³³äÀÇ ±¸¹®
+		//-- out.write(ch); ì™€ ê°™ì€ ê°œë…ì˜ êµ¬ë¬¸
 
-		// °´Ã¼ Àü¿ë ¸®¼Ò½º ¹Ý³³
+		// ê°ì²´ ì „ìš© ë¦¬ì†ŒìŠ¤ ë°˜ë‚©
 		oos.close();
-		//-- ObjectOutputStream ¸®¼Ò½º ¹Ý³³
+		//-- ObjectOutputStream ë¦¬ì†ŒìŠ¤ ë°˜ë‚©
 
-		// ÆÄÀÏ Àü¿ë ¸®¼Ò½º ¹Ý³³
+		// íŒŒì¼ ì „ìš© ë¦¬ì†ŒìŠ¤ ë°˜ë‚©
 		fos.close();
-		//-- FileOutputStream ¸®¼Ò½º ¹Ý³³
+		//-- FileOutputStream ë¦¬ì†ŒìŠ¤ ë°˜ë‚©
 
 		
-		// (°´Ã¼¸¦ Á÷·ÄÈ­ÇÏ¿© ÆÄÀÏ·Î) ³»º¸³»±â ³¡~!!!
-		// ---------------------------------------------------------------- Á÷·ÄÈ­
+		// (ê°ì²´ë¥¼ ì§ë ¬í™”í•˜ì—¬ íŒŒì¼ë¡œ) ë‚´ë³´ë‚´ê¸° ë~!!!
+		// ---------------------------------------------------------------- ì§ë ¬í™”
 
 
-		// (°´Ã¼¸¦ Á÷·ÄÈ­ÇÏ¿© ³»º¸³½ ÆÄÀÏ) ÀÐ¾îµéÀÌ±â ½ÃÀÛ~!!!
+		// (ê°ì²´ë¥¼ ì§ë ¬í™”í•˜ì—¬ ë‚´ë³´ë‚¸ íŒŒì¼) ì½ì–´ë“¤ì´ê¸° ì‹œìž‘~!!!
 
-		// f0 ÆÄÀÏ °´Ã¼°¡ Á¸ÀçÇÑ´Ù¸é...
+		// f0 íŒŒì¼ ê°ì²´ê°€ ì¡´ìž¬í•œë‹¤ë©´...
 		if( f0.exists() )
 		{
-			// f0 ÆÄÀÏÀ» ÆÄÀÏ ÀÔ·Â ½ºÆ®¸²(fis, FileInputStream)À¸·Î ÀÐ¾îµéÀÌ°í
+			// f0 íŒŒì¼ì„ íŒŒì¼ ìž…ë ¥ ìŠ¤íŠ¸ë¦¼(fis, FileInputStream)ìœ¼ë¡œ ì½ì–´ë“¤ì´ê³ 
 			FileInputStream fis = new FileInputStream(f0);
 
-			// fis ÆÄÀÏ ÀÔ·Â ½ºÆ®¸²À¸·ÎºÎÅÍ °´Ã¼ ÀÔ·Â ½ºÆ®¸²(ois, bjectInputStream)À» ¾ò¾î³»¾î
+			// fis íŒŒì¼ ìž…ë ¥ ìŠ¤íŠ¸ë¦¼ìœ¼ë¡œë¶€í„° ê°ì²´ ìž…ë ¥ ìŠ¤íŠ¸ë¦¼(ois, bjectInputStream)ì„ ì–»ì–´ë‚´ì–´
 			ObjectInputStream ois = new ObjectInputStream(fis);
 
-			// °´Ã¼ ÀÔ·Â ½ºÆ®¸²(ois, ObjectInputStream)À¸·Î ºÎÅÍ ÀÐ¾îµéÀÎ °´Ã¼(Object)¸¦
-			// Ä³½ºÆÃ(Hashtable) ÇÏ¿© h2 ¶ó´Â Hashtable ÀÚ·á±¸Á¶¿¡ ´ã¾Æ³»±â
+			// ê°ì²´ ìž…ë ¥ ìŠ¤íŠ¸ë¦¼(ois, ObjectInputStream)ìœ¼ë¡œ ë¶€í„° ì½ì–´ë“¤ì¸ ê°ì²´(Object)ë¥¼
+			// ìºìŠ¤íŒ…(Hashtable) í•˜ì—¬ h2 ë¼ëŠ” Hashtable ìžë£Œêµ¬ì¡°ì— ë‹´ì•„ë‚´ê¸°
 			// Object obj = ois.readObject();
 			Hashtable h2 = (Hashtable)ois.readObject();
 			
 			ois.close();
-			//-- ois, ObjectInputStream ¸®¼Ò½º ¹Ý³³
+			//-- ois, ObjectInputStream ë¦¬ì†ŒìŠ¤ ë°˜ë‚©
 
 			fis.close();
-			//-- fis, FileInputStream ¸®¼Ò½º ¹Ý³³
+			//-- fis, FileInputStream ë¦¬ì†ŒìŠ¤ ë°˜ë‚©
 
-			//----------------------------------------------- ¿©±â±îÁö ¼öÇàÇÏ¸é
-			//                                                ÀÐ¾îµéÀÌ´Â ÀÛ¾÷ ³¡~!!!
+			//----------------------------------------------- ì—¬ê¸°ê¹Œì§€ ìˆ˜í–‰í•˜ë©´
+			//                                                ì½ì–´ë“¤ì´ëŠ” ìž‘ì—… ë~!!!
 
-			// ÀÐ¾îµéÀÎ h2 °´Ã¼ÀÇ ³»¿ë È®ÀÎ
+			// ì½ì–´ë“¤ì¸ h2 ê°ì²´ì˜ ë‚´ìš© í™•ì¸
 			String key;
 			String value;
 
-			// ¡Ø Iterator »ç¿ëÇÒ ¼ö ¾øÀ½~!!!
+			// â€» Iterator ì‚¬ìš©í•  ìˆ˜ ì—†ìŒ~!!!
 
 			Enumeration e = h2.keys();
 
 			while(e.hasMoreElements())
 			{
 				key = (String)e.nextElement();
-				//-- Hashtable ÀÚ·á±¸Á¶¸¦ ´ë»óÀ¸·Î key °ªÀ» ÀÐ¾îµéÀÌ´Â °úÁ¤
+				//-- Hashtable ìžë£Œêµ¬ì¡°ë¥¼ ëŒ€ìƒìœ¼ë¡œ key ê°’ì„ ì½ì–´ë“¤ì´ëŠ” ê³¼ì •
 
-				//Å×½ºÆ®
+				//í…ŒìŠ¤íŠ¸
 				//System.out.println(key);
 				//--==>>
 				/*
@@ -247,16 +247,16 @@ public class Test177
 				*/
 				
 				value = (String)h2.get(key);
-				//-- Hashtable ÀÚ·á±¸Á¶¸¦ ´ë»óÀ¸·Î key¸¦ È°¿ëÇÏ¿© value¸¦ ¾ò¾î³»´Â °úÁ¤
+				//-- Hashtable ìžë£Œêµ¬ì¡°ë¥¼ ëŒ€ìƒìœ¼ë¡œ keyë¥¼ í™œìš©í•˜ì—¬ valueë¥¼ ì–»ì–´ë‚´ëŠ” ê³¼ì •
 
-				System.out.println(key + " ¡æ " + value);
+				System.out.println(key + " â†’ " + value);
 				//--==>>
 				/*
-				2206512 ¡æ ÀÓ½Ã¿¬
-				2206524 ¡æ ÇÑÀº¿µ
-				2206436 ¡æ À¯µ¿Çö
-				2206537 ¡æ Á¶ÇöÇÏ
-				2206428 ¡æ ¾ö¼Ò¿¬
+				2206512 â†’ ìž„ì‹œì—°
+				2206524 â†’ í•œì€ì˜
+				2206436 â†’ ìœ ë™í˜„
+				2206537 â†’ ì¡°í˜„í•˜
+				2206428 â†’ ì—„ì†Œì—°
 				*/
 			}
 

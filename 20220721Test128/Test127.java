@@ -1,12 +1,12 @@
 /*==============================================
-  ¡á¡á¡á ÀÚ¹ÙÀÇ ÁÖ¿ä(Áß¿ä) Å¬·¡½º ¡á¡á¡á
-  - ÀÚ¹Ù¿¡¼­ ±âº»ÀûÀ¸·Î Á¦°øÇÏ´Â ÁÖ¿ä Å¬·¡½ºµé
+  â– â– â–  ìžë°”ì˜ ì£¼ìš”(ì¤‘ìš”) í´ëž˜ìŠ¤ â– â– â– 
+  - ìžë°”ì—ì„œ ê¸°ë³¸ì ìœ¼ë¡œ ì œê³µí•˜ëŠ” ì£¼ìš” í´ëž˜ìŠ¤ë“¤
 ===============================================*/
 
-// Test126.java ¿Í ºñ±³~!!!
+// Test126.java ì™€ ë¹„êµ~!!!
 
 // import java.lang.*;
-// (import java.lang.Object Æ÷ÇÔ)
+// (import java.lang.Object í¬í•¨)
 
 public class Test127 // extends Object
 {
@@ -25,7 +25,7 @@ public class Test127 // extends Object
 	@Override
 	public String toString()
 	{
-		return "ÀçÁ¤ÀÇÇÑ toString()...";
+		return "ìž¬ì •ì˜í•œ toString()...";
 	}
 
 
@@ -33,11 +33,11 @@ public class Test127 // extends Object
 	{
 		Test127 ob = new Test127();
 		System.out.println(ob.toString());
-		//--==>> ÀçÁ¤ÀÇÇÑ toString()...
+		//--==>> ìž¬ì •ì˜í•œ toString()...
 
 
 		System.out.println(ob);
-		//--==>> ÀçÁ¤ÀÇÇÑ toString()...
+		//--==>> ìž¬ì •ì˜í•œ toString()...
 
 	}
 

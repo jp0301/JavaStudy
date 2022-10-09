@@ -1,40 +1,40 @@
 /*==================================
-  ¡á¡á¡á ÄÃ·º¼Ç(Collection) ¡á¡á¡á
+  â– â– â–  ì»¬ë ‰ì…˜(Collection) â– â– â– 
 ====================================*/
 
 // Vector v = new Vector();
-//-- ºñ¾îÀÖ´Â Vector ÀÚ·á±¸Á¶ v »ý¼º
+//-- ë¹„ì–´ìžˆëŠ” Vector ìžë£Œêµ¬ì¡° v ìƒì„±
 
 // Vector v = new Vector(8);
-//-- 8°³ÀÇ ÃÊ±â elements ¸¦ °¡Áø Vector ÀÚ·á±¸Á¶ v°¡ »ý¼º
-//   ÀÌ ÀÚ·á±¸Á¶¸¦ È°¿ëÇÏ´Â °úÁ¤¿¡¼­
-//   8°³ÀÇ ¹æÀÌ ¸ðµÎ Ã¤¿öÁö°Ô µÇ¸é(¸ðÀÚ¶ó°Ô µÇ¸é) ÀÚµ¿À¸·Î È®ÀåµÈ´Ù.
+//-- 8ê°œì˜ ì´ˆê¸° elements ë¥¼ ê°€ì§„ Vector ìžë£Œêµ¬ì¡° vê°€ ìƒì„±
+//   ì´ ìžë£Œêµ¬ì¡°ë¥¼ í™œìš©í•˜ëŠ” ê³¼ì •ì—ì„œ
+//   8ê°œì˜ ë°©ì´ ëª¨ë‘ ì±„ì›Œì§€ê²Œ ë˜ë©´(ëª¨ìžë¼ê²Œ ë˜ë©´) ìžë™ìœ¼ë¡œ í™•ìž¥ëœë‹¤.
 
 // Vector v = new Vector(3, 5);
-//-- 3°³ÀÇ ÃÊ±â elements ¸¦ °¡Áø Vector ÀÚ·á±¸Á¶ v »ý¼º
-//   ÀÌ ÀÚ·á±¸Á¶¸¦ È°¿ëÇÏ´Â °úÁ¤¿¡¼­
-//   3°³ÀÇ ¹æÀÌ ¸ðµÎ Ã¤¿öÁö°Ô µÇ¸é(¸ðÀÚ¶ó°Ô µÇ¸é) ÀÚµ¿À¸·Î 5°³ Áõ°¡(È®Àå)µÈ´Ù.
+//-- 3ê°œì˜ ì´ˆê¸° elements ë¥¼ ê°€ì§„ Vector ìžë£Œêµ¬ì¡° v ìƒì„±
+//   ì´ ìžë£Œêµ¬ì¡°ë¥¼ í™œìš©í•˜ëŠ” ê³¼ì •ì—ì„œ
+//   3ê°œì˜ ë°©ì´ ëª¨ë‘ ì±„ì›Œì§€ê²Œ ë˜ë©´(ëª¨ìžë¼ê²Œ ë˜ë©´) ìžë™ìœ¼ë¡œ 5ê°œ ì¦ê°€(í™•ìž¥)ëœë‹¤.
 
-// ¡Ø º¤ÅÍ´Â µ¥ÀÌÅÍ ¿ä¼Ò·Î¼­ Á¤¼öÇü, ½Ç¼öÇü, ¹®ÀÚ¿­... µîÀ»
-//    ´ã¾Æ³»´Â °ÍÀÌ °¡´ÉÇÏ´Ù. (¡æ °¡´ÉÇØÁ³´Ù.) ¿ÀÅä¹Ú½Ì, ¿ÀÅä¾ð¹Ú½Ì
-//    ¡æ µ¥ÀÌÅÍ ¾ÈÁ¤¼º È®º¸ check~!!!
+// â€» ë²¡í„°ëŠ” ë°ì´í„° ìš”ì†Œë¡œì„œ ì •ìˆ˜í˜•, ì‹¤ìˆ˜í˜•, ë¬¸ìžì—´... ë“±ì„
+//    ë‹´ì•„ë‚´ëŠ” ê²ƒì´ ê°€ëŠ¥í•˜ë‹¤. (â†’ ê°€ëŠ¥í•´ì¡Œë‹¤.) ì˜¤í† ë°•ì‹±, ì˜¤í† ì–¸ë°•ì‹±
+//    â†’ ë°ì´í„° ì•ˆì •ì„± í™•ë³´ check~!!!
 
-// MyVector Å¬·¡½º ¼³°è ¡æ Vector Å¬·¡½º »ó¼Ó
+// MyVector í´ëž˜ìŠ¤ ì„¤ê³„ â†’ Vector í´ëž˜ìŠ¤ ìƒì†
 
 import java.util.Vector;
 import java.util.Iterator;
 
 class MyVector extends Vector<Object>
 {
-	//  »ý¼ºÀÚ
+	//  ìƒì„±ìž
 	MyVector()
 	{
-		// Vector(½´ÆÛ Å¬·¡½º) »ý¼ºÀÚ È£Ãâ
+		// Vector(ìŠˆí¼ í´ëž˜ìŠ¤) ìƒì„±ìž í˜¸ì¶œ
 		//super();
-		// ¡æ Vector();
+		// â†’ Vector();
 		super(1, 1);
-		//-- Ã¹ ¹øÂ° ÀÎÀÚ : ÁÖ¾îÁø ¿ë·®
-		//   µÎ ¹øÂ° ÀÎÀÚ : Áõ°¡·®
+		//-- ì²« ë²ˆì§¸ ì¸ìž : ì£¼ì–´ì§„ ìš©ëŸ‰
+		//   ë‘ ë²ˆì§¸ ì¸ìž : ì¦ê°€ëŸ‰
 	}
 	
 	void addInt(int i)
@@ -75,19 +75,19 @@ class MyVector extends Vector<Object>
 		}
 		//--==>> 5
 		//		 3.14
-		//		 ¾È³çÇÏ¼¼¿ä
+		//		 ì•ˆë…•í•˜ì„¸ìš”
 		//		 [C@15db9742
 		*/
 
 		// -------------------------------------------------
 
-		System.out.println("º¤ÅÍ ¸î°³³Ä? : " + size());
+		System.out.println("ë²¡í„° ëª‡ê°œëƒ? : " + size());
 
 		/*
 		Object o;
 		int length = size();
 
-		//System.out.println("º¤ÅÍ ¿ä¼Ò °¹¼ö : " + length);
+		//System.out.println("ë²¡í„° ìš”ì†Œ ê°¯ìˆ˜ : " + length);
 		//--==>> 4
 
 		for(int i=0; i < length; i++)
@@ -97,7 +97,7 @@ class MyVector extends Vector<Object>
 		}
 		//--==>> 5
 		//       3.14
-		//       ¾È³çÇÏ¼¼¿ä
+		//       ì•ˆë…•í•˜ì„¸ìš”
 		//       [C@15db9742
 		*/
 
@@ -105,37 +105,37 @@ class MyVector extends Vector<Object>
 		Object o;
 		int length = size();
 
-		System.out.println("º¤ÅÍ ¿ä¼Ò °¹¼ö : " + length);
+		System.out.println("ë²¡í„° ìš”ì†Œ ê°¯ìˆ˜ : " + length);
 
 		for(int i=0; i< length; i++)
 		{	
 			o = elementAt(i);
 
-			// ¡ºinstanceof¡» ¿¬»êÀÚ             check~!!!
-			//-- Ã³¸®ÇØ¾ß ÇÏ´Â ´ë»óÀÇ °´Ã¼ Å¸ÀÔ È®ÀÎ
+			// ã€Žinstanceofã€ ì—°ì‚°ìž             check~!!!
+			//-- ì²˜ë¦¬í•´ì•¼ í•˜ëŠ” ëŒ€ìƒì˜ ê°ì²´ íƒ€ìž… í™•ì¸
 
 			if(o instanceof char[])
 			{
-				//System.out.println("¹®ÀÚ¹è¿­ : " + o); --(X)
-				//System.out.println("¹®ÀÚ¹è¿­ : " + o.toString()); -- (X)
-				System.out.println("¹®ÀÚ¹è¿­ : " + String.copyValueOf( (char[])o )  );
+				//System.out.println("ë¬¸ìžë°°ì—´ : " + o); --(X)
+				//System.out.println("ë¬¸ìžë°°ì—´ : " + o.toString()); -- (X)
+				System.out.println("ë¬¸ìžë°°ì—´ : " + String.copyValueOf( (char[])o )  );
 				
 			}
 			else if (o instanceof String)
 			{
-				System.out.println("¹®ÀÚ¿­ : " + o.toString());
+				System.out.println("ë¬¸ìžì—´ : " + o.toString());
 			}
 			else if (o instanceof Integer)
 			{
-				System.out.println("Á¤¼öÇü : " + o);
+				System.out.println("ì •ìˆ˜í˜• : " + o);
 			}
 			else if (o instanceof Float)
 			{
-				System.out.println("½Ç¼öÇü : " + o);
+				System.out.println("ì‹¤ìˆ˜í˜• : " + o);
 			}
 			else
 			{
-				System.out.println("Å¸ÀÔ È®ÀÎ ºÒ°¡~~!!!");
+				System.out.println("íƒ€ìž… í™•ì¸ ë¶ˆê°€~~!!!");
 			}
 		}
 
@@ -153,19 +153,19 @@ public class Test159
 {
 	public static void main(String[] args)
 	{
-		// MyVector Å¬·¡½º ±â¹Ý ÀÎ½ºÅÏ½º »ý¼º
+		// MyVector í´ëž˜ìŠ¤ ê¸°ë°˜ ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
 		MyVector v = new MyVector();
 
-		// ÁÖ¿ä º¯¼ö ¼±¾ð ¹× ÃÊ±âÈ­
+		// ì£¼ìš” ë³€ìˆ˜ ì„ ì–¸ ë° ì´ˆê¸°í™”
 		int digit = 5;
 		float real = 3.14f;
-		String s = new String("¾È³çÇÏ¼¼¿ä");
+		String s = new String("ì•ˆë…•í•˜ì„¸ìš”");
 		char[] letters = {'s', 't', 'u', 'd', 'y'};
 
-		v.addInt(digit);			//-- º¤ÅÍ ÀÚ·á±¸Á¶¿¡ Á¤¼ö ÀúÀå	
-		v.addFloat(real);			//-- º¤ÅÍ ÀÚ·á±¸Á¶¿¡ ½Ç¼ö ÀúÀå
-		v.addString(s);				//-- º¤ÅÍ ÀÚ·á±¸Á¶¿¡ ¹®ÀÚ¿­ ÀúÀå
-		v.addCharArray(letters);	//-- º¤ÅÍ ÀÚ·á±¸Á¶¿¡ ¹®ÀÚ ¹è¿­ ÀúÀå
+		v.addInt(digit);			//-- ë²¡í„° ìžë£Œêµ¬ì¡°ì— ì •ìˆ˜ ì €ìž¥	
+		v.addFloat(real);			//-- ë²¡í„° ìžë£Œêµ¬ì¡°ì— ì‹¤ìˆ˜ ì €ìž¥
+		v.addString(s);				//-- ë²¡í„° ìžë£Œêµ¬ì¡°ì— ë¬¸ìžì—´ ì €ìž¥
+		v.addCharArray(letters);	//-- ë²¡í„° ìžë£Œêµ¬ì¡°ì— ë¬¸ìž ë°°ì—´ ì €ìž¥
 		
 		v.write();
 
@@ -173,14 +173,14 @@ public class Test159
 	}
 }
 
-//½ÇÇà °á°ú
+//ì‹¤í–‰ ê²°ê³¼
 
 /*
-º¤ÅÍ ¸î°³³Ä? : 4
-º¤ÅÍ ¿ä¼Ò °¹¼ö : 4
-Á¤¼öÇü : 5
-½Ç¼öÇü : 3.14
-¹®ÀÚ¿­ : ¾È³çÇÏ¼¼¿ä
-¹®ÀÚ¹è¿­ : study
-°è¼ÓÇÏ·Á¸é ¾Æ¹« Å°³ª ´©¸£½Ê½Ã¿À . . .
+ë²¡í„° ëª‡ê°œëƒ? : 4
+ë²¡í„° ìš”ì†Œ ê°¯ìˆ˜ : 4
+ì •ìˆ˜í˜• : 5
+ì‹¤ìˆ˜í˜• : 3.14
+ë¬¸ìžì—´ : ì•ˆë…•í•˜ì„¸ìš”
+ë¬¸ìžë°°ì—´ : study
+ê³„ì†í•˜ë ¤ë©´ ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ì‹­ì‹œì˜¤ . . .
 */

@@ -1,7 +1,7 @@
 /*==============================================
-  ¡á¡á¡á ÀÚ¹ÙÀÇ ÁÖ¿ä(Áß¿ä) Å¬·¡½º ¡á¡á¡á
-  - ÀÚ¹Ù¿¡¼­ ±âº»ÀûÀ¸·Î Á¦°øÇÏ´Â ÁÖ¿ä Å¬·¡½ºµé
-  - Wrapper Å¬·¡½º
+  â– â– â–  ìžë°”ì˜ ì£¼ìš”(ì¤‘ìš”) í´ëž˜ìŠ¤ â– â– â– 
+  - ìžë°”ì—ì„œ ê¸°ë³¸ì ìœ¼ë¡œ ì œê³µí•˜ëŠ” ì£¼ìš” í´ëž˜ìŠ¤ë“¤
+  - Wrapper í´ëž˜ìŠ¤
 ===============================================*/
 
 
@@ -11,11 +11,11 @@ public class Test131
 	{
 		boolean bi = true;
 		Boolean wrapBi = new Boolean(bi);
-		Boolean wBi = bi;					//-- ¿ÀÅä ¹Ú½Ì
+		Boolean wBi = bi;					//-- ì˜¤í†  ë°•ì‹±
 		
 		int n = 300;
 		Integer wrapN = new Integer(n);
-		int n2 = wrapN;						//-- ¿ÀÅä ¾ð¹Ú½Ì
+		int n2 = wrapN;						//-- ì˜¤í†  ì–¸ë°•ì‹±
 
 
 		float f = 300.3f;
@@ -37,7 +37,7 @@ public class Test131
 		//       300.3
 
 
-		// Integer Å¬·¡½º
+		// Integer í´ëž˜ìŠ¤
 		String sn = "12";
 		int ni = Integer.parseInt(sn);
 		System.out.printf("ni : %3d\n", ni);
@@ -60,8 +60,8 @@ public class Test131
 		System.out.printf("sn : %s\n", sn);
 		//--==>> sn : 10100
 
-		// to°¡ ºÙÀº ¸Þ¼ÒµåµéÀº ´ëºÎºÐ ¹«¾ð°¡¸¦ º¯È¯ÇÏ°Ô ¸¸µå´Â ¸Þ¼ÒµåÀÏ È®·üÀÌ Å©´Ù.
-		// is°¡ ºÙÀº ¸Þ¼ÒµåµéÀº º¸Åë ~ÀÎÁö ¾Æ´ÑÁö¸¦ È®ÀÎÇØ¼­ °á°ú°ªÀ» true / false·Î ¹ÝÈ¯ÇÏ´Â °æ¿ì°¡ ¸¹´Ù.
+		// toê°€ ë¶™ì€ ë©”ì†Œë“œë“¤ì€ ëŒ€ë¶€ë¶„ ë¬´ì–¸ê°€ë¥¼ ë³€í™˜í•˜ê²Œ ë§Œë“œëŠ” ë©”ì†Œë“œì¼ í™•ë¥ ì´ í¬ë‹¤.
+		// isê°€ ë¶™ì€ ë©”ì†Œë“œë“¤ì€ ë³´í†µ ~ì¸ì§€ ì•„ë‹Œì§€ë¥¼ í™•ì¸í•´ì„œ ê²°ê³¼ê°’ì„ true / falseë¡œ ë°˜í™˜í•˜ëŠ” ê²½ìš°ê°€ ë§Žë‹¤.
 		
 		sn = Integer.toOctalString(31);
 		System.out.printf("sn : %s\n", sn);

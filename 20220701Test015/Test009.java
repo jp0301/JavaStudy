@@ -1,23 +1,23 @@
 /*==========================================
-  ¡á¡á¡á ÀÚ¹ÙÀÇ °³¿ä ¹× Æ¯Â¡ ¡á¡á¡á
-  - º¯¼ö¿Í ÀÚ·áÇü
-  - º¯¼ö¿Í ÀÚ·áÇü ½Ç½À ¹× Å×½ºÆ® : double
-  - ³ª´°¼À ¿¬»ê ½Ç½À
+  â– â– â–  ìžë°”ì˜ ê°œìš” ë° íŠ¹ì§• â– â– â– 
+  - ë³€ìˆ˜ì™€ ìžë£Œí˜•
+  - ë³€ìˆ˜ì™€ ìžë£Œí˜• ì‹¤ìŠµ ë° í…ŒìŠ¤íŠ¸ : double
+  - ë‚˜ëˆ—ì…ˆ ì—°ì‚° ì‹¤ìŠµ
 ==========================================*/
 
 public class Test009
 {
 	public static void main(String[] args)
 	{
-		// Á¤¼ö¿Í Á¤¼öÀÇ ³ª´°¼À
-		double a = 1 / 2; // ÇÇ¿¬»êÀÚ°¡ ¸ðµÎ Á¤¼öÀÏ °æ¿ì¿¡´Â ¸òÀ» ÃëÇÑ´Ù.
+		// ì •ìˆ˜ì™€ ì •ìˆ˜ì˜ ë‚˜ëˆ—ì…ˆ
+		double a = 1 / 2; // í”¼ì—°ì‚°ìžê°€ ëª¨ë‘ ì •ìˆ˜ì¼ ê²½ìš°ì—ëŠ” ëª«ì„ ì·¨í•œë‹¤.
 		//double a = 0;
 		System.out.println("double a : " + a);
 		//--==>> double a : 0.0
 
 		double b = (double)1 / 2;
-		//¡æ double b = 1.0 / 2;			--(O)
-		//¡æ double b = (double)0;			--(X)
+		//â†’ double b = 1.0 / 2;			--(O)
+		//â†’ double b = (double)0;			--(X)
 		System.out.println("double b : " + b);
 		//--==>> double b : 0.5
 
@@ -29,14 +29,14 @@ public class Test009
 		System.out.println("double c : " + c);
 		//--==>> double c : 0.0
 
-		// ÇÇ ¿¬»êÀÚ·Î ½Ç¼ö°¡ Æ÷ÇÔµÇ¾î ÀÖ´Â ³ª´°¼À ¿¬»ê
+		// í”¼ ì—°ì‚°ìžë¡œ ì‹¤ìˆ˜ê°€ í¬í•¨ë˜ì–´ ìžˆëŠ” ë‚˜ëˆ—ì…ˆ ì—°ì‚°
 		double d = 1 / 2.0;
 		System.out.println("double d : " + d);
 		//--==>> double d = 0.5
-		//-- ³ª´°¼À ¿¬»ê°ú °ü·ÃÇÏ¿©
-		//   ÇÇ ¿¬»êÀÚ Áß ½Ç¼ö°¡ ÇÏ³ª¶óµµ Æ÷ÇÔµÇ¾î ÀÖ´Ù¸é
-		//   ¿¬»êÀº ½Ç¼ö ±â¹ÝÀÇ ¿¬»êÀÌ ¼öÇàµÇ¸ç
-		//   °á°ú°ª ¶ÇÇÑ ½Ç¼ö ÇüÅÂ·Î ¹ÝÈ¯µÈ´Ù.
+		//-- ë‚˜ëˆ—ì…ˆ ì—°ì‚°ê³¼ ê´€ë ¨í•˜ì—¬
+		//   í”¼ ì—°ì‚°ìž ì¤‘ ì‹¤ìˆ˜ê°€ í•˜ë‚˜ë¼ë„ í¬í•¨ë˜ì–´ ìžˆë‹¤ë©´
+		//   ì—°ì‚°ì€ ì‹¤ìˆ˜ ê¸°ë°˜ì˜ ì—°ì‚°ì´ ìˆ˜í–‰ë˜ë©°
+		//   ê²°ê³¼ê°’ ë˜í•œ ì‹¤ìˆ˜ í˜•íƒœë¡œ ë°˜í™˜ëœë‹¤.
 		
 
 		double e = 3/2 + 1/2;
@@ -60,7 +60,7 @@ public class Test009
 }
 
 
-// ½ÇÇà °á°ú
+// ì‹¤í–‰ ê²°ê³¼
 
 /*
 double a : 0.0
@@ -69,5 +69,5 @@ double c : 0.0
 double d : 0.5
 double e : 1.0
 double f : 1.5
-°è¼ÓÇÏ·Á¸é ¾Æ¹« Å°³ª ´©¸£½Ê½Ã¿À . . .
+ê³„ì†í•˜ë ¤ë©´ ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ì‹­ì‹œì˜¤ . . .
 */

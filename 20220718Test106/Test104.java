@@ -1,6 +1,6 @@
 /*==============================================================================
-               ¡á¡á¡á ¸Ş¼Òµå Áßº¹ Á¤ÀÇ(Method Overloading) ¡á¡á¡á
-	  - ¸Ş¼Òµå Áßº¹ Á¤ÀÇ(Method Overloading)ÀÌ °¡´ÉÇÑ ÇüÅÂ¿Í ºÒ°¡´ÉÇÑ ÇüÅÂ
+               â– â– â–  ë©”ì†Œë“œ ì¤‘ë³µ ì •ì˜(Method Overloading) â– â– â– 
+	  - ë©”ì†Œë“œ ì¤‘ë³µ ì •ì˜(Method Overloading)ì´ ê°€ëŠ¥í•œ í˜•íƒœì™€ ë¶ˆê°€ëŠ¥í•œ í˜•íƒœ
   =============================================================================*/
 
 public class Test104
@@ -10,8 +10,8 @@ public class Test104
 		print('A');
 
 		
-		// ¿ì¸®°¡ º¸±â¿£ 15¹øÀº double d, 16¹øÀº double e ¸Ş¼Òµå¸¦ È£ÃâÇÒ °Í °°Áö¸¸
-		// ÀÚ¹Ù ÀÔÀå¿¡¼­´Â ¿À¸¥ÂÊºÎÅÍ ±âÁØ, º¸±â ¶§¹®¿¡ ¶È°°ÀÌ º»´Ù.
+		// ìš°ë¦¬ê°€ ë³´ê¸°ì—” 15ë²ˆì€ double d, 16ë²ˆì€ double e ë©”ì†Œë“œë¥¼ í˜¸ì¶œí•  ê²ƒ ê°™ì§€ë§Œ
+		// ìë°” ì…ì¥ì—ì„œëŠ” ì˜¤ë¥¸ìª½ë¶€í„° ê¸°ì¤€, ë³´ê¸° ë•Œë¬¸ì— ë˜‘ê°™ì´ ë³¸ë‹¤.
 		print(3.14);
 		double result = print(3.14);
 	}
@@ -20,10 +20,10 @@ public class Test104
 	//public static void print() {};						//-- (X)
 	public static void print(int i) {};
 	//public static void print(int j) {};					//-- (X)
-    public static void print(char c) {};					//-- °¡´ÉÇÏÁö¸¸ µÇ°Ô Á¶½ÉÇØ¾ßÇÔ, °¡±ŞÀû ÀÌ·±½ÄÀÇ ¸Ş¼Òµå ¿À¹ö·ÎµùÀº È¸ÇÇ, ÀÚµ¿Çüº¯È¯±ÔÄ¢ check~!!!
+    public static void print(char c) {};					//-- ê°€ëŠ¥í•˜ì§€ë§Œ ë˜ê²Œ ì¡°ì‹¬í•´ì•¼í•¨, ê°€ê¸‰ì  ì´ëŸ°ì‹ì˜ ë©”ì†Œë“œ ì˜¤ë²„ë¡œë”©ì€ íšŒí”¼, ìë™í˜•ë³€í™˜ê·œì¹™ check~!!!
 	public static void print(int i, int j) {};		
-	public static void print(double d) {};					//-- µÇÁö¸¸ Á¶½É, Çüº¯È¯±ÔÄ¢ check~!!!
-	//public static void print(double e) { return 10.0; };     //-- Á¤ÀÇ ºÒ°¡
+	public static void print(double d) {};					//-- ë˜ì§€ë§Œ ì¡°ì‹¬, í˜•ë³€í™˜ê·œì¹™ check~!!!
+	//public static void print(double e) { return 10.0; };     //-- ì •ì˜ ë¶ˆê°€
     // public static double print(double e) { return 10.0; };  //--(X) check~!!!
 	
 	

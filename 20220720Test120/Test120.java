@@ -1,87 +1,87 @@
 /*================================
-     ¡á¡á¡á Å¬·¡½º °í±Þ ¡á¡á¡á
-	 - ÀÎÅÍÆäÀÌ½º(Interface)
+     â– â– â–  í´ëž˜ìŠ¤ ê³ ê¸‰ â– â– â– 
+	 - ì¸í„°íŽ˜ì´ìŠ¤(Interface)
   ===============================*/
 
 
 /*
-¡Û ¡ºextends¡» vs ¡ºimplements¡»
+â—‹ ã€Žextendsã€ vs ã€Žimplementsã€
  
-    Å¬·¡½º extends Å¬·¡½º
-	Å¬·¡½º extends Ãß»óÅ¬·¡½º
+    í´ëž˜ìŠ¤ extends í´ëž˜ìŠ¤
+	í´ëž˜ìŠ¤ extends ì¶”ìƒí´ëž˜ìŠ¤
 	
-	ÀÎÅÍÆäÀÌ½º extends ÀÎÅÍÆäÀÌ½º
-	ÀÎÅÍÆäÀÌ½º extends ÀÎÅÍÆäÀÌ½º, ÀÎÅÍÆäÀÌ½º
+	ì¸í„°íŽ˜ì´ìŠ¤ extends ì¸í„°íŽ˜ì´ìŠ¤
+	ì¸í„°íŽ˜ì´ìŠ¤ extends ì¸í„°íŽ˜ì´ìŠ¤, ì¸í„°íŽ˜ì´ìŠ¤
 	
-	Ãß»óÅ¬·¡½º implements ÀÎÅÍÆäÀÌ½º
-	Ãß»óÅ¬·¡½º implements ÀÎÅÍÆäÀÌ½º, ÀÎÅÍÆäÀÌ½º
+	ì¶”ìƒí´ëž˜ìŠ¤ implements ì¸í„°íŽ˜ì´ìŠ¤
+	ì¶”ìƒí´ëž˜ìŠ¤ implements ì¸í„°íŽ˜ì´ìŠ¤, ì¸í„°íŽ˜ì´ìŠ¤
 
-	Å¬·¡½º implements ÀÎÅÍÆäÀÌ½º
-	Å¬·¡½º implements ÀÎÅÍÆäÀÌ½º, ÀÎÅÍÆäÀÌ½º
-
-
-¡Ø ÀÎÅÍÆäÀÌ½º´Â Å¬·¡½º¿Í´Â ´Þ¸® ´ÙÁß »ó¼ÓÀÌ °¡´ÉÇÏ¸ç,
-   ÀÎÅÍÆäÀÌ½º ÀÚÃ¼µµ »ó¼ÓµÈ´Ù.
+	í´ëž˜ìŠ¤ implements ì¸í„°íŽ˜ì´ìŠ¤
+	í´ëž˜ìŠ¤ implements ì¸í„°íŽ˜ì´ìŠ¤, ì¸í„°íŽ˜ì´ìŠ¤
 
 
-¡Ø ÀÎÅÍÆäÀÌ½ºÀÇ ¸â¹ö º¯¼öÀÎ µ¥ÀÌÅÍ´Â
-   Á¢±ÙÁ¦¾îÁö½ÃÀÚ¸¦ º°µµ·Î ¸í½ÃÇÏÁö ¾Ê´õ¶óµµ ±âº» »ó¼ö(primitive constant)ÀÎ
-   public static final ÀÇ º¯°æÀÚ·Î ¼³Á¤µÈ´Ù.
-   Å¬·¡½º¿¡¼­ ÀÎÅÍÆäÀÌ½º¸¦ Ãß°¡ÇÏ¿©(implements) »ç¿ëÇÒ °æ¿ì
-   ÀÎÅÍÆäÀÌ½º ¾È¿¡¼­ ¼±¾ðµÈ ¸ðµç ¸Þ¼Òµå¸¦ ±¸ÇöÇØ ÁÖ¾î¾ß ÇÏ¸ç
-   ÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇÏ´Â Å¬·¡½º´Â
-   ÀÎÅÍÆäÀÌ½ºÀÇ »óÀ§ ÀÎÅÍÆäÀÌ½º°¡ Á¦°øÇÏ´Â Ãß»ó ¸Þ¼Òµå¸¦ Æ÷ÇÔÇÑ
-   ¸ðµç ¸Þ¼Òµå¸¦ ±¸ÇöÇÏÁö ¾ÊÀ» °æ¿ì
-   Ãß»ó(abstract) Å¬·¡½º·Î ¼±¾ðÇØ¾ß ÇÑ´Ù.
+â€» ì¸í„°íŽ˜ì´ìŠ¤ëŠ” í´ëž˜ìŠ¤ì™€ëŠ” ë‹¬ë¦¬ ë‹¤ì¤‘ ìƒì†ì´ ê°€ëŠ¥í•˜ë©°,
+   ì¸í„°íŽ˜ì´ìŠ¤ ìžì²´ë„ ìƒì†ëœë‹¤.
+
+
+â€» ì¸í„°íŽ˜ì´ìŠ¤ì˜ ë©¤ë²„ ë³€ìˆ˜ì¸ ë°ì´í„°ëŠ”
+   ì ‘ê·¼ì œì–´ì§€ì‹œìžë¥¼ ë³„ë„ë¡œ ëª…ì‹œí•˜ì§€ ì•Šë”ë¼ë„ ê¸°ë³¸ ìƒìˆ˜(primitive constant)ì¸
+   public static final ì˜ ë³€ê²½ìžë¡œ ì„¤ì •ëœë‹¤.
+   í´ëž˜ìŠ¤ì—ì„œ ì¸í„°íŽ˜ì´ìŠ¤ë¥¼ ì¶”ê°€í•˜ì—¬(implements) ì‚¬ìš©í•  ê²½ìš°
+   ì¸í„°íŽ˜ì´ìŠ¤ ì•ˆì—ì„œ ì„ ì–¸ëœ ëª¨ë“  ë©”ì†Œë“œë¥¼ êµ¬í˜„í•´ ì£¼ì–´ì•¼ í•˜ë©°
+   ì¸í„°íŽ˜ì´ìŠ¤ë¥¼ êµ¬í˜„í•˜ëŠ” í´ëž˜ìŠ¤ëŠ”
+   ì¸í„°íŽ˜ì´ìŠ¤ì˜ ìƒìœ„ ì¸í„°íŽ˜ì´ìŠ¤ê°€ ì œê³µí•˜ëŠ” ì¶”ìƒ ë©”ì†Œë“œë¥¼ í¬í•¨í•œ
+   ëª¨ë“  ë©”ì†Œë“œë¥¼ êµ¬í˜„í•˜ì§€ ì•Šì„ ê²½ìš°
+   ì¶”ìƒ(abstract) í´ëž˜ìŠ¤ë¡œ ì„ ì–¸í•´ì•¼ í•œë‹¤.
 	
-¡Ø Çü½Ä
-   - ÀÎÅÍÆäÀÌ½º´Â ¸Þ¼Òµå¸¦ ¼±¾ð¸¸ ÇÏ°í Á¤ÀÇ´Â ¾ø´Ù.
-   - ÀÎÅÍÆäÀÌ½º¸¦ implements ÇÒ °æ¿ì ¹Ýµå½Ã ÇÏÀ§ Å¬·¡½º´Â
-     ÀÎÅÍÆäÀÌ½ºÀÇ ¸ðµç ¸Þ¼Òµå¸¦ ¿À¹ö¶óÀÌµù(Overriding) ÇØ¾ß ÇÑ´Ù.
-   - ÀÎÅÍÆäÀÌ½º´Â ÀÚµ¿ÀûÀ¸·Î ´ÙÀ½°ú °°ÀÌ Ã³¸®µÈ´Ù.
-     ¡¤¸â¹ö º¯¼ö : public static final
-	 ¡¤¸Þ¼Òµå    : public abstract
-   - ´ÙÁß »ó¼ÓÀº ÄÞ¸¶(¡º,¡»)·Î ±¸ºÐµÇ¸ç
-     ¿©·¯ °³ÀÇ ÀÎÅÍÆäÀÌ½º¸¦ »ó¼ÓÇÒ ¼ö ÀÖ´Ù.
-   - ÀÎÅÍÆäÀÌ½º³¢¸® »ó¼ÓÇÒ °æ¿ì´Â ¡ºextends¡» Å°¿öµå¸¦ »ç¿ëÇÑ´Ù.
+â€» í˜•ì‹
+   - ì¸í„°íŽ˜ì´ìŠ¤ëŠ” ë©”ì†Œë“œë¥¼ ì„ ì–¸ë§Œ í•˜ê³  ì •ì˜ëŠ” ì—†ë‹¤.
+   - ì¸í„°íŽ˜ì´ìŠ¤ë¥¼ implements í•  ê²½ìš° ë°˜ë“œì‹œ í•˜ìœ„ í´ëž˜ìŠ¤ëŠ”
+     ì¸í„°íŽ˜ì´ìŠ¤ì˜ ëª¨ë“  ë©”ì†Œë“œë¥¼ ì˜¤ë²„ë¼ì´ë”©(Overriding) í•´ì•¼ í•œë‹¤.
+   - ì¸í„°íŽ˜ì´ìŠ¤ëŠ” ìžë™ì ìœ¼ë¡œ ë‹¤ìŒê³¼ ê°™ì´ ì²˜ë¦¬ëœë‹¤.
+     Â·ë©¤ë²„ ë³€ìˆ˜ : public static final
+	 Â·ë©”ì†Œë“œ    : public abstract
+   - ë‹¤ì¤‘ ìƒì†ì€ ì½¤ë§ˆ(ã€Ž,ã€)ë¡œ êµ¬ë¶„ë˜ë©°
+     ì—¬ëŸ¬ ê°œì˜ ì¸í„°íŽ˜ì´ìŠ¤ë¥¼ ìƒì†í•  ìˆ˜ ìžˆë‹¤.
+   - ì¸í„°íŽ˜ì´ìŠ¤ë¼ë¦¬ ìƒì†í•  ê²½ìš°ëŠ” ã€Žextendsã€ í‚¤ì›Œë“œë¥¼ ì‚¬ìš©í•œë‹¤.
 	 
 
-¡Ø ÀÎÅÍÆäÀÌ½ºÀÇ ¼±¾ð
+â€» ì¸í„°íŽ˜ì´ìŠ¤ì˜ ì„ ì–¸
 
-   ÀÎÅÍÆäÀÌ½º´Â Å¬·¡½ºÀÇ ³»ºÎ ±¸ÇöÀ» Á¦¿ÜÇÑ ÂüÁ¶Çü¸¸ ¼±¾ðÇÑ °ÍÀÌ¹Ç·Î
-   ¸Þ¼Òµå¸¦ ¼±¾ð¸¸ ÇÏ°í Á¤ÀÇ´Â ÇÒ ¼ö ¾ø´Ù.
-   ¶ÇÇÑ, Å¬·¡½º¿¡¼­ÀÇ º¯¼ö´Â °ªÀÌ º¯ÇÒ ¼ö ÀÖÁö¸¸
-   ÀÎÅÍÆäÀÌ½º¿¡¼­ÀÇ º¯¼ö´Â »ó¼öÃ³·³ °ªÀÌ ¹Ù²ð ¼ö ¾ø±â ´ë¹®¿¡
-   ¼±¾ð ½Ã¿¡ ¹Ì¸® °ªÀ» ÇÒ´çÇØ ³õ¾Æ¾ß ÇÑ´Ù.
-
-
-¡Ø ÀÎÅÍÆäÀÌ½ºÀÇ ±¸Çö
-
-   ÀÎÅÍÆäÀÌ½º´Â Å¬·¡½º¸¦ À§ÇÑ ÅÛÇÃ¸´ÀÌ±â ¶§¹®¿¡
-   »ç¿ë °¡´ÉÇÑ ÀÎÅÍÆäÀÌ½º°¡ µÇ±â À§ÇØ¼­´Â 
-   ÀÚ¹Ù ÇÁ·Î±×·¥¿¡¼­ ÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇØ ÁÖ¾î¾ß ÇÏ´Âµ¥
-   ÀÌ·¯ÇÑ ±â´ÉÀ» ¼öÇàÇÏ´Â °ÍÀÌ ¡ºimplements¡» ¿¹¾à¾îÀÌ´Ù.
+   ì¸í„°íŽ˜ì´ìŠ¤ëŠ” í´ëž˜ìŠ¤ì˜ ë‚´ë¶€ êµ¬í˜„ì„ ì œì™¸í•œ ì°¸ì¡°í˜•ë§Œ ì„ ì–¸í•œ ê²ƒì´ë¯€ë¡œ
+   ë©”ì†Œë“œë¥¼ ì„ ì–¸ë§Œ í•˜ê³  ì •ì˜ëŠ” í•  ìˆ˜ ì—†ë‹¤.
+   ë˜í•œ, í´ëž˜ìŠ¤ì—ì„œì˜ ë³€ìˆ˜ëŠ” ê°’ì´ ë³€í•  ìˆ˜ ìžˆì§€ë§Œ
+   ì¸í„°íŽ˜ì´ìŠ¤ì—ì„œì˜ ë³€ìˆ˜ëŠ” ìƒìˆ˜ì²˜ëŸ¼ ê°’ì´ ë°”ë€” ìˆ˜ ì—†ê¸° ëŒ€ë¬¸ì—
+   ì„ ì–¸ ì‹œì— ë¯¸ë¦¬ ê°’ì„ í• ë‹¹í•´ ë†“ì•„ì•¼ í•œë‹¤.
 
 
-¡Ø Å¬·¡½º´Â µ¿½Ã¿¡ µÎ °³ ÀÌ»óÀÇ ÀÎÅÍÆäÀÌ½º¸¦
-    implements ÇÒ ¼ö ÀÖ´Ù~!!!
+â€» ì¸í„°íŽ˜ì´ìŠ¤ì˜ êµ¬í˜„
+
+   ì¸í„°íŽ˜ì´ìŠ¤ëŠ” í´ëž˜ìŠ¤ë¥¼ ìœ„í•œ í…œí”Œë¦¿ì´ê¸° ë•Œë¬¸ì—
+   ì‚¬ìš© ê°€ëŠ¥í•œ ì¸í„°íŽ˜ì´ìŠ¤ê°€ ë˜ê¸° ìœ„í•´ì„œëŠ” 
+   ìžë°” í”„ë¡œê·¸ëž¨ì—ì„œ ì¸í„°íŽ˜ì´ìŠ¤ë¥¼ êµ¬í˜„í•´ ì£¼ì–´ì•¼ í•˜ëŠ”ë°
+   ì´ëŸ¬í•œ ê¸°ëŠ¥ì„ ìˆ˜í–‰í•˜ëŠ” ê²ƒì´ ã€Žimplementsã€ ì˜ˆì•½ì–´ì´ë‹¤.
+
+
+â€» í´ëž˜ìŠ¤ëŠ” ë™ì‹œì— ë‘ ê°œ ì´ìƒì˜ ì¸í„°íŽ˜ì´ìŠ¤ë¥¼
+    implements í•  ìˆ˜ ìžˆë‹¤~!!!
 
 
 */
 
-// ÀÎÅÍÆäÀÌ½º
+// ì¸í„°íŽ˜ì´ìŠ¤
 interface ADemo
 {
 	public void write();
 }
 
-// ÀÎÅÍÆäÀÌ½º
+// ì¸í„°íŽ˜ì´ìŠ¤
 interface BDemo
 {
 	public void print();
 }
 
-// µÎ ÀÎÅÍÆäÀÌ½º(ADemo, BDemo)¸¦ »ó¼Ó¹ÞÀº ÀÎÅÍÆäÀÌ½º
+// ë‘ ì¸í„°íŽ˜ì´ìŠ¤(ADemo, BDemo)ë¥¼ ìƒì†ë°›ì€ ì¸í„°íŽ˜ì´ìŠ¤
 interface CDemo extends ADemo, BDemo
 {
 	// public void write();
@@ -91,15 +91,15 @@ interface CDemo extends ADemo, BDemo
 }
 
 
-// Å¬·¡½º
+// í´ëž˜ìŠ¤
 // class DemoImpl
-//   ¡é
-// Ãß»ó Å¬·¡½º
-// µÎ ÀÎÅÍÆäÀÌ½º(ADemo, BDemo)¸¦ »ó¼Ó¹ÞÀº ÀÎÅÍÆäÀÌ½º(CDemo)¸¦ ±¸ÇöÇÑ Ãß»ó Å¬·¡½º
-//   ¡é
-// Å¬·¡½º
-// µÎ ÀÎÅÍÆäÀÌ½º(ADemo, BDemo)¸¦ »ó¼Ó¹ÞÀº ÀÎÅÍÆäÀÌ½º(CDemo)¸¦ ±¸ÇöÇÑ ÈÄ
-// ¸ðµç ¸Þ¼Òµå¸¦ ÀçÁ¤ÀÇÇÑ Å¬·¡½º
+//   â†“
+// ì¶”ìƒ í´ëž˜ìŠ¤
+// ë‘ ì¸í„°íŽ˜ì´ìŠ¤(ADemo, BDemo)ë¥¼ ìƒì†ë°›ì€ ì¸í„°íŽ˜ì´ìŠ¤(CDemo)ë¥¼ êµ¬í˜„í•œ ì¶”ìƒ í´ëž˜ìŠ¤
+//   â†“
+// í´ëž˜ìŠ¤
+// ë‘ ì¸í„°íŽ˜ì´ìŠ¤(ADemo, BDemo)ë¥¼ ìƒì†ë°›ì€ ì¸í„°íŽ˜ì´ìŠ¤(CDemo)ë¥¼ êµ¬í˜„í•œ í›„
+// ëª¨ë“  ë©”ì†Œë“œë¥¼ ìž¬ì •ì˜í•œ í´ëž˜ìŠ¤
 class DemoImpl implements CDemo
 {
 	
@@ -124,15 +124,15 @@ class DemoImpl implements CDemo
 }
 
 
-// main() ¸Þ¼Òµå¸¦ Æ÷ÇÔÇÏ´Â ¿ÜºÎÀÇ ´Ù¸¥ Å¬·¡½º
+// main() ë©”ì†Œë“œë¥¼ í¬í•¨í•˜ëŠ” ì™¸ë¶€ì˜ ë‹¤ë¥¸ í´ëž˜ìŠ¤
 public class Test120
 {
 	public static void main(String[] args)
 	{
 
-		// µÎ ÀÎÅÍÆäÀÌ½º¸¦ »ó¼Ó¹ÞÀº ÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇÏ°í
-		// ÇØ´ç ÀÎÅÍÆäÀÌ½ºÀÇ ¸Þ¼Òµå »Ó ¾Æ´Ï¶ó
-		// »ó¼Ó¹ÞÀº ÀÎÅÍÆäÀÌ½ºÀÇ ¸ðµç ¸Þ¼Òµå¸¦ ÀçÁ¤ÀÇÇÑ Å¬·¡½º ±â¹ÝÀÇ ÀÎ½ºÅÏ½º »ý¼º
+		// ë‘ ì¸í„°íŽ˜ì´ìŠ¤ë¥¼ ìƒì†ë°›ì€ ì¸í„°íŽ˜ì´ìŠ¤ë¥¼ êµ¬í˜„í•˜ê³ 
+		// í•´ë‹¹ ì¸í„°íŽ˜ì´ìŠ¤ì˜ ë©”ì†Œë“œ ë¿ ì•„ë‹ˆë¼
+		// ìƒì†ë°›ì€ ì¸í„°íŽ˜ì´ìŠ¤ì˜ ëª¨ë“  ë©”ì†Œë“œë¥¼ ìž¬ì •ì˜í•œ í´ëž˜ìŠ¤ ê¸°ë°˜ì˜ ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
 		DemoImpl ob = new DemoImpl();
 
 		ob.test();
@@ -141,10 +141,10 @@ public class Test120
 	}
 }
 
-// ½ÇÇà °á°ú
+// ì‹¤í–‰ ê²°ê³¼
 /*
 test()...
 write()...
 print()...
-°è¼ÓÇÏ·Á¸é ¾Æ¹« Å°³ª ´©¸£½Ê½Ã¿À . . .
+ê³„ì†í•˜ë ¤ë©´ ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ì‹­ì‹œì˜¤ . . .
 */

@@ -1,6 +1,6 @@
 /*==============================
-  ¡á¡á¡á Å¬·¡½º °í±Ş ¡á¡á¡á
-   - ÁßÃ¸ Å¬·¡½º
+  â– â– â–  í´ë˜ìŠ¤ ê³ ê¸‰ â– â– â– 
+   - ì¤‘ì²© í´ë˜ìŠ¤
 ===============================*/
 
 
@@ -15,23 +15,23 @@ class InnerOuterTest
 	{
 		int c = 30;
 
-		void write()			// innerÀÇ write() ¸Ş¼Òµå
+		void write()			// innerì˜ write() ë©”ì†Œë“œ
 		{
-			System.out.println("inner ÀÇ write()...");
+			System.out.println("inner ì˜ write()...");
 			System.out.println("a : " + a);
 			System.out.println("b : " + b);
 			System.out.println("c : " + c);
 		}
 	}
 
-	void write()				// outerÀÇ write() ¸Ş¼Òµå
+	void write()				// outerì˜ write() ë©”ì†Œë“œ
 	{
-		System.out.println("outer ÀÇ write()...");
+		System.out.println("outer ì˜ write()...");
 
 		InnerNested ob1 = new InnerNested();
-		ob1.write();			//-- inner ÀÇ write() ¸Ş¼Òµå È£Ãâ
-		//--==>> outer ÀÇ write()...
-		//		 inner ÀÇ write()...
+		ob1.write();			//-- inner ì˜ write() ë©”ì†Œë“œ í˜¸ì¶œ
+		//--==>> outer ì˜ write()...
+		//		 inner ì˜ write()...
 		//		 a : 10
 		//		 b : 20
 		//		 c : 30
@@ -41,51 +41,51 @@ class InnerOuterTest
 }
 
 
-// main() ¸Ş¼Òµå¸¦ Æ÷ÇÔÇÏ°í ÀÖ´Â ¿ÜºÎÀÇ ´Ù¸¥ Å¬·¡½º
+// main() ë©”ì†Œë“œë¥¼ í¬í•¨í•˜ê³  ìˆëŠ” ì™¸ë¶€ì˜ ë‹¤ë¥¸ í´ë˜ìŠ¤
 public class Test124
 {
 	public static void main(String[] args)
 	{
-		// InnerOuterTest(outer) Å¬·¡½º ±â¹İ ÀÎ½ºÅÏ½º »ı¼º
+		// InnerOuterTest(outer) í´ë˜ìŠ¤ ê¸°ë°˜ ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
 		InnerOuterTest ob2 = new InnerOuterTest();
-		ob2.write();		//-- outerÀÇ write() ¸Ş¼Òµå È£Ãâ
+		ob2.write();		//-- outerì˜ write() ë©”ì†Œë“œ í˜¸ì¶œ
 
-		// InnerNested(inner) Å¬·¡½º ±â¹İ ÀÎ½ºÅÏ½º »ı¼º
+		// InnerNested(inner) í´ë˜ìŠ¤ ê¸°ë°˜ ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
 		//InnerNested ob3 = new InnerNested();
-		//--==>> ¿¡·¯ ¹ß»ı(ÄÄÆÄÀÏ ¿¡·¯)
+		//--==>> ì—ëŸ¬ ë°œìƒ(ì»´íŒŒì¼ ì—ëŸ¬)
 
-		// check~!!! ¡æ Test122 ¿Í ºñ±³~!!!
-		// InnerOuterTest(outer) Å¬·¡½º¸¦ ÅëÇØ InnerNested(inner) Å¬·¡½º ±â¹İ ÀÎ½ºÅÏ½º »ı¼º
+		// check~!!! â†’ Test122 ì™€ ë¹„êµ~!!!
+		// InnerOuterTest(outer) í´ë˜ìŠ¤ë¥¼ í†µí•´ InnerNested(inner) í´ë˜ìŠ¤ ê¸°ë°˜ ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
 		// InnerOuterTest.InnerNested ob4 = new InnerOuterTest.InnerNested();
-		//--==>> ¿¡·¯ ¹ß»ı(ÄÄÆÄÀÏ ¿¡·¯)
+		//--==>> ì—ëŸ¬ ë°œìƒ(ì»´íŒŒì¼ ì—ëŸ¬)
 
 		
-		// ¡Ø ÁßÃ¸ ³»ºÎ Å¬·¡½º(static ÁßÃ¸ Å¬·¡½º)¿Í´Â ´Ş¸®
-		//    ¿ÜºÎ Å¬·¡½ºÀÇ ÀÎ½ºÅÏ½º(°´Ã¼)¸¦ »ç¿ëÇÏÁö ¾Ê°í
-		//    ´Üµ¶À¸·Î ³»ºÎ Å¬·¡½ºÀÇ ÀÎ½ºÅÏ½º¸¦ »ı¼ºÇÏ´Â °ÍÀº ºÒ°¡´ÉÇÏ´Ù.
-		//    ¡æ ¿ÜºÎ Å¬·¡½ºÀÇ °´Ã¼¸¦ »ç¿ëÇÏ¸é
-		//       ³»ºÎ Å¬·¡½ºÀÇ °´Ã¼¸¦ »ı¼ºÇÏ´Â °ÍÀÌ °¡´ÉÇÏ´Ù.
+		// â€» ì¤‘ì²© ë‚´ë¶€ í´ë˜ìŠ¤(static ì¤‘ì²© í´ë˜ìŠ¤)ì™€ëŠ” ë‹¬ë¦¬
+		//    ì™¸ë¶€ í´ë˜ìŠ¤ì˜ ì¸ìŠ¤í„´ìŠ¤(ê°ì²´)ë¥¼ ì‚¬ìš©í•˜ì§€ ì•Šê³ 
+		//    ë‹¨ë…ìœ¼ë¡œ ë‚´ë¶€ í´ë˜ìŠ¤ì˜ ì¸ìŠ¤í„´ìŠ¤ë¥¼ ìƒì„±í•˜ëŠ” ê²ƒì€ ë¶ˆê°€ëŠ¥í•˜ë‹¤.
+		//    â†’ ì™¸ë¶€ í´ë˜ìŠ¤ì˜ ê°ì²´ë¥¼ ì‚¬ìš©í•˜ë©´
+		//       ë‚´ë¶€ í´ë˜ìŠ¤ì˜ ê°ì²´ë¥¼ ìƒì„±í•˜ëŠ” ê²ƒì´ ê°€ëŠ¥í•˜ë‹¤.
 
 		InnerOuterTest.InnerNested ob5 = ob2.new InnerNested();
 		ob5.write();
-		//--==>> inner ÀÇ write()...
+		//--==>> inner ì˜ write()...
 		// 		 a : 10
 		//		 b : 20
 		//		 c : 30
 
-		// check~!!! ¡æ Test122 ¿Í ºñ±³~!!!
+		// check~!!! â†’ Test122 ì™€ ë¹„êµ~!!!
 		InnerOuterTest.InnerNested ob6 = new InnerOuterTest().new InnerNested();
 		ob6.write();
-		//--==>> inner ÀÇ write()...
+		//--==>> inner ì˜ write()...
 		//	  	 a : 10
 		//		 b : 20
 		//		 c : 30
 		
-		// outerÅ¬·¡½º¸í.innerÅ¬·¡½º¸í ÂüÁ¶º¯¼ö¸í = new outer»ı¼ºÀÚ(). new inner»ı¼ºÀÚ();
+		// outerí´ë˜ìŠ¤ëª….innerí´ë˜ìŠ¤ëª… ì°¸ì¡°ë³€ìˆ˜ëª… = new outerìƒì„±ì(). new innerìƒì„±ì();
 		
 
-		// cf) static ¡æ ÁßÃ¸ ³»ºÎ Å¬·¡½º
-		// outerÅ¬·¡½º¸í.innerÅ¬·¡½º¸í ÂüÁ¶º¯¼ö¸í = new outerÅ¬·¡½º¸í.inner»ı¼ºÀÚ();
+		// cf) static â†’ ì¤‘ì²© ë‚´ë¶€ í´ë˜ìŠ¤
+		// outerí´ë˜ìŠ¤ëª….innerí´ë˜ìŠ¤ëª… ì°¸ì¡°ë³€ìˆ˜ëª… = new outerí´ë˜ìŠ¤ëª….innerìƒì„±ì();
 
 		
 

@@ -1,7 +1,7 @@
 /*==============================================
-  ¡á¡á¡á ÀÚ¹ÙÀÇ ÁÖ¿ä(Áß¿ä) Å¬·¡½º ¡á¡á¡á
-  - ÀÚ¹Ù¿¡¼­ ±âº»ÀûÀ¸·Î Á¦°øÇÏ´Â ÁÖ¿ä Å¬·¡½ºµé
-  - Object Å¬·¡½º
+  â– â– â–  ìžë°”ì˜ ì£¼ìš”(ì¤‘ìš”) í´ëž˜ìŠ¤ â– â– â– 
+  - ìžë°”ì—ì„œ ê¸°ë³¸ì ìœ¼ë¡œ ì œê³µí•˜ëŠ” ì£¼ìš” í´ëž˜ìŠ¤ë“¤
+  - Object í´ëž˜ìŠ¤
 ===============================================*/
 
 class NewCar  // extends Objects
@@ -10,9 +10,9 @@ class NewCar  // extends Objects
 	/*
 	*/
 
-	private int velocity;			//-- ÀÚµ¿Â÷ÀÇ ¼Óµµ
-	private int wheelNum;			//-- ÀÚµ¿Â÷ÀÇ ¹ÙÄû °¹¼ö
-	private String carName;			//-- ÀÚµ¿Â÷ÀÇ ÀÌ¸§
+	private int velocity;			//-- ìžë™ì°¨ì˜ ì†ë„
+	private int wheelNum;			//-- ìžë™ì°¨ì˜ ë°”í€´ ê°¯ìˆ˜
+	private String carName;			//-- ìžë™ì°¨ì˜ ì´ë¦„
 
 	NewCar(int speed, String name, int wheel)
 	{
@@ -26,7 +26,7 @@ public class Test129
 {
 	public static void main(String[] args)
 	{
-		NewCar nCar1 = new NewCar(250, "¶÷º¸¸£±â´Ï", 4);
+		NewCar nCar1 = new NewCar(250, "ëžŒë³´ë¥´ê¸°ë‹ˆ", 4);
 		NewCar nCar2 = new NewCar(150, "K5", 4);
 		
 		// equals()
@@ -36,8 +36,8 @@ public class Test129
 		//       1-2 : false
 
 		
-		NewCar nCar3 = nCar1;   // °´Ã¼ º¹»ç ¡æ ¾èÀº º¹»ç(ÂüÁ¶Çü)
-								// ¡æ ÁÖ¼Ò°ª º¹»ç
+		NewCar nCar3 = nCar1;   // ê°ì²´ ë³µì‚¬ â†’ ì–•ì€ ë³µì‚¬(ì°¸ì¡°í˜•)
+								// â†’ ì£¼ì†Œê°’ ë³µì‚¬
 
 		System.out.println("2-1 : " + nCar1.equals(nCar3));
 		System.out.println("2-2 : " + (nCar1 == nCar3));
@@ -46,14 +46,14 @@ public class Test129
 
 
 		
-		// ¡ºÅ¬·¡½º¸í@ÇØ½ÃÄÚµå¡»
+		// ã€Ží´ëž˜ìŠ¤ëª…@í•´ì‹œì½”ë“œã€
 
-		// ¡Ø ÇØ½ÃÄÚµå(hashcode)
-		//    : ÀÚ¹Ù ³»ºÎÀûÀ¸·Î °´Ã¼¸¦ ±¸ºÐÇÏ±â À§ÇØ »ç¿ëÇÏ´Â °Í.
-		//      ¸Þ¸ð¸®ÀÇ ÁÖ¼Ò°ªÀ¸·Î »ý°¢ÇÏ¸é Àý´ë·Î ¾ÈµÈ´Ù.
+		// â€» í•´ì‹œì½”ë“œ(hashcode)
+		//    : ìžë°” ë‚´ë¶€ì ìœ¼ë¡œ ê°ì²´ë¥¼ êµ¬ë¶„í•˜ê¸° ìœ„í•´ ì‚¬ìš©í•˜ëŠ” ê²ƒ.
+		//      ë©”ëª¨ë¦¬ì˜ ì£¼ì†Œê°’ìœ¼ë¡œ ìƒê°í•˜ë©´ ì ˆëŒ€ë¡œ ì•ˆëœë‹¤.
 		
-		// ¡Ø °´Ã¼°¡ °°À¸¸é hashcode(ÇØ½ÃÄÚµå)°¡ °°Áö¸¸
-		//    hashcode(ÇØ½ÃÄÚµå)°¡ °°´Ù°í °°Àº °´Ã¼´Â ¾Æ´Ï´Ù.
+		// â€» ê°ì²´ê°€ ê°™ìœ¼ë©´ hashcode(í•´ì‹œì½”ë“œ)ê°€ ê°™ì§€ë§Œ
+		//    hashcode(í•´ì‹œì½”ë“œ)ê°€ ê°™ë‹¤ê³  ê°™ì€ ê°ì²´ëŠ” ì•„ë‹ˆë‹¤.
 
 
 		// toString()
@@ -72,8 +72,8 @@ public class Test129
 		//--==>> 4-1 : 366712642
 		//       4-2 : 1829164700
 		//       4-3 : 366712642
-		//-- °á°ú°ªÀ» 16Áø¼ö ÇüÅÂ·Î ¹Ù²Ù°Ô µÇ¸é
-		//   ¡ºtoString()¡» ¸Þ¼Òµå°¡ ¹ÝÈ¯ÇÑ °á°ú°ª È®ÀÎ °¡´É. 366712642 ¡æ 15DB9742
+		//-- ê²°ê³¼ê°’ì„ 16ì§„ìˆ˜ í˜•íƒœë¡œ ë°”ê¾¸ê²Œ ë˜ë©´
+		//   ã€ŽtoString()ã€ ë©”ì†Œë“œê°€ ë°˜í™˜í•œ ê²°ê³¼ê°’ í™•ì¸ ê°€ëŠ¥. 366712642 â†’ 15DB9742
 
 
 		//getClass()
@@ -83,15 +83,15 @@ public class Test129
 		//--==>> 5-1 : class NewCar
 		//       5-2 : class NewCar
 		//       5-3 : class NewCar
-		//-- »ý¼ºµÈ °´Ã¼¸¦ ÅëÇØ
-		//   ÇØ´ç °´Ã¼ÀÇ ±â¹Ý ¼³°èµµ¸¦ È®ÀÎÇÒ ¼ö ÀÖ´Â ±â´ÉÀ» °¡Áø ¸Þ¼Òµå
+		//-- ìƒì„±ëœ ê°ì²´ë¥¼ í†µí•´
+		//   í•´ë‹¹ ê°ì²´ì˜ ê¸°ë°˜ ì„¤ê³„ë„ë¥¼ í™•ì¸í•  ìˆ˜ ìžˆëŠ” ê¸°ëŠ¥ì„ ê°€ì§„ ë©”ì†Œë“œ
 
 		
-		// clone()		//-- °´Ã¼ º¹»ç
+		// clone()		//-- ê°ì²´ ë³µì‚¬
 
-		// finalize()	//-- °´Ã¼ Á÷·ÄÈ­
+		// finalize()	//-- ê°ì²´ ì§ë ¬í™”
 
-		// ±âÅ¸ ³ª¸ÓÁö ¸Þ¼Òµå´Â ½º·¹µå Ã³¸®¿Í °ü·ÃÀÌ ÀÖ´Ù.
+		// ê¸°íƒ€ ë‚˜ë¨¸ì§€ ë©”ì†Œë“œëŠ” ìŠ¤ë ˆë“œ ì²˜ë¦¬ì™€ ê´€ë ¨ì´ ìžˆë‹¤.
 
         
 	}

@@ -1,17 +1,17 @@
  /*=============================================
-      ¡á¡á¡á ½ÇÇà Èå¸§ÀÇ ÄÁÆ®·Ñ(Á¦¾î¹®) ¡á¡á¡á
-      - if¹®
-	  - if ~ else ¹® ½Ç½À
+      â– â– â–  ì‹¤í–‰ íë¦„ì˜ ì»¨íŠ¸ë¡¤(ì œì–´ë¬¸) â– â– â– 
+      - ifë¬¸
+	  - if ~ else ë¬¸ ì‹¤ìŠµ
    ============================================*/
 
-// »ç¿ëÀÚ·ÎºÎÅÍ ÀÓÀÇÀÇ Á¤¼ö 5°³¸¦ ÀÔ·Â¹Þ¾Æ
-// Â¦¼öº°, È¦¼öº° ÇÕ°è¸¦ Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ±¸ÇöÇÑ´Ù.
-// ´Ü, Scanner¸¦ È°¿ëÇÏ¿© µ¥ÀÌÅÍ¸¦ ÀÔ·Â¹ÞÀ» ¼ö ÀÖµµ·Ï ÇÑ´Ù.
+// ì‚¬ìš©ìžë¡œë¶€í„° ìž„ì˜ì˜ ì •ìˆ˜ 5ê°œë¥¼ ìž…ë ¥ë°›ì•„
+// ì§ìˆ˜ë³„, í™€ìˆ˜ë³„ í•©ê³„ë¥¼ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ êµ¬í˜„í•œë‹¤.
+// ë‹¨, Scannerë¥¼ í™œìš©í•˜ì—¬ ë°ì´í„°ë¥¼ ìž…ë ¥ë°›ì„ ìˆ˜ ìžˆë„ë¡ í•œë‹¤.
 
-// ½ÇÇà ¿¹)
-// ÀÓÀÇÀÇ Á¤¼ö 5°³ ÀÔ·Â(°ø¹é ±¸ºÐ) : 1 2 3 4 5
+// ì‹¤í–‰ ì˜ˆ)
+// ìž„ì˜ì˜ ì •ìˆ˜ 5ê°œ ìž…ë ¥(ê³µë°± êµ¬ë¶„) : 1 2 3 4 5
 
-// >> Â¦¼öÀÇ ÇÕÀº 6 ÀÌ°í, È¦¼öÀÇ ÇÕÀº 9 ÀÔ´Ï´Ù.
+// >> ì§ìˆ˜ì˜ í•©ì€ 6 ì´ê³ , í™€ìˆ˜ì˜ í•©ì€ 9 ìž…ë‹ˆë‹¤.
 
 import java.util.Scanner;
 
@@ -26,7 +26,7 @@ public class Test038
 		int even = 0;
 		int odd = 0;
 
-		System.out.print("ÀÓÀÇÀÇ Á¤¼ö 5°³ ÀÔ·Â(°ø¹é ±¸ºÐ) : ");
+		System.out.print("ìž„ì˜ì˜ ì •ìˆ˜ 5ê°œ ìž…ë ¥(ê³µë°± êµ¬ë¶„) : ");
 		a = sc.nextInt();
 		b = sc.nextInt();
 		c = sc.nextInt();
@@ -63,7 +63,7 @@ public class Test038
 		else if(e % 2 != 0)
 			odd += e;
 
-		System.out.printf(">> Â¦¼öÀÇ ÇÕÀº %d ÀÌ°í, È¦¼öÀÇ ÇÕÀº %d ÀÔ´Ï´Ù.\n", even, odd);
+		System.out.printf(">> ì§ìˆ˜ì˜ í•©ì€ %d ì´ê³ , í™€ìˆ˜ì˜ í•©ì€ %d ìž…ë‹ˆë‹¤.\n", even, odd);
 		
 		*/
 
@@ -71,25 +71,25 @@ public class Test038
 
 
 
-		// ÇÔ²² ÇØ°áÇÑ Ç®ÀÌ --------------------------------------------------------------------
+		// í•¨ê»˜ í•´ê²°í•œ í’€ì´ --------------------------------------------------------------------
 		
 		/*
 		import java.util.Scanner;
 		*/
 
-		// ÁÖ¿ä º¯¼ö ¼±¾ð
+		// ì£¼ìš” ë³€ìˆ˜ ì„ ì–¸
 		Scanner sc = new Scanner(System.in);
 
 		// check ~~!!!
-		// ´©ÀûÇÕÀ» ´ã¾Æ³¾ º¯¼ö ÃÊ±âÈ­
-		int evenSum = 0;							//-- Â¦¼öÀÇ ÇÕÀ» ´ã¾Æ³¾ º¯¼ö ¼±¾ð(´©ÀûÇÕ)
-		int oddSum = 0;								//-- È¦¼öÀÇ ÇÕÀ» ´ã¾Æ³¾ º¯¼ö ¼±¾ð(´©ÀûÇÕ)
+		// ëˆ„ì í•©ì„ ë‹´ì•„ë‚¼ ë³€ìˆ˜ ì´ˆê¸°í™”
+		int evenSum = 0;							//-- ì§ìˆ˜ì˜ í•©ì„ ë‹´ì•„ë‚¼ ë³€ìˆ˜ ì„ ì–¸(ëˆ„ì í•©)
+		int oddSum = 0;								//-- í™€ìˆ˜ì˜ í•©ì„ ë‹´ì•„ë‚¼ ë³€ìˆ˜ ì„ ì–¸(ëˆ„ì í•©)
 		int num1, num2, num3, num4, num5;
-		//-- »ç¿ëÀÚ·ÎºÎÅÍ ÀÔ·Â¹ÞÀº ´Ù¼¸ °³ÀÇ Á¤¼ö¸¦ ´ã¾Æ³¾ º¯¼ö ¼±¾ð
+		//-- ì‚¬ìš©ìžë¡œë¶€í„° ìž…ë ¥ë°›ì€ ë‹¤ì„¯ ê°œì˜ ì •ìˆ˜ë¥¼ ë‹´ì•„ë‚¼ ë³€ìˆ˜ ì„ ì–¸
 		
 
-		// ¿¬»ê ¹× Ã³¸®
-		System.out.print("ÀÓÀÇÀÇ Á¤¼ö 5°³ ÀÔ·Â(°ø¹é ±¸ºÐ) : ");
+		// ì—°ì‚° ë° ì²˜ë¦¬
+		System.out.print("ìž„ì˜ì˜ ì •ìˆ˜ 5ê°œ ìž…ë ¥(ê³µë°± êµ¬ë¶„) : ");
 		num1 = sc.nextInt();
 		num2 = sc.nextInt();
 		num3 = sc.nextInt();
@@ -97,36 +97,36 @@ public class Test038
 		num5 = sc.nextInt();
         
 		
-		if(num1 % 2 == 0)						//-- num1ÀÌ Â¦¼öÀÏ ¶§ ¡æ evenSum À» num1 ¸¸Å­ Áõ°¡
+		if(num1 % 2 == 0)						//-- num1ì´ ì§ìˆ˜ì¼ ë•Œ â†’ evenSum ì„ num1 ë§Œí¼ ì¦ê°€
 			evenSum += num1;
-		else									//-- num1ÀÌ È¦¼öÀÏ ¶§ ¡æ oddSum À» num1 ¸¸Å­ Áõ°¡
+		else									//-- num1ì´ í™€ìˆ˜ì¼ ë•Œ â†’ oddSum ì„ num1 ë§Œí¼ ì¦ê°€
 			oddSum += num1;
 
-		if(num2 % 2 == 0)						//-- num2ÀÌ Â¦¼öÀÏ ¶§ ¡æ evenSum À» num2 ¸¸Å­ Áõ°¡
+		if(num2 % 2 == 0)						//-- num2ì´ ì§ìˆ˜ì¼ ë•Œ â†’ evenSum ì„ num2 ë§Œí¼ ì¦ê°€
 			evenSum += num2;
-		else									//-- num2ÀÌ È¦¼öÀÏ ¶§ ¡æ oddSum À» num2 ¸¸Å­ Áõ°¡
+		else									//-- num2ì´ í™€ìˆ˜ì¼ ë•Œ â†’ oddSum ì„ num2 ë§Œí¼ ì¦ê°€
 			oddSum += num2;
 
-		if(num3 % 2 == 0)						//-- num3ÀÌ Â¦¼öÀÏ ¶§ ¡æ evenSum À» num3 ¸¸Å­ Áõ°¡
+		if(num3 % 2 == 0)						//-- num3ì´ ì§ìˆ˜ì¼ ë•Œ â†’ evenSum ì„ num3 ë§Œí¼ ì¦ê°€
 			evenSum += num3;
-		else									//-- num3ÀÌ È¦¼öÀÏ ¶§ ¡æ oddSum À» num3 ¸¸Å­ Áõ°¡
+		else									//-- num3ì´ í™€ìˆ˜ì¼ ë•Œ â†’ oddSum ì„ num3 ë§Œí¼ ì¦ê°€
 			oddSum += num3;
 
 
-		if(num4 % 2 == 0)						//-- num4ÀÌ Â¦¼öÀÏ ¶§ ¡æ evenSum À» num4 ¸¸Å­ Áõ°¡
+		if(num4 % 2 == 0)						//-- num4ì´ ì§ìˆ˜ì¼ ë•Œ â†’ evenSum ì„ num4 ë§Œí¼ ì¦ê°€
 			evenSum += num4;
-		else									//-- num4ÀÌ È¦¼öÀÏ ¶§ ¡æ oddSum À» num4 ¸¸Å­ Áõ°¡
+		else									//-- num4ì´ í™€ìˆ˜ì¼ ë•Œ â†’ oddSum ì„ num4 ë§Œí¼ ì¦ê°€
 			oddSum += num4;
 
 
-		if(num5 % 2 == 0)						//-- num5ÀÌ Â¦¼öÀÏ ¶§ ¡æ evenSum À» num5 ¸¸Å­ Áõ°¡
+		if(num5 % 2 == 0)						//-- num5ì´ ì§ìˆ˜ì¼ ë•Œ â†’ evenSum ì„ num5 ë§Œí¼ ì¦ê°€
 			evenSum += num5;
-		else									//-- num5ÀÌ È¦¼öÀÏ ¶§ ¡æ oddSum À» num5 ¸¸Å­ Áõ°¡
+		else									//-- num5ì´ í™€ìˆ˜ì¼ ë•Œ â†’ oddSum ì„ num5 ë§Œí¼ ì¦ê°€
 			oddSum += num5;
 	
 
-		// °á°ú Ãâ·Â
-		System.out.printf("\n>> Â¦¼öÀÇ ÇÕÀº %d ÀÌ°í, È¦¼öÀÇ ÇÕÀº %d ÀÔ´Ï´Ù.\n", evenSum, oddSum);
+		// ê²°ê³¼ ì¶œë ¥
+		System.out.printf("\n>> ì§ìˆ˜ì˜ í•©ì€ %d ì´ê³ , í™€ìˆ˜ì˜ í•©ì€ %d ìž…ë‹ˆë‹¤.\n", evenSum, oddSum);
 
 
 
@@ -134,25 +134,25 @@ public class Test038
 }
 
 
-// ½ÇÇà °á°ú
+// ì‹¤í–‰ ê²°ê³¼
 
 /*
-ÀÓÀÇÀÇ Á¤¼ö 5°³ ÀÔ·Â(°ø¹é ±¸ºÐ) : 1 2 3 4 5
+ìž„ì˜ì˜ ì •ìˆ˜ 5ê°œ ìž…ë ¥(ê³µë°± êµ¬ë¶„) : 1 2 3 4 5
 
->> Â¦¼öÀÇ ÇÕÀº 6 ÀÌ°í, È¦¼öÀÇ ÇÕÀº 9 ÀÔ´Ï´Ù.
-°è¼ÓÇÏ·Á¸é ¾Æ¹« Å°³ª ´©¸£½Ê½Ã¿À . . .
+>> ì§ìˆ˜ì˜ í•©ì€ 6 ì´ê³ , í™€ìˆ˜ì˜ í•©ì€ 9 ìž…ë‹ˆë‹¤.
+ê³„ì†í•˜ë ¤ë©´ ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ì‹­ì‹œì˜¤ . . .
 */
 
 /*
-ÀÓÀÇÀÇ Á¤¼ö 5°³ ÀÔ·Â(°ø¹é ±¸ºÐ) : 2 4 6 8 10
+ìž„ì˜ì˜ ì •ìˆ˜ 5ê°œ ìž…ë ¥(ê³µë°± êµ¬ë¶„) : 2 4 6 8 10
 
->> Â¦¼öÀÇ ÇÕÀº 30 ÀÌ°í, È¦¼öÀÇ ÇÕÀº 0 ÀÔ´Ï´Ù.
-°è¼ÓÇÏ·Á¸é ¾Æ¹« Å°³ª ´©¸£½Ê½Ã¿À . . .
+>> ì§ìˆ˜ì˜ í•©ì€ 30 ì´ê³ , í™€ìˆ˜ì˜ í•©ì€ 0 ìž…ë‹ˆë‹¤.
+ê³„ì†í•˜ë ¤ë©´ ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ì‹­ì‹œì˜¤ . . .
 */
 
 /*
-ÀÓÀÇÀÇ Á¤¼ö 5°³ ÀÔ·Â(°ø¹é ±¸ºÐ) : 1 3 5 7 9
+ìž„ì˜ì˜ ì •ìˆ˜ 5ê°œ ìž…ë ¥(ê³µë°± êµ¬ë¶„) : 1 3 5 7 9
 
->> Â¦¼öÀÇ ÇÕÀº 0 ÀÌ°í, È¦¼öÀÇ ÇÕÀº 25 ÀÔ´Ï´Ù.
-°è¼ÓÇÏ·Á¸é ¾Æ¹« Å°³ª ´©¸£½Ê½Ã¿À . . .
+>> ì§ìˆ˜ì˜ í•©ì€ 0 ì´ê³ , í™€ìˆ˜ì˜ í•©ì€ 25 ìž…ë‹ˆë‹¤.
+ê³„ì†í•˜ë ¤ë©´ ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ì‹­ì‹œì˜¤ . . .
 */

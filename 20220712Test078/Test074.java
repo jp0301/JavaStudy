@@ -1,25 +1,25 @@
 /*====================================
-    ¡á¡á¡á Å¬·¡½º¿Í ÀÎ½ºÅÏ½º ¡á¡á¡á
-	- »ý¼ºÀÚ(Constructor)
+    â– â– â–  í´ëž˜ìŠ¤ì™€ ì¸ìŠ¤í„´ìŠ¤ â– â– â– 
+	- ìƒì„±ìž(Constructor)
   ====================================*/
 
 /*
-¡Û »ý¼ºÀÚ(Constructor)ÀÇ ¿ªÇÒ
+â—‹ ìƒì„±ìž(Constructor)ì˜ ì—­í• 
    
-   1. ÀÎ½ºÅÏ½º »ý¼º ¡æ ¸Þ¸ð¸® ÇÒ´ç
-   2. ÃÊ±âÈ­
+   1. ì¸ìŠ¤í„´ìŠ¤ ìƒì„± â†’ ë©”ëª¨ë¦¬ í• ë‹¹
+   2. ì´ˆê¸°í™”
 
 
-¡Û »ý¼ºÀÚ(Constructor)ÀÇ Æ¯Â¡
+â—‹ ìƒì„±ìž(Constructor)ì˜ íŠ¹ì§•
 
-   1. »ý¼ºÀÚ´Â ¸Þ¼ÒµåÀÌÁö¸¸, ÀÏ¹Ý ¸Þ¼ÒµåÃ³·³ È£ÃâµÉ ¼ö ¾øÀ¸¸ç,
-      ¹ÝÈ¯ ÀÚ·áÇüÀ» °¡Áú ¼ö ¾ø´Ù.
-	  (¡ºvoid¡»Á¶Â÷ °¡Áú ¼ö ¾øÀ¸¸ç, °ªÀ» ¹ÝÈ¯ÇÒ ¼öµµ ¾ø´Ù.)
-   2. »ý¼ºÀÚ´Â Å¬·¡½º¿Í µ¿ÀÏÇÑ ÀÌ¸§À» °¡Á®¾ß ÇÑ´Ù.
-      (´ë¼Ò¹®ÀÚ ¸íÈ®È÷ ±¸ºÐ)
-   3. »ý¼ºÀÚ´Â °´Ã¼¸¦ »ý¼ºÇÏ´Â °úÁ¤¿¡¼­ ¡ºnew »ý¼ºÀÚ();¡»ÀÇ ÇüÅÂ·Î È£ÃâµÈ´Ù.
-      (ÀÎ½ºÅÏ½º »ý¼º ½Ã ´Ü ÇÑ ¹ø¸¸ È£Ãâ)
-      ¡æ final º¯¼ö(»ó¼öÈ­µÈ º¯¼ö) ÃÊ±âÈ­ °¡´É
+   1. ìƒì„±ìžëŠ” ë©”ì†Œë“œì´ì§€ë§Œ, ì¼ë°˜ ë©”ì†Œë“œì²˜ëŸ¼ í˜¸ì¶œë  ìˆ˜ ì—†ìœ¼ë©°,
+      ë°˜í™˜ ìžë£Œí˜•ì„ ê°€ì§ˆ ìˆ˜ ì—†ë‹¤.
+	  (ã€Žvoidã€ì¡°ì°¨ ê°€ì§ˆ ìˆ˜ ì—†ìœ¼ë©°, ê°’ì„ ë°˜í™˜í•  ìˆ˜ë„ ì—†ë‹¤.)
+   2. ìƒì„±ìžëŠ” í´ëž˜ìŠ¤ì™€ ë™ì¼í•œ ì´ë¦„ì„ ê°€ì ¸ì•¼ í•œë‹¤.
+      (ëŒ€ì†Œë¬¸ìž ëª…í™•ížˆ êµ¬ë¶„)
+   3. ìƒì„±ìžëŠ” ê°ì²´ë¥¼ ìƒì„±í•˜ëŠ” ê³¼ì •ì—ì„œ ã€Žnew ìƒì„±ìž();ã€ì˜ í˜•íƒœë¡œ í˜¸ì¶œëœë‹¤.
+      (ì¸ìŠ¤í„´ìŠ¤ ìƒì„± ì‹œ ë‹¨ í•œ ë²ˆë§Œ í˜¸ì¶œ)
+      â†’ final ë³€ìˆ˜(ìƒìˆ˜í™”ëœ ë³€ìˆ˜) ì´ˆê¸°í™” ê°€ëŠ¥
 */ 
 
 class NumberTest
@@ -27,24 +27,24 @@ class NumberTest
 	int num;
 
 	// check~!!!	
-	// Å¬·¡½º¿¡... »ç¿ëÀÚ Á¤ÀÇ »ý¼ºÀÚ¸¦ Á¤ÀÇÇÏÁö ¾Ê¾Ò´Ù¸é...
-	// ÄÄÆÄÀÏ °úÁ¤¿¡¼­ µðÆúÆ®(default) »ý¼ºÀÚ°¡ ÀÚµ¿À¸·Î »ðÀÔµÈ´Ù.
+	// í´ëž˜ìŠ¤ì—... ì‚¬ìš©ìž ì •ì˜ ìƒì„±ìžë¥¼ ì •ì˜í•˜ì§€ ì•Šì•˜ë‹¤ë©´...
+	// ì»´íŒŒì¼ ê³¼ì •ì—ì„œ ë””í´íŠ¸(default) ìƒì„±ìžê°€ ìžë™ìœ¼ë¡œ ì‚½ìž…ëœë‹¤.
 
 
-	// µðÆúÆ®(default) »ý¼ºÀÚ
+	// ë””í´íŠ¸(default) ìƒì„±ìž
 	/*
 	NumberTest()
 	{
-		// ÅÖ ºñ¾îÀÖÀ½
+		// í…… ë¹„ì–´ìžˆìŒ
 	}
 	*/
 
 
-	// »ç¿ëÀÚ Á¤ÀÇ »ý¼ºÀÚ
+	// ì‚¬ìš©ìž ì •ì˜ ìƒì„±ìž
 	NumberTest()
 	{
 		num = 10;
-		System.out.println("»ç¿ëÀÚ Á¤ÀÇ »ý¼ºÀÚ È£Ãâ~!!!");
+		System.out.println("ì‚¬ìš©ìž ì •ì˜ ìƒì„±ìž í˜¸ì¶œ~!!!");
 	}
 
 	int getNum()
@@ -57,11 +57,11 @@ public class Test074
 {
 	public static void main(String[] args)
 	{
-		// NumberTest Å¬·¡½º ±â¹ÝÀÇ ÀÎ½ºÅÏ½º »ý¼º
+		// NumberTest í´ëž˜ìŠ¤ ê¸°ë°˜ì˜ ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
 		NumberTest nt1 = new NumberTest();
-		//--==>> »ç¿ëÀÚ Á¤ÀÇ »ý¼ºÀÚ È£Ãâ~!!!
-		//-- ÀÎ½ºÅÏ½º°¡ »ý¼ºµÇ´Â ½ÃÁ¡¿¡¼­
-		//   ÀÌ¿Í µ¿½Ã¿¡ ¼±ÅÃÀÇ ¿©Áö ¾øÀÌ »ý¼ºÀÚ È£ÃâÀÌ ÀÌ·ç¾îÁø´Ù.
+		//--==>> ì‚¬ìš©ìž ì •ì˜ ìƒì„±ìž í˜¸ì¶œ~!!!
+		//-- ì¸ìŠ¤í„´ìŠ¤ê°€ ìƒì„±ë˜ëŠ” ì‹œì ì—ì„œ
+		//   ì´ì™€ ë™ì‹œì— ì„ íƒì˜ ì—¬ì§€ ì—†ì´ ìƒì„±ìž í˜¸ì¶œì´ ì´ë£¨ì–´ì§„ë‹¤.
 		//                                -----------
 		//                                NumberTest();
 		/*
@@ -73,11 +73,11 @@ public class Test074
 		*/
 
 		// nt1.action();
-		//--==>> ¿¡·¯ ¹ß»ý(ÄÄÆÄÀÏ ¿¡·¯) 
+		//--==>> ì—ëŸ¬ ë°œìƒ(ì»´íŒŒì¼ ì—ëŸ¬) 
 		//       cannot find symbol
 
 		//nt1.NumberTest();
-		//--==>> ¿¡·¯(ÄÄÆÄÀÏ ¿¡·¯)
+		//--==>> ì—ëŸ¬(ì»´íŒŒì¼ ì—ëŸ¬)
 		//        cannot find symbol
 		int num = nt1.getNum();
 		System.out.println(num);
@@ -92,11 +92,11 @@ public class Test074
 		//--==>> 200
 
 		NumberTest nt2 = new NumberTest();
-		//--==>> »ç¿ëÀÚ Á¤ÀÇ »ý¼ºÀÚ È£Ãâ~!!!
+		//--==>> ì‚¬ìš©ìž ì •ì˜ ìƒì„±ìž í˜¸ì¶œ~!!!
 
 		System.out.println(nt2.num);
 		//--==>> 10
-		// °°Àº ¼³°èµµ¿¡ ÀÇÇØ ¸¸µé¾îÁ³´Ù°íÇØ¼­ µÎ °´Ã¼°¡ °°Àº °´Ã¼°¡ ¾Æ´Ï´Ù.
+		// ê°™ì€ ì„¤ê³„ë„ì— ì˜í•´ ë§Œë“¤ì–´ì¡Œë‹¤ê³ í•´ì„œ ë‘ ê°ì²´ê°€ ê°™ì€ ê°ì²´ê°€ ì•„ë‹ˆë‹¤.
 
 		int testResult = nt2.getNum();
 		System.out.println(testResult);

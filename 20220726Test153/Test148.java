@@ -1,5 +1,5 @@
 /*==============================================
-  ¡á¡á¡á ¿¹¿Ü Ã³¸®(Exception Handling) ¡á¡á¡á
+  â– â– â–  ì˜ˆì™¸ ì²˜ë¦¬(Exception Handling) â– â– â– 
 ===============================================*/
 
 import java.io.BufferedReader;
@@ -18,14 +18,14 @@ public class Test148
 		String str;
 		int n = 0;
 		
-		System.out.println("ÀÌ¸§ ÀÔ·Â[Á¾·á:Ctrl+z] : ");
+		System.out.println("ì´ë¦„ ì…ë ¥[ì¢…ë£Œ:Ctrl+z] : ");
 		while( (str = br.readLine() ) != null )
-		{ // BufferedReaderÀÇ readLine¿¡¼­ IOExceptionÀ» ´øÁö°í ÀÖ°Ú±¸³ª. ÃßÃø °¡´É.
+		{ // BufferedReaderì˜ readLineì—ì„œ IOExceptionì„ ë˜ì§€ê³  ìˆê² êµ¬ë‚˜. ì¶”ì¸¡ ê°€ëŠ¥.
 			data[n++] = str;
-			System.out.print("ÀÌ¸§ ÀÔ·Â[Á¾·á:Ctrl+z] : ");
+			System.out.print("ì´ë¦„ ì…ë ¥[ì¢…ë£Œ:Ctrl+z] : ");
 		}
 
-		System.out.println("ÀÔ·ÂµÈ ³»¿ë...........");
+		System.out.println("ì…ë ¥ëœ ë‚´ìš©...........");
 		for(String s : data)
 		{
 			if( s != null)

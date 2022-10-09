@@ -1,16 +1,16 @@
 /*===============================
-      ¡á¡á¡á Å¬·¡½º °í±Þ ¡á¡á¡á
-	  - »ó¼Ó(Inheritance)
+      â– â– â–  í´ëž˜ìŠ¤ ê³ ê¸‰ â– â– â– 
+	  - ìƒì†(Inheritance)
   ===============================*/
 
-// ´ÙÀ½°ú °°Àº ÇÁ·Î±×·¥À» ±¸ÇöÇÑ´Ù.
-// ´Ü, »ó¼ÓÀÇ °³³äÀ» Àû¿ëÇÏ¿© ÀÛ¼ºÇÒ ¼ö ÀÖµµ·Ï ÇÑ´Ù.
+// ë‹¤ìŒê³¼ ê°™ì€ í”„ë¡œê·¸ëž¨ì„ êµ¬í˜„í•œë‹¤.
+// ë‹¨, ìƒì†ì˜ ê°œë…ì„ ì ìš©í•˜ì—¬ ìž‘ì„±í•  ìˆ˜ ìžˆë„ë¡ í•œë‹¤.
 
-// ½ÇÇà ¿¹)
-// ÀÓÀÇÀÇ µÎ Á¤¼ö ÀÔ·Â(°ø¹é ±¸ºÐ) : 20 15
-// ¿¬»êÀÚ ÀÔ·Â(+ - * /) : -
+// ì‹¤í–‰ ì˜ˆ)
+// ìž„ì˜ì˜ ë‘ ì •ìˆ˜ ìž…ë ¥(ê³µë°± êµ¬ë¶„) : 20 15
+// ì—°ì‚°ìž ìž…ë ¥(+ - * /) : -
 // >> 20 - 15 = 5
-// °è¼ÓÇÏ·Á¸é ¾Æ¹« Å°³ª ´©¸£¼¼¿ä...
+// ê³„ì†í•˜ë ¤ë©´ ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ì„¸ìš”...
 
 //import java.util.Scanner;
 import java.io.BufferedReader;
@@ -34,14 +34,14 @@ class Aclass
 }
 
 
-// Aclass ¸¦ »ó¼Ó¹Þ´Â Å¬·¡½º·Î ¼³°è
+// Aclass ë¥¼ ìƒì†ë°›ëŠ” í´ëž˜ìŠ¤ë¡œ ì„¤ê³„
 class Bclass extends Aclass
 {
-	/* »ó¼Ó ¹ÞÀº °Íµé
+	/* ìƒì† ë°›ì€ ê²ƒë“¤
 	protected int x, y;
 	protected char op;
 
-	// »ý¼ºÀÚ´Â »ó¼ÓÀÇ ´ë»ó¿¡¼­ Á¦¿Ü
+	// ìƒì„±ìžëŠ” ìƒì†ì˜ ëŒ€ìƒì—ì„œ ì œì™¸
 
 	void write(double result)
 	{
@@ -54,45 +54,45 @@ class Bclass extends Aclass
 		// super();
 	}
 
-	// µ¥ÀÌÅÍ¸¦ ÀÔ·Â¹Þ¾Æ¿À´Â ¸Þ¼Òµå
+	// ë°ì´í„°ë¥¼ ìž…ë ¥ë°›ì•„ì˜¤ëŠ” ë©”ì†Œë“œ
 	boolean input() throws IOException
 	{
 		/*
 		Scanner sc = new Scanner(System.in);
 
-		System.out.print("ÀÓÀÇÀÇ µÎ Á¤¼ö ÀÔ·Â(°ø¹é ±¸ºÐ) : ");
+		System.out.print("ìž„ì˜ì˜ ë‘ ì •ìˆ˜ ìž…ë ¥(ê³µë°± êµ¬ë¶„) : ");
 		x = sc.nextInt();
 		y = sc.nextInt();
 
-		System.out.print("¿¬»êÀÚ ÀÔ·Â(+ - * /) : ");
+		System.out.print("ì—°ì‚°ìž ìž…ë ¥(+ - * /) : ");
 		op = (char)System.in.read();
 		*/
 		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
-		System.out.print("ÀÓÀÇÀÇ µÎ Á¤¼ö ÀÔ·Â(°ø¹é ±¸ºÐ) : ");	// "20 15"
+		System.out.print("ìž„ì˜ì˜ ë‘ ì •ìˆ˜ ìž…ë ¥(ê³µë°± êµ¬ë¶„) : ");	// "20 15"
 		String temp = br.readLine();
 
-		// ¡Ø ¹®ÀÚ¿­.split("±¸ºÐÀÚ");
-		//    ¹®ÀÚ¿­.split("\\s");		//-- ±¸ºÐÀÚ ¡æ °ø¹é
+		// â€» ë¬¸ìžì—´.split("êµ¬ë¶„ìž");
+		//    ë¬¸ìžì—´.split("\\s");		//-- êµ¬ë¶„ìž â†’ ê³µë°±
 		//    ex) "10 20 30 40 50".split("\\s");
-		//         ¡æ ¹ÝÈ¯ ¡æ {"10", "20", "30", "40", "50"}
+		//         â†’ ë°˜í™˜ â†’ {"10", "20", "30", "40", "50"}
 		//    ex) "010-1234-4567".split("-");
-		//         ¡æ ¹ÝÈ¯ ¡æ {"010", "1234", "4567"}
+		//         â†’ ë°˜í™˜ â†’ {"010", "1234", "4567"}
 		
 		String[] strArr = temp.split("\\s");
 
 		if(strArr.length != 2)
 			return false;
-		//-- false ¸¦ ¹ÝÈ¯ÇÏ¸ç input() ¸Þ¼Òµå Á¾·á
-		//   ÀÌ Á¶°ÇÀ» ¸¸Á·ÇÏ¿© if ¹®À» ¼öÇàÇÏ°Ô µÉ °æ¿ì...
-		//   ¾Æ·¡ ¼öÇàÇØ¾ß ÇÒ ÄÚµå°¡ ³²¾ÆÀÖ´õ¶óµµ
-		//   °á°ú°ª(false)À» ¹ÝÈ¯ÇÏ¸ç ¸Þ¼Òµå´Â Á¾·áµÈ´Ù.
+		//-- false ë¥¼ ë°˜í™˜í•˜ë©° input() ë©”ì†Œë“œ ì¢…ë£Œ
+		//   ì´ ì¡°ê±´ì„ ë§Œì¡±í•˜ì—¬ if ë¬¸ì„ ìˆ˜í–‰í•˜ê²Œ ë  ê²½ìš°...
+		//   ì•„ëž˜ ìˆ˜í–‰í•´ì•¼ í•  ì½”ë“œê°€ ë‚¨ì•„ìžˆë”ë¼ë„
+		//   ê²°ê³¼ê°’(false)ì„ ë°˜í™˜í•˜ë©° ë©”ì†Œë“œëŠ” ì¢…ë£Œëœë‹¤.
 
 		x = Integer.parseInt(strArr[0]);
 		y = Integer.parseInt(strArr[1]);
 		
-		System.out.print("¿¬»êÀÚ ÀÔ·Â(+ - * /) : ");
+		System.out.print("ì—°ì‚°ìž ìž…ë ¥(+ - * /) : ");
 		op = (char)System.in.read();
 		
 		/*
@@ -100,7 +100,7 @@ class Bclass extends Aclass
 			return false;
 		*/
 
-		//¹ÝÀü - ºÎÁ¤ÀÇ Á¶°Ç½ÄÀº °í¹ÎÀ» Á» ÇØºÁ¾ßÇÑ´Ù.
+		//ë°˜ì „ - ë¶€ì •ì˜ ì¡°ê±´ì‹ì€ ê³ ë¯¼ì„ ì¢€ í•´ë´ì•¼í•œë‹¤.
 		
 		if(op == '+' || op == '-' || op == '*' || op == '/')
 			return true;
@@ -137,7 +137,7 @@ class Bclass extends Aclass
 } // close class Bclass
 
 
-// main() ¸Þ¼Òµå¸¦ Æ÷ÇÔÇÏ°í ÀÖ´Â ¿ÜºÎÀÇ ´Ù¸¥ Å¬·¡½º
+// main() ë©”ì†Œë“œë¥¼ í¬í•¨í•˜ê³  ìžˆëŠ” ì™¸ë¶€ì˜ ë‹¤ë¥¸ í´ëž˜ìŠ¤
 public class Test113
 {
 	public static void main(String[] args) throws IOException
@@ -159,17 +159,17 @@ public class Test113
 	}
 }
 
-// ½ÇÇà °á°ú
+// ì‹¤í–‰ ê²°ê³¼
 /*
-ÀÓÀÇÀÇ µÎ Á¤¼ö ÀÔ·Â(°ø¹é ±¸ºÐ) : 11 6
-¿¬»êÀÚ ÀÔ·Â(+ - * /) : *
+ìž„ì˜ì˜ ë‘ ì •ìˆ˜ ìž…ë ¥(ê³µë°± êµ¬ë¶„) : 11 6
+ì—°ì‚°ìž ìž…ë ¥(+ - * /) : *
 >> 11 * 6 = 66.00
-°è¼ÓÇÏ·Á¸é ¾Æ¹« Å°³ª ´©¸£½Ê½Ã¿À . . .
+ê³„ì†í•˜ë ¤ë©´ ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ì‹­ì‹œì˜¤ . . .
 */
 
 /*
-ÀÓÀÇÀÇ µÎ Á¤¼ö ÀÔ·Â(°ø¹é ±¸ºÐ) : 22 6
-¿¬»êÀÚ ÀÔ·Â(+ - * /) : /
+ìž„ì˜ì˜ ë‘ ì •ìˆ˜ ìž…ë ¥(ê³µë°± êµ¬ë¶„) : 22 6
+ì—°ì‚°ìž ìž…ë ¥(+ - * /) : /
 >> 22 / 6 = 3.67
-°è¼ÓÇÏ·Á¸é ¾Æ¹« Å°³ª ´©¸£½Ê½Ã¿À . . .
+ê³„ì†í•˜ë ¤ë©´ ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ì‹­ì‹œì˜¤ . . .
 */

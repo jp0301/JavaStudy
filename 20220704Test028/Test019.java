@@ -1,13 +1,13 @@
 /*=============================================
-      ¡á¡á¡á ÀÚ¹Ù ±âº» ÇÁ·Î±×·¡¹Ö ¡á¡á¡á
-   - ÀÚ¹Ù ±âº» ÀÔÃâ·Â : System.util.Scanner
+      â– â– â–  ìžë°” ê¸°ë³¸ í”„ë¡œê·¸ëž˜ë° â– â– â– 
+   - ìžë°” ê¸°ë³¸ ìž…ì¶œë ¥ : System.util.Scanner
 ==============================================*/
 
-// ¡Ø java.util.Scanner
-//    ´Ü¶ô ¹®ÀÚ ÆÐÅÏÀ» »ç¿ëÇÏ¿© ÀÔ·ÂÀ» ÅäÅ«¿¡ µû¶ó ºÐÇÒÇÏ¸ç
-//    µðÆúÆ®(default)·Î »ç¿ëµÇ´Â ´Ü¶ô¹®ÀÚ´Â °ø¹éÀÌ´Ù.
-//    ÀÛ¼ºµÈ ´ÙÀ½ ÅäÅ«Àº ¡ºnext()¡» ¸Þ¼Òµå¸¦ »ç¿ë
-//    ´Ù¸¥ ÇüÅÂ(ÀÚ·áÇü)ÀÇ °ªÀ¸·Î º¯È¯ÇÒ ¼ö ÀÖ´Ù.
+// â€» java.util.Scanner
+//    ë‹¨ë½ ë¬¸ìž íŒ¨í„´ì„ ì‚¬ìš©í•˜ì—¬ ìž…ë ¥ì„ í† í°ì— ë”°ë¼ ë¶„í• í•˜ë©°
+//    ë””í´íŠ¸(default)ë¡œ ì‚¬ìš©ë˜ëŠ” ë‹¨ë½ë¬¸ìžëŠ” ê³µë°±ì´ë‹¤.
+//    ìž‘ì„±ëœ ë‹¤ìŒ í† í°ì€ ã€Žnext()ã€ ë©”ì†Œë“œë¥¼ ì‚¬ìš©
+//    ë‹¤ë¥¸ í˜•íƒœ(ìžë£Œí˜•)ì˜ ê°’ìœ¼ë¡œ ë³€í™˜í•  ìˆ˜ ìžˆë‹¤.
 
 import java.util.Scanner;
 
@@ -15,29 +15,29 @@ public class Test019
 {
 	public static void main(String[] args)
 	{
-		// ÁÖ¿ä º¯¼ö ¼±¾ð
+		// ì£¼ìš” ë³€ìˆ˜ ì„ ì–¸
 		Scanner sc = new Scanner(System.in);
 		String name;
 		int kor, eng, mat, tot;
 		
 
-		// ¿¬»ê ¹× Ã³¸®
-		System.out.print("ÀÌ¸§,±¹¾î,¿µ¾î,¼öÇÐ ÀÔ·Â(¡º,¡»±¸ºÐ) : ");
-		// ÀÌ¸§,±¹¾î,¿µ¾î,¼öÇÐ ÀÔ·Â(¡º,¡»±¸ºÐ) : ¹Ú¿ø¼®,10,20,30
+		// ì—°ì‚° ë° ì²˜ë¦¬
+		System.out.print("ì´ë¦„,êµ­ì–´,ì˜ì–´,ìˆ˜í•™ ìž…ë ¥(ã€Ž,ã€êµ¬ë¶„) : ");
+		// ì´ë¦„,êµ­ì–´,ì˜ì–´,ìˆ˜í•™ ìž…ë ¥(ã€Ž,ã€êµ¬ë¶„) : ë°•ì›ì„,10,20,30
 
 		sc = new Scanner(sc.next()).useDelimiter("\\s*,\\s*");
 		//               ---------
-		//           "¹Ú¿ø¼®,10,20,30"
+		//           "ë°•ì›ì„,10,20,30"
 		//
-		// new Scanner("¹Ú¿ø¼®,10,20,30").useDelimiter("\\s*,\\s*");
-		//                               .±¸ºÐÀÚ»ç¿ë()
+		// new Scanner("ë°•ì›ì„,10,20,30").useDelimiter("\\s*,\\s*");
+		//                               .êµ¬ë¶„ìžì‚¬ìš©()
 		//											   "\\s*,\\s*"
 		//
-		//      "\n"   "\t"  "\\" ¡æ "\"			   "\s*,\s*"
+		//      "\n"   "\t"  "\\" â†’ "\"			   "\s*,\s*"
 		//												---
-		//									ÀÓÀÇÀÇ¸ðµç¹®ÀÚ¿­,ÀÓÀÇÀÇ¸ðµç¹®ÀÚ¿­
-		//   È²±Ýµ¶¼ö¸®¼¼»óÀ»³î¶ó°ÔÇÏ´Ù,0,20,100
-		//   ±èÈÆ
+		//									ìž„ì˜ì˜ëª¨ë“ ë¬¸ìžì—´,ìž„ì˜ì˜ëª¨ë“ ë¬¸ìžì—´
+		//   í™©ê¸ˆë…ìˆ˜ë¦¬ì„¸ìƒì„ë†€ë¼ê²Œí•˜ë‹¤,0,20,100
+		//   ê¹€í›ˆ
 		
 		name = sc.next();
 		kor = sc.nextInt();
@@ -46,19 +46,19 @@ public class Test019
 
 		tot = kor + eng + mat;
 
-		// °á°ú Ãâ·Â
-		System.out.println("\n>> ÀÌ¸§ : " + name);
-		System.out.println(">> ÃÑÁ¡ : " + tot);
+		// ê²°ê³¼ ì¶œë ¥
+		System.out.println("\n>> ì´ë¦„ : " + name);
+		System.out.println(">> ì´ì  : " + tot);
 
 	}
 
 }
 
-// ½ÇÇà °á°ú
+// ì‹¤í–‰ ê²°ê³¼
 /*
-ÀÌ¸§,±¹¾î,¿µ¾î,¼öÇÐ ÀÔ·Â(¡º,¡»±¸ºÐ) : ¹Ú¿ø¼®,10,20,30
+ì´ë¦„,êµ­ì–´,ì˜ì–´,ìˆ˜í•™ ìž…ë ¥(ã€Ž,ã€êµ¬ë¶„) : ë°•ì›ì„,10,20,30
 
->> ÀÌ¸§ : ¹Ú¿ø¼®
->> ÃÑÁ¡ : 60
-°è¼ÓÇÏ·Á¸é ¾Æ¹« Å°³ª ´©¸£½Ê½Ã¿À . . .
+>> ì´ë¦„ : ë°•ì›ì„
+>> ì´ì  : 60
+ê³„ì†í•˜ë ¤ë©´ ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ì‹­ì‹œì˜¤ . . .
 */

@@ -1,27 +1,27 @@
  /*=============================================
-      ¡á¡á¡á ½ÇÇà Èå¸§ÀÇ ÄÁÆ®·Ñ(Á¦¾î¹®) ¡á¡á¡á
-      - if¹®
-	  - if ~ else ¹® ½Ç½À
+      â– â– â–  ì‹¤í–‰ íë¦„ì˜ ì»¨íŠ¸ë¡¤(ì œì–´ë¬¸) â– â– â– 
+      - ifë¬¸
+	  - if ~ else ë¬¸ ì‹¤ìŠµ
    ============================================*/
 
-// 1. ÇÁ·Î±×·¥À» ÀÛ¼ºÇÒ ¶§ ÁÖ¾îÁø Á¶°Ç¿¡ µû¶ó
-//	  ºÐ±â ¹æÇâÀ» Á¤ÇÏ±â À§ÇØ »ç¿ëÇÏ´Â Á¦¾î¹®¿¡´Â
-//    if ¹®, if ~ else ¹®, Á¶°Ç ¿¬»êÀÚ, º¹ÇÕ if¹®(if¹® ÁßÃ¸)
-//    , switch ¹®ÀÌ ÀÖ´Ù.
+// 1. í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•  ë•Œ ì£¼ì–´ì§„ ì¡°ê±´ì— ë”°ë¼
+//	  ë¶„ê¸° ë°©í–¥ì„ ì •í•˜ê¸° ìœ„í•´ ì‚¬ìš©í•˜ëŠ” ì œì–´ë¬¸ì—ëŠ”
+//    if ë¬¸, if ~ else ë¬¸, ì¡°ê±´ ì—°ì‚°ìž, ë³µí•© ifë¬¸(ifë¬¸ ì¤‘ì²©)
+//    , switch ë¬¸ì´ ìžˆë‹¤.
 
-// 2. if¹®Àº if ´ÙÀ½ÀÇ Á¶°ÇÀÌ ÂüÀÏ °æ¿ì
-//    Æ¯Á¤ ¹®ÀåÀ» ¼öÇàÇÏ°íÀÚ ÇÒ ¶§ »ç¿ëµÇ´Â ±¸¹®ÀÌ´Ù.
+// 2. ifë¬¸ì€ if ë‹¤ìŒì˜ ì¡°ê±´ì´ ì°¸ì¼ ê²½ìš°
+//    íŠ¹ì • ë¬¸ìž¥ì„ ìˆ˜í–‰í•˜ê³ ìž í•  ë•Œ ì‚¬ìš©ë˜ëŠ” êµ¬ë¬¸ì´ë‹¤.
 
-// »ç¿ëÀÚ·ÎºÎÅÍ ÀÓÀÇÀÇ Á¤¼ö¸¦ ¼¼ °³¸¦ ÀÔ·Â¹Þ¾Æ¼­
-// ÀÛÀº ¼ö¿¡¼­ Å« ¼ö ¼øÀ¸·Î Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ±¸ÇöÇÑ´Ù.
+// ì‚¬ìš©ìžë¡œë¶€í„° ìž„ì˜ì˜ ì •ìˆ˜ë¥¼ ì„¸ ê°œë¥¼ ìž…ë ¥ë°›ì•„ì„œ
+// ìž‘ì€ ìˆ˜ì—ì„œ í° ìˆ˜ ìˆœìœ¼ë¡œ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ êµ¬í˜„í•œë‹¤.
 
-// ½ÇÇà ¿¹)
-// Ã¹ ¹øÂ° Á¤¼ö ÀÔ·Â : 753
-// µÎ ¹øÂ° Á¤¼ö ÀÔ·Â : 42
-// ¼¼ ¹øÂ° Á¤¼ö ÀÔ·Â : 127
+// ì‹¤í–‰ ì˜ˆ)
+// ì²« ë²ˆì§¸ ì •ìˆ˜ ìž…ë ¥ : 753
+// ë‘ ë²ˆì§¸ ì •ìˆ˜ ìž…ë ¥ : 42
+// ì„¸ ë²ˆì§¸ ì •ìˆ˜ ìž…ë ¥ : 127
 
-// >> Á¤·Ä °á°ú : 42 127 753
-// °è¼ÓÇÏ·Á¸é ¾Æ¹« Å°³ª ´©¸£¼¼¿ä...
+// >> ì •ë ¬ ê²°ê³¼ : 42 127 753
+// ê³„ì†í•˜ë ¤ë©´ ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ì„¸ìš”...
 
 
 /*
@@ -45,15 +45,15 @@ public class Test037
 
 		int n1, n2, n3, temp;
 
-		System.out.print("Ã¹ ¹øÂ° Á¤¼ö ÀÔ·Â : ");
+		System.out.print("ì²« ë²ˆì§¸ ì •ìˆ˜ ìž…ë ¥ : ");
 		n1 = Integer.parseInt(br.readLine());
 		
 		
-		System.out.print("µÎ ¹øÂ° Á¤¼ö ÀÔ·Â : ");
+		System.out.print("ë‘ ë²ˆì§¸ ì •ìˆ˜ ìž…ë ¥ : ");
 		n2 = Integer.parseInt(br.readLine());
 
 		
-		System.out.print("¼¼ ¹øÂ° Á¤¼ö ÀÔ·Â : ");
+		System.out.print("ì„¸ ë²ˆì§¸ ì •ìˆ˜ ìž…ë ¥ : ");
 		n3 = Integer.parseInt(br.readLine());
 
 		if(n1 > n2) 
@@ -89,27 +89,27 @@ public class Test037
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
-		int a, b, c;	 //-- »ç¿ëÀÚ°¡ ÀÔ·ÂÇÏ´Â ÀÓÀÇÀÇ Á¤¼ö
+		int a, b, c;	 //-- ì‚¬ìš©ìžê°€ ìž…ë ¥í•˜ëŠ” ìž„ì˜ì˜ ì •ìˆ˜
 		
-		System.out.print("Ã¹ ¹øÂ° Á¤¼ö ÀÔ·Â : ");
+		System.out.print("ì²« ë²ˆì§¸ ì •ìˆ˜ ìž…ë ¥ : ");
 		a = Integer.parseInt(br.readLine());
 		
-		System.out.print("µÎ ¹øÂ° Á¤¼ö ÀÔ·Â : ");
+		System.out.print("ë‘ ë²ˆì§¸ ì •ìˆ˜ ìž…ë ¥ : ");
 		b = Integer.parseInt(br.readLine());
 		
-		System.out.print("¼¼ ¹øÂ° Á¤¼ö ÀÔ·Â : ");
+		System.out.print("ì„¸ ë²ˆì§¸ ì •ìˆ˜ ìž…ë ¥ : ");
 		c = Integer.parseInt(br.readLine());
 		
 
 
-		// ¨ç Ã¹ ¹øÂ° Á¤¼ö vs µÎ ¹øÂ° Á¤¼ö Å©±â ºñ±³
-		//    ¡æ Ã¹ ¹øÂ° Á¤¼ö°¡ µÎ ¹øÂ° Á¤¼öº¸´Ù Å¬ °æ¿ì ... ÀÚ¸® ¹Ù²Þ
+		// â‘  ì²« ë²ˆì§¸ ì •ìˆ˜ vs ë‘ ë²ˆì§¸ ì •ìˆ˜ í¬ê¸° ë¹„êµ
+		//    â†’ ì²« ë²ˆì§¸ ì •ìˆ˜ê°€ ë‘ ë²ˆì§¸ ì •ìˆ˜ë³´ë‹¤ í´ ê²½ìš° ... ìžë¦¬ ë°”ê¿ˆ
 
-		// ¨è Ã¹ ¹øÂ° Á¤¼ö vs ¼¼ ¹øÂ° Á¤¼ö Å©±â ºñ±³
-		//    ¡æ Ã¹ ¹øÂ° Á¤¼ö°¡ ¼¼ ¹øÂ° Á¤¼öº¸´Ù Å¬ °æ¿ì ... ÀÚ¸® ¹Ù²Þ
+		// â‘¡ ì²« ë²ˆì§¸ ì •ìˆ˜ vs ì„¸ ë²ˆì§¸ ì •ìˆ˜ í¬ê¸° ë¹„êµ
+		//    â†’ ì²« ë²ˆì§¸ ì •ìˆ˜ê°€ ì„¸ ë²ˆì§¸ ì •ìˆ˜ë³´ë‹¤ í´ ê²½ìš° ... ìžë¦¬ ë°”ê¿ˆ
 
-		// ¨é µÎ ¹øÂ° Á¤¼ö vs ¼¼ ¹øÂ° Á¤¼ö Å©±â ºñ±³
-		//    ¡æ µÎ ¹øÂ° Á¤¼ö°¡ ¼¼ ¹øÂ° Á¤¼öº¸´Ù Å¬ °æ¿ì ... ÀÚ¸® ¹Ù²Þ
+		// â‘¢ ë‘ ë²ˆì§¸ ì •ìˆ˜ vs ì„¸ ë²ˆì§¸ ì •ìˆ˜ í¬ê¸° ë¹„êµ
+		//    â†’ ë‘ ë²ˆì§¸ ì •ìˆ˜ê°€ ì„¸ ë²ˆì§¸ ì •ìˆ˜ë³´ë‹¤ í´ ê²½ìš° ... ìžë¦¬ ë°”ê¿ˆ
 
 		if(a > b)
 		{
@@ -135,25 +135,25 @@ public class Test037
 
 	
 
-		System.out.printf("\n>> Á¤·Ä °á°ú : %d %d %d\n", a, b, c); 
+		System.out.printf("\n>> ì •ë ¬ ê²°ê³¼ : %d %d %d\n", a, b, c); 
 		
 	}
 }
 
-//½ÇÇà °á°ú
+//ì‹¤í–‰ ê²°ê³¼
 
 /*
-Ã¹ ¹øÂ° Á¤¼ö ÀÔ·Â : 23
-µÎ ¹øÂ° Á¤¼ö ÀÔ·Â : 45
-¼¼ ¹øÂ° Á¤¼ö ÀÔ·Â : 7
+ì²« ë²ˆì§¸ ì •ìˆ˜ ìž…ë ¥ : 23
+ë‘ ë²ˆì§¸ ì •ìˆ˜ ìž…ë ¥ : 45
+ì„¸ ë²ˆì§¸ ì •ìˆ˜ ìž…ë ¥ : 7
 7 23 45
-°è¼ÓÇÏ·Á¸é ¾Æ¹« Å°³ª ´©¸£½Ê½Ã¿À . . .
+ê³„ì†í•˜ë ¤ë©´ ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ì‹­ì‹œì˜¤ . . .
 */
 
 /*
-Ã¹ ¹øÂ° Á¤¼ö ÀÔ·Â : 20
-µÎ ¹øÂ° Á¤¼ö ÀÔ·Â : 3
-¼¼ ¹øÂ° Á¤¼ö ÀÔ·Â : 3
+ì²« ë²ˆì§¸ ì •ìˆ˜ ìž…ë ¥ : 20
+ë‘ ë²ˆì§¸ ì •ìˆ˜ ìž…ë ¥ : 3
+ì„¸ ë²ˆì§¸ ì •ìˆ˜ ìž…ë ¥ : 3
 3 3 20
-°è¼ÓÇÏ·Á¸é ¾Æ¹« Å°³ª ´©¸£½Ê½Ã¿À . . .
+ê³„ì†í•˜ë ¤ë©´ ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ì‹­ì‹œì˜¤ . . .
 */

@@ -1,41 +1,41 @@
 /*==============================================
-  ¡á¡á¡á ¿¹¿Ü Ã³¸®(Exception Handling) ¡á¡á¡á
+  â– â– â–  ì˜ˆì™¸ ì²˜ë¦¬(Exception Handling) â– â– â– 
 ===============================================*/
 
-// ´Ù¸¥ ¿¹¿Ü ´Ù½Ã ´øÁö±â
+// ë‹¤ë¥¸ ì˜ˆì™¸ ë‹¤ì‹œ ë˜ì§€ê¸°
 
 public class Test153
 {
-	public int getValue(int value) throws Exception		   // ¨í ¿¹¿Ü ´øÁö±â
-	{													   //  ÆÄ¶ûÆøÅº
+	public int getValue(int value) throws Exception		   // â‘¦ ì˜ˆì™¸ ë˜ì§€ê¸°
+	{													   //  íŒŒë‘í­íƒ„
 		int a = 0;
 
 		try
 		{
-			a = getData(-2);								// ¨é ¿¹¿Ü ¹ß»ı	
-		}													//    »¡°­ ÆøÅº
-		catch (Exception e)									// ¨ê ¿¹¿Ü Àâ¾Æ³»±â
-		{													//    »¡°­ ÆøÅº
-			// ¨ë ¿¹¿Ü Ã³¸®	// »¡°­ ÆøÅº
+			a = getData(-2);								// â‘¢ ì˜ˆì™¸ ë°œìƒ	
+		}													//    ë¹¨ê°• í­íƒ„
+		catch (Exception e)									// â‘£ ì˜ˆì™¸ ì¡ì•„ë‚´ê¸°
+		{													//    ë¹¨ê°• í­íƒ„
+			// â‘¤ ì˜ˆì™¸ ì²˜ë¦¬	// ë¹¨ê°• í­íƒ„
 			System.out.println("printStackTrace..........");
 			e.printStackTrace();
 
 			// check~!!!
-			// ¨ì ¿¹¿Ü ¹ß»ı	// ÆÄ¶û ÆøÅº
-			throw new Exception("value °¡ À½¼öÀÔ´Ï´Ù.");
+			// â‘¥ ì˜ˆì™¸ ë°œìƒ	// íŒŒë‘ í­íƒ„
+			throw new Exception("value ê°€ ìŒìˆ˜ì…ë‹ˆë‹¤.");
 		}
 		
 
 		return a;
 	}
 
-	public int getData(int data) throws Exception		// ¨è ¿¹¿Ü ´øÁö±â
-	{													//     »¡°­ ÆøÅº
+	public int getData(int data) throws Exception		// â‘¡ ì˜ˆì™¸ ë˜ì§€ê¸°
+	{													//     ë¹¨ê°• í­íƒ„
 
 		if(data < 0)
 		{
-			throw new Exception("data°¡ 0º¸´Ù ÀÛ½À´Ï´Ù.");	// ¨ç ¿¹¿Ü ¹ß»ı
-		}													//    »¡°­ ÆøÅº
+			throw new Exception("dataê°€ 0ë³´ë‹¤ ì‘ìŠµë‹ˆë‹¤.");	// â‘  ì˜ˆì™¸ ë°œìƒ
+		}													//    ë¹¨ê°• í­íƒ„
 
 		return data + 10;
 	}
@@ -45,29 +45,29 @@ public class Test153
 		Test153 ob = new Test153();
 		try
 		{
-			int a = ob.getValue(-2);					// ¨î ¿¹¿Ü ¹ß»ı(ÆÄ¶ûÆøÅº)
+			int a = ob.getValue(-2);					// â‘§ ì˜ˆì™¸ ë°œìƒ(íŒŒë‘í­íƒ„)
 			System.out.println("a : " + a);	
 		}
-		catch (Exception e)								// ¨ï ¿¹¿Ü Àâ¾Æ³»±â(ÆÄ¶ûÆøÅº)
+		catch (Exception e)								// â‘¨ ì˜ˆì™¸ ì¡ì•„ë‚´ê¸°(íŒŒë‘í­íƒ„)
 		{
-			// ¨ğ ¿¹¿Ü Ã³¸® (ÆÄ¶û ÆøÅº)
+			// â‘© ì˜ˆì™¸ ì²˜ë¦¬ (íŒŒë‘ í­íƒ„)
 			System.out.println("printStackTrace.............");
 			e.printStackTrace();
 		}
 	}
 }	
 
-// ½ÇÇà °á°ú
+// ì‹¤í–‰ ê²°ê³¼
 
 /*
 printStackTrace..........
-java.lang.Exception: data°¡ 0º¸´Ù ÀÛ½À´Ï´Ù.
+java.lang.Exception: dataê°€ 0ë³´ë‹¤ ì‘ìŠµë‹ˆë‹¤.
         at Test153.getData(Test153.java:37)
         at Test153.getValue(Test153.java:15)
         at Test153.main(Test153.java:48)
 printStackTrace.............
-java.lang.Exception: value °¡ À½¼öÀÔ´Ï´Ù.
+java.lang.Exception: value ê°€ ìŒìˆ˜ì…ë‹ˆë‹¤.
         at Test153.getValue(Test153.java:25)
         at Test153.main(Test153.java:48)
-°è¼ÓÇÏ·Á¸é ¾Æ¹« Å°³ª ´©¸£½Ê½Ã¿À . . .
+ê³„ì†í•˜ë ¤ë©´ ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ì‹­ì‹œì˜¤ . . .
 */

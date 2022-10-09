@@ -1,17 +1,17 @@
 /*============================
-      ¡á¡á¡á ¹è¿­ ¡á¡á¡á
-    - ¹è¿­ÀÇ ¼±¾ð°ú ÃÊ±âÈ­
-	- ¹è¿­ÀÇ ±âº»Àû È°¿ë
+      â– â– â–  ë°°ì—´ â– â– â– 
+    - ë°°ì—´ì˜ ì„ ì–¸ê³¼ ì´ˆê¸°í™”
+	- ë°°ì—´ì˜ ê¸°ë³¸ì  í™œìš©
   ============================*/
 
-// ¡ºchar¡» ÀÚ·áÇüÀÇ ¹è¿­À» ¸¸µé¾î
-//  ±× ¹è¿­ÀÇ °¢ ¹æ¿¡ ¾ËÆÄºª ´ë¹®ÀÚ¸¦ Ã¤¿ì°í
-// Ã¤¿öÁø ±× ¹è¿­ÀÇ ÀüÃ¼ ¿ä¼Ò¸¦ Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ±¸ÇöÇÑ´Ù.
-// ´Ü, Ã¤¿ì´Â ±¸¹®°ú Ãâ·ÂÇÏ´Â ±¸¹®Àº µû·Î ºÐ¸®ÇÏ¿© Ã³¸®ÇÒ ¼ö ÀÖµµ·Ï ÇÑ´Ù.
+// ã€Žcharã€ ìžë£Œí˜•ì˜ ë°°ì—´ì„ ë§Œë“¤ì–´
+//  ê·¸ ë°°ì—´ì˜ ê° ë°©ì— ì•ŒíŒŒë²³ ëŒ€ë¬¸ìžë¥¼ ì±„ìš°ê³ 
+// ì±„ì›Œì§„ ê·¸ ë°°ì—´ì˜ ì „ì²´ ìš”ì†Œë¥¼ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ êµ¬í˜„í•œë‹¤.
+// ë‹¨, ì±„ìš°ëŠ” êµ¬ë¬¸ê³¼ ì¶œë ¥í•˜ëŠ” êµ¬ë¬¸ì€ ë”°ë¡œ ë¶„ë¦¬í•˜ì—¬ ì²˜ë¦¬í•  ìˆ˜ ìžˆë„ë¡ í•œë‹¤.
 
-// ½ÇÇà ¿¹)
+// ì‹¤í–‰ ì˜ˆ)
 // A B C D E F G H I J K ... V W X Y Z
-// °è¼ÓÇÏ·Á¸é ¾Æ¹« Å°³ª ´©¸£¼¼¿ä...	
+// ê³„ì†í•˜ë ¤ë©´ ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ì„¸ìš”...	
 
 public class Test081
 {
@@ -35,8 +35,8 @@ public class Test081
 		System.out.println();
 		*/
 
-		// ¿µ¹® ¾ËÆÄºª ´ë¹®ÀÚ ¹è¿­ ±¸¼º
-		// ¹æ¹ý ¨ç
+		// ì˜ë¬¸ ì•ŒíŒŒë²³ ëŒ€ë¬¸ìž ë°°ì—´ êµ¬ì„±
+		// ë°©ë²• â‘ 
 		char[] arr1;
 		arr1 = new char[26];
 
@@ -68,23 +68,23 @@ public class Test081
         arr1[25] = 'Z';
         
 
-		// ¹æ¹ý ¨è
+		// ë°©ë²• â‘¡
 		char[] arr2 = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I' , 'J' ,'K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y', 'Z'};
 
 
-		// ¹æ¹ý ¨é
+		// ë°©ë²• â‘¢
 		char[] arr3 = new char[26];
-	    for(int i=0, ch=65; i<arr3.length; i++, ch++) // i ¡æ 0~25, ch ¡æ 65~90
+	    for(int i=0, ch=65; i<arr3.length; i++, ch++) // i â†’ 0~25, ch â†’ 65~90
 		{
 			arr3[i] = (char)ch;
 		}
 
-		// ¹è¿­ ¿ä¼Ò ÀüÃ¼ Ãâ·Â
+		// ë°°ì—´ ìš”ì†Œ ì „ì²´ ì¶œë ¥
 		for(int i=0; i < arr3.length; i++)
 		{
 			System.out.print(arr3[i] + " ");
 		}
-		System.out.println(); //°³Çà
+		System.out.println(); //ê°œí–‰
 		//--==>> A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 
 

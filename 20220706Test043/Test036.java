@@ -1,29 +1,29 @@
  /*=============================================
-      ¡á¡á¡á ½ÇÇà Èå¸§ÀÇ ÄÁÆ®·Ñ(Á¦¾î¹®) ¡á¡á¡á
-      - if¹®
-	  - if ~ else ¹® ½Ç½À
+      â– â– â–  ì‹¤í–‰ íë¦„ì˜ ì»¨íŠ¸ë¡¤(ì œì–´ë¬¸) â– â– â– 
+      - ifë¬¸
+	  - if ~ else ë¬¸ ì‹¤ìŠµ
    ============================================*/
 
-// 1. ÇÁ·Î±×·¥À» ÀÛ¼ºÇÒ ¶§ ÁÖ¾îÁø Á¶°Ç¿¡ µû¶ó
-//	  ºÐ±â ¹æÇâÀ» Á¤ÇÏ±â À§ÇØ »ç¿ëÇÏ´Â Á¦¾î¹®¿¡´Â
-//    if ¹®, if ~ else ¹®, Á¶°Ç ¿¬»êÀÚ, º¹ÇÕ if¹®(if¹® ÁßÃ¸)
-//    , switch ¹®ÀÌ ÀÖ´Ù.
+// 1. í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•  ë•Œ ì£¼ì–´ì§„ ì¡°ê±´ì— ë”°ë¼
+//	  ë¶„ê¸° ë°©í–¥ì„ ì •í•˜ê¸° ìœ„í•´ ì‚¬ìš©í•˜ëŠ” ì œì–´ë¬¸ì—ëŠ”
+//    if ë¬¸, if ~ else ë¬¸, ì¡°ê±´ ì—°ì‚°ìž, ë³µí•© ifë¬¸(ifë¬¸ ì¤‘ì²©)
+//    , switch ë¬¸ì´ ìžˆë‹¤.
 
-// 2. if¹®Àº if ´ÙÀ½ÀÇ Á¶°ÇÀÌ ÂüÀÏ °æ¿ì
-//    Æ¯Á¤ ¹®ÀåÀ» ¼öÇàÇÏ°íÀÚ ÇÒ ¶§ »ç¿ëµÇ´Â ±¸¹®ÀÌ´Ù.
+// 2. ifë¬¸ì€ if ë‹¤ìŒì˜ ì¡°ê±´ì´ ì°¸ì¼ ê²½ìš°
+//    íŠ¹ì • ë¬¸ìž¥ì„ ìˆ˜í–‰í•˜ê³ ìž í•  ë•Œ ì‚¬ìš©ë˜ëŠ” êµ¬ë¬¸ì´ë‹¤.
 
-// »ç¿ëÀÚ·ÎºÎÅÍ ÀÓÀÇÀÇ µÎ Á¤¼ö¿Í ¿¬»êÀÚ¸¦ ÀÔ·Â¹Þ¾Æ
-// ÇØ´ç ¿¬»êÀÚÀÇ ¿¬»ê Ã³¸® °á°ú¸¦ Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ±¸ÇöÇÑ´Ù.
-// ´Ü, if Á¶°Ç¹®À» È°¿ëÇÏ¿© Ã³¸®ÇÒ ¼ö ÀÖµµ·Ï ÇÏ¸ç,
-// ¿¬»ê °á°ú´Â ÆíÀÇ»ó Á¤¼ö ±â¹ÝÀ¸·Î Ã³¸®µÉ ¼ö ÀÖµµ·Ï ÇÑ´Ù.
+// ì‚¬ìš©ìžë¡œë¶€í„° ìž„ì˜ì˜ ë‘ ì •ìˆ˜ì™€ ì—°ì‚°ìžë¥¼ ìž…ë ¥ë°›ì•„
+// í•´ë‹¹ ì—°ì‚°ìžì˜ ì—°ì‚° ì²˜ë¦¬ ê²°ê³¼ë¥¼ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ êµ¬í˜„í•œë‹¤.
+// ë‹¨, if ì¡°ê±´ë¬¸ì„ í™œìš©í•˜ì—¬ ì²˜ë¦¬í•  ìˆ˜ ìžˆë„ë¡ í•˜ë©°,
+// ì—°ì‚° ê²°ê³¼ëŠ” íŽ¸ì˜ìƒ ì •ìˆ˜ ê¸°ë°˜ìœ¼ë¡œ ì²˜ë¦¬ë  ìˆ˜ ìžˆë„ë¡ í•œë‹¤.
 
-// ½ÇÇà ¿¹)
-// Ã¹ ¹øÂ° Á¤¼ö ÀÔ·Â    : 10
-// µÎ ¹øÂ° Á¤¼ö ÀÔ·Â    : 3
-// ¿¬»êÀÚ ÀÔ·Â[+ - * /] : +
+// ì‹¤í–‰ ì˜ˆ)
+// ì²« ë²ˆì§¸ ì •ìˆ˜ ìž…ë ¥    : 10
+// ë‘ ë²ˆì§¸ ì •ìˆ˜ ìž…ë ¥    : 3
+// ì—°ì‚°ìž ìž…ë ¥[+ - * /] : +
 
 // >> 10 + 3 = 13
-// °è¼ÓÇÏ·Á¸é ¾Æ¹« Å°³ª ´©¸£¼¼¿ä...
+// ê³„ì†í•˜ë ¤ë©´ ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ì„¸ìš”...
 
 
 import java.io.BufferedReader;
@@ -38,10 +38,10 @@ public class Test036
 
 
 
-		// ³» Ç®ÀÌ ---------------------------------------------------------------
+		// ë‚´ í’€ì´ ---------------------------------------------------------------
 
 		/*
-		// ÁÖ¿ä º¯¼ö ¼±¾ð
+		// ì£¼ìš” ë³€ìˆ˜ ì„ ì–¸
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		int n1, n2;
@@ -49,14 +49,14 @@ public class Test036
 		int result = 0;
 
 
-		// ¿¬»ê ¹× Ã³¸®
-		System.out.print("Ã¹ ¹øÂ° Á¤¼ö ÀÔ·Â : ");
+		// ì—°ì‚° ë° ì²˜ë¦¬
+		System.out.print("ì²« ë²ˆì§¸ ì •ìˆ˜ ìž…ë ¥ : ");
 		n1 = Integer.parseInt(br.readLine());
 
-		System.out.print("Ã¹ ¹øÂ° Á¤¼ö ÀÔ·Â : ");
+		System.out.print("ì²« ë²ˆì§¸ ì •ìˆ˜ ìž…ë ¥ : ");
 		n2 = Integer.parseInt(br.readLine());
 			
-		System.out.print("¿¬»êÀÚ ÀÔ·Â[+ - * /] : ");
+		System.out.print("ì—°ì‚°ìž ìž…ë ¥[+ - * /] : ");
 		//operator = (char)System.in.read();
 		operator = (char)br.read();
 		
@@ -79,7 +79,7 @@ public class Test036
 		}
 
 
-		// °á°ú Ãâ·Â
+		// ê²°ê³¼ ì¶œë ¥
 		System.out.println(">> " + n1 + " " + operator + " " + n2 + " = " + result);
 		*/
 
@@ -90,50 +90,50 @@ public class Test036
 
 
 
-		// ÇÔ²²ÇÑ Ç®ÀÌ --------------------------------------------------------------------------------------------
+		// í•¨ê»˜í•œ í’€ì´ --------------------------------------------------------------------------------------------
 		/*
-		// ¹æ¹ý ¨ç
+		// ë°©ë²• â‘ 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
-		int a, b;			//-- Ã¹ ¹øÂ°, µÎ ¹øÂ° Á¤¼ö
-		char op;			//-- ¿¬»êÀÚ
+		int a, b;			//-- ì²« ë²ˆì§¸, ë‘ ë²ˆì§¸ ì •ìˆ˜
+		char op;			//-- ì—°ì‚°ìž
 
 		
-		System.out.print("Ã¹ ¹øÂ° Á¤¼ö ÀÔ·Â : ");
+		System.out.print("ì²« ë²ˆì§¸ ì •ìˆ˜ ìž…ë ¥ : ");
 		a = Integer.parseInt(br.readLine());
 
-		System.out.print("µÎ ¹øÂ° Á¤¼ö ÀÔ·Â : ");
+		System.out.print("ë‘ ë²ˆì§¸ ì •ìˆ˜ ìž…ë ¥ : ");
 		b = Integer.parseInt(br.readLine());
 
 		// Integer.parseInt()
-		// "1234" ¡æ Integer.parseInt() ¡æ 1234
-		// "abcd" ¡æ Integer.parseInt() ¡æ (X : Number Format Exception Error!)
-		// System.in.read()int ¹ÝÈ¯
-		// Integer.parseInt() int ¹ÝÈ¯,  ¼ýÀÚ¸ð¾çÀÇ ¹®ÀÚ¿­¸¸ °Ç³×Áà¼­ int·Î º¯È¯ÇØÁØ´Ù.
+		// "1234" â†’ Integer.parseInt() â†’ 1234
+		// "abcd" â†’ Integer.parseInt() â†’ (X : Number Format Exception Error!)
+		// System.in.read()int ë°˜í™˜
+		// Integer.parseInt() int ë°˜í™˜,  ìˆ«ìžëª¨ì–‘ì˜ ë¬¸ìžì—´ë§Œ ê±´ë„¤ì¤˜ì„œ intë¡œ ë³€í™˜í•´ì¤€ë‹¤.
 		
-		System.out.print("¿¬»êÀÚ ÀÔ·Â[+ - * /] : ");
+		System.out.print("ì—°ì‚°ìž ìž…ë ¥[+ - * /] : ");
 		op = (char)System.in.read();
 			
 
-		if(op == '+')													// »ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ ¿¬»êÀÚ°¡ '+' ¶ó¸é
+		if(op == '+')													// ì‚¬ìš©ìžê°€ ìž…ë ¥í•œ ì—°ì‚°ìžê°€ '+' ë¼ë©´
 		{
-			System.out.printf(">> %d + %d = %d\n", a, b, (a+b));	    // a ¿Í bÀÇ µ¡¼À ¿¬»ê ¼öÇàÇÏ¿© Ãâ·Â
+			System.out.printf(">> %d + %d = %d\n", a, b, (a+b));	    // a ì™€ bì˜ ë§ì…ˆ ì—°ì‚° ìˆ˜í–‰í•˜ì—¬ ì¶œë ¥
 		}
-		else if(op == '-')												// »ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ ¿¬»êÀÚ°¡ '-' ¶ó¸é
+		else if(op == '-')												// ì‚¬ìš©ìžê°€ ìž…ë ¥í•œ ì—°ì‚°ìžê°€ '-' ë¼ë©´
 		{
-			System.out.printf(">> %d - %d = %d\n", a, b, (a-b));        // a ¿Í bÀÇ »¬¼À ¿¬»ê ¼öÇàÇÏ¿© Ãâ·Â
+			System.out.printf(">> %d - %d = %d\n", a, b, (a-b));        // a ì™€ bì˜ ëº„ì…ˆ ì—°ì‚° ìˆ˜í–‰í•˜ì—¬ ì¶œë ¥
 		}
-		else if(op == '*')												// »ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ ¿¬»êÀÚ°¡ '*' ¶ó¸é
+		else if(op == '*')												// ì‚¬ìš©ìžê°€ ìž…ë ¥í•œ ì—°ì‚°ìžê°€ '*' ë¼ë©´
 		{
-			System.out.printf(">> %d * %d = %d\n", a, b, (a*b));        // a ¿Í bÀÇ °ö¼À ¿¬»ê ¼öÇàÇÏ¿© Ãâ·Â
+			System.out.printf(">> %d * %d = %d\n", a, b, (a*b));        // a ì™€ bì˜ ê³±ì…ˆ ì—°ì‚° ìˆ˜í–‰í•˜ì—¬ ì¶œë ¥
 		}
-		else if(op == '/')												// »ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ ¿¬»êÀÚ°¡ '/' ¶ó¸é
+		else if(op == '/')												// ì‚¬ìš©ìžê°€ ìž…ë ¥í•œ ì—°ì‚°ìžê°€ '/' ë¼ë©´
 		{
-			System.out.printf(">> %d / %d = %d\n", a, b, (a/b));        // a ¿Í bÀÇ ³ª´°¼À ¿¬»ê ¼öÇàÇÏ¿© Ãâ·Â
+			System.out.printf(">> %d / %d = %d\n", a, b, (a/b));        // a ì™€ bì˜ ë‚˜ëˆ—ì…ˆ ì—°ì‚° ìˆ˜í–‰í•˜ì—¬ ì¶œë ¥
 		}
 		else
 		{
-			System.out.println("\n>> ÀÔ·Â °úÁ¤¿¡ ¿À·ù°¡ Á¸ÀçÇÕ´Ï´Ù.");
+			System.out.println("\n>> ìž…ë ¥ ê³¼ì •ì— ì˜¤ë¥˜ê°€ ì¡´ìž¬í•©ë‹ˆë‹¤.");
 		}
 		
 		*/
@@ -144,42 +144,42 @@ public class Test036
 
 
 		// ---------------------------------------------------------------------------------------------------------
-		// ¹æ¹ý ¨è
+		// ë°©ë²• â‘¡
 		/*
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
-		int a, b, op;													//-- Ã¹ ¹øÂ°, µÎ ¹øÂ° Á¤¼ö, ¿¬»êÀÚ check~!!!
+		int a, b, op;													//-- ì²« ë²ˆì§¸, ë‘ ë²ˆì§¸ ì •ìˆ˜, ì—°ì‚°ìž check~!!!
 		
-		System.out.print("Ã¹ ¹øÂ° Á¤¼ö ÀÔ·Â : ");
+		System.out.print("ì²« ë²ˆì§¸ ì •ìˆ˜ ìž…ë ¥ : ");
 		a = Integer.parseInt(br.readLine());
 
-		System.out.print("µÎ ¹øÂ° Á¤¼ö ÀÔ·Â : ");
+		System.out.print("ë‘ ë²ˆì§¸ ì •ìˆ˜ ìž…ë ¥ : ");
 		b = Integer.parseInt(br.readLine());
 
 		
-		System.out.print("¿¬»êÀÚ ÀÔ·Â[+ - * /] : ");
+		System.out.print("ì—°ì‚°ìž ìž…ë ¥[+ - * /] : ");
 		op = System.in.read();
 			
 
-		if(op == 43)													// »ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ ¿¬»êÀÚ°¡ '+' ¶ó¸é
+		if(op == 43)													// ì‚¬ìš©ìžê°€ ìž…ë ¥í•œ ì—°ì‚°ìžê°€ '+' ë¼ë©´
 		{
-			System.out.printf(">> %d + %d = %d\n", a, b, (a+b));	    // a ¿Í bÀÇ µ¡¼À ¿¬»ê ¼öÇàÇÏ¿© Ãâ·Â
+			System.out.printf(">> %d + %d = %d\n", a, b, (a+b));	    // a ì™€ bì˜ ë§ì…ˆ ì—°ì‚° ìˆ˜í–‰í•˜ì—¬ ì¶œë ¥
 		}
-		else if(op == 45)												// »ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ ¿¬»êÀÚ°¡ '-' ¶ó¸é
+		else if(op == 45)												// ì‚¬ìš©ìžê°€ ìž…ë ¥í•œ ì—°ì‚°ìžê°€ '-' ë¼ë©´
 		{
-			System.out.printf(">> %d - %d = %d\n", a, b, (a-b));        // a ¿Í bÀÇ »¬¼À ¿¬»ê ¼öÇàÇÏ¿© Ãâ·Â
+			System.out.printf(">> %d - %d = %d\n", a, b, (a-b));        // a ì™€ bì˜ ëº„ì…ˆ ì—°ì‚° ìˆ˜í–‰í•˜ì—¬ ì¶œë ¥
 		}
-		else if(op == 42)												// »ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ ¿¬»êÀÚ°¡ '*' ¶ó¸é
+		else if(op == 42)												// ì‚¬ìš©ìžê°€ ìž…ë ¥í•œ ì—°ì‚°ìžê°€ '*' ë¼ë©´
 		{
-			System.out.printf(">> %d * %d = %d\n", a, b, (a*b));        // a ¿Í bÀÇ °ö¼À ¿¬»ê ¼öÇàÇÏ¿© Ãâ·Â
+			System.out.printf(">> %d * %d = %d\n", a, b, (a*b));        // a ì™€ bì˜ ê³±ì…ˆ ì—°ì‚° ìˆ˜í–‰í•˜ì—¬ ì¶œë ¥
 		}
-		else if(op == 47)												// »ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ ¿¬»êÀÚ°¡ '/' ¶ó¸é
+		else if(op == 47)												// ì‚¬ìš©ìžê°€ ìž…ë ¥í•œ ì—°ì‚°ìžê°€ '/' ë¼ë©´
 		{
-			System.out.printf(">> %d / %d = %d\n", a, b, (a/b));        // a ¿Í bÀÇ ³ª´°¼À ¿¬»ê ¼öÇàÇÏ¿© Ãâ·Â
+			System.out.printf(">> %d / %d = %d\n", a, b, (a/b));        // a ì™€ bì˜ ë‚˜ëˆ—ì…ˆ ì—°ì‚° ìˆ˜í–‰í•˜ì—¬ ì¶œë ¥
 		}
 		else
 		{
-			System.out.println("\n>> ÀÔ·Â °úÁ¤¿¡ ¿À·ù°¡ Á¸ÀçÇÕ´Ï´Ù.");
+			System.out.println("\n>> ìž…ë ¥ ê³¼ì •ì— ì˜¤ë¥˜ê°€ ì¡´ìž¬í•©ë‹ˆë‹¤.");
 		}
 		*/
 
@@ -189,21 +189,21 @@ public class Test036
 
 
 		// ---------------------------------------------------------------------------------------------------------
-		// ¹æ¹ý ¨é
+		// ë°©ë²• â‘¢
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		int a, b, result = 0;
 		char op;
 		
-		System.out.print("Ã¹ ¹øÂ° Á¤¼ö ÀÔ·Â : ");
+		System.out.print("ì²« ë²ˆì§¸ ì •ìˆ˜ ìž…ë ¥ : ");
 		a = Integer.parseInt(br.readLine());
 
-		System.out.print("µÎ ¹øÂ° Á¤¼ö ÀÔ·Â : ");
+		System.out.print("ë‘ ë²ˆì§¸ ì •ìˆ˜ ìž…ë ¥ : ");
 		b = Integer.parseInt(br.readLine());
 
 		
-		System.out.print("¿¬»êÀÚ ÀÔ·Â[+ - * /] : ");
+		System.out.print("ì—°ì‚°ìž ìž…ë ¥[+ - * /] : ");
 		op = (char) System.in.read();
 			
 
@@ -217,7 +217,7 @@ public class Test036
 			result = a / b;
 		
 
-		// °á°ú Ãâ·Â
+		// ê²°ê³¼ ì¶œë ¥
 		//System.out.println(">> " + a + " " + op + " " + b + " = " + result);	
 		System.out.printf("\n>> %d %c %d = %d\n", a, op, b, result);
 
@@ -228,29 +228,29 @@ public class Test036
 	}
 }
 
-// ½ÇÇà °á°ú
+// ì‹¤í–‰ ê²°ê³¼
 
 /*
-Ã¹ ¹øÂ° Á¤¼ö ÀÔ·Â : 10
-Ã¹ ¹øÂ° Á¤¼ö ÀÔ·Â : 3
-¿¬»êÀÚ ÀÔ·Â[+ - * /] : +
+ì²« ë²ˆì§¸ ì •ìˆ˜ ìž…ë ¥ : 10
+ì²« ë²ˆì§¸ ì •ìˆ˜ ìž…ë ¥ : 3
+ì—°ì‚°ìž ìž…ë ¥[+ - * /] : +
 >> 10 + 3 = 13
-°è¼ÓÇÏ·Á¸é ¾Æ¹« Å°³ª ´©¸£½Ê½Ã¿À . . .
+ê³„ì†í•˜ë ¤ë©´ ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ì‹­ì‹œì˜¤ . . .
 */
 
 /*
-Ã¹ ¹øÂ° Á¤¼ö ÀÔ·Â : 100
-Ã¹ ¹øÂ° Á¤¼ö ÀÔ·Â : 40
-¿¬»êÀÚ ÀÔ·Â[+ - * /] : -
+ì²« ë²ˆì§¸ ì •ìˆ˜ ìž…ë ¥ : 100
+ì²« ë²ˆì§¸ ì •ìˆ˜ ìž…ë ¥ : 40
+ì—°ì‚°ìž ìž…ë ¥[+ - * /] : -
 >> 100 - 40 = 60
-°è¼ÓÇÏ·Á¸é ¾Æ¹« Å°³ª ´©¸£½Ê½Ã¿À . . .
+ê³„ì†í•˜ë ¤ë©´ ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ì‹­ì‹œì˜¤ . . .
 */
 
 /*
-Ã¹ ¹øÂ° Á¤¼ö ÀÔ·Â : 10
-µÎ ¹øÂ° Á¤¼ö ÀÔ·Â : 2
-¿¬»êÀÚ ÀÔ·Â[+ - * /] : [
+ì²« ë²ˆì§¸ ì •ìˆ˜ ìž…ë ¥ : 10
+ë‘ ë²ˆì§¸ ì •ìˆ˜ ìž…ë ¥ : 2
+ì—°ì‚°ìž ìž…ë ¥[+ - * /] : [
 
->> ÀÔ·Â °úÁ¤¿¡ ¿À·ù°¡ Á¸ÀçÇÕ´Ï´Ù.
-°è¼ÓÇÏ·Á¸é ¾Æ¹« Å°³ª ´©¸£½Ê½Ã¿À . . .
+>> ìž…ë ¥ ê³¼ì •ì— ì˜¤ë¥˜ê°€ ì¡´ìž¬í•©ë‹ˆë‹¤.
+ê³„ì†í•˜ë ¤ë©´ ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ì‹­ì‹œì˜¤ . . .
 */

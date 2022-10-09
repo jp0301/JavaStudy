@@ -1,25 +1,25 @@
 /*============================================
-  ¡á¡á¡á ÀÚ¹Ù ±âº» ÇÁ·Î±×·¡¹Ö ¡á¡á¡á
-  - º¯¼ö¿Í ÀÚ·áÇü
-  - ÀÚ¹Ù ±âº» ÀÔÃâ·Â : BufferedReader Å¬·¡½º
+  â– â– â–  ìžë°” ê¸°ë³¸ í”„ë¡œê·¸ëž˜ë° â– â– â– 
+  - ë³€ìˆ˜ì™€ ìžë£Œí˜•
+  - ìžë°” ê¸°ë³¸ ìž…ì¶œë ¥ : BufferedReader í´ëž˜ìŠ¤
 =============================================*/
 
-// ¡Û ÄûÁî
-//    »ï°¢ÇüÀÇ ¹Øº¯ÀÇ ±æÀÌ¿Í ³ôÀÌ¸¦ »ç¿ëÀÚ·ÎºÎÅÍ ÀÔ·Â¹Þ¾Æ
-//    ÀÌ »ï°¢ÇüÀÇ ³ÐÀÌ¸¦ ±¸ÇÏ´Â ÇÁ·Î±×·¥À» ±¸ÇöÇÑ´Ù.
+// â—‹ í€´ì¦ˆ
+//    ì‚¼ê°í˜•ì˜ ë°‘ë³€ì˜ ê¸¸ì´ì™€ ë†’ì´ë¥¼ ì‚¬ìš©ìžë¡œë¶€í„° ìž…ë ¥ë°›ì•„
+//    ì´ ì‚¼ê°í˜•ì˜ ë„“ì´ë¥¼ êµ¬í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ êµ¬í˜„í•œë‹¤.
 
-// ½ÇÇà ¿¹)
-// ¡á »ï°¢Çü ³ÐÀÌ ±¸ÇÏ´Â ÇÁ·Î±×·¥ ¡á
-//  - »ï°¢ÇüÀÇ ¹Øº¯ ÀÔ·Â : 
-//  - »ï°¢ÇüÀÇ ³ôÀÌ ÀÔ·Â :
+// ì‹¤í–‰ ì˜ˆ)
+// â–  ì‚¼ê°í˜• ë„“ì´ êµ¬í•˜ëŠ” í”„ë¡œê·¸ëž¨ â– 
+//  - ì‚¼ê°í˜•ì˜ ë°‘ë³€ ìž…ë ¥ : 
+//  - ì‚¼ê°í˜•ì˜ ë†’ì´ ìž…ë ¥ :
 
-// >> ¹Øº¯ÀÌ 3, ³ôÀÌ°¡ 5ÀÎ »ï°¢ÇüÀÇ ³ÐÀÌ : xxxx
-// °è¼ÓÇÏ·Á¸é ¾Æ¹« Å°³ª ´©¸£¼¼¿ä...
+// >> ë°‘ë³€ì´ 3, ë†’ì´ê°€ 5ì¸ ì‚¼ê°í˜•ì˜ ë„“ì´ : xxxx
+// ê³„ì†í•˜ë ¤ë©´ ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ì„¸ìš”...
 
-// ¡Ø ¹®Á¦ ÀÎ½Ä ¹× ºÐ¼®
-//    »ï°¢ÇüÀÇ ³ÐÀÌ = ¹Øº¯ * ³ôÀÌ / 2
-//    »ç¿ëÀÚ·ÎºÎÅÍ µ¥ÀÌÅÍ¸¦ ÀÔ·Â¹Þ¾Æ Ã³¸® ¡æ BufferedReader È°¿ë
-//    BufferedReader ¸¦ ¿©·¯ °³ »ç¿ë? ÇÑ °³ »ç¿ë?
+// â€» ë¬¸ì œ ì¸ì‹ ë° ë¶„ì„
+//    ì‚¼ê°í˜•ì˜ ë„“ì´ = ë°‘ë³€ * ë†’ì´ / 2
+//    ì‚¬ìš©ìžë¡œë¶€í„° ë°ì´í„°ë¥¼ ìž…ë ¥ë°›ì•„ ì²˜ë¦¬ â†’ BufferedReader í™œìš©
+//    BufferedReader ë¥¼ ì—¬ëŸ¬ ê°œ ì‚¬ìš©? í•œ ê°œ ì‚¬ìš©?
 
 
 
@@ -33,76 +33,76 @@ public class Test013
 	{
 		
 
-		// ³» Ç®ÀÌ ---------------------------------------------------------------------------
+		// ë‚´ í’€ì´ ---------------------------------------------------------------------------
 		/*
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 
-		// ÁÖ¿ä º¯¼ö ¼±¾ð
+		// ì£¼ìš” ë³€ìˆ˜ ì„ ì–¸
 		int a, b;
 		double area;
 
 
 
-		// ¿¬»ê ¹× Ã³¸®
-		System.out.print("»ï°¢ÇüÀÇ ¹Øº¯ ÀÔ·Â : ");
+		// ì—°ì‚° ë° ì²˜ë¦¬
+		System.out.print("ì‚¼ê°í˜•ì˜ ë°‘ë³€ ìž…ë ¥ : ");
 		a = Integer.parseInt(br.readLine());
 
-		System.out.print("»ï°¢ÇüÀÇ ³ôÀÌ ÀÔ·Â : ");
+		System.out.print("ì‚¼ê°í˜•ì˜ ë†’ì´ ìž…ë ¥ : ");
         b = Integer.parseInt(br.readLine());
 
 		area = (double) a * b / 2;
 
 
 
-		// °á°ú Ãâ·Â
-		System.out.printf(">> ¹Øº¯ÀÌ %d, ³ôÀÌ°¡ %dÀÎ »ï°¢ÇüÀÇ ³ÐÀÌ : %.2f%n", a, b, area);
+		// ê²°ê³¼ ì¶œë ¥
+		System.out.printf(">> ë°‘ë³€ì´ %d, ë†’ì´ê°€ %dì¸ ì‚¼ê°í˜•ì˜ ë„“ì´ : %.2f%n", a, b, area);
 		*/
 
 
 
-		// ÇÔ²²ÇÑ Ç®ÀÌ -----------------------------------------------------------------------
+		// í•¨ê»˜í•œ í’€ì´ -----------------------------------------------------------------------
 
-		// ÁÖ¿ä º¯¼ö ¼±¾ð
+		// ì£¼ìš” ë³€ìˆ˜ ì„ ì–¸
 
-		//BufferedReader ÀÎ½ºÅÏ½º »ý¼º
+		//BufferedReader ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
-		// ¹Øº¯ ³ôÀÌ ³ÐÀÌ
-		int underLength, height;			//-- ¹Øº¯°ú ³ôÀÌ
-		double area;						//-- ³ÐÀÌ			check~!!!
+		// ë°‘ë³€ ë†’ì´ ë„“ì´
+		int underLength, height;			//-- ë°‘ë³€ê³¼ ë†’ì´
+		double area;						//-- ë„“ì´			check~!!!
 		
 		
 
-		// ¿¬»ê ¹× Ã³¸®
-		// ¨ç »ç¿ëÀÚ¿¡°Ô ¾È³» ¸Þ¼¼Áö Ãâ·Â
-		System.out.println("¡á »ï°¢Çü ³ÐÀÌ ±¸ÇÏ´Â  ÇÁ·Î±×·¥ ¡á");
-		System.out.print("- »ï°¢ÇüÀÇ ¹Øº¯ ÀÔ·Â : ");
+		// ì—°ì‚° ë° ì²˜ë¦¬
+		// â‘  ì‚¬ìš©ìžì—ê²Œ ì•ˆë‚´ ë©”ì„¸ì§€ ì¶œë ¥
+		System.out.println("â–  ì‚¼ê°í˜• ë„“ì´ êµ¬í•˜ëŠ”  í”„ë¡œê·¸ëž¨ â– ");
+		System.out.print("- ì‚¼ê°í˜•ì˜ ë°‘ë³€ ìž…ë ¥ : ");
 		
-		// ¨è »ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ µ¥ÀÌÅÍ(¹®ÀÚ¿­)¸¦ Á¤¼ö ÇüÅÂ·Î º¯È¯ÇÑ ÈÄ
-		//    º¯¼ö underLength¿¡ ´ã¾Æ³»±â
+		// â‘¡ ì‚¬ìš©ìžê°€ ìž…ë ¥í•œ ë°ì´í„°(ë¬¸ìžì—´)ë¥¼ ì •ìˆ˜ í˜•íƒœë¡œ ë³€í™˜í•œ í›„
+		//    ë³€ìˆ˜ underLengthì— ë‹´ì•„ë‚´ê¸°
 		underLength = Integer.parseInt(br.readLine());
 		
-		// ¨é ´Ù½Ã »ç¿ëÀÚ¿¡°Ô ¾È³» ¸Þ¼¼Áö Ãâ·Â
-		System.out.print("- »ï°¢ÇüÀÇ ³ôÀÌ ÀÔ·Â : ");
+		// â‘¢ ë‹¤ì‹œ ì‚¬ìš©ìžì—ê²Œ ì•ˆë‚´ ë©”ì„¸ì§€ ì¶œë ¥
+		System.out.print("- ì‚¼ê°í˜•ì˜ ë†’ì´ ìž…ë ¥ : ");
         
-		// ¨ê »ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ µ¥ÀÌÅÍ(¹®ÀÚ¿­)¸¦ Á¤¼ö ÇüÅÂ·Î º¯È¯ÇÑ ÈÄ
-		//    º¯¼ö height¿¡ ´ã¾Æ³»±â
+		// â‘£ ì‚¬ìš©ìžê°€ ìž…ë ¥í•œ ë°ì´í„°(ë¬¸ìžì—´)ë¥¼ ì •ìˆ˜ í˜•íƒœë¡œ ë³€í™˜í•œ í›„
+		//    ë³€ìˆ˜ heightì— ë‹´ì•„ë‚´ê¸°
 		height = Integer.parseInt(br.readLine());
 
 		
-		// ¨ë »ï°¢ÇüÀÇ ³ÐÀÌ ±¸ÇÏ´Â ¿¬»ê Ã³¸®
-		//    »ï°¢ÇüÀÇ ³ÐÀÌ = ¹Øº¯ * ³ôÀÌ / 2
+		// â‘¤ ì‚¼ê°í˜•ì˜ ë„“ì´ êµ¬í•˜ëŠ” ì—°ì‚° ì²˜ë¦¬
+		//    ì‚¼ê°í˜•ì˜ ë„“ì´ = ë°‘ë³€ * ë†’ì´ / 2
 		//area = underLength * height / 2;
-		//                 Á¤¼öÇü     Á¤¼öÇü / Á¤¼öÇü ¡æ Á¤¼ö ±â¹Ý ¿¬»ê
-		//												 (Áï, ¸òÀ» ÃëÇÏ°í ³ª¸ÓÁö´Â ¹ö¸²)
+		//                 ì •ìˆ˜í˜•     ì •ìˆ˜í˜• / ì •ìˆ˜í˜• â†’ ì •ìˆ˜ ê¸°ë°˜ ì—°ì‚°
+		//												 (ì¦‰, ëª«ì„ ì·¨í•˜ê³  ë‚˜ë¨¸ì§€ëŠ” ë²„ë¦¼)
 		area = underLength * height / 2.0;				//check~!!!
-		//                 Á¤¼öÇü     Á¤¼öÇü / ½Ç¼öÇü ¡æ ½Ç¼ö ±â¹Ý ¿¬»ê
+		//                 ì •ìˆ˜í˜•     ì •ìˆ˜í˜• / ì‹¤ìˆ˜í˜• â†’ ì‹¤ìˆ˜ ê¸°ë°˜ ì—°ì‚°
 
-		// ¡Ø ½Ç¼ö ÀÚ·áÇüÀÌ °á°ú°ªÀ¸·Î ³ª¿À´Â °úÁ¤¿¡¼­
-		// ½Ç¼ö ±â¹ÝÀÇ ¿¬»êÀÌ ÇÊ¿äÇÑ »óÈ²ÀÌ´Ù.
-		// Á¤¼öÇü ¡º2¡»°¡ ¾Æ´Ñ, ½Ç¼öÇüÀ¸·Î ¡º2.0¡»À¸·Î ³ª´°¼À ¿¬»êÀ» ¼öÇàÇÏ°Ô µÇ¸é
-		// ÀÌ ¿¬»êÀº ½Ç¼ö ±â¹ÝÀ¸·Î Ã³¸®µÈ´Ù.
+		// â€» ì‹¤ìˆ˜ ìžë£Œí˜•ì´ ê²°ê³¼ê°’ìœ¼ë¡œ ë‚˜ì˜¤ëŠ” ê³¼ì •ì—ì„œ
+		// ì‹¤ìˆ˜ ê¸°ë°˜ì˜ ì—°ì‚°ì´ í•„ìš”í•œ ìƒí™©ì´ë‹¤.
+		// ì •ìˆ˜í˜• ã€Ž2ã€ê°€ ì•„ë‹Œ, ì‹¤ìˆ˜í˜•ìœ¼ë¡œ ã€Ž2.0ã€ìœ¼ë¡œ ë‚˜ëˆ—ì…ˆ ì—°ì‚°ì„ ìˆ˜í–‰í•˜ê²Œ ë˜ë©´
+		// ì´ ì—°ì‚°ì€ ì‹¤ìˆ˜ ê¸°ë°˜ìœ¼ë¡œ ì²˜ë¦¬ëœë‹¤.
 
 
 		// area = (double)(underLength * height / 2);		//--(X)
@@ -110,24 +110,24 @@ public class Test013
 		// area = underLength * (double)height / 2;			//--(O)
 		// area = (double)(underLength * height) / 2;		//--(O)
 
-		// °á°ú Ãâ·Â
-		System.out.println();	// °³Çà
-		//System.out.print();	//-- ¿¡·¯ ¹ß»ý(ÄÄÆÄÀÏ ¿¡·¯)
+		// ê²°ê³¼ ì¶œë ¥
+		System.out.println();	// ê°œí–‰
+		//System.out.print();	//-- ì—ëŸ¬ ë°œìƒ(ì»´íŒŒì¼ ì—ëŸ¬)
 
-		System.out.printf(">> ¹Øº¯ÀÌ %d, ³ôÀÌ°¡ %dÀÎ »ï°¢ÇüÀÇ ³ÐÀÌ : %.2f%n", underLength, height, area);
+		System.out.printf(">> ë°‘ë³€ì´ %d, ë†’ì´ê°€ %dì¸ ì‚¼ê°í˜•ì˜ ë„“ì´ : %.2f%n", underLength, height, area);
 		
 		
 		
 	}
 }
 
-// ½ÇÇà °á°ú
+// ì‹¤í–‰ ê²°ê³¼
 
 /*
-¡á »ï°¢Çü ³ÐÀÌ ±¸ÇÏ´Â  ÇÁ·Î±×·¥ ¡á
-- »ï°¢ÇüÀÇ ¹Øº¯ ÀÔ·Â : 3
-- »ï°¢ÇüÀÇ ³ôÀÌ ÀÔ·Â : 5
+â–  ì‚¼ê°í˜• ë„“ì´ êµ¬í•˜ëŠ”  í”„ë¡œê·¸ëž¨ â– 
+- ì‚¼ê°í˜•ì˜ ë°‘ë³€ ìž…ë ¥ : 3
+- ì‚¼ê°í˜•ì˜ ë†’ì´ ìž…ë ¥ : 5
 
->> ¹Øº¯ÀÌ 3, ³ôÀÌ°¡ 5ÀÎ »ï°¢ÇüÀÇ ³ÐÀÌ : 7.50
-°è¼ÓÇÏ·Á¸é ¾Æ¹« Å°³ª ´©¸£½Ê½Ã¿À . . .
+>> ë°‘ë³€ì´ 3, ë†’ì´ê°€ 5ì¸ ì‚¼ê°í˜•ì˜ ë„“ì´ : 7.50
+ê³„ì†í•˜ë ¤ë©´ ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ì‹­ì‹œì˜¤ . . .
 */

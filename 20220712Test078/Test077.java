@@ -1,6 +1,6 @@
 /*====================================
-    ¡á¡á¡á Å¬·¡½º¿Í ÀÎ½ºÅÏ½º ¡á¡á¡á
-	- »ý¼ºÀÚ(Constructor)
+    â– â– â–  í´ëž˜ìŠ¤ì™€ ì¸ìŠ¤í„´ìŠ¤ â– â– â– 
+	- ìƒì„±ìž(Constructor)
   ====================================*/
 
 public class Test077
@@ -13,7 +13,7 @@ public class Test077
 	{
 		val1 =0;
 		val2 =0;
-		System.out.println("¸Å°³º¯¼ö ¾ø´Â »ý¼ºÀÚ...");
+		System.out.println("ë§¤ê°œë³€ìˆ˜ ì—†ëŠ” ìƒì„±ìž...");
 	}
 
 
@@ -21,21 +21,21 @@ public class Test077
 	{
 		val1=x;
 		val2=0;
-		System.out.println("intÇü µ¥ÀÌÅÍ¸¦ ¸Å°³º¯¼ö·Î ¹Þ´Â »ý¼ºÀÚ...");
+		System.out.println("intí˜• ë°ì´í„°ë¥¼ ë§¤ê°œë³€ìˆ˜ë¡œ ë°›ëŠ” ìƒì„±ìž...");
 	}
 
 	Test077(double y)
 	{
 		val1=0;
 		val2=y;
-		System.out.println("doubleÇü µ¥ÀÌÅÍ¸¦ ¸Å°³º¯¼ö·Î ¹Þ´Â »ý¼ºÀÚ...");
+		System.out.println("doubleí˜• ë°ì´í„°ë¥¼ ë§¤ê°œë³€ìˆ˜ë¡œ ë°›ëŠ” ìƒì„±ìž...");
 	}
 
 	Test077(int x, double y)
 	{
 		val1=x;
 		val2=y;
-		System.out.println("intÇü º¯¼ö¿Í doubleÇü º¯¼ö¸¦ ¸Å°³º¯¼ö·Î ¹Þ´Â »ý¼ºÀÚ...");
+		System.out.println("intí˜• ë³€ìˆ˜ì™€ doubleí˜• ë³€ìˆ˜ë¥¼ ë§¤ê°œë³€ìˆ˜ë¡œ ë°›ëŠ” ìƒì„±ìž...");
 	}
 
 
@@ -43,22 +43,22 @@ public class Test077
 	public static void main(String[] args)
 	{
 		Test077 ob1 = new Test077();
-		//--==>> ¸Å°³º¯¼ö ¾ø´Â »ý¼ºÀÚ...
+		//--==>> ë§¤ê°œë³€ìˆ˜ ì—†ëŠ” ìƒì„±ìž...
 		System.out.println(ob1.val1 + ", " + ob1.val2 + "\n");
 		//--==>> 0, 0.0
 
 		Test077 ob2 = new Test077(4);
-		//--==>> intÇü µ¥ÀÌÅÍ¸¦ ¸Å°³º¯¼ö·Î ¹Þ´Â »ý¼ºÀÚ...
+		//--==>> intí˜• ë°ì´í„°ë¥¼ ë§¤ê°œë³€ìˆ˜ë¡œ ë°›ëŠ” ìƒì„±ìž...
 		System.out.println(ob2.val1 + ", " + ob2.val2 + "\n");
 		//--==>> 4, 0.0
 
         Test077 ob3 = new Test077(7.0);
-		//--==>> doubleÇü µ¥ÀÌÅÍ¸¦ ¸Å°³º¯¼ö·Î ¹Þ´Â »ý¼ºÀÚ...
+		//--==>> doubleí˜• ë°ì´í„°ë¥¼ ë§¤ê°œë³€ìˆ˜ë¡œ ë°›ëŠ” ìƒì„±ìž...
 		System.out.println(ob3.val1 + ", " + ob3.val2 + "\n");
 		//--==>> 0, 7.0
 
         Test077 ob4 = new Test077(4,7.0);
-        //--==>> intÇü º¯¼ö¿Í doubleÇü º¯¼ö¸¦ ¸Å°³º¯¼ö·Î ¹Þ´Â »ý¼ºÀÚ...
+        //--==>> intí˜• ë³€ìˆ˜ì™€ doubleí˜• ë³€ìˆ˜ë¥¼ ë§¤ê°œë³€ìˆ˜ë¡œ ë°›ëŠ” ìƒì„±ìž...
 		System.out.println(ob4.val1 + ", " + ob4.val2 + "\n");
 		//--==>> 4, 7.0
 

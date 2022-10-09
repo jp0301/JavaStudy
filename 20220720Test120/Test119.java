@@ -1,45 +1,45 @@
 /*================================
-     ¡á¡á¡á Å¬·¡½º °í±Þ ¡á¡á¡á
-	 - ÀÎÅÍÆäÀÌ½º(Interface)
+     â– â– â–  í´ëž˜ìŠ¤ ê³ ê¸‰ â– â– â– 
+	 - ì¸í„°íŽ˜ì´ìŠ¤(Interface)
   ===============================*/
 
-// ÀÎÅÍÆäÀÌ½º
+// ì¸í„°íŽ˜ì´ìŠ¤
 interface Demo
 {
 	public void write();
 	public void print();
 }
 
-// ÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇÏ´Â Ãß»ó Å¬·¡½º
+// ì¸í„°íŽ˜ì´ìŠ¤ë¥¼ êµ¬í˜„í•˜ëŠ” ì¶”ìƒ í´ëž˜ìŠ¤
 abstract class DemoImpl implements Demo
 {
 	@Override
 	public void write()
 	{
-		System.out.println("write() ¸Þ¼Òµå ÀçÁ¤ÀÇ...");
+		System.out.println("write() ë©”ì†Œë“œ ìž¬ì •ì˜...");
 	}
 
 	// public abstract void print();
 }
 
-// Ãß»ó Å¬·¡½º¸¦ »ó¼Ó¹Þ´Â Ãß»ó Å¬·¡½º
+// ì¶”ìƒ í´ëž˜ìŠ¤ë¥¼ ìƒì†ë°›ëŠ” ì¶”ìƒ í´ëž˜ìŠ¤
 //abstract class DemoImplSub extends DemoImpl
-//				¡é
-// Ãß»ó Å¬·¡½º¸¦ »ó¼Ó¹Þ´Â Å¬·¡½º
+//				â†“
+// ì¶”ìƒ í´ëž˜ìŠ¤ë¥¼ ìƒì†ë°›ëŠ” í´ëž˜ìŠ¤
 class DemoImplSub extends DemoImpl
 {
 	/*
 	@Override
 	public void write()
 	{
-		System.out.println("write() ¸Þ¼Òµå ÀçÁ¤ÀÇ...");
+		System.out.println("write() ë©”ì†Œë“œ ìž¬ì •ì˜...");
 	}
 	*/
 
 	@Override
 	public void print()
 	{
-		System.out.println("print() ¸Þ¼Òµå ÀçÁ¤ÀÇ... ");
+		System.out.println("print() ë©”ì†Œë“œ ìž¬ì •ì˜... ");
 	}
 }
 
@@ -51,23 +51,23 @@ public class Test119
 	public static void main(String[] args)
 	{
 		// Demo ob1 = new Demo();
-		//-- ÀÎ½ºÅÏ½º »ý¼º ºÒ°¡ ¡æ ÀÎÅÍÆäÀÌ½º
+		//-- ì¸ìŠ¤í„´ìŠ¤ ìƒì„± ë¶ˆê°€ â†’ ì¸í„°íŽ˜ì´ìŠ¤
 
 		//DemoImpl ob2 = new DemoImpl();
-		//-- ÀÎ½ºÅÏ½º »ý¼º ºÒ°¡ ¡æ Ãß»ó Å¬·¡½º
+		//-- ì¸ìŠ¤í„´ìŠ¤ ìƒì„± ë¶ˆê°€ â†’ ì¶”ìƒ í´ëž˜ìŠ¤
 
 		DemoImplSub ob3 = new DemoImplSub();
 		ob3.write();
 		ob3.print();
-		//--==>> write() ¸Þ¼Òµå ÀçÁ¤ÀÇ...
-		//       print() ¸Þ¼Òµå ÀçÁ¤ÀÇ...
+		//--==>> write() ë©”ì†Œë“œ ìž¬ì •ì˜...
+		//       print() ë©”ì†Œë“œ ìž¬ì •ì˜...
 
 	}
 }
 
-// ½ÇÇà °á°ú
+// ì‹¤í–‰ ê²°ê³¼
 /*
-write() ¸Þ¼Òµå ÀçÁ¤ÀÇ...
-print() ¸Þ¼Òµå ÀçÁ¤ÀÇ...
-°è¼ÓÇÏ·Á¸é ¾Æ¹« Å°³ª ´©¸£½Ê½Ã¿À . . .
+write() ë©”ì†Œë“œ ìž¬ì •ì˜...
+print() ë©”ì†Œë“œ ìž¬ì •ì˜...
+ê³„ì†í•˜ë ¤ë©´ ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ì‹­ì‹œì˜¤ . . .
 */

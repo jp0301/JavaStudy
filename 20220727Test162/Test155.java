@@ -1,23 +1,23 @@
 /*==================================
-  ¡á¡á¡á ÄÃ·º¼Ç(Collection) ¡á¡á¡á
+  â– â– â–  ì»¬ë ‰ì…˜(Collection) â– â– â– 
 ====================================*/
 
 import java.util.Stack;
 
 public class Test155
 {
-	//Á¤Àû ¹®ÀÚ¿­ ¹è¿­ ¼±¾ð ¹× ÃÊ±âÈ­
+	//ì •ì  ë¬¸ìžì—´ ë°°ì—´ ì„ ì–¸ ë° ì´ˆê¸°í™”
 	private static final String[] colors 
-		= {"°ËÁ¤", "³ë¶û", "ÃÊ·Ï" ,"ÆÄ¶û", "»¡°­", "¿¬µÎ"};
+		= {"ê²€ì •", "ë…¸ëž‘", "ì´ˆë¡" ,"íŒŒëž‘", "ë¹¨ê°•", "ì—°ë‘"};
 
-	// »ý¼ºÀÚ
+	// ìƒì„±ìž
 	public Test155()
 	{
-		// st ¶ó´Â Stack ÀÚ·á±¸Á¶ »ý¼º
-		// Á¦³×¸¯À» È°¿ëÇÏ¿© ÀÚ·á±¸Á¶¿¡ ´ã±â´Â µ¥ÀÌÅÍ Ç¥Çö ¡æ ¡º<String>¡»
+		// st ë¼ëŠ” Stack ìžë£Œêµ¬ì¡° ìƒì„±
+		// ì œë„¤ë¦­ì„ í™œìš©í•˜ì—¬ ìžë£Œêµ¬ì¡°ì— ë‹´ê¸°ëŠ” ë°ì´í„° í‘œí˜„ â†’ ã€Ž<String>ã€
 		Stack<String> st = new Stack<String>();
 
-		// st ¶ó´Â Stack ÀÚ·á±¸Á¶¿¡ µ¥ÀÌÅÍ(colors) ´ã±â
+		// st ë¼ëŠ” Stack ìžë£Œêµ¬ì¡°ì— ë°ì´í„°(colors) ë‹´ê¸°
 		// st = colors; // (X)
 		
 		/*
@@ -27,7 +27,7 @@ public class Test155
 			st.add(colors[i]);
 			i++;
 		}
-		// µé¾î°¬´ÂÁö È®ÀÎ
+		// ë“¤ì–´ê°”ëŠ”ì§€ í™•ì¸
 		System.out.println(st);
 		*/
 
@@ -40,30 +40,30 @@ public class Test155
 		st.push(colors[5]);
 		*/
 
-		/* for ¹®
+		/* for ë¬¸
 		for(int i=0; i<color.length; i++)
 			st.push(colors[i]); //st.add(colors[i]);
 		*/
 		
-		// Çâ»óµÈ for ¹®
+		// í–¥ìƒëœ for ë¬¸
 		for(String color : colors)
 		{
 			st.push(color);	//st.add(color);
 		}
 
-		st.push("º¸¶ó");
+		st.push("ë³´ë¼");
 		//st.push(10); 
 		//st.push(10.0);
-		//--==>> ¿¡·¯ ¹ß»ý(ÄÄÆÄÀÏ ¿¡·¯)
-		//       String ÀÌ ¾Æ´Ñ ´Ù¸¥ ÀÚ·áÇü(int³ª double)À»
-		//       ½ºÅÃ ÀÚ·á±¸Á¶ st¿¡ push()ÇÏ·Á°í Çß±â ¶§¹®¿¡...
+		//--==>> ì—ëŸ¬ ë°œìƒ(ì»´íŒŒì¼ ì—ëŸ¬)
+		//       String ì´ ì•„ë‹Œ ë‹¤ë¥¸ ìžë£Œí˜•(intë‚˜ double)ì„
+		//       ìŠ¤íƒ ìžë£Œêµ¬ì¡° stì— push()í•˜ë ¤ê³  í–ˆê¸° ë•Œë¬¸ì—...
 
 
-		// Ãâ·Â ¸Þ¼Òµå È£Ãâ
+		// ì¶œë ¥ ë©”ì†Œë“œ í˜¸ì¶œ
 		popStack(st);
 	}
 
-	// Ãâ·Â ¸Þ¼Òµå
+	// ì¶œë ¥ ë©”ì†Œë“œ
 	private void popStack(Stack<String> st)
 	{
 		System.out.print("pop : ");
@@ -81,14 +81,14 @@ public class Test155
 	}
 }
 
-//½ÇÇà °á°ú
-//"°ËÁ¤", "³ë¶û", "ÃÊ·Ï" ,"ÆÄ¶û", "»¡°­", "¿¬µÎ"
+//ì‹¤í–‰ ê²°ê³¼
+//"ê²€ì •", "ë…¸ëž‘", "ì´ˆë¡" ,"íŒŒëž‘", "ë¹¨ê°•", "ì—°ë‘"
 
 /*
-pop : ¿¬µÎ »¡°­ ÆÄ¶û ÃÊ·Ï ³ë¶û °ËÁ¤
+pop : ì—°ë‘ ë¹¨ê°• íŒŒëž‘ ì´ˆë¡ ë…¸ëž‘ ê²€ì •
 */
 
 /*
-pop : º¸¶ó ¿¬µÎ »¡°­ ÆÄ¶û ÃÊ·Ï ³ë¶û °ËÁ¤
+pop : ë³´ë¼ ì—°ë‘ ë¹¨ê°• íŒŒëž‘ ì´ˆë¡ ë…¸ëž‘ ê²€ì •
 */
 

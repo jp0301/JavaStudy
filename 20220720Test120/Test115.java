@@ -1,44 +1,44 @@
 /*===============================
-      ¡á¡á¡á Å¬·¡½º °í±Þ ¡á¡á¡á
-	  - Ãß»ó Å¬·¡½º(abstract)
+      â– â– â–  í´ëž˜ìŠ¤ ê³ ê¸‰ â– â– â– 
+	  - ì¶”ìƒ í´ëž˜ìŠ¤(abstract)
   ===============================*/
 
 /*
-¡Û Ãß»ó Å¬·¡½º(abstract)´Â
+â—‹ ì¶”ìƒ í´ëž˜ìŠ¤(abstract)ëŠ”
 
-   ¼±¾ð¸¸ ÀÖ°í Á¤ÀÇ°¡ ¾ø´Â ÇÏ³ª ÀÌ»óÀÇ ¸Þ¼Òµå(Ãß»ó ¸Þ¼Òµå)¸¦ °®´Â Å¬·¡½º·Î
-   ÇÏÀ§ Å¬·¡½º¿¡¼­(ÀÚ½Ä Å¬·¡½º)¿¡¼­ ¿À¹ö¶óÀÌµù(Overriding) ÇÒ °ÍÀ¸·Î ¿¹»óµÇ´Â ¸Þ¼Òµå¿¡ ´ëÇØ
-   ¸Þ¸ð¸® ³¶ºñ ¾øÀÌ ¹Ì¸® È£Ãâ °èÈ¹À» ¼¼¿öµÎ±â À§ÇØ ¸¸µç´Ù.
+   ì„ ì–¸ë§Œ ìžˆê³  ì •ì˜ê°€ ì—†ëŠ” í•˜ë‚˜ ì´ìƒì˜ ë©”ì†Œë“œ(ì¶”ìƒ ë©”ì†Œë“œ)ë¥¼ ê°–ëŠ” í´ëž˜ìŠ¤ë¡œ
+   í•˜ìœ„ í´ëž˜ìŠ¤ì—ì„œ(ìžì‹ í´ëž˜ìŠ¤)ì—ì„œ ì˜¤ë²„ë¼ì´ë”©(Overriding) í•  ê²ƒìœ¼ë¡œ ì˜ˆìƒë˜ëŠ” ë©”ì†Œë“œì— ëŒ€í•´
+   ë©”ëª¨ë¦¬ ë‚­ë¹„ ì—†ì´ ë¯¸ë¦¬ í˜¸ì¶œ ê³„íšì„ ì„¸ì›Œë‘ê¸° ìœ„í•´ ë§Œë“ ë‹¤.
 
-¡Û Çü½Ä ¹× ±¸Á¶
+â—‹ í˜•ì‹ ë° êµ¬ì¡°
 
-   [Á¢±ÙÁ¦¾îÁö½ÃÀÚ] abstract class Å¬·¡½º¸í
+   [ì ‘ê·¼ì œì–´ì§€ì‹œìž] abstract class í´ëž˜ìŠ¤ëª…
    {
-		[Á¢±ÙÁ¦¾îÁö½ÃÀÚ] abstract ÀÚ·áÇü ¸Þ¼Òµå¸í([¸Å°³º¯¼ö], ...);
+		[ì ‘ê·¼ì œì–´ì§€ì‹œìž] abstract ìžë£Œí˜• ë©”ì†Œë“œëª…([ë§¤ê°œë³€ìˆ˜], ...);
    }
 
-¡Û Æ¯Â¡
+â—‹ íŠ¹ì§•
 
-   Å¬·¡½º°¡ Àû¾îµµ ÇÏ³ª ÀÌ»óÀÇ Ãß»ó ¸Þ¼Òµå¸¦ Æ÷ÇÔÇÒ ¶§
-   ±× Å¬·¡½º´Â Å¬·¡½º ¾Õ¿¡ ¡ºabstract¡» Å°¿öµå¸¦ ºÙ¿©
-   Ãß»ó Å¬·¡½º·Î ¸í½ÃÇØ¾ß ÇÏ¸ç,
-   Ãß»ó Å¬·¡½º·Î ¼±¾ðÇÑ °æ¿ì¿¡´Â
-   ºÒ¿ÏÀüÇÑ ÇüÅÂÀÇ Å¬·¡½ºÀÌ¹Ç·Î °´Ã¼¸¦ »ý¼ºÇÒ ¼ö ¾ø´Ù.
-   Ãß»ó ¸Þ¼Òµå°¡ Á¸ÀçÇÏÁö ¾Ê´Â Ãß»óÅ¬·¡½º¸¶Àúµµ
-   °´Ã¼¸¦ »ý¼ºÇÒ ¼ö ¾ø´Â °ÍÀÌ´Ù.
+   í´ëž˜ìŠ¤ê°€ ì ì–´ë„ í•˜ë‚˜ ì´ìƒì˜ ì¶”ìƒ ë©”ì†Œë“œë¥¼ í¬í•¨í•  ë•Œ
+   ê·¸ í´ëž˜ìŠ¤ëŠ” í´ëž˜ìŠ¤ ì•žì— ã€Žabstractã€ í‚¤ì›Œë“œë¥¼ ë¶™ì—¬
+   ì¶”ìƒ í´ëž˜ìŠ¤ë¡œ ëª…ì‹œí•´ì•¼ í•˜ë©°,
+   ì¶”ìƒ í´ëž˜ìŠ¤ë¡œ ì„ ì–¸í•œ ê²½ìš°ì—ëŠ”
+   ë¶ˆì™„ì „í•œ í˜•íƒœì˜ í´ëž˜ìŠ¤ì´ë¯€ë¡œ ê°ì²´ë¥¼ ìƒì„±í•  ìˆ˜ ì—†ë‹¤.
+   ì¶”ìƒ ë©”ì†Œë“œê°€ ì¡´ìž¬í•˜ì§€ ì•ŠëŠ” ì¶”ìƒí´ëž˜ìŠ¤ë§ˆì €ë„
+   ê°ì²´ë¥¼ ìƒì„±í•  ìˆ˜ ì—†ëŠ” ê²ƒì´ë‹¤.
 
-   Áï, Ãß»ó Å¬·¡½º´Â µ¶¸³ÀûÀ¸·Î Á¸ÀçÇÒ ¼ö ¾ø±â ¶§¹®¿¡
-   »ó¼ÓÀ» À§ÇØ¼­¸¸ Á¸ÀçÇÏ¸ç
-   Ãß»ó Å¬·¡½º¸¦ »ó¼Ó¹ÞÀº ÇÏÀ§ Å¬·¡½º¿¡¼­´Â
-   ¹Ýµå½Ã Ãß»ó ¸Þ¼Òµå¸¦ ¿À¹ö¶óÀÌµù(Overriding) ÇØ¾ß ÇÑ´Ù.
+   ì¦‰, ì¶”ìƒ í´ëž˜ìŠ¤ëŠ” ë…ë¦½ì ìœ¼ë¡œ ì¡´ìž¬í•  ìˆ˜ ì—†ê¸° ë•Œë¬¸ì—
+   ìƒì†ì„ ìœ„í•´ì„œë§Œ ì¡´ìž¬í•˜ë©°
+   ì¶”ìƒ í´ëž˜ìŠ¤ë¥¼ ìƒì†ë°›ì€ í•˜ìœ„ í´ëž˜ìŠ¤ì—ì„œëŠ”
+   ë°˜ë“œì‹œ ì¶”ìƒ ë©”ì†Œë“œë¥¼ ì˜¤ë²„ë¼ì´ë”©(Overriding) í•´ì•¼ í•œë‹¤.
 
 
-¡Ø ¡ºabstract¡» Å°¿öµå´Â
-    Å¬·¡½º¿Í ¸Þ¼Òµå¿¡¼­¸¸ »ç¿ëÇÒ ¼ö ÀÖÀ¸¸ç
-	¸â¹ö º¯¼ö³ª ·ÎÄÃ º¯¼ö¿¡¼­´Â »ç¿ëÇÒ ¼ö ¾ø´Ù.
+â€» ã€Žabstractã€ í‚¤ì›Œë“œëŠ”
+    í´ëž˜ìŠ¤ì™€ ë©”ì†Œë“œì—ì„œë§Œ ì‚¬ìš©í•  ìˆ˜ ìžˆìœ¼ë©°
+	ë©¤ë²„ ë³€ìˆ˜ë‚˜ ë¡œì»¬ ë³€ìˆ˜ì—ì„œëŠ” ì‚¬ìš©í•  ìˆ˜ ì—†ë‹¤.
 */
 
-// Ãß»ó Å¬·¡½º
+// ì¶”ìƒ í´ëž˜ìŠ¤
 abstract class SortInt115
 {
 	private int[] value;
@@ -49,7 +49,7 @@ abstract class SortInt115
 		sorting();
 	}
 	
-	// Ãß»ó ¸Þ¼Òµå
+	// ì¶”ìƒ ë©”ì†Œë“œ
 	protected abstract void sorting();
 
 	protected int dataLength()
@@ -57,9 +57,9 @@ abstract class SortInt115
 		return value.length;
 	}
 	
-	// ¡ºfinal¡» Å°¿öµå·Î ÀÎÇØ
-	// ÀÌ Å¬·¡½º(SortInt115)¸¦ »ó¼Ó¹Þ´Â Å¬·¡½º¿¡¼­
-	// ÀÌ ¸Þ¼Òµå¸¦ ÀçÁ¤ÀÇ(Method Overriding)ÇÒ ¼ö ¾ø´Ù.
+	// ã€Žfinalã€ í‚¤ì›Œë“œë¡œ ì¸í•´
+	// ì´ í´ëž˜ìŠ¤(SortInt115)ë¥¼ ìƒì†ë°›ëŠ” í´ëž˜ìŠ¤ì—ì„œ
+	// ì´ ë©”ì†Œë“œë¥¼ ìž¬ì •ì˜(Method Overriding)í•  ìˆ˜ ì—†ë‹¤.
 	protected final int compare(int i, int j)
 	{
 		int x = value[i];
@@ -73,9 +73,9 @@ abstract class SortInt115
 			return -1;
 	}
 
-	// ¡ºfinal¡» Å°¿öµå·Î ÀÎÇØ
-	// ÀÌ Å¬·¡½º(SortInt115)¸¦ »ó¼Ó¹Þ´Â Å¬·¡½º¿¡¼­
-	// ÀÌ ¸Þ¼Òµå¸¦ ÀçÁ¤ÀÇ(Method Overriding)ÇÒ ¼ö ¾ø´Ù.
+	// ã€Žfinalã€ í‚¤ì›Œë“œë¡œ ì¸í•´
+	// ì´ í´ëž˜ìŠ¤(SortInt115)ë¥¼ ìƒì†ë°›ëŠ” í´ëž˜ìŠ¤ì—ì„œ
+	// ì´ ë©”ì†Œë“œë¥¼ ìž¬ì •ì˜(Method Overriding)í•  ìˆ˜ ì—†ë‹¤.
 	protected final void swap(int i, int j)
 	{
 		int temp = value[i];
@@ -85,10 +85,10 @@ abstract class SortInt115
 	
 }
 
-// SortInt115(Ãß»ó Å¬·¡½º)¸¦ »ó¼Ó¹ÞÀº Å¬·¡½º ¡æ ÀÏ´ÜÀº Ãß»ó Å¬·¡½º
+// SortInt115(ì¶”ìƒ í´ëž˜ìŠ¤)ë¥¼ ìƒì†ë°›ì€ í´ëž˜ìŠ¤ â†’ ì¼ë‹¨ì€ ì¶”ìƒ í´ëž˜ìŠ¤
 // public abstract class Test115 extends SortInt115
 
-// Ãß»ó ¸Þ¼Òµå (sorting())¸¦ Override ¡æ ÀÏ¹Ý Á¤»ó Å¬·¡½º°¡ µÈ´Ù.
+// ì¶”ìƒ ë©”ì†Œë“œ (sorting())ë¥¼ Override â†’ ì¼ë°˜ ì •ìƒ í´ëž˜ìŠ¤ê°€ ëœë‹¤.
 public class Test115 extends SortInt115
 {
 	
@@ -99,7 +99,7 @@ public class Test115 extends SortInt115
 		sorting();
 	}
 	
-	// Ãß»ó ¸Þ¼Òµå
+	// ì¶”ìƒ ë©”ì†Œë“œ
 	protected abstract void sorting();
 
 	protected int dataLength()
@@ -139,7 +139,7 @@ public class Test115 extends SortInt115
 
 
 		// selection sort
-		for(i = 0; i < dataLength()-1; i++) // ±âÁØÀÌ´Ï±ñ ±»ÀÌ 4¹ø°ú 4¹øÀ» ºñ±³ÇÒ ÇÊ¿ä¾øÁö...
+		for(i = 0; i < dataLength()-1; i++) // ê¸°ì¤€ì´ë‹ˆê¹ êµ³ì´ 4ë²ˆê³¼ 4ë²ˆì„ ë¹„êµí•  í•„ìš”ì—†ì§€...
 		{
 			for(j = i+1; j < dataLength(); j++)
 			{

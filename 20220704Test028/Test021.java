@@ -1,22 +1,22 @@
  /*=============================================
-      ¡á¡á¡á ÀÚ¹Ù ±âº» ÇÁ·Î±×·¡¹Ö ¡á¡á¡á
-   - »ê¼ú ¿¬»êÀÚ
+      â– â– â–  ìë°” ê¸°ë³¸ í”„ë¡œê·¸ë˜ë° â– â– â– 
+   - ì‚°ìˆ  ì—°ì‚°ì
    - BufferedReader
    - printf()
 ==============================================*/
 
-// »ç¿ëÀÚ·ÎºÎÅÍ ÀÓÀÇÀÇ Á¤¼ö¸¦ µÎ ¹ø ÀÔ·Â¹Ş¾Æ
-// »çÄ¢¿¬»ê ¹× ³ª¸ÓÁö ¿¬»êÀ» ¼öÇàÇÏ¿©
-// ±× °á°ú¸¦ Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ±¸ÇöÇÑ´Ù.
-// ´Ü, ÀÔ·Â¹Ş´Â °úÁ¤Àº BufferedReader  ¸¦ È°¿ëÇÒ ¼ö ÀÖµµ·Ï ÇÏ°í
-// Ãâ·ÂÇÏ´Â °úÁ¤Àº printf() ¸Ş¼Òµå¸¦ È°¿ëÇÒ ¼ö ÀÖµµ·Ï ÇÑ´Ù.
-// ¶ÇÇÑ, ³ª´°¼À ¿¬»êÀº ÆíÀÇ»ó Á¤¼ö ±â¹İÀ¸·Î Ã³¸®ÇÑ´Ù.
+// ì‚¬ìš©ìë¡œë¶€í„° ì„ì˜ì˜ ì •ìˆ˜ë¥¼ ë‘ ë²ˆ ì…ë ¥ë°›ì•„
+// ì‚¬ì¹™ì—°ì‚° ë° ë‚˜ë¨¸ì§€ ì—°ì‚°ì„ ìˆ˜í–‰í•˜ì—¬
+// ê·¸ ê²°ê³¼ë¥¼ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ë¨ì„ êµ¬í˜„í•œë‹¤.
+// ë‹¨, ì…ë ¥ë°›ëŠ” ê³¼ì •ì€ BufferedReader  ë¥¼ í™œìš©í•  ìˆ˜ ìˆë„ë¡ í•˜ê³ 
+// ì¶œë ¥í•˜ëŠ” ê³¼ì •ì€ printf() ë©”ì†Œë“œë¥¼ í™œìš©í•  ìˆ˜ ìˆë„ë¡ í•œë‹¤.
+// ë˜í•œ, ë‚˜ëˆ—ì…ˆ ì—°ì‚°ì€ í¸ì˜ìƒ ì •ìˆ˜ ê¸°ë°˜ìœ¼ë¡œ ì²˜ë¦¬í•œë‹¤.
 
-//½ÇÇà ¿¹)
-// Ã¹ ¹øÂ° Á¤¼ö ÀÔ·Â : 10
-// µÎ ¹øÂ° Á¤¼ö ÀÔ·Â : 2
+//ì‹¤í–‰ ì˜ˆ)
+// ì²« ë²ˆì§¸ ì •ìˆ˜ ì…ë ¥ : 10
+// ë‘ ë²ˆì§¸ ì •ìˆ˜ ì…ë ¥ : 2
 
-// ==== [ °á°ú ] ====
+// ==== [ ê²°ê³¼ ] ====
 // 10 + 2 = 12
 // 10 - 2 = 8
 // 10 * 2 = 20
@@ -32,21 +32,21 @@ import java.io.IOException;
 	public static void main(String[] args) throws IOException
 	{
 		/*
-		// ÁÖ¿ä º¯¼ö ¼±¾ğ
+		// ì£¼ìš” ë³€ìˆ˜ ì„ ì–¸
 		InputStreamReader isr = new InputStreamReader(System.in);
 		BufferedReader br = new BufferedReader(isr);
 		int a, b;
 	
 
-		// ¿¬»ê ¹× Ã³¸®
-		System.out.print("Ã¹ ¹øÂ° Á¤¼ö ÀÔ·Â : ");
+		// ì—°ì‚° ë° ì²˜ë¦¬
+		System.out.print("ì²« ë²ˆì§¸ ì •ìˆ˜ ì…ë ¥ : ");
 		a = Integer.parseInt(br.readLine());
 
-		System.out.print("µÎ ¹øÂ° Á¤¼ö ÀÔ·Â : ");
+		System.out.print("ë‘ ë²ˆì§¸ ì •ìˆ˜ ì…ë ¥ : ");
 		b = Integer.parseInt(br.readLine());
 
-		// °á°ú Ãâ·Â
-		System.out.printf("\n====[°á°ú]====\n");
+		// ê²°ê³¼ ì¶œë ¥
+		System.out.printf("\n====[ê²°ê³¼]====\n");
 		System.out.printf("%d + %d = %d\n", a, b, (a+b));
 		System.out.printf("%d - %d = %d\n", a, b, (a-b));
 		System.out.printf("%d * %d = %d\n", a, b, (a*b));
@@ -55,16 +55,16 @@ import java.io.IOException;
 		*/
 
 
-		// ÁÖ¿ä º¯¼ö ¼±¾ğ
-		int num1, num2;						//-- »ç¿ëÀÚ ÀÔ·Â°ªÀ» ´ãÀ» º¯¼ö
-		int res1, res2, res3, res4, res5;   //-- °¢°¢ÀÇ ¿¬»ê °á°ú¸¦ ´ãÀ» º¯¼ö
+		// ì£¼ìš” ë³€ìˆ˜ ì„ ì–¸
+		int num1, num2;						//-- ì‚¬ìš©ì ì…ë ¥ê°’ì„ ë‹´ì„ ë³€ìˆ˜
+		int res1, res2, res3, res4, res5;   //-- ê°ê°ì˜ ì—°ì‚° ê²°ê³¼ë¥¼ ë‹´ì„ ë³€ìˆ˜
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 
-		// ¿¬»ê ¹× Ã³¸®
-		System.out.print("Ã¹ ¹øÂ° Á¤¼ö ÀÔ·Â : ");
+		// ì—°ì‚° ë° ì²˜ë¦¬
+		System.out.print("ì²« ë²ˆì§¸ ì •ìˆ˜ ì…ë ¥ : ");
 		num1 = Integer.parseInt(br.readLine());
-		System.out.print("µÎ ¹øÂ° Á¤¼ö ÀÔ·Â : ");
+		System.out.print("ë‘ ë²ˆì§¸ ì •ìˆ˜ ì…ë ¥ : ");
 		num2 = Integer.parseInt(br.readLine());
 		
 		res1 = num1 + num2;
@@ -74,30 +74,30 @@ import java.io.IOException;
 		res5 = num1 % num2;
 
 
-		// °á°ú Ãâ·Â
-		System.out.printf("\n====[°á°ú]====\n");
+		// ê²°ê³¼ ì¶œë ¥
+		System.out.printf("\n====[ê²°ê³¼]====\n");
 
 		System.out.printf("%d + %d = %d\n", num1, num2, res1);
 		System.out.printf("%d - %d = %d\n", num1, num2, res2);
 		System.out.printf("%d * %d = %d\n", num1, num2, res3);
 		System.out.printf("%d / %d = %d\n", num1, num2, res4);
-		System.out.printf("%d %% %d = %d\n", num1, num2, res5);		// "%%: ¡æ "%"
+		System.out.printf("%d %% %d = %d\n", num1, num2, res5);		// "%%: â†’ "%"
 		
 		System.out.printf("==============\n");
 	}
  }
 
- // ½ÇÇà °á°ú
+ // ì‹¤í–‰ ê²°ê³¼
  /*
-Ã¹ ¹øÂ° Á¤¼ö ÀÔ·Â : 10
-µÎ ¹øÂ° Á¤¼ö ÀÔ·Â : 2
+ì²« ë²ˆì§¸ ì •ìˆ˜ ì…ë ¥ : 10
+ë‘ ë²ˆì§¸ ì •ìˆ˜ ì…ë ¥ : 2
 
-====[°á°ú]====
+====[ê²°ê³¼]====
 10 + 2 = 12
 10 - 2 = 8
 10 * 2 = 20
 10 / 2 = 5
 10 % 2 = 0
 ==============
-°è¼ÓÇÏ·Á¸é ¾Æ¹« Å°³ª ´©¸£½Ê½Ã¿À . . .
+ê³„ì†í•˜ë ¤ë©´ ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ì‹­ì‹œì˜¤ . . .
  */

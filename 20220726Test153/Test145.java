@@ -1,106 +1,106 @@
 /*==============================================
-  ¡á¡á¡á ÀÚ¹ÙÀÇ ÁÖ¿ä(Áß¿ä) Å¬·¡½º ¡á¡á¡á
-  - ÀÚ¹Ù¿¡¼­ ±âº»ÀûÀ¸·Î Á¦°øÇÏ´Â ÁÖ¿ä Å¬·¡½ºµé
-  - Math Å¬·¡½º
+  â– â– â–  ìžë°”ì˜ ì£¼ìš”(ì¤‘ìš”) í´ëž˜ìŠ¤ â– â– â– 
+  - ìžë°”ì—ì„œ ê¸°ë³¸ì ìœ¼ë¡œ ì œê³µí•˜ëŠ” ì£¼ìš” í´ëž˜ìŠ¤ë“¤
+  - Math í´ëž˜ìŠ¤
 ===============================================*/
 
 /*
-¡Û java.lang.Math Å¬·¡½º´Â
+â—‹ java.lang.Math í´ëž˜ìŠ¤ëŠ”
 
-   ¼öÇÐ(Mathmatics)°ú °ü·ÃµÈ À¯¿ëÇÑ ¼Ó¼º°ú ÇÔ¼öµéÀ» Á¦°øÇÏ´Â Å¬·¡½º·Î
-   »ý¼ºÀÚ°¡ ÀÖ±ä ÇÏÁö¸¸... ¡ºprivate¡»À¸·Î ¼±¾ðµÇ¾î ÀÖ±â ¶§¹®¿¡
-   ¿ÜºÎ¿¡¼­ °´Ã¼(ÀÎ½ºÅÏ½º)¸¦ »ý¼ºÇÒ ¼ö ¾ø´Ù.
-   ´Ü, ¸ðµç ¸Þ¼Òµå°¡ ¡ºstatic¡» À¸·Î Á¤ÀÇµÇ¾î ÀÖÀ¸¹Ç·Î
-   °´Ã¼¸¦ »ý¼ºÇÏÁö ¾Ê°í ¹Ù·Î Á¢±ÙÇÏ¿© »ç¿ëÇÏ´Â °ÍÀÌ °¡´ÉÇÏ´Ù.
+   ìˆ˜í•™(Mathmatics)ê³¼ ê´€ë ¨ëœ ìœ ìš©í•œ ì†ì„±ê³¼ í•¨ìˆ˜ë“¤ì„ ì œê³µí•˜ëŠ” í´ëž˜ìŠ¤ë¡œ
+   ìƒì„±ìžê°€ ìžˆê¸´ í•˜ì§€ë§Œ... ã€Žprivateã€ìœ¼ë¡œ ì„ ì–¸ë˜ì–´ ìžˆê¸° ë•Œë¬¸ì—
+   ì™¸ë¶€ì—ì„œ ê°ì²´(ì¸ìŠ¤í„´ìŠ¤)ë¥¼ ìƒì„±í•  ìˆ˜ ì—†ë‹¤.
+   ë‹¨, ëª¨ë“  ë©”ì†Œë“œê°€ ã€Žstaticã€ ìœ¼ë¡œ ì •ì˜ë˜ì–´ ìžˆìœ¼ë¯€ë¡œ
+   ê°ì²´ë¥¼ ìƒì„±í•˜ì§€ ì•Šê³  ë°”ë¡œ ì ‘ê·¼í•˜ì—¬ ì‚¬ìš©í•˜ëŠ” ê²ƒì´ ê°€ëŠ¥í•˜ë‹¤.
 
 
-¡Û java.lang.Math Å¬·¡½ºÀÇ ÁÖ¿ä »ó¼ö ¹× ¸Þ¼Òµå
+â—‹ java.lang.Math í´ëž˜ìŠ¤ì˜ ì£¼ìš” ìƒìˆ˜ ë° ë©”ì†Œë“œ
 
    - public static final double E = 2.71...;
-     : ÀÚ¿¬ ·Î±× »ó¼ö
+     : ìžì—° ë¡œê·¸ ìƒìˆ˜
 
    - public static final double PI = 3.141592...;
-     : ¿øÁÖÀ²(¥ð)	// ¤¾
+     : ì›ì£¼ìœ¨(Ï€)	// ã…Ž
 
    - public static double sin(double a)
    - public static double cos(double a)
    - public static double tan(double a)
-     : sin(a), cos(a), tan(a) °ªÀ» ¹ÝÈ¯ÇÑ´Ù. (»ï°¢ÇÔ¼ö)
+     : sin(a), cos(a), tan(a) ê°’ì„ ë°˜í™˜í•œë‹¤. (ì‚¼ê°í•¨ìˆ˜)
 
    - public static double asin(double a)
    - public static double acos(double a)
    - public static double atan(double a)
-     : asin(a), acos(a), atan(a) °ªÀ» ¹ÝÈ¯ÇÑ´Ù. (»ï°¢ÇÔ¼öÀÇ ¿ªÇÔ¼ö)
+     : asin(a), acos(a), atan(a) ê°’ì„ ë°˜í™˜í•œë‹¤. (ì‚¼ê°í•¨ìˆ˜ì˜ ì—­í•¨ìˆ˜)
 
    - public static double toRadians(double angdeg)
-     : °¢µµ(angdeg)¸¦ ¶óµð¾È(radian)À¸·Î ¹Ù²Ù¾î ¹ÝÈ¯ÇÑ´Ù.
+     : ê°ë„(angdeg)ë¥¼ ë¼ë””ì•ˆ(radian)ìœ¼ë¡œ ë°”ê¾¸ì–´ ë°˜í™˜í•œë‹¤.
    - public static double toDegrees(double angrad)
-     : ¶óµð¾È(angrad)À» °¢µµ(degree)·Î ¹Ù²Ù¾î ¹ÝÈ¯ÇÑ´Ù.
+     : ë¼ë””ì•ˆ(angrad)ì„ ê°ë„(degree)ë¡œ ë°”ê¾¸ì–´ ë°˜í™˜í•œë‹¤.
 
    - public static double exp(double a)
-     : e ÀÇ a ½ÂÀ» ±¸ÇÏ¿© ¹ÝÈ¯ÇÑ´Ù.
+     : e ì˜ a ìŠ¹ì„ êµ¬í•˜ì—¬ ë°˜í™˜í•œë‹¤.
 
    - public static double log(double a)
-     : ·Î±×(log) °ªÀ» ±¸ÇÏ¿© ¹ÝÈ¯ÇÑ´Ù.
+     : ë¡œê·¸(log) ê°’ì„ êµ¬í•˜ì—¬ ë°˜í™˜í•œë‹¤.
 
    - public static double sqrt(double a)
-     : aÀÇ Á¦°ö±ÙÀ» ±¸ÇÏ¿© ¹ÝÈ¯ÇÑ´Ù.
+     : aì˜ ì œê³±ê·¼ì„ êµ¬í•˜ì—¬ ë°˜í™˜í•œë‹¤.
 	
    - public static double ceil(double a)
-     : a º¸´Ù Å©°Å³ª °°Àº Á¤¼ö¸¦ ¹ÝÈ¯ÇÑ´Ù. (¿Ã¸²ÀÇ °³³ä)
+     : a ë³´ë‹¤ í¬ê±°ë‚˜ ê°™ì€ ì •ìˆ˜ë¥¼ ë°˜í™˜í•œë‹¤. (ì˜¬ë¦¼ì˜ ê°œë…)
 
    - public static double floor(double a)
-     : a º¸´Ù ÀÛ°Å³ª °°Àº Á¤¼ö¸¦ ¹ÝÈ¯ÇÑ´Ù. (Àý»èÀÇ °³³ä)
+     : a ë³´ë‹¤ ìž‘ê±°ë‚˜ ê°™ì€ ì •ìˆ˜ë¥¼ ë°˜í™˜í•œë‹¤. (ì ˆì‚­ì˜ ê°œë…)
 
    - public static double pow(double a, double b)
-     : a ÀÇ b ½ÂÀ» ±¸ÇÏ¿© ¹ÝÈ¯ÇÑ´Ù.
+     : a ì˜ b ìŠ¹ì„ êµ¬í•˜ì—¬ ë°˜í™˜í•œë‹¤.
  
    - public static int round(float a)
    - public static long round(double a)
-     : a ¸¦ ¹Ý¿Ã¸²ÇÏ¿© °á°ú°ªÀ» ¹ÝÈ¯ÇÑ´Ù.
+     : a ë¥¼ ë°˜ì˜¬ë¦¼í•˜ì—¬ ê²°ê³¼ê°’ì„ ë°˜í™˜í•œë‹¤.
 
    - public static double random()
-     : 0.0 ~ 1.0 »çÀÌÀÇ ³­¼ö(ÀÓÀÇÀÇ ½Ç¼ö)¸¦ ¹ß»ý½ÃÄÑ ¹ÝÈ¯ÇÑ´Ù.
+     : 0.0 ~ 1.0 ì‚¬ì´ì˜ ë‚œìˆ˜(ìž„ì˜ì˜ ì‹¤ìˆ˜)ë¥¼ ë°œìƒì‹œì¼œ ë°˜í™˜í•œë‹¤.
 */
 
 public class Test145
 {
 	public static void main(String[] args)
 	{
-		System.out.println("¿øÁÖÀ² : " + Math.PI);
-		System.out.println("2ÀÇ Á¦°ö±Ù : " + Math.sqrt(2));
-		//--==>> ¿øÁÖÀ² : 3.141592653589793
-		//--==>> 2ÀÇ Á¦°ö±Ù : 1.4142135623730951
+		System.out.println("ì›ì£¼ìœ¨ : " + Math.PI);
+		System.out.println("2ì˜ ì œê³±ê·¼ : " + Math.sqrt(2));
+		//--==>> ì›ì£¼ìœ¨ : 3.141592653589793
+		//--==>> 2ì˜ ì œê³±ê·¼ : 1.4142135623730951
 		
-		System.out.println("ÆÄÀÌ¿¡ ´ëÇÑ Degree  : " + Math.toDegrees(Math.PI));
-		System.out.println("2ÆÄÀÌ¿¡ ´ëÇÑ Degree : " + Math.toDegrees(2.0 * Math.PI)); 
-		//--==>> ÆÄÀÌ¿¡ ´ëÇÑ Degree  : 180.0
-		//--==>> 2ÆÄÀÌ¿¡ ´ëÇÑ Degree : 360.0
+		System.out.println("íŒŒì´ì— ëŒ€í•œ Degree  : " + Math.toDegrees(Math.PI));
+		System.out.println("2íŒŒì´ì— ëŒ€í•œ Degree : " + Math.toDegrees(2.0 * Math.PI)); 
+		//--==>> íŒŒì´ì— ëŒ€í•œ Degree  : 180.0
+		//--==>> 2íŒŒì´ì— ëŒ€í•œ Degree : 360.0
 
-		// °¢µµ¸¦ ¶óµð¾ÈÀ¸·Î º¯È¯~!!!
+		// ê°ë„ë¥¼ ë¼ë””ì•ˆìœ¼ë¡œ ë³€í™˜~!!!
 		double radian45 = Math.toRadians(45);
 
-		System.out.println("°¢µµ   45 : " + radian45);
-		System.out.println("½ÎÀÎ   45 : " + Math.sin(radian45));
-        System.out.println("ÄÚ½ÎÀÎ 45 : " + Math.cos(radian45));
-        System.out.println("ÅºÁ¨Æ® 45 : " + Math.tan(radian45));
-		//--==>> °¢µµ   45 : 0.7853981633974483
-		//--==>> ½ÎÀÎ   45 : 0.7071067811865475
-		//--==>> ÄÚ½ÎÀÎ 45 : 0.7071067811865476
-		//--==>> ÅºÁ¨Æ® 45 : 0.9999999999999999
+		System.out.println("ê°ë„   45 : " + radian45);
+		System.out.println("ì‹¸ì¸   45 : " + Math.sin(radian45));
+        System.out.println("ì½”ì‹¸ì¸ 45 : " + Math.cos(radian45));
+        System.out.println("íƒ„ì  íŠ¸ 45 : " + Math.tan(radian45));
+		//--==>> ê°ë„   45 : 0.7853981633974483
+		//--==>> ì‹¸ì¸   45 : 0.7071067811865475
+		//--==>> ì½”ì‹¸ì¸ 45 : 0.7071067811865476
+		//--==>> íƒ„ì  íŠ¸ 45 : 0.9999999999999999
 
 
-		System.out.println("·Î±×  25 : " + Math.log(25));
-		//--==>> ·Î±×  25 : 3.2188758248682006
+		System.out.println("ë¡œê·¸  25 : " + Math.log(25));
+		//--==>> ë¡œê·¸  25 : 3.2188758248682006
 
-		System.out.println("2ÀÇ 4½Â  : " + Math.pow(2,4));
-		//--==>> 2ÀÇ 4½Â  : 16.0
+		System.out.println("2ì˜ 4ìŠ¹  : " + Math.pow(2,4));
+		//--==>> 2ì˜ 4ìŠ¹  : 16.0
 
-		System.out.println("0.0 ~ 1.0 »çÀÌÀÇ ³­¼ö : " + Math.random());
-		//--==>> 0.0 ~ 1.0 »çÀÌÀÇ ³­¼ö : 0.02128153528898369
-		//       0.0 ~ 1.0 »çÀÌÀÇ ³­¼ö : 0.3318488358519186
-		//       0.0 ~ 1.0 »çÀÌÀÇ ³­¼ö : 0.6630016263624716
-		//       0.0 ~ 1.0 »çÀÌÀÇ ³­¼ö : 0.08492398281472902
-		//       0.0 ~ 1.0 »çÀÌÀÇ ³­¼ö : 0.33446714335559813
+		System.out.println("0.0 ~ 1.0 ì‚¬ì´ì˜ ë‚œìˆ˜ : " + Math.random());
+		//--==>> 0.0 ~ 1.0 ì‚¬ì´ì˜ ë‚œìˆ˜ : 0.02128153528898369
+		//       0.0 ~ 1.0 ì‚¬ì´ì˜ ë‚œìˆ˜ : 0.3318488358519186
+		//       0.0 ~ 1.0 ì‚¬ì´ì˜ ë‚œìˆ˜ : 0.6630016263624716
+		//       0.0 ~ 1.0 ì‚¬ì´ì˜ ë‚œìˆ˜ : 0.08492398281472902
+		//       0.0 ~ 1.0 ì‚¬ì´ì˜ ë‚œìˆ˜ : 0.33446714335559813
 	}
 }

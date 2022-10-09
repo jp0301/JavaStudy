@@ -1,8 +1,8 @@
 /*==============================================
-  ¡á¡á¡á ¿¹¿Ü Ã³¸®(Exception Handling) ¡á¡á¡á
+  â– â– â–  ì˜ˆì™¸ ì²˜ë¦¬(Exception Handling) â– â– â– 
 ===============================================*/
 
-// ¿¹¿Ü ´Ù½Ã ´øÁö±â
+// ì˜ˆì™¸ ë‹¤ì‹œ ë˜ì§€ê¸°
 
 
 public class Test152
@@ -13,12 +13,12 @@ public class Test152
 
 		try
 		{
-			int a = ob.getValue(-2);	// ¨î ¿¹¿Ü ¹ß»ı
+			int a = ob.getValue(-2);	// â‘§ ì˜ˆì™¸ ë°œìƒ
 			System.out.println("a : " + a);
 		}
-		catch (Exception e)		// ¨ï ¿¹¿Ü Àâ¾Æ³»±â
+		catch (Exception e)		// â‘¨ ì˜ˆì™¸ ì¡ì•„ë‚´ê¸°
 		{
-			// ¨ğ Àâ¾Æ³½ ¿¹¿Ü¿¡ ´ëÇÑ Ã³¸®
+			// â‘© ì¡ì•„ë‚¸ ì˜ˆì™¸ì— ëŒ€í•œ ì²˜ë¦¬
 			System.out.println("printStackTrace....................");
 			e.printStackTrace();
 		}
@@ -27,13 +27,13 @@ public class Test152
 
 
 
-								// ¨è ¹ß»ıÇÑ ¿¹¿Ü ´øÁö±â~!!!
+								// â‘¡ ë°œìƒí•œ ì˜ˆì™¸ ë˜ì§€ê¸°~!!!
 	public int getData(int data) throws Exception
 	{
 		if(data < 0)
 		{
-			// ¨ç ¿¹¿Ü ¹ß»ı
-			throw new Exception("data °¡ 0º¸´Ù ÀÛ½À´Ï´Ù.");
+			// â‘  ì˜ˆì™¸ ë°œìƒ
+			throw new Exception("data ê°€ 0ë³´ë‹¤ ì‘ìŠµë‹ˆë‹¤.");
 		}
 		return data + 10;
 	}
@@ -41,22 +41,22 @@ public class Test152
 
 
 					
-									// ¨í Àâ¾Æ³½ ¿¹¿Ü¸¦ ´Ù½Ã ´øÁö´Â °ÍÀÌ °¡´ÉÇÏµµ·Ï Ã³¸®
+									// â‘¦ ì¡ì•„ë‚¸ ì˜ˆì™¸ë¥¼ ë‹¤ì‹œ ë˜ì§€ëŠ” ê²ƒì´ ê°€ëŠ¥í•˜ë„ë¡ ì²˜ë¦¬
 	public int getValue(int value) throws Exception
 	{
 		int a = 0;
 		try
 		{
-			a = getData(-2); // ¨é ¿¹¿Ü ¹ß»ı
+			a = getData(-2); // â‘¢ ì˜ˆì™¸ ë°œìƒ
 		}
-		catch (Exception e)	// ¨ê ¿¹¿Ü Àâ¾Æ³»±â
+		catch (Exception e)	// â‘£ ì˜ˆì™¸ ì¡ì•„ë‚´ê¸°
 		{
-			// ¨ë Àâ¾Æ³½ ¿¹¿Ü¿¡ ´ëÇÑ Ã³¸®
+			// â‘¤ ì¡ì•„ë‚¸ ì˜ˆì™¸ì— ëŒ€í•œ ì²˜ë¦¬
 			System.out.println("printStackTrace.........");\
 			e.printStackTrace;
 
 			// check~!!!
-			// ¨ì Àâ¾Æ¼­ Ã³¸®ÇÑ ¿¹¿Ü¸¦ ´Ù½Ã ´øÁö±â
+			// â‘¥ ì¡ì•„ì„œ ì²˜ë¦¬í•œ ì˜ˆì™¸ë¥¼ ë‹¤ì‹œ ë˜ì§€ê¸°
 			throw e;
 		}
 

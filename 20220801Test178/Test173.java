@@ -1,6 +1,6 @@
 /*=======================================
-  ¡á¡á¡á ÀÚ¹ÙÀÇ ±âº» ÀÔÃâ·Â(I/O) ¡á¡á¡á
-  - OutputStream ½Ç½À
+  â– â– â–  ìžë°”ì˜ ê¸°ë³¸ ìž…ì¶œë ¥(I/O) â– â– â– 
+  - OutputStream ì‹¤ìŠµ
 =========================================*/
 
 import java.io.OutputStream;
@@ -10,11 +10,11 @@ public class Test173
 {
 	public static void main(String[] args) throws IOException
 	{
-		// ¡Ø System.in : ÀÚ¹ÙÀÇ Ç¥ÁØ ÀÔ·Â ½ºÆ®¸²
-		//    System.out : ÀÚ¹ÙÀÇ Ç¥ÁØ Ãâ·Â ½ºÆ®¸²
+		// â€» System.in : ìžë°”ì˜ í‘œì¤€ ìž…ë ¥ ìŠ¤íŠ¸ë¦¼
+		//    System.out : ìžë°”ì˜ í‘œì¤€ ì¶œë ¥ ìŠ¤íŠ¸ë¦¼
 		OutputStream out = System.out;
 
-		// ¹è¿­ ±¸¼º
+		// ë°°ì—´ êµ¬ì„±
 		byte[] ch = new byte[3];
 
 		ch[0] = 65;		// A
@@ -28,19 +28,19 @@ public class Test173
 		*/
 
 
-		out.write(ch);	//-- ¹ÛÀ¸·Î ³»º¸³¾ µ¥ÀÌÅÍ(º¯¼ö)¸¦ ½ºÆ®¸²(¹°ÁÙ±â)¿¡ ±â·Ï
+		out.write(ch);	//-- ë°–ìœ¼ë¡œ ë‚´ë³´ë‚¼ ë°ì´í„°(ë³€ìˆ˜)ë¥¼ ìŠ¤íŠ¸ë¦¼(ë¬¼ì¤„ê¸°)ì— ê¸°ë¡
 
-		out.flush();	//-- ±â·ÏµÈ ½ºÆ®¸²À» ³»º¸³»´Â(¹Ð¾î³»´Â) ±â´ÉÀ» ¼öÇà
-						//   Áö±ÝÀº Buffer ¸¦ È°¿ëÇÏÁö ¾Ê°í ÀÖ´Â »óÈ²ÀÌ±â ¶§¹®¿¡
-						//   »ý·«ÀÌ °¡´ÉÇÑ ÄÚµå.
-						//   (Buffered µÇ¾î ÀÖ´Â ½ºÆ®¸²(stream)ÀÏ °æ¿ì »ý·« ºÒ°¡)
+		out.flush();	//-- ê¸°ë¡ëœ ìŠ¤íŠ¸ë¦¼ì„ ë‚´ë³´ë‚´ëŠ”(ë°€ì–´ë‚´ëŠ”) ê¸°ëŠ¥ì„ ìˆ˜í–‰
+						//   ì§€ê¸ˆì€ Buffer ë¥¼ í™œìš©í•˜ì§€ ì•Šê³  ìžˆëŠ” ìƒí™©ì´ê¸° ë•Œë¬¸ì—
+						//   ìƒëžµì´ ê°€ëŠ¥í•œ ì½”ë“œ.
+						//   (Buffered ë˜ì–´ ìžˆëŠ” ìŠ¤íŠ¸ë¦¼(stream)ì¼ ê²½ìš° ìƒëžµ ë¶ˆê°€)
 		
-		out.close();	//-- Ãâ·Â ½ºÆ®¸²(¹°ÁÙ±â)¿¡ ´ëÇÑ ¸®¼Ò½º ¹Ý³³.
-						//   (out ½ºÆ®¸²À»(¼öµµ²ÀÁö¸¦) Àá°¡¹ö¸° »óÈ²)
+		out.close();	//-- ì¶œë ¥ ìŠ¤íŠ¸ë¦¼(ë¬¼ì¤„ê¸°)ì— ëŒ€í•œ ë¦¬ì†ŒìŠ¤ ë°˜ë‚©.
+						//   (out ìŠ¤íŠ¸ë¦¼ì„(ìˆ˜ë„ê¼­ì§€ë¥¼) ìž ê°€ë²„ë¦° ìƒí™©)
 
-		System.out.println("Àý´ëÀûÀÎ ½Å·Ú¸¦ °®°í ÀÖ´Â ±¸¹®...");
-		//-- ¡ºout.close()¡»¸¦ ÀÛ¼ºÇÑ ÀÌÈÄ Ãâ·ÂµÇÁö ¾Ê´Â ±¸¹®.
-		//    Ãâ·ÂµÇ´Â ½ºÆ®¸²(¹°ÁÙ±â)À» ´Ý¾Ò±â ¶§¹®¿¡...
+		System.out.println("ì ˆëŒ€ì ì¸ ì‹ ë¢°ë¥¼ ê°–ê³  ìžˆëŠ” êµ¬ë¬¸...");
+		//-- ã€Žout.close()ã€ë¥¼ ìž‘ì„±í•œ ì´í›„ ì¶œë ¥ë˜ì§€ ì•ŠëŠ” êµ¬ë¬¸.
+		//    ì¶œë ¥ë˜ëŠ” ìŠ¤íŠ¸ë¦¼(ë¬¼ì¤„ê¸°)ì„ ë‹«ì•˜ê¸° ë•Œë¬¸ì—...
 
 
 		

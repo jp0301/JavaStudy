@@ -1,18 +1,18 @@
 /*==============================================
-  ¡á¡á¡á ÀÚ¹ÙÀÇ ÁÖ¿ä(Áß¿ä) Å¬·¡½º ¡á¡á¡á
-  - ÀÚ¹Ù¿¡¼­ ±âº»ÀûÀ¸·Î Á¦°øÇÏ´Â ÁÖ¿ä Å¬·¡½ºµé
-  - Calendar Å¬·¡½º
+  â– â– â–  ìžë°”ì˜ ì£¼ìš”(ì¤‘ìš”) í´ëž˜ìŠ¤ â– â– â– 
+  - ìžë°”ì—ì„œ ê¸°ë³¸ì ìœ¼ë¡œ ì œê³µí•˜ëŠ” ì£¼ìš” í´ëž˜ìŠ¤ë“¤
+  - Calendar í´ëž˜ìŠ¤
 ===============================================*/
 
 /*
-¡Ø Calendar Å¬·¡½º´Â Ãß»ó Å¬·¡½ºÀÌ±â ¶§¹®¿¡ °´Ã¼¸¦ »ý¼ºÇÒ ¼ö ¾ø´Ù.
-   (Ãß»ó Å¬·¡½º : ¹Ì¿Ï¼ºµÈ Å¬·¡½º)
+â€» Calendar í´ëž˜ìŠ¤ëŠ” ì¶”ìƒ í´ëž˜ìŠ¤ì´ê¸° ë•Œë¬¸ì— ê°ì²´ë¥¼ ìƒì„±í•  ìˆ˜ ì—†ë‹¤.
+   (ì¶”ìƒ í´ëž˜ìŠ¤ : ë¯¸ì™„ì„±ëœ í´ëž˜ìŠ¤)
 
    Calendar ob = new Calendar();
-   ¡æ ÀÌ¿Í °°Àº ±¸¹®À» ÅëÇØ ÀÎ½ºÅÏ½º »ý¼º ºÒ°¡.
+   â†’ ì´ì™€ ê°™ì€ êµ¬ë¬¸ì„ í†µí•´ ì¸ìŠ¤í„´ìŠ¤ ìƒì„± ë¶ˆê°€.
 
 
-¡Û Calendar Å¬·¡½º °´Ã¼(ÀÎ½ºÅÏ½º)¸¦ »ý¼ºÇÒ ¼ö ÀÖ´Â ¹æ¹ý
+â—‹ Calendar í´ëž˜ìŠ¤ ê°ì²´(ì¸ìŠ¤í„´ìŠ¤)ë¥¼ ìƒì„±í•  ìˆ˜ ìžˆëŠ” ë°©ë²•
 
    1. Calendar ob1 = Calendar.getInstance();
 
@@ -20,11 +20,11 @@
 
    3. GregorianCalendar ob3 = new GregorianCalendar();
 
-   (¡Ø GregorianCalendar : Calendar Å¬·¡½ºÀÇ ÇÏÀ§ Å¬·¡½º), »ó¼Ó, ¾÷Ä³½ºÆÃ
+   (â€» GregorianCalendar : Calendar í´ëž˜ìŠ¤ì˜ í•˜ìœ„ í´ëž˜ìŠ¤), ìƒì†, ì—…ìºìŠ¤íŒ…
 
 */
 
-// ¿¬, ¿ù, ÀÏ, ¿äÀÏÀ» Calendar °´Ã¼·ÎºÎÅÍ °¡Á®¿Í¼­ Ãâ·Â
+// ì—°, ì›”, ì¼, ìš”ì¼ì„ Calendar ê°ì²´ë¡œë¶€í„° ê°€ì ¸ì™€ì„œ ì¶œë ¥
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
@@ -33,18 +33,18 @@ public class Test142
 {
 	public static void main(String[] args)
 	{
-		// Calendar Å¬·¡½º ±â¹Ý ÀÎ½ºÅÏ½º »ý¼º
+		// Calendar í´ëž˜ìŠ¤ ê¸°ë°˜ ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
 		//Calendar ob = new Calendar(); -- (X)
 		Calendar rightNow = Calendar.getInstance();
 
-		// »ý¼ºµÈ ´Þ·Â(Calendar) ÀÎ½ºÅÏ½º¸¦  ÅëÇØ
-		// ³¯Â¥ °ü·Ã Á¤º¸¸¦ ¾ò¾î³¾ ¼ö ÀÖ´Â ¸Þ¼Òµå ¡æ ¡ºget()¡»
+		// ìƒì„±ëœ ë‹¬ë ¥(Calendar) ì¸ìŠ¤í„´ìŠ¤ë¥¼  í†µí•´
+		// ë‚ ì§œ ê´€ë ¨ ì •ë³´ë¥¼ ì–»ì–´ë‚¼ ìˆ˜ ìžˆëŠ” ë©”ì†Œë“œ â†’ ã€Žget()ã€
 
-		int y = rightNow.get(Calendar.YEAR); // static final(»ó¼ö º¯¼ö)
+		int y = rightNow.get(Calendar.YEAR); // static final(ìƒìˆ˜ ë³€ìˆ˜)
 		System.out.println("y : " + y);
 		//--==>> y : 2022
 
-		int m = rightNow.get(Calendar.MONTH) + 1; //-- ¡º+1¡» check~!!!
+		int m = rightNow.get(Calendar.MONTH) + 1; //-- ã€Ž+1ã€ check~!!!
 		System.out.println("m : " + m);
 		//--==>> m : 7
 
@@ -56,14 +56,14 @@ public class Test142
 		System.out.println("w : " + w);
 		//--==>> w : 2
 		
-		// Å×½ºÆ®
-		System.out.println(Calendar.SUNDAY);	//--==>> 1 ¡æ ÀÏ¿äÀÏ
-		System.out.println(Calendar.MONDAY);	//--==>> 2 ¡æ ¿ù¿äÀÏ
-		System.out.println(Calendar.TUESDAY);	//--==>> 3 ¡æ È­¿äÀÏ
-		System.out.println(Calendar.WEDNESDAY);	//--==>> 4 ¡æ ¼ö¿äÀÏ
-		System.out.println(Calendar.THURSDAY);	//--==>> 5 ¡æ ¸ñ¿äÀÏ
-		System.out.println(Calendar.FRIDAY);	//--==>> 6 ¡æ ±Ý¿äÀÏ
-		System.out.println(Calendar.SATURDAY);	//--==>> 7 ¡æ Åä¿äÀÏ
+		// í…ŒìŠ¤íŠ¸
+		System.out.println(Calendar.SUNDAY);	//--==>> 1 â†’ ì¼ìš”ì¼
+		System.out.println(Calendar.MONDAY);	//--==>> 2 â†’ ì›”ìš”ì¼
+		System.out.println(Calendar.TUESDAY);	//--==>> 3 â†’ í™”ìš”ì¼
+		System.out.println(Calendar.WEDNESDAY);	//--==>> 4 â†’ ìˆ˜ìš”ì¼
+		System.out.println(Calendar.THURSDAY);	//--==>> 5 â†’ ëª©ìš”ì¼
+		System.out.println(Calendar.FRIDAY);	//--==>> 6 â†’ ê¸ˆìš”ì¼
+		System.out.println(Calendar.SATURDAY);	//--==>> 7 â†’ í† ìš”ì¼
 
 
 		System.out.println(y + "-" + m + "-" + d + " "  + w);
@@ -73,47 +73,47 @@ public class Test142
 		switch(w)
 		{
 			/*
-			case Calendar.SUNDAY: week = "ÀÏ¿äÀÏ"; break;
-			case Calendar.MONDAY: week = "¿ù¿äÀÏ"; break;
-			case Calendar.TUESDAY: week = "È­¿äÀÏ"; break;
-			case Calendar.WEDNESDAY: week = "¼ö¿äÀÏ"; break;
-			case Calendar.THURSDAY: week = "¸ñ¿äÀÏ"; break;
-			case Calendar.FRIDAY: week = "±Ý¿äÀÏ"; break;
-			case Calendar.SATURDAY: week = "Åä¿äÀÏ"; break;
+			case Calendar.SUNDAY: week = "ì¼ìš”ì¼"; break;
+			case Calendar.MONDAY: week = "ì›”ìš”ì¼"; break;
+			case Calendar.TUESDAY: week = "í™”ìš”ì¼"; break;
+			case Calendar.WEDNESDAY: week = "ìˆ˜ìš”ì¼"; break;
+			case Calendar.THURSDAY: week = "ëª©ìš”ì¼"; break;
+			case Calendar.FRIDAY: week = "ê¸ˆìš”ì¼"; break;
+			case Calendar.SATURDAY: week = "í† ìš”ì¼"; break;
 			*/
-			case 1: week = "ÀÏ¿äÀÏ"; break;
-			case 2: week = "¿ù¿äÀÏ"; break;
-			case 3: week = "È­¿äÀÏ"; break;
-			case 4: week = "¼ö¿äÀÏ"; break;
-			case 5: week = "¸ñ¿äÀÏ"; break;
-			case 6: week = "±Ý¿äÀÏ"; break;
-			case 7: week = "Åä¿äÀÏ"; break;
+			case 1: week = "ì¼ìš”ì¼"; break;
+			case 2: week = "ì›”ìš”ì¼"; break;
+			case 3: week = "í™”ìš”ì¼"; break;
+			case 4: week = "ìˆ˜ìš”ì¼"; break;
+			case 5: week = "ëª©ìš”ì¼"; break;
+			case 6: week = "ê¸ˆìš”ì¼"; break;
+			case 7: week = "í† ìš”ì¼"; break;
 		}
 		
 
 		System.out.println(y + "-" + m + "-" + d + " "  + week);
-		//--==>> 2022-7-25 ¿ù¿äÀÏ
+		//--==>> 2022-7-25 ì›”ìš”ì¼
 
 		/////////////////////////////////////////////////////////////////////////
 
-		System.out.println(); // °³Çà
+		System.out.println(); // ê°œí–‰
 		
 		Calendar rightNow2 = new GregorianCalendar();
 
-		String[] week2 = {"ÀÏ¿äÀÏ", "¿ù¿äÀÏ", "È­¿äÀÏ", "¼ö¿äÀÏ", "¸ñ¿äÀÏ", "±Ý¿äÀÏ" ,"Åä¿äÀÏ"};
+		String[] week2 = {"ì¼ìš”ì¼", "ì›”ìš”ì¼", "í™”ìš”ì¼", "ìˆ˜ìš”ì¼", "ëª©ìš”ì¼", "ê¸ˆìš”ì¼" ,"í† ìš”ì¼"};
 
-		// ´Þ·ÂÀÇ ³¯Â¥ ¼¼ÆÃ ¡æ ¡ºset()¡»¸Þ¼Òµå È°¿ë
-		rightNow2.set(2023, 0, 16);			// 2023³â 1¿ù 16ÀÏ check~!!!
+		// ë‹¬ë ¥ì˜ ë‚ ì§œ ì„¸íŒ… â†’ ã€Žset()ã€ë©”ì†Œë“œ í™œìš©
+		rightNow2.set(2023, 0, 16);			// 2023ë…„ 1ì›” 16ì¼ check~!!!
 
 		System.out.println(rightNow2.get(Calendar.DAY_OF_WEEK));
 		//--==>> 5
 
 		System.out.println(week2[rightNow2.get(Calendar.DAY_OF_WEEK)-1]);
-		//--==>> ¿ù¿äÀÏ
+		//--==>> ì›”ìš”ì¼
 	}
 }
 
-// ½ÇÇà °á°ú
+// ì‹¤í–‰ ê²°ê³¼
 /*
 y : 2022
 m : 7
@@ -127,8 +127,8 @@ w : 2
 6
 7
 2022-7-25 2
-2022-7-25 ¿ù¿äÀÏ
+2022-7-25 ì›”ìš”ì¼
 
 2
-¿ù¿äÀÏ
+ì›”ìš”ì¼
 */

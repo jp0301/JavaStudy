@@ -1,52 +1,52 @@
 /*==============================
-  ¡á¡á¡á Å¬·¡½º °í±Ş ¡á¡á¡á
-   - ÀÎÅÍÆäÀÌ½º(Interface)
+  â– â– â–  í´ë˜ìŠ¤ ê³ ê¸‰ â– â– â– 
+   - ì¸í„°í˜ì´ìŠ¤(Interface)
 ===============================*/
 
-// ¡Û ½Ç½À ¹®Á¦
-//    ¼ºÀû Ã³¸® ÇÁ·Î±×·¥À» ±¸ÇöÇÑ´Ù.
-//    ´Ü, ÀÎÅÍÆäÀÌ½º¸¦ È°¿ëÇÒ ¼ö ÀÖµµ·Ï ÇÑ´Ù.
+// â—‹ ì‹¤ìŠµ ë¬¸ì œ
+//    ì„±ì  ì²˜ë¦¬ í”„ë¡œê·¸ë¨ì„ êµ¬í˜„í•œë‹¤.
+//    ë‹¨, ì¸í„°í˜ì´ìŠ¤ë¥¼ í™œìš©í•  ìˆ˜ ìˆë„ë¡ í•œë‹¤.
 
 
-// ½ÇÇà ¿¹)
-// ÀÎ¿ø ¼ö ÀÔ·Â(1~10) : 11
-// ÀÎ¿ø ¼ö ÀÔ·Â(1~10) : 0
-// ÀÎ¿ø ¼ö ÀÔ·Â(1~10) : 2
+// ì‹¤í–‰ ì˜ˆ)
+// ì¸ì› ìˆ˜ ì…ë ¥(1~10) : 11
+// ì¸ì› ìˆ˜ ì…ë ¥(1~10) : 0
+// ì¸ì› ìˆ˜ ì…ë ¥(1~10) : 2
 
-// 1¹øÂ° ÇĞ»ıÀÇ ÇĞ¹ø ÀÌ¸§ ÀÔ·Â(°ø¹é ±¸ºĞ) : 2207123 ÃÖÃÖÃÖ
-// ±¹¾î ¿µ¾î ¼öÇĞ Á¡¼ö ÀÔ·Â   (°ø¹é ±¸ºĞ) : 90 100 85
-// 2¹øÂ° ÇĞ»ıÀÇ ÇĞ¹ø ÀÌ¸§ ÀÔ·Â(°ø¹é ±¸ºĞ) : 2208225 ¹Ú¹Ú¹Ú
-// ±¹¾î ¿µ¾î ¼öÇĞ Á¡¼ö ÀÔ·Â   (°ø¹é ±¸ºĞ) : 85 70 65
+// 1ë²ˆì§¸ í•™ìƒì˜ í•™ë²ˆ ì´ë¦„ ì…ë ¥(ê³µë°± êµ¬ë¶„) : 2207123 ìµœìµœìµœ
+// êµ­ì–´ ì˜ì–´ ìˆ˜í•™ ì ìˆ˜ ì…ë ¥   (ê³µë°± êµ¬ë¶„) : 90 100 85
+// 2ë²ˆì§¸ í•™ìƒì˜ í•™ë²ˆ ì´ë¦„ ì…ë ¥(ê³µë°± êµ¬ë¶„) : 2208225 ë°•ë°•ë°•
+// êµ­ì–´ ì˜ì–´ ìˆ˜í•™ ì ìˆ˜ ì…ë ¥   (ê³µë°± êµ¬ë¶„) : 85 70 65
 
-// 2207123 ÃÖÃÖÃÖ    90 100 85    xxx xx.xx
-//                   ¼ö  ¼ö ¿ì
-// 2208225 ¹Ú¹Ú¹Ú    85 70 65     xxx xx.xx
-//                   ¿ì ¹Ì ¾ç
+// 2207123 ìµœìµœìµœ    90 100 85    xxx xx.xx
+//                   ìˆ˜  ìˆ˜ ìš°
+// 2208225 ë°•ë°•ë°•    85 70 65     xxx xx.xx
+//                   ìš° ë¯¸ ì–‘
 
-// °è¼ÓÇÏ·Á¸é ¾Æ¹« Å°³ª ´©¸£¼¼¿ä...
+// ê³„ì†í•˜ë ¤ë©´ ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ì„¸ìš”...
 
 
 import java.util.Scanner;
 import java.io.IOException;
 
-// ¼Ó¼º¸¸ Á¸ÀçÇÏ´Â Å¬·¡½º ¡æ ÀÚ·áÇü È°¿ë
+// ì†ì„±ë§Œ ì¡´ì¬í•˜ëŠ” í´ë˜ìŠ¤ â†’ ìë£Œí˜• í™œìš©
 class Record
 {
-	String hak, name;		//-- ÇĞ¹ø, ÀÌ¸§
-	int kor, eng, mat;		//-- ±¹¾î, ¿µ¾î, ¼öÇĞ
-	int tot;				//-- ÃÑÁ¡
-	double avg;				//-- Æò±Õ
+	String hak, name;		//-- í•™ë²ˆ, ì´ë¦„
+	int kor, eng, mat;		//-- êµ­ì–´, ì˜ì–´, ìˆ˜í•™
+	int tot;				//-- ì´ì 
+	double avg;				//-- í‰ê· 
 }
 
 
 interface Sungjuk
 {
-	public void set();		//-- ÀÎ¿ø ¼¼ÆÃ
-	public void input();	//-- µ¥ÀÌÅÍ ÀÔ·Â
-	public void print();	//-- °á°ú Ãâ·Â
+	public void set();		//-- ì¸ì› ì„¸íŒ…
+	public void input();	//-- ë°ì´í„° ì…ë ¥
+	public void print();	//-- ê²°ê³¼ ì¶œë ¥
 }
 
-// ¹®Á¦ ÇØ°á °úÁ¤¿¡¼­ ¼³°èÇØ¾ß ÇÒ Å¬·¡½º ¡æ Sungjuk ÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇÏ´Â Å¬·¡½º
+// ë¬¸ì œ í•´ê²° ê³¼ì •ì—ì„œ ì„¤ê³„í•´ì•¼ í•  í´ë˜ìŠ¤ â†’ Sungjuk ì¸í„°í˜ì´ìŠ¤ë¥¼ êµ¬í˜„í•˜ëŠ” í´ë˜ìŠ¤
 class SungjukImpl implements Sungjuk
 {
 	private int inwon;
@@ -56,14 +56,14 @@ class SungjukImpl implements Sungjuk
 	char strRank[][];
 
 
-	// ³»ºÎÀûÀ¸·Î µî±Ş¿¡ ´ëÇÑ ÆÇÁ¤À» ¼öÇàÇÒ ¸Ş¼Òµå
+	// ë‚´ë¶€ì ìœ¼ë¡œ ë“±ê¸‰ì— ëŒ€í•œ íŒì •ì„ ìˆ˜í–‰í•  ë©”ì†Œë“œ
 	@Override
 	public void set()
 	{
 		Scanner sc = new Scanner(System.in);
 		do
 		{
-			System.out.print("ÀÎ¿ø ¼ö ÀÔ·Â(1~10) : ");
+			System.out.print("ì¸ì› ìˆ˜ ì…ë ¥(1~10) : ");
 			inwon = sc.nextInt();
 		}
 		while (inwon < 1 || inwon > 10);
@@ -85,11 +85,11 @@ class SungjukImpl implements Sungjuk
 		{
 			rec[i] = new Record();
 				
-			System.out.printf("%d¹øÂ° ÇĞ»ıÀÇ ÇĞ¹ø ÀÌ¸§ ÀÔ·Â(°ø¹é ±¸ºĞ) : ", (i+1));
+			System.out.printf("%dë²ˆì§¸ í•™ìƒì˜ í•™ë²ˆ ì´ë¦„ ì…ë ¥(ê³µë°± êµ¬ë¶„) : ", (i+1));
 			rec[i].hak = sc.next();
 			rec[i].name = sc.next();
 
-			System.out.printf("±¹¾î ¿µ¾î ¼öÇĞ Á¡¼ö ÀÔ·Â   (°ø¹é ±¸ºĞ) : ");
+			System.out.printf("êµ­ì–´ ì˜ì–´ ìˆ˜í•™ ì ìˆ˜ ì…ë ¥   (ê³µë°± êµ¬ë¶„) : ");
 			rec[i].kor = sc.nextInt();
 			rec[i].eng = sc.nextInt();
 			rec[i].mat = sc.nextInt();
@@ -102,22 +102,22 @@ class SungjukImpl implements Sungjuk
 			rec[i].avg = rec[i].tot / 3.0; 
 		}
 
-		System.out.println(); // °³Çà
+		System.out.println(); // ê°œí–‰
 
 		for(int i=0; i < inwon; i++)
 		{
 			for(int j=0; j < 3; j++)
 			{
 				if(score[i][j] == 100 || score[i][j] >= 90)
-					strRank[i][j] = '¼ö';
+					strRank[i][j] = 'ìˆ˜';
 				else if(score[i][j] >= 80)
-					strRank[i][j] = '¿ì';
+					strRank[i][j] = 'ìš°';
                 else if(score[i][j] >= 70)
-					strRank[i][j] = '¹Ì';
+					strRank[i][j] = 'ë¯¸';
                 else if(score[i][j] >= 60)
-					strRank[i][j] = '¾ç';
+					strRank[i][j] = 'ì–‘';
                 else
-					strRank[i][j] = '°¡';
+					strRank[i][j] = 'ê°€';
                 
 			}
 		}
@@ -141,7 +141,7 @@ class SungjukImpl implements Sungjuk
 
 
 
-// main() ¸Ş¼Òµå¸¦ Æ÷ÇÔÇÏ´Â ¿ÜºÎÀÇ ´Ù¸¥ Å¬·¡½º
+// main() ë©”ì†Œë“œë¥¼ í¬í•¨í•˜ëŠ” ì™¸ë¶€ì˜ ë‹¤ë¥¸ í´ë˜ìŠ¤
 public class Test121
 {
 	public static void main(String[] args) throws IOException
@@ -149,7 +149,7 @@ public class Test121
 
 		Sungjuk ob;
 
-		// ¹®Á¦ ÇØ°á°úÁ¤¿¡¼­ ÀÛ¼ºÇØ¾ß ÇÒ ob ±¸¼º ¹× °´Ã¼ »ı¼º
+		// ë¬¸ì œ í•´ê²°ê³¼ì •ì—ì„œ ì‘ì„±í•´ì•¼ í•  ob êµ¬ì„± ë° ê°ì²´ ìƒì„±
 		ob = new SungjukImpl();
 
 		ob.set();

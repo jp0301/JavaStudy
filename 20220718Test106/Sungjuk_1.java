@@ -1,104 +1,104 @@
 /*=======================================
-      ¡á¡á¡á Å¬·¡½º¿Í ÀÎ½ºÅÏ½º ¡á¡á¡á
-	  - Å¬·¡½º¿Í ÀÎ½ºÅÏ½º È°¿ë
+      â– â– â–  í´ëž˜ìŠ¤ì™€ ì¸ìŠ¤í„´ìŠ¤ â– â– â– 
+	  - í´ëž˜ìŠ¤ì™€ ì¸ìŠ¤í„´ìŠ¤ í™œìš©
   ======================================*/
 
-// 2. Sungjuk Å¬·¡½º
-//    - ÀÎ¿ø ¼ö¸¦ ÀÔ·Â¹Þ¾Æ, ÀÔ·Â¹ÞÀº ÀÎ¿ø ¼ö ¸¸Å­
-//      ÀÌ¸§, ±¹¾îÁ¡¼ö, ¿µ¾îÁ¡¼ö,  ¼öÇÐÁ¡¼ö¸¦ ÀÔ·Â¹Þ°í
-//      ÃÑÁ¡°ú Æò±ÕÀ» »êÃâÇÏ´Â Å¬·¡½º·Î ¼³°èÇÒ °Í
-//      ¡¤¼Ó¼º : ÀÎ¿ø¼ö, Record Å¸ÀÔÀÇ ¹è¿­                    (Record[] recArr;)
-//      ¡¤±â´É : ÀÎ¿ø¼ö ÀÔ·Â, »ó¼¼ µ¥ÀÌÅÍ ÀÔ·Â, ÃÑÁ¡ ¹× Æò±Õ ¿¬»ê, °á°ú Ãâ·Â
+// 2. Sungjuk í´ëž˜ìŠ¤
+//    - ì¸ì› ìˆ˜ë¥¼ ìž…ë ¥ë°›ì•„, ìž…ë ¥ë°›ì€ ì¸ì› ìˆ˜ ë§Œí¼
+//      ì´ë¦„, êµ­ì–´ì ìˆ˜, ì˜ì–´ì ìˆ˜,  ìˆ˜í•™ì ìˆ˜ë¥¼ ìž…ë ¥ë°›ê³ 
+//      ì´ì ê³¼ í‰ê· ì„ ì‚°ì¶œí•˜ëŠ” í´ëž˜ìŠ¤ë¡œ ì„¤ê³„í•  ê²ƒ
+//      Â·ì†ì„± : ì¸ì›ìˆ˜, Record íƒ€ìž…ì˜ ë°°ì—´                    (Record[] recArr;)
+//      Â·ê¸°ëŠ¥ : ì¸ì›ìˆ˜ ìž…ë ¥, ìƒì„¸ ë°ì´í„° ìž…ë ¥, ì´ì  ë° í‰ê·  ì—°ì‚°, ê²°ê³¼ ì¶œë ¥
 
 import java.util.Scanner;
 
 public class Sungjuk_1
 {
-	// ÁÖ¿ä ¼Ó¼º ±¸¼º
-	int inwon;			//-- ÀÎ¿ø ¼ö
-	Record_1[] rec;		//-- Record ¹è¿­(ÇÐ»ý ÇÑ ¸í ´ç Record ¹è¿­ ¹æ ÇÑ °³ È°¿ë)
-						//   Record ¸¦ ±â¹ÝÀ¸·Î »ý¼ºµÈ °´Ã¼¸¸ ´ã¾Æ³¾ ¼ö ÀÖ´Â ¹è¿­
+	// ì£¼ìš” ì†ì„± êµ¬ì„±
+	int inwon;			//-- ì¸ì› ìˆ˜
+	Record_1[] rec;		//-- Record ë°°ì—´(í•™ìƒ í•œ ëª… ë‹¹ Record ë°°ì—´ ë°© í•œ ê°œ í™œìš©)
+						//   Record ë¥¼ ê¸°ë°˜ìœ¼ë¡œ ìƒì„±ëœ ê°ì²´ë§Œ ë‹´ì•„ë‚¼ ìˆ˜ ìžˆëŠ” ë°°ì—´
 	
 
 
-	// ÁÖ¿ä ¸Þ¼Òµå Á¤ÀÇ(±â´É ±¸¼º)
-	// ¨ç ÀÎ¿ø ¼ö ÀÔ·Â
+	// ì£¼ìš” ë©”ì†Œë“œ ì •ì˜(ê¸°ëŠ¥ êµ¬ì„±)
+	// â‘  ì¸ì› ìˆ˜ ìž…ë ¥
 	public void set()
 	{
 		Scanner sc = new Scanner(System.in);
 
 		do
 		{
-			System.out.print("ÀÎ¿ø ¼ö ÀÔ·Â(1~100) : ");
+			System.out.print("ì¸ì› ìˆ˜ ìž…ë ¥(1~100) : ");
 			inwon = sc.nextInt();
 		}
 		while (inwon < 1 || inwon > 101);
 		
 		// check~!!!
-		// Record Å¬·¡½º¸¦ ±â¹ÝÀ¸·Î »ý¼ºµÈ °´Ã¼(ÀÎ½ºÅÏ½º)¸¦ ´ãÀ» ¼ö ÀÖ´Â
-		// ¹è¿­¹æÀ» inwon ¸¸Å­ »ý¼ºÇÑ °ÍÀÌÁö
-		// Record Å¬·¡½ºÀÇ ÀÎ½ºÅÏ½º¸¦ »ý¼ºÇÑ °ÍÀº ¾Æ´Ï´Ù.
+		// Record í´ëž˜ìŠ¤ë¥¼ ê¸°ë°˜ìœ¼ë¡œ ìƒì„±ëœ ê°ì²´(ì¸ìŠ¤í„´ìŠ¤)ë¥¼ ë‹´ì„ ìˆ˜ ìžˆëŠ”
+		// ë°°ì—´ë°©ì„ inwon ë§Œí¼ ìƒì„±í•œ ê²ƒì´ì§€
+		// Record í´ëž˜ìŠ¤ì˜ ì¸ìŠ¤í„´ìŠ¤ë¥¼ ìƒì„±í•œ ê²ƒì€ ì•„ë‹ˆë‹¤.
 		rec = new Record_1[inwon];
 	}
 
 
 
-	// ¨è »ó¼¼ µ¥ÀÌÅÍ ÀÔ·Â(ÃÑÁ¡ ¹× Æò±Õ »êÃâ ±â´É Æ÷ÇÔ)
+	// â‘¡ ìƒì„¸ ë°ì´í„° ìž…ë ¥(ì´ì  ë° í‰ê·  ì‚°ì¶œ ê¸°ëŠ¥ í¬í•¨)
 	public void input()
 	{
 		Scanner sc = new Scanner(System.in);
 
-		String[] title = {"±¹¾î Á¡¼ö : ", "¿µ¾î Á¡¼ö : ", "¼öÇÐ Á¡¼ö : "};
+		String[] title = {"êµ­ì–´ ì ìˆ˜ : ", "ì˜ì–´ ì ìˆ˜ : ", "ìˆ˜í•™ ì ìˆ˜ : "};
 
-		// ÀÎ¿ø ¼ö ¸¸Å­ ¹Ýº¹ ¡æ ÀÎ¿ø ¼ö¿¡ ±â¹ÝÇÏ¿© ¸¸µé¾îÁø ¹è¿­ÀÇ ±æÀÌ¸¸Å­ ¹Ýº¹
+		// ì¸ì› ìˆ˜ ë§Œí¼ ë°˜ë³µ â†’ ì¸ì› ìˆ˜ì— ê¸°ë°˜í•˜ì—¬ ë§Œë“¤ì–´ì§„ ë°°ì—´ì˜ ê¸¸ì´ë§Œí¼ ë°˜ë³µ
 		for(int i=0; i < inwon; i++) // for(int i =0; i<rec.length; i++)
 		{
 			// check~!!!
-			// Record Å¬·¡½º ±â¹ÝÀÇ ÀÎ½ºÅÏ½º »ý¼º
+			// Record í´ëž˜ìŠ¤ ê¸°ë°˜ì˜ ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
 			rec[i] = new Record_1();	
 			
-			System.out.printf("%d¹øÂ° ÇÐ»ýÀÇ ÀÌ¸§ ÀÔ·Â : ", (i+1));
+			System.out.printf("%dë²ˆì§¸ í•™ìƒì˜ ì´ë¦„ ìž…ë ¥ : ", (i+1));
 			rec[i].name = sc.next();
 
 			/*
-			System.out.print("±¹¾î Á¡¼ö : ");
+			System.out.print("êµ­ì–´ ì ìˆ˜ : ");
 			rec[i].kor = sc.nextInt();
 
-			System.out.print("¿µ¾î Á¡¼ö : ");
+			System.out.print("ì˜ì–´ ì ìˆ˜ : ");
 			rec[i].eng = sc.nextInt();
 			
-			System.out.print("¼öÇÐ Á¡¼ö : ");
+			System.out.print("ìˆ˜í•™ ì ìˆ˜ : ");
 			rec[i].mat = sc.nextInt();
 			*/
 
 
 			/*
-			System.out.print("±¹¾î Á¡¼ö : ");
+			System.out.print("êµ­ì–´ ì ìˆ˜ : ");
 			rec[i].score[0] = sc.nextInt();
 
-			System.out.print("¿µ¾î Á¡¼ö : ");
+			System.out.print("ì˜ì–´ ì ìˆ˜ : ");
 			rec[i].score[1] = sc.nextInt();
 			
-			System.out.print("¼öÇÐ Á¡¼ö : ");
+			System.out.print("ìˆ˜í•™ ì ìˆ˜ : ");
 			rec[i].score[2] = sc.nextInt();
 			*/
 
 		
 			for(int j=0; j < title.length; j++)			// 0 1 2
 			{
-				// ¾È³» ¸Þ¼¼Áö Ãâ·Â	
+				// ì•ˆë‚´ ë©”ì„¸ì§€ ì¶œë ¥	
 				System.out.print(title[j]);
 
-				// »ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ µ¥ÀÌÅÍ¸¦ ½ºÄÚ¾î(score) ¹è¿­¿¡ ´ã¾Æ³»±â
-				rec[i].score[j] = sc.nextInt();			// score[0] ¡æ ±¹¾îÁ¡¼ö
-														// score[1] ¡æ ¿µ¾îÁ¡¼ö
-														// score[2] ¡æ ¼öÇÐÁ¡¼ö
-				// ±¹¾î, ¿µ¾î, ¼öÇÐ Á¡¼ö µ¥ÀÌÅÍ¸¦ ¹Ýº¹ÀûÀ¸·Î ÀÔ·Â¹Þ´Â µ¿¾È
-				// ÃÑÁ¡¿¡ ´ëÇÑ ´©Àû »êÃâ
+				// ì‚¬ìš©ìžê°€ ìž…ë ¥í•œ ë°ì´í„°ë¥¼ ìŠ¤ì½”ì–´(score) ë°°ì—´ì— ë‹´ì•„ë‚´ê¸°
+				rec[i].score[j] = sc.nextInt();			// score[0] â†’ êµ­ì–´ì ìˆ˜
+														// score[1] â†’ ì˜ì–´ì ìˆ˜
+														// score[2] â†’ ìˆ˜í•™ì ìˆ˜
+				// êµ­ì–´, ì˜ì–´, ìˆ˜í•™ ì ìˆ˜ ë°ì´í„°ë¥¼ ë°˜ë³µì ìœ¼ë¡œ ìž…ë ¥ë°›ëŠ” ë™ì•ˆ
+				// ì´ì ì— ëŒ€í•œ ëˆ„ì  ì‚°ì¶œ
 				rec[i].tot += rec[i].score[j];
 			}
 
-			// Æò±Õ »êÃâÇÏ±â
+			// í‰ê·  ì‚°ì¶œí•˜ê¸°
 			rec[i].avg = rec[i].tot / 3.0;
 		} // end outer for
 	}
@@ -107,35 +107,35 @@ public class Sungjuk_1
 
 
 
-	// ¨é °á°ú Ãâ·Â
-	// ÀÌ¶¯±¸ 90 80 70  240 80.00    2
-	// ÀÌ±âÃ¶ 92 82 72  246 82.00    1
-	// ÀÌ±â¿µ 82 72 62  216 72.00    3
+	// â‘¢ ê²°ê³¼ ì¶œë ¥
+	// ì´ë•¡êµ¬ 90 80 70  240 80.00    2
+	// ì´ê¸°ì²  92 82 72  246 82.00    1
+	// ì´ê¸°ì˜ 82 72 62  216 72.00    3
 	public void print()
 	{
 		ranking();
 		System.out.println();
 
-		// ÇÐ»ý ÇÑ ¸í ´ç ¹Ýº¹ Ãâ·Â ±¸¹® ±¸¼º
+		// í•™ìƒ í•œ ëª… ë‹¹ ë°˜ë³µ ì¶œë ¥ êµ¬ë¬¸ êµ¬ì„±
 		for(int i=0; i<inwon; i++)		//for (int i = 0; i<rec.length; i++)
 		{
-			// ÀÌ¸§ Ãâ·Â
+			// ì´ë¦„ ì¶œë ¥
 			System.out.printf("%5s", rec[i].name);
 			
-			// ¼ºÀû(±¹¾î, ¿µ¾î, ¼öÇÐ) ¹Ýº¹ Ãâ·Â
+			// ì„±ì (êµ­ì–´, ì˜ì–´, ìˆ˜í•™) ë°˜ë³µ ì¶œë ¥
 			for(int j=0; j < 3; j++)
 				System.out.printf("%4d", rec[i].score[j]);
 			
             
-			// ÃÑÁ¡ Æò±Õ Ãâ·Â
+			// ì´ì  í‰ê·  ì¶œë ¥
 			System.out.printf("%5d", rec[i].tot);
 			System.out.printf("%8.2f", rec[i].avg);
             
 			// check~!!!
-			// ¼®Â÷ Ãâ·Â ±¸¹® Ãß°¡~!!!!
+			// ì„ì°¨ ì¶œë ¥ êµ¬ë¬¸ ì¶”ê°€~!!!!
 			System.out.printf("%5d", rec[i].rank);
             
-			// °³Çà
+			// ê°œí–‰
 			System.out.println();
 		}
 	}
@@ -143,31 +143,31 @@ public class Sungjuk_1
 
 
 
-	// ¨ê ¼®Â÷ »êÃâ ¸Þ¼Òµå Ãß°¡
-	//    - »êÃâ °úÁ¤¿¡¼­ ¿¬»ê¿¡ ÇÊ¿äÇÑ µ¥ÀÌÅÍ°¡ ÀÌ¹Ì Á¸ÀçÇÏ´Â »óÈ² ¡æ ¸Å°³º¯¼ö ¾øÀ½
-	//    - Record ¹è¿­ÀÇ rank ¼Ó¼º ÃÊ±âÈ­ ±â´É ¼öÇà ¡æ ¹ÝÈ¯ ÀÚ·áÇü void
-	//    - Å¬·¡½º ³»ºÎ¿¡¼­ È°¿ëÇÒ ¸Þ¼Òµå·Î Á¤ÀÇ ¡æ Á¢±ÙÁ¦¾îÁö½ÃÀÚ private
+	// â‘£ ì„ì°¨ ì‚°ì¶œ ë©”ì†Œë“œ ì¶”ê°€
+	//    - ì‚°ì¶œ ê³¼ì •ì—ì„œ ì—°ì‚°ì— í•„ìš”í•œ ë°ì´í„°ê°€ ì´ë¯¸ ì¡´ìž¬í•˜ëŠ” ìƒí™© â†’ ë§¤ê°œë³€ìˆ˜ ì—†ìŒ
+	//    - Record ë°°ì—´ì˜ rank ì†ì„± ì´ˆê¸°í™” ê¸°ëŠ¥ ìˆ˜í–‰ â†’ ë°˜í™˜ ìžë£Œí˜• void
+	//    - í´ëž˜ìŠ¤ ë‚´ë¶€ì—ì„œ í™œìš©í•  ë©”ì†Œë“œë¡œ ì •ì˜ â†’ ì ‘ê·¼ì œì–´ì§€ì‹œìž private
 	private void ranking()
 	{
-		// ¸ðµç ÇÐ»ýµéÀÇ µî¼ö (¼®Â÷, rank)¸¦ 1·Î ÃÊ±âÈ­
+		// ëª¨ë“  í•™ìƒë“¤ì˜ ë“±ìˆ˜ (ì„ì°¨, rank)ë¥¼ 1ë¡œ ì´ˆê¸°í™”
 		for(int i=0; i<inwon; i++)
 			rec[i].rank = 1;
 		
-		// µî¼ö »êÃâ ¡æ 5¸íÀ» ¿¹·Î µé¸é...
-		for(int i=0; i<inwon-1; i++) //  ¿õ ¡æ ºñ±³±âÁØ ¡æ 0 1 2 3
+		// ë“±ìˆ˜ ì‚°ì¶œ â†’ 5ëª…ì„ ì˜ˆë¡œ ë“¤ë©´...
+		for(int i=0; i<inwon-1; i++) //  ì›… â†’ ë¹„êµê¸°ì¤€ â†’ 0 1 2 3
 		{
-			for(int j=i+1; j < inwon; j++) // œ¼ ¡æ ºñ±³´ë»ó ¡æ 1234 234 34 4
+			for(int j=i+1; j < inwon; j++) // ì‘ â†’ ë¹„êµëŒ€ìƒ â†’ 1234 234 34 4
 			{
-				// ºñ±³±âÁØÀÇ Æò±ÕÀÌ ºñ±³´ë»óÀÇ Æò±Õº¸´Ù Å©´Ù¸é
+				// ë¹„êµê¸°ì¤€ì˜ í‰ê· ì´ ë¹„êµëŒ€ìƒì˜ í‰ê· ë³´ë‹¤ í¬ë‹¤ë©´
 				if(rec[i].avg > rec[j].avg)
 				{
-					// ºñ±³ ´ë»óÀÇ rank¸¦ 1¸¸Å­ Áõ°¡
+					// ë¹„êµ ëŒ€ìƒì˜ rankë¥¼ 1ë§Œí¼ ì¦ê°€
 					rec[j].rank++;
 				}
-				// ºñ±³´ë»óÀÇ Æò±ÕÀÌ ºñ±³±âÁØÀÇ Æò±Õº¸´Ù Å©´Ù¸é
+				// ë¹„êµëŒ€ìƒì˜ í‰ê· ì´ ë¹„êµê¸°ì¤€ì˜ í‰ê· ë³´ë‹¤ í¬ë‹¤ë©´
 				else if(rec[j].avg > rec[i].avg)
 				{
-					// ºñ±³±âÁØÀÇ rank¸¦ 1¸¸Å­ Áõ°¡
+					// ë¹„êµê¸°ì¤€ì˜ rankë¥¼ 1ë§Œí¼ ì¦ê°€
 					rec[i].rank++;
 				}
 

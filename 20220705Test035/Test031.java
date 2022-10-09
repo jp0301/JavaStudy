@@ -1,43 +1,43 @@
  /*=============================================
-      ¡á¡á¡á ½ÇÇà Èå¸§ÀÇ ÄÁÆ®·Ñ(Á¦¾î¹®) ¡á¡á¡á
-      - if¹®
-	  - if ~ else ¹® ½Ç½À
+      â– â– â–  ì‹¤í–‰ íë¦„ì˜ ì»¨íŠ¸ë¡¤(ì œì–´ë¬¸) â– â– â– 
+      - ifë¬¸
+	  - if ~ else ë¬¸ ì‹¤ìŠµ
    ============================================*/
 
-// 1. ÇÁ·Î±×·¥À» ÀÛ¼ºÇÒ ¶§ ÁÖ¾îÁø Á¶°Ç¿¡ µû¶ó
-//	  ºÐ±â ¹æÇâÀ» Á¤ÇÏ±â À§ÇØ »ç¿ëÇÏ´Â Á¦¾î¹®¿¡´Â
-//    if ¹®, if ~ else ¹®, Á¶°Ç ¿¬»êÀÚ, º¹ÇÕ if¹®(if¹® ÁßÃ¸)
-//    , switch ¹®ÀÌ ÀÖ´Ù.
+// 1. í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•  ë•Œ ì£¼ì–´ì§„ ì¡°ê±´ì— ë”°ë¼
+//	  ë¶„ê¸° ë°©í–¥ì„ ì •í•˜ê¸° ìœ„í•´ ì‚¬ìš©í•˜ëŠ” ì œì–´ë¬¸ì—ëŠ”
+//    if ë¬¸, if ~ else ë¬¸, ì¡°ê±´ ì—°ì‚°ìž, ë³µí•© ifë¬¸(ifë¬¸ ì¤‘ì²©)
+//    , switch ë¬¸ì´ ìžˆë‹¤.
 
-// 2. if¹®Àº if ´ÙÀ½ÀÇ Á¶°ÇÀÌ ÂüÀÏ °æ¿ì
-//    Æ¯Á¤ ¹®ÀåÀ» ¼öÇàÇÏ°íÀÚ ÇÒ ¶§ »ç¿ëµÇ´Â ±¸¹®ÀÌ´Ù.
+// 2. ifë¬¸ì€ if ë‹¤ìŒì˜ ì¡°ê±´ì´ ì°¸ì¼ ê²½ìš°
+//    íŠ¹ì • ë¬¸ìž¥ì„ ìˆ˜í–‰í•˜ê³ ìž í•  ë•Œ ì‚¬ìš©ë˜ëŠ” êµ¬ë¬¸ì´ë‹¤.
 
-// »ç¿ëÀÚ·ÎºÎÅÍ ÀÌ¸§, ±¹¾îÁ¡¼ö, ¿µ¾îÁ¡¼ö, ¼öÇÐÁ¡¼ö¸¦ ÀÔ·Â¹Þ¾Æ
-// ´ÙÀ½°ú °°Àº ÇüÅÂ·Î Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÑ´Ù.
-// µî±ÞÀº Æò±Õ Á¡¼ö¸¦ ±âÁØÀ¸·Î Ã³¸®ÇÑ´Ù.
+// ì‚¬ìš©ìžë¡œë¶€í„° ì´ë¦„, êµ­ì–´ì ìˆ˜, ì˜ì–´ì ìˆ˜, ìˆ˜í•™ì ìˆ˜ë¥¼ ìž…ë ¥ë°›ì•„
+// ë‹¤ìŒê³¼ ê°™ì€ í˜•íƒœë¡œ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•œë‹¤.
+// ë“±ê¸‰ì€ í‰ê·  ì ìˆ˜ë¥¼ ê¸°ì¤€ìœ¼ë¡œ ì²˜ë¦¬í•œë‹¤.
 
-// 90Á¡ ÀÌ»ó : A
-// 80Á¡ ÀÌ»ó 90Á¡ ¹Ì¸¸ : B
-// 70Á¡ ÀÌ»ó 80Á¡ ¹Ì¸¸ : C
-// 60Á¡ ÀÌ»ó 70Á¡ ¹Ì¸¸ : D
-// 60Á¡ ¹Ì¸¸           : F
+// 90ì  ì´ìƒ : A
+// 80ì  ì´ìƒ 90ì  ë¯¸ë§Œ : B
+// 70ì  ì´ìƒ 80ì  ë¯¸ë§Œ : C
+// 60ì  ì´ìƒ 70ì  ë¯¸ë§Œ : D
+// 60ì  ë¯¸ë§Œ           : F
 
-// ´Ü, BufferedReader ¸¦ È°¿ëÇØ µ¥ÀÌÅÍ¸¦  ÀÔ·Â¹ÞÀ» ¼ö ÀÖµµ·Ï ÇÏ¸ç,
-// printf() ¸Þ¼Òµå¸¦ ÅëÇØ Ãâ·ÂÇÒ ¼ö ÀÖµµ·Ï ÇÑ´Ù.
+// ë‹¨, BufferedReader ë¥¼ í™œìš©í•´ ë°ì´í„°ë¥¼  ìž…ë ¥ë°›ì„ ìˆ˜ ìžˆë„ë¡ í•˜ë©°,
+// printf() ë©”ì†Œë“œë¥¼ í†µí•´ ì¶œë ¥í•  ìˆ˜ ìžˆë„ë¡ í•œë‹¤.
 
-// ½ÇÇà ¿¹)
-// ÀÌ¸§ ÀÔ·Â : ¹Ú¿ø¼®
-// ±¹¾î Á¡¼ö : 90
-// ¿µ¾î Á¡¼ö : 80
-// ¼öÇÐ Á¡¼ö : 70
+// ì‹¤í–‰ ì˜ˆ)
+// ì´ë¦„ ìž…ë ¥ : ë°•ì›ì„
+// êµ­ì–´ ì ìˆ˜ : 90
+// ì˜ì–´ ì ìˆ˜ : 80
+// ìˆ˜í•™ ì ìˆ˜ : 70
 
-// >> ´ç½ÅÀÇ ÀÌ¸§Àº ¹Ú¿ø¼®ÀÔ´Ï´Ù.
-// >> ±¹¾î Á¡¼ö´Â 90,
-// >> ¿µ¾î Á¡¼ö´Â 80,
-// >> ¼öÇÐ Á¡¼ö´Â 70,
-// >> ÃÑÁ¡Àº 240ÀÌ°í, Æò±ÕÀº 80ÀÔ´Ï´Ù.
-// >> µî±ÞÀº B ÀÔ´Ï´Ù.
-// °è¼ÓÇÏ·Á¸é ¾Æ¹« Å°³ª ´©¸£¼¼¿ä...
+// >> ë‹¹ì‹ ì˜ ì´ë¦„ì€ ë°•ì›ì„ìž…ë‹ˆë‹¤.
+// >> êµ­ì–´ ì ìˆ˜ëŠ” 90,
+// >> ì˜ì–´ ì ìˆ˜ëŠ” 80,
+// >> ìˆ˜í•™ ì ìˆ˜ëŠ” 70,
+// >> ì´ì ì€ 240ì´ê³ , í‰ê· ì€ 80ìž…ë‹ˆë‹¤.
+// >> ë“±ê¸‰ì€ B ìž…ë‹ˆë‹¤.
+// ê³„ì†í•˜ë ¤ë©´ ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ì„¸ìš”...
 
 
 import java.io.BufferedReader;
@@ -52,30 +52,30 @@ public class Test031
 		String strKor, strEng, strMat;
 		String strName;
 
-		// 1. »ç¿ëÀÚ·ÎºÎÅÍ ÀÌ¸§À» ÀÔ·Â¹Þ´Â´Ù.
-		System.out.print("ÀÌ¸§ ÀÔ·Â : ");
+		// 1. ì‚¬ìš©ìžë¡œë¶€í„° ì´ë¦„ì„ ìž…ë ¥ë°›ëŠ”ë‹¤.
+		System.out.print("ì´ë¦„ ìž…ë ¥ : ");
 		strName = br.readLine();
 		
-		// 2. »ç¿ëÀÚ·ÎºÎÅÍ ±¹¾î, ¿µ¾î, ¼öÇÐ Á¡¼ö¸¦ ÀÔ·Â¹Þ´Â´Ù.
-		System.out.print("±¹¾î Á¡¼ö : ");
+		// 2. ì‚¬ìš©ìžë¡œë¶€í„° êµ­ì–´, ì˜ì–´, ìˆ˜í•™ ì ìˆ˜ë¥¼ ìž…ë ¥ë°›ëŠ”ë‹¤.
+		System.out.print("êµ­ì–´ ì ìˆ˜ : ");
 		strKor = br.readLine();
 
-		System.out.print("¿µ¾î Á¡¼ö : ");
+		System.out.print("ì˜ì–´ ì ìˆ˜ : ");
 		strEng = br.readLine();
 
-		System.out.print("¼öÇÐ Á¡¼ö : ");
+		System.out.print("ìˆ˜í•™ ì ìˆ˜ : ");
 		strMat = br.readLine();
 
-		// 3. ¹®ÀÚ¿­ ÇüÅÂ·Î ÀÔ·Â¹ÞÀº °ú¸ñ Á¡¼ö¸¦ Á¤¼ö ÇüÅÂ·Î º¯È¯ÇÑ´Ù.
+		// 3. ë¬¸ìžì—´ í˜•íƒœë¡œ ìž…ë ¥ë°›ì€ ê³¼ëª© ì ìˆ˜ë¥¼ ì •ìˆ˜ í˜•íƒœë¡œ ë³€í™˜í•œë‹¤.
 		int nKor= Integer.parseInt(strKor);
 		int nEng = Integer.parseInt(strEng);
 		int nMat = Integer.parseInt(strMat);
 
-		// 4. »ê¼ú ¿¬»êÀ» ÅëÇØ ÃÑÁ¡°ú Æò±ÕÀ» »êÃâÇÑ´Ù.
+		// 4. ì‚°ìˆ  ì—°ì‚°ì„ í†µí•´ ì´ì ê³¼ í‰ê· ì„ ì‚°ì¶œí•œë‹¤.
 		int nTot = nKor + nEng + nMat;
 		double fAvg = nTot / 3.0;
 
-		// 5. µî±Þ¿¡ ´ëÇÑ Á¶°Ç °Ë»ç¸¦ ¼öÇàÇÑ´Ù.
+		// 5. ë“±ê¸‰ì— ëŒ€í•œ ì¡°ê±´ ê²€ì‚¬ë¥¼ ìˆ˜í–‰í•œë‹¤.
 		char grade = 'F';
 
 		if (fAvg >= 90)
@@ -99,31 +99,31 @@ public class Test031
 			grade = 'F';
 		}
 
-		// 6. ÃÖÁ¾ °á°ú Ãâ·Â
-		System.out.printf(">> ´ç½ÅÀÇ ÀÌ¸§Àº %sÀÔ´Ï´Ù.%n", strName);
-		System.out.printf(">> ±¹¾î Á¡¼ö´Â %s, %n", strKor);
-		System.out.printf(">> ¿µ¾î Á¡¼ö´Â %s, %n", strEng);
-        System.out.printf(">> ¼öÇÐ Á¡¼ö´Â %s, %n", strMat);
-		System.out.printf(">> ÃÑÁ¡Àº %dÀÌ°í, Æò±ÕÀº %.2fÀÔ´Ï´Ù.%n", nTot, fAvg);
-		System.out.printf(">> µî±ÞÀº %c ÀÔ´Ï´Ù.%n", grade);
+		// 6. ìµœì¢… ê²°ê³¼ ì¶œë ¥
+		System.out.printf(">> ë‹¹ì‹ ì˜ ì´ë¦„ì€ %sìž…ë‹ˆë‹¤.%n", strName);
+		System.out.printf(">> êµ­ì–´ ì ìˆ˜ëŠ” %s, %n", strKor);
+		System.out.printf(">> ì˜ì–´ ì ìˆ˜ëŠ” %s, %n", strEng);
+        System.out.printf(">> ìˆ˜í•™ ì ìˆ˜ëŠ” %s, %n", strMat);
+		System.out.printf(">> ì´ì ì€ %dì´ê³ , í‰ê· ì€ %.2fìž…ë‹ˆë‹¤.%n", nTot, fAvg);
+		System.out.printf(">> ë“±ê¸‰ì€ %c ìž…ë‹ˆë‹¤.%n", grade);
         
 	
 
 	}
 }
 
-// ½ÇÇà °á°ú
+// ì‹¤í–‰ ê²°ê³¼
 
 /*
-ÀÌ¸§ ÀÔ·Â : ¹Ú¿ø¼®
-±¹¾î Á¡¼ö : 90
-¿µ¾î Á¡¼ö : 80
-¼öÇÐ Á¡¼ö : 70
->> ´ç½ÅÀÇ ÀÌ¸§Àº ¹Ú¿ø¼®ÀÔ´Ï´Ù.
->> ±¹¾î Á¡¼ö´Â 90,
->> ¿µ¾î Á¡¼ö´Â 80,
->> ¼öÇÐ Á¡¼ö´Â 70,
->> ÃÑÁ¡Àº 240ÀÌ°í, Æò±ÕÀº 80.00ÀÔ´Ï´Ù.
->> µî±ÞÀº B ÀÔ´Ï´Ù.
-°è¼ÓÇÏ·Á¸é ¾Æ¹« Å°³ª ´©¸£½Ê½Ã¿À . . .
+ì´ë¦„ ìž…ë ¥ : ë°•ì›ì„
+êµ­ì–´ ì ìˆ˜ : 90
+ì˜ì–´ ì ìˆ˜ : 80
+ìˆ˜í•™ ì ìˆ˜ : 70
+>> ë‹¹ì‹ ì˜ ì´ë¦„ì€ ë°•ì›ì„ìž…ë‹ˆë‹¤.
+>> êµ­ì–´ ì ìˆ˜ëŠ” 90,
+>> ì˜ì–´ ì ìˆ˜ëŠ” 80,
+>> ìˆ˜í•™ ì ìˆ˜ëŠ” 70,
+>> ì´ì ì€ 240ì´ê³ , í‰ê· ì€ 80.00ìž…ë‹ˆë‹¤.
+>> ë“±ê¸‰ì€ B ìž…ë‹ˆë‹¤.
+ê³„ì†í•˜ë ¤ë©´ ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ì‹­ì‹œì˜¤ . . .
 */

@@ -1,32 +1,32 @@
 /*==================================
-  ¡á¡á¡á ÄÃ·º¼Ç(Collection) ¡á¡á¡á
+  â– â– â–  ì»¬ë ‰ì…˜(Collection) â– â– â– 
 ====================================*/
 
 /*
-	Map ¡æ Hashtable, HashMap
+	Map â†’ Hashtable, HashMap
 
-¡Û java.util.Map ÀÎÅÍÆäÀÌ½º´Â
-   Å°(key)¸¦ °ª(value)¿¡ ¸ÅÇÎ(mapping) ÇÏ¸ç
-   µ¿ÀÏÇÑ Å°¸¦ µî·ÏÇÒ ¼ö ¾ø°í, À¯ÀÏÇØ¾ß ÇÏ¸ç
-   °¢ Å°´Â ÇÑ °³ÀÇ °ª¸¸À» ¸ÅÇÎÇØ¾ß ÇÑ´Ù.
-   Áï, ÇÏ³ªÀÇ Å° °ª¿¡ ´ëÀÀÇÏ´Â ÇÏ³ªÀÇ °ªÀ» °®´Â ÀÚ·á±¸Á¶ÀÌ´Ù.
+â—‹ java.util.Map ì¸í„°íŽ˜ì´ìŠ¤ëŠ”
+   í‚¤(key)ë¥¼ ê°’(value)ì— ë§¤í•‘(mapping) í•˜ë©°
+   ë™ì¼í•œ í‚¤ë¥¼ ë“±ë¡í•  ìˆ˜ ì—†ê³ , ìœ ì¼í•´ì•¼ í•˜ë©°
+   ê° í‚¤ëŠ” í•œ ê°œì˜ ê°’ë§Œì„ ë§¤í•‘í•´ì•¼ í•œë‹¤.
+   ì¦‰, í•˜ë‚˜ì˜ í‚¤ ê°’ì— ëŒ€ì‘í•˜ëŠ” í•˜ë‚˜ì˜ ê°’ì„ ê°–ëŠ” ìžë£Œêµ¬ì¡°ì´ë‹¤.
 
 */
 
 
 /*
-¡Û Hashtable Å¬·¡½º
+â—‹ Hashtable í´ëž˜ìŠ¤
 
-   - ÇØ½ÃÅ×ÀÌºí ±¸Á¶¸¦ °´Ã¼ ¸ðµ¨¸µÇÑ Å¬·¡½º·Î
-     °Ë»öÀÌ ¿ëÀÌÇÏ±â ¶§¹®¿¡ »ç¿ë ºóµµ°¡ ³ôÀº Æí¿¡ ¼ÓÇÑ´Ù.
+   - í•´ì‹œí…Œì´ë¸” êµ¬ì¡°ë¥¼ ê°ì²´ ëª¨ë¸ë§í•œ í´ëž˜ìŠ¤ë¡œ
+     ê²€ìƒ‰ì´ ìš©ì´í•˜ê¸° ë•Œë¬¸ì— ì‚¬ìš© ë¹ˆë„ê°€ ë†’ì€ íŽ¸ì— ì†í•œë‹¤.
 
-   - ÇØ½ÃÅ×ÀÌºíÀÌ¶õ Å°(Key)¿Í ±×¿¡ »óÀÀÇÏ´Â µ¥ÀÌÅÍ(value)·Î
-     ±¸ºÐµÈ µ¥ÀÌÅÍ ±¸Á¶ÀÌ´Ù.
+   - í•´ì‹œí…Œì´ë¸”ì´ëž€ í‚¤(Key)ì™€ ê·¸ì— ìƒì‘í•˜ëŠ” ë°ì´í„°(value)ë¡œ
+     êµ¬ë¶„ëœ ë°ì´í„° êµ¬ì¡°ì´ë‹¤.
 
-   - µ¥ÀÌÅÍ¸¦ ÀúÀåÇÏ°í, °Ë»öÇÏ±â À§ÇØ¼­ Å°(Key)·Î Á¢±ÙÇÏ¸ç
-     ÀÌ ±¸Á¶¿¡¼­´Â Å° °ªÀ» ºÎ¿©ÇÏ¸é ÇØ´ç µ¥ÀÌÅÍ°¡ º¯È¯µÈ´Ù.
+   - ë°ì´í„°ë¥¼ ì €ìž¥í•˜ê³ , ê²€ìƒ‰í•˜ê¸° ìœ„í•´ì„œ í‚¤(Key)ë¡œ ì ‘ê·¼í•˜ë©°
+     ì´ êµ¬ì¡°ì—ì„œëŠ” í‚¤ ê°’ì„ ë¶€ì—¬í•˜ë©´ í•´ë‹¹ ë°ì´í„°ê°€ ë³€í™˜ëœë‹¤.
 
-   - ¶ÇÇÑ, Hashtable Å¬·¡½º´Â key ¶Ç´Â value ÀÇ °ªÀ¸·Î nullÀ» Çã¿ëÇÏÁö ¾Ê´Â´Ù.
+   - ë˜í•œ, Hashtable í´ëž˜ìŠ¤ëŠ” key ë˜ëŠ” value ì˜ ê°’ìœ¼ë¡œ nullì„ í—ˆìš©í•˜ì§€ ì•ŠëŠ”ë‹¤.
 */
 
 import java.util.Hashtable;
@@ -35,128 +35,128 @@ public class Test170
 {
 
 	private static final String[] names
-		= {"Á¶ÇöÇÏ","¹ÎÂù¿ì", "ÃÖ³ªÀ±", "°í¿¬¼ö", "Á¤¿µÁØ", "¹Ýº¸¿µ"};
+		= {"ì¡°í˜„í•˜","ë¯¼ì°¬ìš°", "ìµœë‚˜ìœ¤", "ê³ ì—°ìˆ˜", "ì •ì˜ì¤€", "ë°˜ë³´ì˜"};
 	private static final String[] tels
 		= {"010-7202-6306","010-2546-0266", "010-7236-0813", "010-4016-6208", "010-4051-5510", "010-6311-1111"};
 
 	public static void main(String[] args)
 	{
-		// Hashtable ÀÚ·á ±¸Á¶ ÀÎ½ºÅÏ½º »ý¼º
+		// Hashtable ìžë£Œ êµ¬ì¡° ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
 		Hashtable ht = new Hashtable();
 		//       
 
-		// ht ¶ó´Â Hashtable ÀÚ·á±¸Á¶¿¡
-		// ¹è¿­(names, tels)¿¡ ´ã°ÜÀÖ´Â µ¥ÀÌÅÍ¸¦ ¿ä¼Ò·Î ´ã¾Æ³»±â
-		// ¡æ put(k, v);
+		// ht ë¼ëŠ” Hashtable ìžë£Œêµ¬ì¡°ì—
+		// ë°°ì—´(names, tels)ì— ë‹´ê²¨ìžˆëŠ” ë°ì´í„°ë¥¼ ìš”ì†Œë¡œ ë‹´ì•„ë‚´ê¸°
+		// â†’ put(k, v);
 		for(int i=0; i<names.length; i++)
 		{
-			//ht.put("Á¶ÇöÇÏ", "010-7202-6306");
+			//ht.put("ì¡°í˜„í•˜", "010-7202-6306");
 			ht.put(names[i], tels[i]);
 		}
 
-		// ht ¶ó´Â Hashtable ÀÚ·á±¸Á¶¿¡... key °¡ Á¸ÀçÇÏ´ÂÁöÀÇ ¿©ºÎ È®ÀÎ
-		// ¡æ containsKey()
-		String findName2 = "ÃÖµ¿Çö";
+		// ht ë¼ëŠ” Hashtable ìžë£Œêµ¬ì¡°ì—... key ê°€ ì¡´ìž¬í•˜ëŠ”ì§€ì˜ ì—¬ë¶€ í™•ì¸
+		// â†’ containsKey()
+		String findName2 = "ìµœë™í˜„";
 		if(ht.containsKey(findName2))
 		{
-			System.out.println(findName2 + " µ¥ÀÌÅÍ°¡ Á¸ÀçÇÕ´Ï´Ù.");
+			System.out.println(findName2 + " ë°ì´í„°ê°€ ì¡´ìž¬í•©ë‹ˆë‹¤.");
 		}
 		else{
-			System.out.println(findName2 + " µ¥ÀÌÅÍ°¡ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.");
+			System.out.println(findName2 + " ë°ì´í„°ê°€ ì¡´ìž¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 		}
-		//--==>> ÃÖµ¿Çö µ¥ÀÌÅÍ°¡ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.
+		//--==>> ìµœë™í˜„ ë°ì´í„°ê°€ ì¡´ìž¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.
 		
 
-		String findName3 = "ÃÖ³ªÀ±";
+		String findName3 = "ìµœë‚˜ìœ¤";
 		if(ht.containsKey(findName3))
 		{
-			System.out.println(findName3 + " µ¥ÀÌÅÍ°¡ Á¸ÀçÇÕ´Ï´Ù.");
+			System.out.println(findName3 + " ë°ì´í„°ê°€ ì¡´ìž¬í•©ë‹ˆë‹¤.");
 		}
 		else
 		{
-			System.out.println(findName3 + " µ¥ÀÌÅÍ°¡ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.");
+			System.out.println(findName3 + " ë°ì´í„°ê°€ ì¡´ìž¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 		}
 		System.out.println();
-		//--==>> ÃÖ³ªÀ± µ¥ÀÌÅÍ°¡ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.
+		//--==>> ìµœë‚˜ìœ¤ ë°ì´í„°ê°€ ì¡´ìž¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.
 
 
-		// ht ¶ó´Â Hashtable ÀÚ·á±¸Á¶¿¡... value°¡ Á¸ÀçÇÏ´ÂÁöÀÇ ¿©ºÎ È®ÀÎ
-		// ¡æ contains()
+		// ht ë¼ëŠ” Hashtable ìžë£Œêµ¬ì¡°ì—... valueê°€ ì¡´ìž¬í•˜ëŠ”ì§€ì˜ ì—¬ë¶€ í™•ì¸
+		// â†’ contains()
 		String findTel1 = "010-2546-0266";
 		if(ht.contains(findTel1))
 		{
-			System.out.println(findTel1 + " µ¥ÀÌÅÍ°¡ Á¸ÀçÇÕ´Ï´Ù.");
+			System.out.println(findTel1 + " ë°ì´í„°ê°€ ì¡´ìž¬í•©ë‹ˆë‹¤.");
 		}
 		else
 		{
-			System.out.println(findTel1 + " µ¥ÀÌÅÍ°¡ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.");
+			System.out.println(findTel1 + " ë°ì´í„°ê°€ ì¡´ìž¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 		}
-		//--==>> 010-2546-0266 µ¥ÀÌÅÍ°¡ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.
+		//--==>> 010-2546-0266 ë°ì´í„°ê°€ ì¡´ìž¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.
 
 
-		// ht ¶ó´Â Hashtable ÀÚ·á±¸Á¶¿¡¼­ ¡º¹Ýº¸¿µ¡» µ¥ÀÌÅÍ »èÁ¦
-		// ¡æ remove()
-		ht.remove("¹Ýº¸¿µ");
+		// ht ë¼ëŠ” Hashtable ìžë£Œêµ¬ì¡°ì—ì„œ ã€Žë°˜ë³´ì˜ã€ ë°ì´í„° ì‚­ì œ
+		// â†’ remove()
+		ht.remove("ë°˜ë³´ì˜");
 
-		// ¡Ø remove() ¸Þ¼Òµå´Â ÀÎÀÚ°ªÀ¸·Î key¸¦ ³Ñ°Ü¹ÞÁö¸¸
-		//  ÀÌ ¶§, key ¸¸ »èÁ¦µÇ´Â °ÍÀÌ ¾Æ´Ï´Ù.
-		//  ÇØ´ç key¿Í ¿¬°áµÇ¾î(¸ÅÇÎµÇ¾î)ÀÖ´Â valueµµ ÇÔ²² remove() µÈ´Ù.
+		// â€» remove() ë©”ì†Œë“œëŠ” ì¸ìžê°’ìœ¼ë¡œ keyë¥¼ ë„˜ê²¨ë°›ì§€ë§Œ
+		//  ì´ ë•Œ, key ë§Œ ì‚­ì œë˜ëŠ” ê²ƒì´ ì•„ë‹ˆë‹¤.
+		//  í•´ë‹¹ keyì™€ ì—°ê²°ë˜ì–´(ë§¤í•‘ë˜ì–´)ìžˆëŠ” valueë„ í•¨ê»˜ remove() ëœë‹¤.
 
 
-		// »èÁ¦(remove()) ÀÌÈÄ key °¡ Á¸ÀçÇÏ´ÂÁö È®ÀÎ
-		if(ht.containsKey("¹Ýº¸¿µ"))
-			System.out.println("º¸¿µÀÌ°¡ Á¸ÀçÇÕ´Ï´Ù.");
+		// ì‚­ì œ(remove()) ì´í›„ key ê°€ ì¡´ìž¬í•˜ëŠ”ì§€ í™•ì¸
+		if(ht.containsKey("ë°˜ë³´ì˜"))
+			System.out.println("ë³´ì˜ì´ê°€ ì¡´ìž¬í•©ë‹ˆë‹¤.");
 		else
-			System.out.println("º¸¿µÀÌ ¾îµð°¬¾î????");
+			System.out.println("ë³´ì˜ì´ ì–´ë””ê°”ì–´????");
 		System.out.println();
-		//--==>> º¸¿µÀÌ ¾îµð°¬¾î????
+		//--==>> ë³´ì˜ì´ ì–´ë””ê°”ì–´????
 
-		// »èÁ¦(remove()) ÀÌÈÄ value°¡ Á¸ÀçÇÏ´ÂÁö È®ÀÎ
+		// ì‚­ì œ(remove()) ì´í›„ valueê°€ ì¡´ìž¬í•˜ëŠ”ì§€ í™•ì¸
 		if(ht.contains("010-6375-7524"))
 		{
-			System.out.println("º¸¿µÀÌ ÀüÈ­¹øÈ£°¡ Á¸ÀçÇÕ´Ï´Ù.");
+			System.out.println("ë³´ì˜ì´ ì „í™”ë²ˆí˜¸ê°€ ì¡´ìž¬í•©ë‹ˆë‹¤.");
 		}
 		else
 		{
-			System.out.println("º¸¿µÀÌ ÀüÈ­¹øÈ£°¡ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.");
+			System.out.println("ë³´ì˜ì´ ì „í™”ë²ˆí˜¸ê°€ ì¡´ìž¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 		}
-		//--==>> º¸¿µÀÌ ÀüÈ­¹øÈ£°¡ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.
+		//--==>> ë³´ì˜ì´ ì „í™”ë²ˆí˜¸ê°€ ì¡´ìž¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.
 
 
-		// ¡Ø null °ü·Ã Ã³¸®
-		//ht.put(null, null);					//-- key, value ¸ðµÎ null
-		//--==>> ¿¡·¯ ¹ß»ý(·±Å¸ÀÓ ¿¡·¯)
+		// â€» null ê´€ë ¨ ì²˜ë¦¬
+		//ht.put(null, null);					//-- key, value ëª¨ë‘ null
+		//--==>> ì—ëŸ¬ ë°œìƒ(ëŸ°íƒ€ìž„ ì—ëŸ¬)
 		//       java.lang.NullPointerException
 
-		//ht.put("µµ±ÔÈñ", null);					//-- value °¡ null
-		//--==>> ¿¡·¯ ¹ß»ý(·±Å¸ÀÓ ¿¡·¯)
+		//ht.put("ë„ê·œí¬", null);					//-- value ê°€ null
+		//--==>> ì—ëŸ¬ ë°œìƒ(ëŸ°íƒ€ìž„ ì—ëŸ¬)
 		//       java.lang.NullPointerException
 
-		//ht.put(null, "010-1234-5678");			//-- key°¡ null
-		//--==>> ¿¡·¯ ¹ß»ý(·±Å¸ÀÓ ¿¡·¯)
+		//ht.put(null, "010-1234-5678");			//-- keyê°€ null
+		//--==>> ì—ëŸ¬ ë°œìƒ(ëŸ°íƒ€ìž„ ì—ëŸ¬)
 		//       java.lang.NullPointerException
 
 		
-		// Áßº¹µÈ key ÀÔ·Â
-		ht.put("¹ÎÂù¿ì","010-1111-1111");
+		// ì¤‘ë³µëœ key ìž…ë ¥
+		ht.put("ë¯¼ì°¬ìš°","010-1111-1111");
 
-		System.out.println(ht.get("¹ÎÂù¿ì"));
+		System.out.println(ht.get("ë¯¼ì°¬ìš°"));
 		System.out.println();
 		//--==>> 010-1111-1111
-		//       Áßº¹µÈ key¸¦ È°¿ëÇÏ¿© µ¥ÀÌÅÍ¸¦ ÀÔ·ÂÇÒ °æ¿ì
-		//       ±âÁ¸ "010-2546-0266" ¿¡¼­ "010-1111-1111"·Î º¯°æµÇ¾úÀ½À» È®ÀÎ
-		//       (µ¤¾î¾²±â È®ÀÎ)
+		//       ì¤‘ë³µëœ keyë¥¼ í™œìš©í•˜ì—¬ ë°ì´í„°ë¥¼ ìž…ë ¥í•  ê²½ìš°
+		//       ê¸°ì¡´ "010-2546-0266" ì—ì„œ "010-1111-1111"ë¡œ ë³€ê²½ë˜ì—ˆìŒì„ í™•ì¸
+		//       (ë®ì–´ì“°ê¸° í™•ì¸)
 
-		// Áßº¹µÈ value ÀÔ·Â
-		ht.put("±èÅÂ¹Î","010-7202-6306");
+		// ì¤‘ë³µëœ value ìž…ë ¥
+		ht.put("ê¹€íƒœë¯¼","010-7202-6306");
 
-		System.out.println(ht.get("Á¶ÇöÇÏ"));
+		System.out.println(ht.get("ì¡°í˜„í•˜"));
 		System.out.println();
 		//--==>> 010-7202-6306
-		System.out.println(ht.get("±èÅÂ¹Î"));
+		System.out.println(ht.get("ê¹€íƒœë¯¼"));
 		System.out.println();
 		//--==>> 010-7202-6306
 
-		// ¡Ø value ´Â Áßº¹µÈ °ªÀÌ ÀÔ·ÂµÇ´õ¶óµµ ±âÁ¸ µ¥ÀÌÅÍ¿¡ ¾Æ¹«·± ¿µÇâÀ» ¹ÌÄ¡Áö ¾ÊÀ½
+		// â€» value ëŠ” ì¤‘ë³µëœ ê°’ì´ ìž…ë ¥ë˜ë”ë¼ë„ ê¸°ì¡´ ë°ì´í„°ì— ì•„ë¬´ëŸ° ì˜í–¥ì„ ë¯¸ì¹˜ì§€ ì•ŠìŒ
 	}
 }

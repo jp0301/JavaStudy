@@ -1,19 +1,19 @@
 /*==================================
-  ¡á¡á¡á ÄÃ·º¼Ç(Collection) ¡á¡á¡á
+  â– â– â–  ì»¬ë ‰ì…˜(Collection) â– â– â– 
 ====================================*/
 
-// Set ¡æ HashSet, TreeSet
-// - ¼ø¼­°¡ ¾ø´Ù.
-// - Áßº¹À» Çã¿ëÇÏÁö ¾Ê´Â ±¸Á¶(±âº»)
+// Set â†’ HashSet, TreeSet
+// - ìˆœì„œê°€ ì—†ë‹¤.
+// - ì¤‘ë³µì„ í—ˆìš©í•˜ì§€ ì•ŠëŠ” êµ¬ì¡°(ê¸°ë³¸)
 
 /*
-¡Û HashSet<E> Å¬·¡½º
+â—‹ HashSet<E> í´ëž˜ìŠ¤
  
-   java.util.HashSet<E> Å¬·¡½º´Â
-   Set ÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇÏ´Â Å¬·¡½º·Î
-   ¼ø¼­ÀÇ °³³äÀÌ ¾Æ´Ï¶ó ÁýÇÕÀÇ °³³äÀ¸·Î ÀÌÇØÇØ¾ß ÇÏ´Â ÀÚ·á±¸Á¶ÀÌ´Ù.
-   ÀÌ·Î ÀÎÇØ µ¥ÀÌÅÍÀÇ Áßº¹À» Çã¿ëÇÏÁö ¾Ê´Â´Ù.
-   ¶ÇÇÑ, µ¿±âÈ­¸¦ Áö¿øÇÏÁö ¾Ê´Â´Ù.
+   java.util.HashSet<E> í´ëž˜ìŠ¤ëŠ”
+   Set ì¸í„°íŽ˜ì´ìŠ¤ë¥¼ êµ¬í˜„í•˜ëŠ” í´ëž˜ìŠ¤ë¡œ
+   ìˆœì„œì˜ ê°œë…ì´ ì•„ë‹ˆë¼ ì§‘í•©ì˜ ê°œë…ìœ¼ë¡œ ì´í•´í•´ì•¼ í•˜ëŠ” ìžë£Œêµ¬ì¡°ì´ë‹¤.
+   ì´ë¡œ ì¸í•´ ë°ì´í„°ì˜ ì¤‘ë³µì„ í—ˆìš©í•˜ì§€ ì•ŠëŠ”ë‹¤.
+   ë˜í•œ, ë™ê¸°í™”ë¥¼ ì§€ì›í•˜ì§€ ì•ŠëŠ”ë‹¤.
 */
 
 import java.util.Set;
@@ -24,69 +24,69 @@ public class Test168
 {
 	public static void main(String[] args)
 	{
-		//Set ob = new Set(); SetÀº ÀÎÅÍÆäÀÌ½º ÀÌ±â ¶§¹®¿¡ ÀÌ·¸°Ô ±¸¼ºÇÒ ¼ö ŸÁ´Ù.
+		//Set ob = new Set(); Setì€ ì¸í„°íŽ˜ì´ìŠ¤ ì´ê¸° ë•Œë¬¸ì— ì´ë ‡ê²Œ êµ¬ì„±í•  ìˆ˜ ìŽë‹¤.
 		Set<String> dog = new HashSet<String>();
 		
 
-		//dog ÀÌ¶ó´Â Set ÀÚ·á±¸Á¶¿¡ ¿ä¼Ò Ãß°¡
-		dog.add("Æ÷¸Þ¶ó´Ï¾È");
-		dog.add("¸»Æ¼Áî");
-		dog.add("ºñ¼õ");
-		dog.add("Áøµ¾°³");
-		dog.add("ºÒµ¶");
+		//dog ì´ë¼ëŠ” Set ìžë£Œêµ¬ì¡°ì— ìš”ì†Œ ì¶”ê°€
+		dog.add("í¬ë©”ë¼ë‹ˆì•ˆ");
+		dog.add("ë§í‹°ì¦ˆ");
+		dog.add("ë¹„ìˆ‘");
+		dog.add("ì§„ë—ê°œ");
+		dog.add("ë¶ˆë…");
 
-		// ±âÁ¸ µ¥ÀÌÅÍ Set Ãâ·Â
-		System.out.print("±âÁ¸ µ¥ÀÌÅÍ Set : ");
+		// ê¸°ì¡´ ë°ì´í„° Set ì¶œë ¥
+		System.out.print("ê¸°ì¡´ ë°ì´í„° Set : ");
 		for(String s : dog)
 			System.out.print(s + " ");
 		System.out.println();
-		//--==>> ±âÁ¸ µ¥ÀÌÅÍ Set : Áøµ¾°³ Æ÷¸Þ¶ó´Ï¾È ºñ¼õ ºÒµ¶ ¸»Æ¼Áî
-		//-- ¼ø¼­°¡ ÀÇ¹Ì ¾ø´Â ÀÚ·á±¸Á¶ÀÌ±â ¶§¹®¿¡
-		//   µ¥ÀÌÅÍ ÀÔ·Â ¼ø¼­ ¡æ ÀÚ·á±¸Á¶ÀÇ ¿ä¼Ò °Ý³³ ¼ø¼­
-		//   ÀÌµéÀÌ ¼­·Î °ü°è ¾øÀÌ ±¸¼ºµÇ¾î ÀÖ´Â °ÍÀ» È®ÀÎ
+		//--==>> ê¸°ì¡´ ë°ì´í„° Set : ì§„ë—ê°œ í¬ë©”ë¼ë‹ˆì•ˆ ë¹„ìˆ‘ ë¶ˆë… ë§í‹°ì¦ˆ
+		//-- ìˆœì„œê°€ ì˜ë¯¸ ì—†ëŠ” ìžë£Œêµ¬ì¡°ì´ê¸° ë•Œë¬¸ì—
+		//   ë°ì´í„° ìž…ë ¥ ìˆœì„œ â†’ ìžë£Œêµ¬ì¡°ì˜ ìš”ì†Œ ê²©ë‚© ìˆœì„œ
+		//   ì´ë“¤ì´ ì„œë¡œ ê´€ê³„ ì—†ì´ êµ¬ì„±ë˜ì–´ ìžˆëŠ” ê²ƒì„ í™•ì¸
 
-		// µ¥ÀÌÅÍ(¿ä¼Ò) Ãß°¡
-		dog.add("µµº£¸£¸¸");
-		dog.add("Ä¡¿Í¿Í");
-		dog.add("½Ãº£¸®¾ÈÇã½ºÅ°");
-		dog.add("ÈÖÆ°Å×¸®¾î");
+		// ë°ì´í„°(ìš”ì†Œ) ì¶”ê°€
+		dog.add("ë„ë² ë¥´ë§Œ");
+		dog.add("ì¹˜ì™€ì™€");
+		dog.add("ì‹œë² ë¦¬ì•ˆí—ˆìŠ¤í‚¤");
+		dog.add("íœ˜íŠ¼í…Œë¦¬ì–´");
 
-		dog.add("ºñ¼õ");
-		dog.add("ºñ¼õ");
-		dog.add("ºñ¼õ");
-		dog.add("ºñ¼õ");
-		dog.add("ºñ¼õ");
-		dog.add("ºñ¼õ");
-		dog.add("¸»Æ¼Áî");
-		dog.add("¸»Æ¼Áî");
-		dog.add("¸»Æ¼Áî");
-		dog.add("¸»Æ¼Áî");
-		dog.add("¸»Æ¼Áî");
-		dog.add("¸»Æ¼Áî");
-		dog.add("µµº£¸£¸¸");
-		dog.add("µµº£¸£¸¸");
-		dog.add("µµº£¸£¸¸");
-		dog.add("µµº£¸£¸¸");
-		dog.add("µµº£¸£¸¸");
+		dog.add("ë¹„ìˆ‘");
+		dog.add("ë¹„ìˆ‘");
+		dog.add("ë¹„ìˆ‘");
+		dog.add("ë¹„ìˆ‘");
+		dog.add("ë¹„ìˆ‘");
+		dog.add("ë¹„ìˆ‘");
+		dog.add("ë§í‹°ì¦ˆ");
+		dog.add("ë§í‹°ì¦ˆ");
+		dog.add("ë§í‹°ì¦ˆ");
+		dog.add("ë§í‹°ì¦ˆ");
+		dog.add("ë§í‹°ì¦ˆ");
+		dog.add("ë§í‹°ì¦ˆ");
+		dog.add("ë„ë² ë¥´ë§Œ");
+		dog.add("ë„ë² ë¥´ë§Œ");
+		dog.add("ë„ë² ë¥´ë§Œ");
+		dog.add("ë„ë² ë¥´ë§Œ");
+		dog.add("ë„ë² ë¥´ë§Œ");
 
 
 		
-		// Ãß°¡ ÈÄ µ¥ÀÌÅÍ Set Ãâ·Â
-		System.out.print("Ãß°¡ ÈÄ µ¥ÀÌÅÍ Set : ");
+		// ì¶”ê°€ í›„ ë°ì´í„° Set ì¶œë ¥
+		System.out.print("ì¶”ê°€ í›„ ë°ì´í„° Set : ");
 		for(String s : dog)
 			System.out.print(s+" ");
 		System.out.println();
-		//--==>> Ãß°¡ ÈÄ µ¥ÀÌÅÍ Set : Áøµ¾°³ Æ÷¸Þ¶ó´Ï¾È ½Ãº£¸®¾ÈÇã½ºÅ° ÈÖÆ°Å×¸®¾î µµº£¸£¸¸ Ä¡¿Í¿Í ºñ¼õ ºÒµ¶ ¸»Æ¼Áî
+		//--==>> ì¶”ê°€ í›„ ë°ì´í„° Set : ì§„ë—ê°œ í¬ë©”ë¼ë‹ˆì•ˆ ì‹œë² ë¦¬ì•ˆí—ˆìŠ¤í‚¤ íœ˜íŠ¼í…Œë¦¬ì–´ ë„ë² ë¥´ë§Œ ì¹˜ì™€ì™€ ë¹„ìˆ‘ ë¶ˆë… ë§í‹°ì¦ˆ
 
-		// ¡Ø µ¥ÀÌÅÍ°¡ Ãß°¡µÇ´Â ¼ø¼­¿Í »ó°ü¾øÀÌ ¸ñ·ÏÀÌ ±¸¼ºµÇ¾î ÀÖÀ¸¸ç
-		//    °°Àº µ¥ÀÌÅÍ°¡ ¿©·¯ ¹ø ¹Ýº¹ Ãß°¡µÉ °æ¿ì
-		//    ÀÌµé Áß ÇÏ³ª¸¸ À¯È¿ÇÑ µ¥ÀÌÅÍ·Î ±¸¼ºµÇ¾î ÀÖ´Â °ÍÀ» È®ÀÎÇÒ ¼ö ÀÖ´Ù.
-		//    (¾Æ¹«¸® Ãß°¡ÇØµµ ÇÑ ¹ø¸¸ Ãâ·ÂµÊ)
+		// â€» ë°ì´í„°ê°€ ì¶”ê°€ë˜ëŠ” ìˆœì„œì™€ ìƒê´€ì—†ì´ ëª©ë¡ì´ êµ¬ì„±ë˜ì–´ ìžˆìœ¼ë©°
+		//    ê°™ì€ ë°ì´í„°ê°€ ì—¬ëŸ¬ ë²ˆ ë°˜ë³µ ì¶”ê°€ë  ê²½ìš°
+		//    ì´ë“¤ ì¤‘ í•˜ë‚˜ë§Œ ìœ íš¨í•œ ë°ì´í„°ë¡œ êµ¬ì„±ë˜ì–´ ìžˆëŠ” ê²ƒì„ í™•ì¸í•  ìˆ˜ ìžˆë‹¤.
+		//    (ì•„ë¬´ë¦¬ ì¶”ê°€í•´ë„ í•œ ë²ˆë§Œ ì¶œë ¥ë¨)
 
-		// ¡Ø ¶ÇÇÑ, ÀÚ·á±¸Á¶ÀÇ Æ¯¼º »ó
-		//    Áßº¹ µ¥ÀÌÅÍ¸¦ Çã¿ëÇÏÁö ¾Ê´Â´Ù°í ÇØ¼­
-		//    Áßº¹µÈ µ¥ÀÌÅÍ¸¦ Ãß°¡ÇÒ °æ¿ì
-		//    ¿¡·¯°¡ ¹ß»ýÇÑ´Ù´Â ÀÇ¹Ì´Â ¾Æ´Ï¶ó´Â °Íµµ È®ÀÎÇÒ ¼ö ÀÖ´Ù.
+		// â€» ë˜í•œ, ìžë£Œêµ¬ì¡°ì˜ íŠ¹ì„± ìƒ
+		//    ì¤‘ë³µ ë°ì´í„°ë¥¼ í—ˆìš©í•˜ì§€ ì•ŠëŠ”ë‹¤ê³  í•´ì„œ
+		//    ì¤‘ë³µëœ ë°ì´í„°ë¥¼ ì¶”ê°€í•  ê²½ìš°
+		//    ì—ëŸ¬ê°€ ë°œìƒí•œë‹¤ëŠ” ì˜ë¯¸ëŠ” ì•„ë‹ˆë¼ëŠ” ê²ƒë„ í™•ì¸í•  ìˆ˜ ìžˆë‹¤.
 
 	}
 }

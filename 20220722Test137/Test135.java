@@ -1,7 +1,7 @@
 /*==============================================
-  ¡á¡á¡á ÀÚ¹ÙÀÇ ÁÖ¿ä(Áß¿ä) Å¬·¡½º ¡á¡á¡á
-  - ÀÚ¹Ù¿¡¼­ ±âº»ÀûÀ¸·Î Á¦°øÇÏ´Â ÁÖ¿ä Å¬·¡½ºµé
-  - Wrapper Å¬·¡½º
+  â– â– â–  ìë°”ì˜ ì£¼ìš”(ì¤‘ìš”) í´ë˜ìŠ¤ â– â– â– 
+  - ìë°”ì—ì„œ ê¸°ë³¸ì ìœ¼ë¡œ ì œê³µí•˜ëŠ” ì£¼ìš” í´ë˜ìŠ¤ë“¤
+  - Wrapper í´ë˜ìŠ¤
 ===============================================*/
 
 public class Test135
@@ -22,12 +22,12 @@ public class Test135
 		System.out.println(Double.MIN_VALUE);
 		//--==>> 1.7976931348623157E308
 		//--==>> 4.9E-324
-		//       ¡Ø e Ç¥±â¹ı
+		//       â€» e í‘œê¸°ë²•
 
-		System.out.println();	// °³Çà
+		System.out.println();	// ê°œí–‰
 
 		
-		// ½Ç¼ö ±â¹İÀÇ ³ª´°¼À ¿¬»ê
+		// ì‹¤ìˆ˜ ê¸°ë°˜ì˜ ë‚˜ëˆ—ì…ˆ ì—°ì‚°
 		System.out.println("1 : " + 3.0/0);
 		System.out.println("2 : " + -3.0/0);
 		//--==>> 1 : Infinity
@@ -39,7 +39,7 @@ public class Test135
 		//       4 : false
 
 
-		// ¡ºDouble.isInfinite()¡»
+		// ã€Double.isInfinite()ã€
 		System.out.println("5 : " + Double.isInfinite(3.0/0));
 		System.out.println("6 : " + Double.isInfinite(-3.0/0));
 		//--==>> 5 : true
@@ -47,7 +47,7 @@ public class Test135
 
 		System.out.println("7 : " + (3.0/0 + -3.0/0));
 		System.out.println("8 : " + (0.0/0));
-		//--==>> 7 : NaN (¡æ Not a Number)
+		//--==>> 7 : NaN (â†’ Not a Number)
 		//       8 : NaN
 
 
@@ -56,11 +56,11 @@ public class Test135
 		//--==>> 9 : false
 		//       10: true
 
-		// ¡Ø NaN(¡æ Not a Number) °ª°ú ÀÓÀÇÀÇ ¼ö¸¦
-		//    Å©±â ºñ±³¸¦ ¼öÇàÇÏ´Â ¡º==¡» ¿¬»êÀÚ¸¦ ÅëÇØ ºñ±³ ¿¬»êÀ» ¼öÇàÇÏ°Ô µÇ¸é
-		//    °á°ú´Â ¾ğÁ¦³ª ¡ºfalse¡»¸¦ ¹İÈ¯ÇÑ´Ù.
+		// â€» NaN(â†’ Not a Number) ê°’ê³¼ ì„ì˜ì˜ ìˆ˜ë¥¼
+		//    í¬ê¸° ë¹„êµë¥¼ ìˆ˜í–‰í•˜ëŠ” ã€==ã€ ì—°ì‚°ìë¥¼ í†µí•´ ë¹„êµ ì—°ì‚°ì„ ìˆ˜í–‰í•˜ê²Œ ë˜ë©´
+		//    ê²°ê³¼ëŠ” ì–¸ì œë‚˜ ã€falseã€ë¥¼ ë°˜í™˜í•œë‹¤.
 
-		// ¡ºDouble.isNaN()¡»
+		// ã€Double.isNaN()ã€
 		System.out.println("11 : " + Double.isNaN(0.0/0);
 		System.out.println("12 : " + Double.isNaN(1.1+2.2);
 		//--==>> 11 : true

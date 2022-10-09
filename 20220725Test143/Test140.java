@@ -1,36 +1,36 @@
 /*==============================================
-  ¡á¡á¡á ÀÚ¹ÙÀÇ ÁÖ¿ä(Áß¿ä) Å¬·¡½º ¡á¡á¡á
-  - ÀÚ¹Ù¿¡¼­ ±âº»ÀûÀ¸·Î Á¦°øÇÏ´Â ÁÖ¿ä Å¬·¡½ºµé
-  - StringTokenizer Å¬·¡½º (°³³ä¸¸ ¼÷Áö~!!!)
+  â– â– â–  ìžë°”ì˜ ì£¼ìš”(ì¤‘ìš”) í´ëž˜ìŠ¤ â– â– â– 
+  - ìžë°”ì—ì„œ ê¸°ë³¸ì ìœ¼ë¡œ ì œê³µí•˜ëŠ” ì£¼ìš” í´ëž˜ìŠ¤ë“¤
+  - StringTokenizer í´ëž˜ìŠ¤ (ê°œë…ë§Œ ìˆ™ì§€~!!!)
 ===============================================*/
 
 /*
-¡Û StringTokenizer Å¬·¡½º´Â
+â—‹ StringTokenizer í´ëž˜ìŠ¤ëŠ”
 
-   ¹®ÀÚ¿­ ÆÄ½Ì(parsing)À» À§ÇÑ Á¤º¸¸¦ Á¦°øÇÏ´Â Å¬·¡½º·Î
-   ÆÄ½Ì(parsing)ÇÏ°íÀÚ ÇÏ´Â ¹®ÀÚ¿­À» ÀÎÀÚ·Î ¹Þ¾Æ »ý¼ºÇÏ´Âµ¥,
-   ¿©±â¿¡¼­ ÆÄ½Ì(parsing)ÀÌ¶õ ÇÏ³ªÀÇ ¹®ÀÚ¿­À» ¿©·¯ ¹®ÀÚ¿­·Î
-   ³ª´©´Â ÀÛ¾÷À» ÀÇ¹ÌÇÏ°Ô µÇ¸ç, ÀÌ ¶§ ³ª´©´Â ´ÜÀ§°¡ µÇ´Â ¹®ÀÚ¿­À»
-   ÅäÅ«(token)ÀÌ¶ó°í ÇÑ´Ù.
+   ë¬¸ìžì—´ íŒŒì‹±(parsing)ì„ ìœ„í•œ ì •ë³´ë¥¼ ì œê³µí•˜ëŠ” í´ëž˜ìŠ¤ë¡œ
+   íŒŒì‹±(parsing)í•˜ê³ ìž í•˜ëŠ” ë¬¸ìžì—´ì„ ì¸ìžë¡œ ë°›ì•„ ìƒì„±í•˜ëŠ”ë°,
+   ì—¬ê¸°ì—ì„œ íŒŒì‹±(parsing)ì´ëž€ í•˜ë‚˜ì˜ ë¬¸ìžì—´ì„ ì—¬ëŸ¬ ë¬¸ìžì—´ë¡œ
+   ë‚˜ëˆ„ëŠ” ìž‘ì—…ì„ ì˜ë¯¸í•˜ê²Œ ë˜ë©°, ì´ ë•Œ ë‚˜ëˆ„ëŠ” ë‹¨ìœ„ê°€ ë˜ëŠ” ë¬¸ìžì—´ì„
+   í† í°(token)ì´ë¼ê³  í•œë‹¤.
 
-   StringTokenizer Å¬·¡½º¸¦ »ç¿ëÇÏ±â À§ÇØ¼­´Â
-   java.util ÆÐÅ°ÁöÀÇ StringTokenizer ¸¦ import ÇØ¾ß ÇÑ´Ù.
+   StringTokenizer í´ëž˜ìŠ¤ë¥¼ ì‚¬ìš©í•˜ê¸° ìœ„í•´ì„œëŠ”
+   java.util íŒ¨í‚¤ì§€ì˜ StringTokenizer ë¥¼ import í•´ì•¼ í•œë‹¤.
 
-   StringTokenizer Å¬·¡½º´Â È£È¯¼ºÀ» À¯ÁöÇÏ´Â ¸ñÀûÀ¸·Î
-   º¸°ü À¯ÁöµÇ°í ÀÖÀ¸¸ç, ¹®ÀÚ¿­À» ÆÄ½Ì(parsing) ÇÏ±â À§ÇØ¼­´Â
-   String Å¬·¡½ºÀÇ split() ¸Þ¼Òµå³ª java.util.regex ÆÐÅ°Áö¸¦
-   »ç¿ëÇÒ °ÍÀ» ±ÇÀåÇÏ°í ÀÖ´Ù.
+   StringTokenizer í´ëž˜ìŠ¤ëŠ” í˜¸í™˜ì„±ì„ ìœ ì§€í•˜ëŠ” ëª©ì ìœ¼ë¡œ
+   ë³´ê´€ ìœ ì§€ë˜ê³  ìžˆìœ¼ë©°, ë¬¸ìžì—´ì„ íŒŒì‹±(parsing) í•˜ê¸° ìœ„í•´ì„œëŠ”
+   String í´ëž˜ìŠ¤ì˜ split() ë©”ì†Œë“œë‚˜ java.util.regex íŒ¨í‚¤ì§€ë¥¼
+   ì‚¬ìš©í•  ê²ƒì„ ê¶Œìž¥í•˜ê³  ìžˆë‹¤.
 
-¡Û »ý¼ºÀÚ
+â—‹ ìƒì„±ìž
 
-   - ¿øÇü
+   - ì›í˜•
      StringTokenizer(String str)
 	 StringTokenizer(String str, String delim)
 	 StringTokenizer(String str, String delim, boolean returnDelims)
-	 : ÁÖ¾îÁø ¹®ÀÚ¿­ str À» ´Ü¾î·Î ºÐ¸®ÇÏ´Â °´Ã¼¸¦ »ý¼ºÇÏ¸ç
-	   °ø¹é(±¸ºÐ) ¹®ÀÚ´Â delim ¿¡ Æ÷ÇÔµÈ ¹®ÀÚ·Î Ã³¸®ÇÏ°Ô µÈ´Ù.
-	   ¸¸¾à returnDelims °¡ true ÀÌ¸é
-	   ±¸ºÐ ¹®ÀÚµµ ºÐ¸®µÈ µ¥ÀÌÅÍ·Î Ã³¸®ÇÏ°Ô µÈ´Ù.
+	 : ì£¼ì–´ì§„ ë¬¸ìžì—´ str ì„ ë‹¨ì–´ë¡œ ë¶„ë¦¬í•˜ëŠ” ê°ì²´ë¥¼ ìƒì„±í•˜ë©°
+	   ê³µë°±(êµ¬ë¶„) ë¬¸ìžëŠ” delim ì— í¬í•¨ëœ ë¬¸ìžë¡œ ì²˜ë¦¬í•˜ê²Œ ëœë‹¤.
+	   ë§Œì•½ returnDelims ê°€ true ì´ë©´
+	   êµ¬ë¶„ ë¬¸ìžë„ ë¶„ë¦¬ëœ ë°ì´í„°ë¡œ ì²˜ë¦¬í•˜ê²Œ ëœë‹¤.
 */
 
 import java.io.BufferedReader;
@@ -48,62 +48,62 @@ public class Test140
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
-		System.out.print("ÆÄ½ÌÇÒ ¹®ÀÚ¿­ ÀÔ·Â(ÄÄ¸¶ ±¸ºÐ) : ");
+		System.out.print("íŒŒì‹±í•  ë¬¸ìžì—´ ìž…ë ¥(ì»´ë§ˆ êµ¬ë¶„) : ");
 		strTemp = br.readLine();
-		//-- "»ç°ú, µþ±â, ¹Ù³ª³ª, Æ÷µµ";
+		//-- "ì‚¬ê³¼, ë”¸ê¸°, ë°”ë‚˜ë‚˜, í¬ë„";
 
-		// StringTokenizer Å¬·¡½º ÀÎ½ºÅÏ½º »ý¼º
+		// StringTokenizer í´ëž˜ìŠ¤ ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
 		StringTokenizer st = new StringTokenizer(strTemp, ",");
-		//-- strTemp ¸¦ ´ë»ó ¹®ÀÚ¿­·Î... ("»ç°ú, µþ±â, ¹Ù³ª³ª, Æ÷µµ")
-		//   ¡º,¡»¸¦ ±¸ºÐÀÚ·Î...
+		//-- strTemp ë¥¼ ëŒ€ìƒ ë¬¸ìžì—´ë¡œ... ("ì‚¬ê³¼, ë”¸ê¸°, ë°”ë‚˜ë‚˜, í¬ë„")
+		//   ã€Ž,ã€ë¥¼ êµ¬ë¶„ìžë¡œ...
 
-		// stÀÇ ¡ºcountTokens()¡»
+		// stì˜ ã€ŽcountTokens()ã€
 		// int countTokens()
-		// : ÆÄ½ÌµÈ ¹®ÀÚ¿­ÀÇ °¹¼ö¸¦ ¹ÝÈ¯(¸®ÅÏ)ÇÑ´Ù.
+		// : íŒŒì‹±ëœ ë¬¸ìžì—´ì˜ ê°¯ìˆ˜ë¥¼ ë°˜í™˜(ë¦¬í„´)í•œë‹¤.
 		strArr = new String[st.countTokens()];
 		//                 -------------------
 		//                          4
 
-		// ¡æ strArr = new String[4];
+		// â†’ strArr = new String[4];
 
 		n = 0;
 
 		while(st.hasMoreTokens())				//true true true true false
 		{
 			strArr[n++] = st.nextToken();
-			//strArr[0]	= "»ç°ú"
-			//strArr[1]	= "µþ±â"
-            //strArr[2]	= "¹Ù³ª³ª"
-            //strArr[3]	= "Æ÷µµ"
+			//strArr[0]	= "ì‚¬ê³¼"
+			//strArr[1]	= "ë”¸ê¸°"
+            //strArr[2]	= "ë°”ë‚˜ë‚˜"
+            //strArr[3]	= "í¬ë„"
 		}
 		
-		//-- ¡ºhasMoreTokens()¡»
-		//    : »ç¿ëÇÒ ¼ö ÀÖ´Â ÅäÅ«ÀÌ ³²¾ÆÀÖ´Â °æ¿ì true ¸¦ ¹ÝÈ¯
-		//      ´õ ÀÌ»ó »ç¿ëÇÒ ÅäÅ«ÀÌ ¾ø´Â °æ¿ì false¸¦ ¹ÝÈ¯
-		//      È®ÀÎ °á°ú¸¸ ¹ÝÈ¯ÇÒ »Ó...
-		//      ½ÇÁ¦ ³»¿ëÀ» ÀÐ¾îµéÀÌÁöµµ ¾Ê°í,
-		//      ½ÇÁ¦ ³»¿ëÀ» ÀÐ¾îµéÀÌ´Â Çìµå¸¦ ÀÌµ¿½ÃÅ°Áöµµ ¾Ê´Â´Ù.
+		//-- ã€ŽhasMoreTokens()ã€
+		//    : ì‚¬ìš©í•  ìˆ˜ ìžˆëŠ” í† í°ì´ ë‚¨ì•„ìžˆëŠ” ê²½ìš° true ë¥¼ ë°˜í™˜
+		//      ë” ì´ìƒ ì‚¬ìš©í•  í† í°ì´ ì—†ëŠ” ê²½ìš° falseë¥¼ ë°˜í™˜
+		//      í™•ì¸ ê²°ê³¼ë§Œ ë°˜í™˜í•  ë¿...
+		//      ì‹¤ì œ ë‚´ìš©ì„ ì½ì–´ë“¤ì´ì§€ë„ ì•Šê³ ,
+		//      ì‹¤ì œ ë‚´ìš©ì„ ì½ì–´ë“¤ì´ëŠ” í—¤ë“œë¥¼ ì´ë™ì‹œí‚¤ì§€ë„ ì•ŠëŠ”ë‹¤.
 
 
-		//-- ¡ºnextToken()¡»
-		//    : ´ÙÀ½ ÅäÅ«À» ¾ò¾î¿Â´Ù.
-		//      ´ÙÀ½ ÅäÅ«À» ¾ò¾î¿À¸ç Çìµå¸¦ ÀÌµ¿½ÃÅ°°Ô µÈ´Ù.
-		//      ±¸ºÐÀÚ¸¦ ¹Ù²Ù¾úÀ» °æ¿ì ´ÙÀ½ È£Ãâ¿¡µµ
-		//      ¹Ù²ï ±¸ºÐÀÚ¸¦ ÀÌ¿ëÇÏ¿© ÅäÅ«À» ºÐ¸®ÇÑ´Ù.
+		//-- ã€ŽnextToken()ã€
+		//    : ë‹¤ìŒ í† í°ì„ ì–»ì–´ì˜¨ë‹¤.
+		//      ë‹¤ìŒ í† í°ì„ ì–»ì–´ì˜¤ë©° í—¤ë“œë¥¼ ì´ë™ì‹œí‚¤ê²Œ ëœë‹¤.
+		//      êµ¬ë¶„ìžë¥¼ ë°”ê¾¸ì—ˆì„ ê²½ìš° ë‹¤ìŒ í˜¸ì¶œì—ë„
+		//      ë°”ë€ êµ¬ë¶„ìžë¥¼ ì´ìš©í•˜ì—¬ í† í°ì„ ë¶„ë¦¬í•œë‹¤.
 	
-		System.out.print("ÆÄ½ÌµÈ ÅäÅ«(¹®ÀÚ¿­) : ");
+		System.out.print("íŒŒì‹±ëœ í† í°(ë¬¸ìžì—´) : ");
 		for(String str : strArr)
 			System.out.print(str + " ");
 		System.out.println();
-		//--==>> ÆÄ½ÌµÈ ÅäÅ«(¹®ÀÚ¿­) : »ç°ú µþ±â ¹Ù³ª³ª Æ÷µµ ¼ö¹Ú
+		//--==>> íŒŒì‹±ëœ í† í°(ë¬¸ìžì—´) : ì‚¬ê³¼ ë”¸ê¸° ë°”ë‚˜ë‚˜ í¬ë„ ìˆ˜ë°•
 		
 	}
 }
 
-// ½ÇÇà °á°ú
+// ì‹¤í–‰ ê²°ê³¼
 
 /*
-ÆÄ½ÌÇÒ ¹®ÀÚ¿­ ÀÔ·Â(ÄÄ¸¶ ±¸ºÐ) : »ç°ú,µþ±â,¹Ù³ª³ª,Æ÷µµ,¼ö¹Ú
-ÆÄ½ÌµÈ ÅäÅ«(¹®ÀÚ¿­) : »ç°ú µþ±â ¹Ù³ª³ª Æ÷µµ ¼ö¹Ú
-°è¼ÓÇÏ·Á¸é ¾Æ¹« Å°³ª ´©¸£½Ê½Ã¿À . . .
+íŒŒì‹±í•  ë¬¸ìžì—´ ìž…ë ¥(ì»´ë§ˆ êµ¬ë¶„) : ì‚¬ê³¼,ë”¸ê¸°,ë°”ë‚˜ë‚˜,í¬ë„,ìˆ˜ë°•
+íŒŒì‹±ëœ í† í°(ë¬¸ìžì—´) : ì‚¬ê³¼ ë”¸ê¸° ë°”ë‚˜ë‚˜ í¬ë„ ìˆ˜ë°•
+ê³„ì†í•˜ë ¤ë©´ ì•„ë¬´ í‚¤ë‚˜ ëˆ„ë¥´ì‹­ì‹œì˜¤ . . .
 */
